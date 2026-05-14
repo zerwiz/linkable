@@ -1,11 +1,11 @@
 {
   "Metadata": {
     "title": "LinkableWork | Partner Portal for Construction Recruitment",
-    "description": "Streamlined digital portal for subcontractors, companies, and individuals to apply for construction projects across Sweden. Submit credentials, specify availability, and get matched with the right projects.",
+    "description": "We recruit both companies and individuals for construction assignments across Sweden. Apply as a subcontractor, company, work crew, or individual — we match you with the right project or employment.",
     "ogTitle": "LinkableWork Partner Portal",
-    "ogDescription": "Connect with construction projects across Sweden. Apply as a subcontractor, company, or individual with F-tax.",
+    "ogDescription": "Find construction projects or employment across Sweden. Apply as a company, subcontractor, or individual.",
     "twitterTitle": "LinkableWork Partner Portal",
-    "twitterDescription": "Connect with construction projects across Sweden."
+    "twitterDescription": "Find construction projects or employment across Sweden."
   },
   "Index": {
     "RequestWorkers": {
@@ -85,8 +85,32 @@
       "responseTime": "Response time",
       "status": "Status",
       "activeRecruiting": "Active recruiting",
+      "projectId": "Project ID",
+      "quickFacts": "Quick Facts",
+      "detailSubtitle": "Here you will find detailed information about the project and how to apply.",
+      "rolesSubtitle": "We are looking for reinforcement in the following categories:",
+      "machineNote": "Please specify in your application which machines you have experience with and which operator licenses you hold.",
       "about": "About the project",
       "rolesTitle": "Roles we are looking for",
+      "machineList": "Machine List (examples)",
+      "machineListDesc": "For machine operators, we are primarily looking for experience with:",
+      "workingConditions": "Working Conditions & Equipment",
+      "languageReq": "Language: Swedish or good English in the crew. At least one person per crew must be able to communicate fluently in Swedish for safety briefings.",
+      "tools": "Tools: Subcontractors are expected to supply their own hand tools and personal protective equipment (PPE).",
+      "insurance": "Insurance: Valid liability insurance is required for all subcontractors.",
+      "compensation": "Compensation & Finance",
+      "paymentTerms": "Payment terms: 30 days after approved invoice",
+      "compensationType": "Compensation: Hourly rate according to agreement or fixed price on sub-contract",
+      "ftaxReq": "F-tax: Required for all applying companies and sole proprietors.",
+      "contactPerson": "Contact Person",
+      "contactRecruiter": "Responsible recruiter:",
+      "application": "Application",
+      "checklistHeader": "Application checklist:",
+      "checklistProjectId": "Enter Project ID: {id}",
+      "checklistFtax": "Attach copy of F-tax certificate",
+      "checklistCerts": "List relevant certificates (ID06 number required)",
+      "checklistReferences": "Brief description of similar previous projects (references)",
+      "checklistDeadline": "Submit your application by {deadline}",
       "requirements": "Required certifications",
       "applyNow": "Apply Now",
       "askQuestion": "Ask a Question",
@@ -104,6 +128,7 @@
       "accommodation": "Accommodation",
       "id06Note": "ID06 can be arranged by LinkableWork upon employment",
       "locationCertsTitle": "Location-specific certifications",
+      "salary": "Salary",
       "items": {
         "groundworks": {
           "title": "Groundworks",
@@ -112,6 +137,7 @@
           "startDate": "June 2026",
           "applyDeadline": "May 30, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "250–350 SEK/hr",
           "locationCerts": [],
           "description": "Foundation work, excavation, and site preparation for new residential and commercial developments across Norrbotten and Vasterbotten. Immediate starts available for crews with valid ID06 and APV certification."
         },
@@ -122,6 +148,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "June 15, 2026",
           "accommodation": "",
+          "salary": "275–375 SEK/hr",
           "locationCerts": [],
           "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with safe construction training and machine operator licenses."
         },
@@ -132,6 +159,7 @@
           "startDate": "July 2026",
           "applyDeadline": "June 1, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "300–400 SEK/hr",
           "locationCerts": [],
           "description": "Skilled machine operators needed for grading, paving, and heavy earthmoving operations. Valid Maskinforarbevis and Arbete pa vag (APV) certification required. Competitive hourly rates."
         },
@@ -142,6 +170,7 @@
           "startDate": "May 2026",
           "applyDeadline": "April 30, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "250–350 SEK/hr",
           "locationCerts": [],
           "description": "General construction crews needed for residential building projects from foundation to finishing. F-tax status required for individual applicants. Teams of 3-8 preferred."
         },
@@ -152,6 +181,7 @@
           "startDate": "June 2026",
           "applyDeadline": "May 20, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "260–360 SEK/hr",
           "locationCerts": [],
           "description": "Mixed-use development in central Umea with commercial and residential units. Foundation work, concrete structures, and interior finishing phases. Experienced teams with ID06 and safe construction training preferred."
         },
@@ -162,6 +192,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "July 1, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "275–375 SEK/hr",
           "locationCerts": [],
           "description": "Expansion of Lulea harbour facilities including new quay, cargo handling areas, and rail connection. Heavy earthmoving, piling, and asphalt work. Machine operators with APV certification needed."
         },
@@ -172,6 +203,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "Aug 10, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "250–350 SEK/hr",
           "locationCerts": [],
           "description": "New educational buildings and surrounding infrastructure at Skelleftea campus. Groundworks, foundation laying, and site preparation for Phase 1 construction starting immediately."
         },
@@ -182,6 +214,7 @@
           "startDate": "Oct 2026",
           "applyDeadline": "Sep 1, 2026",
           "accommodation": "Barracks / hotel included",
+          "salary": "240–340 SEK/hr",
           "locationCerts": [],
           "description": "Industrial park development on the outskirts of Pitea. New road networks, utility installation, and commercial building foundations. Ideal for teams with experience in infrastructure and site development."
         }
@@ -354,9 +387,12 @@
       },
       "contact": {
         "title": "Contact",
-        "jorgen": "Jörgen",
-        "jorgenEmail": "jörgen@gmail.com",
-        "jorgenPhone": "070-xxx xx xx"
+        "thomas": "Thomas",
+        "thomasEmail": "thomas@linkable.se",
+        "thomasPhone": "070-xxx xx xx",
+        "christer": "Christer",
+        "christerEmail": "christer@linkable.se",
+        "christerPhone": "070-xxx xx xx"
       },
       "rights": "All rights reserved.",
       "privacy": "Privacy Policy",

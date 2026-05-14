@@ -288,6 +288,9 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                     <span>
                       {t("Projects.applyDeadline")}: {t(`Projects.items.${project.id}.applyDeadline`)}
                     </span>
+                    <span className="text-green-600">
+                      {t("Projects.salary")}: {t(`Projects.items.${project.id}.salary`)}
+                    </span>
                     {t.raw(`Projects.items.${project.id}.accommodation`) && (
                       <span className="text-emerald-600">
                         {t("Projects.accommodation")}: {t(`Projects.items.${project.id}.accommodation`)}

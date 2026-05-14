@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === "sv" ? "sv_SE" : "en_SE",
       images: [
         {
-          url: `${baseUrl}/og-image.svg`,
+          url: `${baseUrl}/og-image.png`,
           width: 1200,
           height: 630,
           alt: "LinkableWork",
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: [`${baseUrl}/og-image.svg`],
+      images: [`${baseUrl}/og-image.png`],
     },
     category: "construction",
     classification: "Business",

@@ -1,11 +1,11 @@
 {
   "Metadata": {
     "title": "LinkableWork | Partnerportal för byggrekrytering",
-    "description": "Strömlinjeformad digital portal för underentreprenörer, företag och privatpersoner för att söka byggprojekt i hela Sverige. Skicka in meriter, ange tillgänglighet och bli matchad med rätt projekt.",
+    "description": "Vi rekryterar både företag och privatpersoner för bygguppdrag i hela Sverige. Sök som underentreprenör, företag, arbetslag eller enskild individ — vi matchar dig med rätt projekt eller anställning.",
     "ogTitle": "LinkableWork Partnerportal",
-    "ogDescription": "Anslut till byggprojekt i hela Sverige. Ansök som underentreprenör, företag eller individ med F-skatt.",
+    "ogDescription": "Hitta byggprojekt eller anställning i hela Sverige. Ansök som företag, underentreprenör eller privatperson.",
     "twitterTitle": "LinkableWork Partnerportal",
-    "twitterDescription": "Anslut till byggprojekt i hela Sverige."
+    "twitterDescription": "Hitta byggprojekt eller anställning i hela Sverige."
   },
   "Index": {
     "RequestWorkers": {
@@ -85,8 +85,32 @@
       "responseTime": "Svarstid",
       "status": "Status",
       "activeRecruiting": "Aktiv rekrytering",
+      "projectId": "Projekt-ID",
+      "quickFacts": "Snabbfakta",
+      "detailSubtitle": "Här hittar du detaljerad information om det kommande projektet och hur ni ansöker.",
+      "rolesSubtitle": "Vi söker förstärkning inom följande kategorier:",
+      "machineNote": "Vänligen specificera i ansökan vilka maskiner ni har vana av och vilka förarbevis ni innehar.",
       "about": "Om projektet",
       "rolesTitle": "Roller vi söker",
+      "machineList": "🚜 Maskinlista (exempel på behov)",
+      "machineListDesc": "För maskinförare söker vi främst erfarenhet av följande:",
+      "workingConditions": "Arbetsvillkor & Utrustning",
+      "languageReq": "Språkkrav: Svenska eller god engelska i arbetslaget. Minst en person per lag måste kunna kommunicera obehindrat på svenska för säkerhetsgenomgångar.",
+      "tools": "Verktyg: Underleverantörer förväntas hålla med egna handverktyg och personlig skyddsutrustning (PPE).",
+      "insurance": "Försäkring: Giltig ansvarsförsäkring krävs för alla underleverantörer.",
+      "compensation": "Ersättning & Ekonomi",
+      "paymentTerms": "Betalningsvillkor: 30 dagar efter godkänd faktura",
+      "compensationType": "Ersättningsform: Timarvode enligt överenskommelse eller fastpris på delentreprenad",
+      "ftaxReq": "F-skatt: Obligatoriskt för alla sökande bolag och enskilda firmor.",
+      "contactPerson": "Kontaktperson",
+      "contactRecruiter": "Ansvarig rekryterare:",
+      "application": "Ansökan",
+      "checklistHeader": "Checklista för ansökan:",
+      "checklistProjectId": "Ange Projekt-ID: {id}",
+      "checklistFtax": "Bifoga kopia på F-skattesedel",
+      "checklistCerts": "Lista relevanta certifikat (ID06-nummer krävs)",
+      "checklistReferences": "Kort beskrivning av tidigare liknande projekt (referenser)",
+      "checklistDeadline": "Skicka in er intresseanmälan senast {deadline}",
       "requirements": "Krav på certifieringar",
       "applyNow": "Ansök nu",
       "askQuestion": "Fråga oss",
@@ -104,6 +128,7 @@
       "accommodation": "Inkvartering",
       "id06Note": "ID06 kan ordnas av LinkableWork vid anställning",
       "locationCertsTitle": "Platsspecifika certifikat",
+      "salary": "Lön",
       "items": {
         "groundworks": {
           "title": "Markarbete",
@@ -112,6 +137,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "250–350 kr/tim",
           "locationCerts": [],
           "description": "Grundarbete, schaktning och platsförberedelse för nya bostads- och kommersiella projekt i Norrbotten och Västerbotten. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
         },
@@ -122,6 +148,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
+          "salary": "275–375 kr/tim",
           "locationCerts": [],
           "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
         },
@@ -132,6 +159,7 @@
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "300–400 kr/tim",
           "locationCerts": [],
           "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Giltigt maskinförarbevis och Arbete på väg (APV) krävs. Konkurrenskraftiga timlöner."
         },
@@ -142,6 +170,7 @@
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "250–350 kr/tim",
           "locationCerts": [],
           "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
         },
@@ -152,6 +181,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "20 maj 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "260–360 kr/tim",
           "locationCerts": [],
           "description": "Blandad bebyggelse i centrala Umeå med kommersiella och bostadsdelar. Grundarbete, betongkonstruktioner och inredningsarbeten. Erfarna team med ID06 och säkerhetsutbildning på bygget önskas."
         },
@@ -162,6 +192,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "275–375 kr/tim",
           "locationCerts": [],
           "description": "Utbyggnad av Luleå hamn med nya kajer, lastutrymmen och järnvägsanslutning. Tunga schaktarbeten, pålning och asfaltering. Maskinförare med APV-certifiering behövs."
         },
@@ -172,6 +203,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "250–350 kr/tim",
           "locationCerts": [],
           "description": "Nya utbildningsbyggnader och omgivande infrastruktur vid Skellefteå campus. Markarbete, grundläggning och platsförberedelse för Fas 1 av byggnationen med omedelbar start."
         },
@@ -182,6 +214,7 @@
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
+          "salary": "240–340 kr/tim",
           "locationCerts": [],
           "description": "Industriområdesutveckling i utkanten av Piteå. Nya vägnät, ledningsdragning och grundläggning för kommersiella byggnader. Idealisk för team med erfarenhet av infrastruktur och markarbete."
         }
@@ -354,9 +387,12 @@
       },
       "contact": {
         "title": "Kontakt",
-        "jorgen": "Jörgen",
-        "jorgenEmail": "jörgen@gmail.com",
-        "jorgenPhone": "070-xxx xx xx"
+        "thomas": "Thomas",
+        "thomasEmail": "thomas@linkable.se",
+        "thomasPhone": "070-xxx xx xx",
+        "christer": "Christer",
+        "christerEmail": "christer@linkable.se",
+        "christerPhone": "070-xxx xx xx"
       },
       "rights": "Med ensamrätt.",
       "privacy": "Integritetspolicy",

@@ -30,22 +30,43 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           </div>
 
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Primary Contact - Jörgen */}
+            {/* Thomas */}
             <Card className="border-amber-500/20 bg-card shadow-lg shadow-amber-500/5">
               <CardContent className="p-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500 text-white shadow-md shadow-amber-500/20">
                   <Mail className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 text-xl font-bold">{t("Footer.contact.jorgen")}</h3>
+                <h3 className="mt-6 text-xl font-bold">{t("Footer.contact.thomas")}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Recruitment & Partnerships</p>
                 <div className="mt-6 space-y-4">
-                  <a href={`mailto:${t("Footer.contact.jorgenEmail")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                  <a href={`mailto:${t("Footer.contact.thomasEmail")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
                     <Mail className="h-4 w-4 text-amber-500" />
-                    {t("Footer.contact.jorgenEmail")}
+                    {t("Footer.contact.thomasEmail")}
                   </a>
-                  <a href={`tel:${t("Footer.contact.jorgenPhone").replace(/\s/g, "")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                  <a href={`tel:${t("Footer.contact.thomasPhone").replace(/\s/g, "")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
                     <Phone className="h-4 w-4 text-amber-500" />
-                    {t("Footer.contact.jorgenPhone")}
+                    {t("Footer.contact.thomasPhone")}
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Christer */}
+            <Card className="border-amber-500/20 bg-card shadow-lg shadow-amber-500/5">
+              <CardContent className="p-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500 text-white shadow-md shadow-amber-500/20">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <h3 className="mt-6 text-xl font-bold">{t("Footer.contact.christer")}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Recruitment & Partnerships</p>
+                <div className="mt-6 space-y-4">
+                  <a href={`mailto:${t("Footer.contact.christerEmail")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                    <Mail className="h-4 w-4 text-amber-500" />
+                    {t("Footer.contact.christerEmail")}
+                  </a>
+                  <a href={`tel:${t("Footer.contact.christerPhone").replace(/\s/g, "")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                    <Phone className="h-4 w-4 text-amber-500" />
+                    {t("Footer.contact.christerPhone")}
                   </a>
                 </div>
               </CardContent>
