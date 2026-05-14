@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HardHat, ArrowRight, Menu, X, Phone, Mail } from "lucide-react";
+import { HardHat, ArrowRight, Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, usePathname, useRouter } from "@/routing";
 import { useLocale, useTranslations } from "next-intl";
 
@@ -13,14 +13,25 @@ function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [extraOpen, setExtraOpen] = useState(false);
+  const extraRef = useRef<HTMLDivElement>(null);
 
-  const links = [
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (extraRef.current && !extraRef.current.contains(e.target as Node)) {
+        setExtraOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const extraLinks = [
     { label: t("Navbar.projects"), href: "/projects" as const },
     { label: t("Navbar.howItWorks"), href: "/how-it-works" as const },
     { label: t("Navbar.requestWorkers"), href: "/request-workers" as const },
     { label: t("Navbar.requestJob"), href: "/request-job" as const },
     { label: t("Navbar.whyLinkable"), href: "/why-linkable" as const },
-    { label: t("Navbar.contact"), href: "/contact" as const },
   ];
 
   const isActive = (href: string) => {
@@ -51,19 +62,62 @@ function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`relative text-sm font-medium transition-colors hover:text-foreground ${
-                isActive(l.href)
-                  ? "text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-amber-500"
-                  : "text-muted-foreground"
+          <Link
+            href="/projects"
+            className={`relative text-sm font-medium transition-colors hover:text-foreground ${
+              isActive("/projects")
+                ? "text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-amber-500"
+                : "text-muted-foreground"
+            }`}
+          >
+            {t("Navbar.anlaggningProjects")}
+          </Link>
+          <Link
+            href="/projects#apply"
+            className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {t("Navbar.applyAnlaggning")}
+          </Link>
+
+          <div ref={extraRef} className="relative">
+            <button
+              onClick={() => setExtraOpen(!extraOpen)}
+              className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-foreground ${
+                extraOpen ? "text-foreground" : "text-muted-foreground"
               }`}
             >
-              {l.label}
-            </Link>
-          ))}
+              {t("Navbar.extra")}
+              <ChevronDown className={`h-4 w-4 transition-transform ${extraOpen ? "rotate-180" : ""}`} />
+            </button>
+            {extraOpen && (
+              <div className="absolute left-0 top-full mt-2 w-56 rounded-xl border border-border/60 bg-background p-2 shadow-xl">
+                {extraLinks.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setExtraOpen(false)}
+                    className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted ${
+                      isActive(l.href) ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/contact"
+            className={`relative text-sm font-medium transition-colors hover:text-foreground ${
+              isActive("/contact")
+                ? "text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-amber-500"
+                : "text-muted-foreground"
+            }`}
+          >
+            {t("Navbar.contact")}
+          </Link>
+
           <button
             onClick={toggleLocale}
             className="flex h-8 w-8 items-center justify-center rounded-full border border-border/60 text-xs font-bold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
@@ -106,18 +160,54 @@ function Navbar() {
           className="border-t border-border/40 bg-background md:hidden"
         >
           <div className="flex flex-col gap-4 px-4 py-6">
-            {links.map((l) => (
+            <div className="pb-2">
               <Link
-                key={l.href}
-                href={l.href}
+                href="/projects"
                 onClick={() => setMobileOpen(false)}
-                className={`text-sm font-medium transition-colors hover:text-foreground ${
-                  isActive(l.href) ? "text-foreground font-semibold" : "text-muted-foreground"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
+                  isActive("/projects") ? "text-foreground font-semibold" : "text-muted-foreground"
                 }`}
               >
-                {l.label}
+                <HardHat className="h-4 w-4 text-amber-500" />
+                {t("Navbar.anlaggningProjects")}
               </Link>
-            ))}
+              <Link
+                href="/projects#apply"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                <ArrowRight className="h-4 w-4 text-amber-500" />
+                {t("Navbar.applyAnlaggning")}
+              </Link>
+            </div>
+
+            <div className="border-t border-border/40 pt-4">
+              <p className="mb-2 text-xs font-semibold tracking-wider text-muted-foreground uppercase">
+                {t("Navbar.extra")}
+              </p>
+              {extraLinks.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`text-sm font-medium transition-colors hover:text-foreground ${
+                    isActive(l.href) ? "text-foreground font-semibold" : "text-muted-foreground"
+                  }`}
+                >
+                  {l.label}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className={`text-sm font-medium transition-colors hover:text-foreground ${
+                  isActive("/contact") ? "text-foreground font-semibold" : "text-muted-foreground"
+                }`}
+              >
+                {t("Navbar.contact")}
+              </Link>
+            </div>
+
             <Link href="/projects#apply" onClick={() => setMobileOpen(false)}>
               <Button className="w-full rounded-full bg-amber-500 font-semibold text-white hover:bg-amber-600">
                 {t("Navbar.applyNow")}

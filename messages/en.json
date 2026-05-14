@@ -34,10 +34,28 @@
         "phone": "Phone",
         "company": "Company (optional)",
         "jobType": "Type of Work",
-        "jobTypeOptions": ["Foundations & Groundwork", "Pool & Garden", "Renovation & Remodeling", "New Construction", "Infrastructure & Road", "Industrial & Warehouse", "Roof & Facade", "Electrical & Plumbing", "Masonry & Concrete", "Other"],
+        "jobTypeOptions": [
+          "Foundations & Groundwork",
+          "Pool & Garden",
+          "Renovation & Remodeling",
+          "New Construction",
+          "Infrastructure & Road",
+          "Industrial & Warehouse",
+          "Roof & Facade",
+          "Electrical & Plumbing",
+          "Masonry & Concrete",
+          "Other"
+        ],
         "location": "Work Location",
         "budget": "Estimated Budget (optional)",
-        "budgetOptions": ["Under 50,000 SEK", "50,000–200,000 SEK", "200,000–500,000 SEK", "500,000–1,000,000 SEK", "Over 1,000,000 SEK", "Not Sure"],
+        "budgetOptions": [
+          "Under 50,000 SEK",
+          "50,000–200,000 SEK",
+          "200,000–500,000 SEK",
+          "500,000–1,000,000 SEK",
+          "Over 1,000,000 SEK",
+          "Not Sure"
+        ],
         "timeline": "Desired Timeline",
         "descriptionLabel": "Describe the Work Needed",
         "descriptionPlaceholder": "Tell us as much as possible about what needs to be done...",
@@ -88,6 +106,10 @@
       "howItWorks": "How It Works",
       "whyLinkable": "Why LinkableWork?",
       "guide": "Cert Guide",
+      "extra": "Extra",
+      "anlaggning": "Anläggning",
+      "anlaggningProjects": "Anläggning projects",
+      "applyAnlaggning": "Apply for anläggning",
       "contact": "Contact",
       "applyNow": "Apply Now",
       "toggleMenu": "Toggle menu"
@@ -174,8 +196,14 @@
       "items": {
         "groundworks": {
           "title": "Groundworks",
-          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
-          "locations": ["Multiple Locations"],
+          "roles": [
+            "Anlaggare",
+            "Maskinforare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Multiple Locations"
+          ],
           "startDate": "June 2026",
           "applyDeadline": "May 30, 2026",
           "accommodation": "Barracks / hotel included",
@@ -185,8 +213,13 @@
         },
         "infrastructure": {
           "title": "Infrastructure",
-          "roles": ["Maskinforare", "Arbetslag"],
-          "locations": ["Multiple Locations"],
+          "roles": [
+            "Maskinforare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Multiple Locations"
+          ],
           "startDate": "Aug 2026",
           "applyDeadline": "June 15, 2026",
           "accommodation": "",
@@ -196,8 +229,12 @@
         },
         "specialized": {
           "title": "Specialized Machine Work",
-          "roles": ["Maskinforare"],
-          "locations": ["Multiple Locations"],
+          "roles": [
+            "Maskinforare"
+          ],
+          "locations": [
+            "Multiple Locations"
+          ],
           "startDate": "July 2026",
           "applyDeadline": "June 1, 2026",
           "accommodation": "Barracks / hotel included",
@@ -207,8 +244,13 @@
         },
         "building": {
           "title": "Building & Construction",
-          "roles": ["Anlaggare", "Arbetslag"],
-          "locations": ["Multiple Locations"],
+          "roles": [
+            "Anlaggare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Multiple Locations"
+          ],
           "startDate": "May 2026",
           "applyDeadline": "April 30, 2026",
           "accommodation": "Barracks / hotel included",
@@ -218,8 +260,14 @@
         },
         "umea-centrum": {
           "title": "Umea City Centre Development",
-          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
-          "locations": ["Umea"],
+          "roles": [
+            "Anlaggare",
+            "Maskinforare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Umea"
+          ],
           "startDate": "June 2026",
           "applyDeadline": "May 20, 2026",
           "accommodation": "Barracks / hotel included",
@@ -229,8 +277,13 @@
         },
         "lulea-hamn": {
           "title": "Lulea Harbour Expansion",
-          "roles": ["Maskinforare", "Arbetslag"],
-          "locations": ["Lulea"],
+          "roles": [
+            "Maskinforare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Lulea"
+          ],
           "startDate": "Aug 2026",
           "applyDeadline": "July 1, 2026",
           "accommodation": "Barracks / hotel included",
@@ -240,8 +293,14 @@
         },
         "skelleftea-campus": {
           "title": "Skelleftea Campus Area",
-          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
-          "locations": ["Skelleftea"],
+          "roles": [
+            "Anlaggare",
+            "Maskinforare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Skelleftea"
+          ],
           "startDate": "Sep 2026",
           "applyDeadline": "Aug 10, 2026",
           "accommodation": "Barracks / hotel included",
@@ -251,8 +310,13 @@
         },
         "pitea-industri": {
           "title": "Pitea Industrial Park",
-          "roles": ["Anlaggare", "Arbetslag"],
-          "locations": ["Pitea"],
+          "roles": [
+            "Anlaggare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Pitea"
+          ],
           "startDate": "Oct 2026",
           "applyDeadline": "Sep 1, 2026",
           "accommodation": "Barracks / hotel included",
@@ -472,20 +536,16 @@
         "machine": "Machine Operator License",
         "ftax": "F-tax Status",
         "esa": "ESA (Electrical Safety Instructions)",
-        "kvartsdamm": "Quartz Dust (Kvartsamm)",
-        "gwo": "GWO (Global Wind Organisation)",
-        "hlrHjartstartare": "CPR with Defibrillator",
-        "hetaBrandvakt": "Hot Works / Fire Watch",
-        "sakraLyftLastkoppling": "Safe Lifting / Load Coupling",
-        "svetsLodning": "Welding Certificate / Soldering",
-        "asbestPcb": "Asbestos / PCB",
-        "fallskyddRaddning": "Fall Protection & Rescue"
+        "lodning": "Soldering (HVAC/refrigeration)"
       }
     },
     "Guide": {
+      "badge": "Guide",
       "title": "Guide: Swedish Professional Certificates & Trade Licenses",
       "description": "An overview of the most common professional certificates and licenses in the Swedish construction and civil engineering industry, organized by category and issuing body.",
+      "tipBadge": "Tip",
       "tip": "At LinkableWork you can easily upload all your trade certificates and licenses digitally directly in the portal. Enter your validity periods and we will remind you well before a certificate expires. Have a certificate number from BYN or TYA? Include it in your application for faster verification.\n\nDo you have competence from the Mining or Wind Power industry? Make sure to mention this as it is in high demand in our projects in northern Sweden.",
+      "showFullGuide": "View full guide",
       "sections": {
         "byn": {
           "title": "1. BYN & Other Trade Boards",
@@ -715,6 +775,117 @@
         }
       }
     },
+    "LinkCollection": {
+      "badge": "Links",
+      "title": "Link Collection: Authorities & Certification",
+      "description": "A complete list of websites for verification of qualifications and booking of training.",
+      "groups": {
+        "myndigheter": {
+          "title": "Authorities",
+          "links": [
+            [
+              "Arbetsmiljöverket (Work Environment Authority)",
+              "https://www.av.se"
+            ],
+            [
+              "Elsäkerhetsverket (Electrical Safety Authority)",
+              "https://www.elsakerhetsverket.se"
+            ],
+            [
+              "Transportstyrelsen (Swedish Transport Agency)",
+              "https://www.transportstyrelsen.se"
+            ],
+            [
+              "Trafikverket (Swedish Transport Administration)",
+              "https://www.trafikverket.se"
+            ]
+          ]
+        },
+        "yrkesnamnder": {
+          "title": "Trade Boards (Trade Certificates)",
+          "links": [
+            [
+              "BYN (Construction Industry's Trade Board)",
+              "https://www.byn.se"
+            ],
+            [
+              "TYA (Transport Trade Board)",
+              "https://www.tya.se"
+            ],
+            [
+              "MYN (Painting Trade Board)",
+              "https://www.maleryrkesnamnd.se"
+            ],
+            [
+              "PVF (Sheet Metal & Ventilation)",
+              "https://www.pvf.se"
+            ],
+            [
+              "TSY (Gardening Trade Board)",
+              "https://www.tsy.se"
+            ]
+          ]
+        },
+        "sakerhet": {
+          "title": "Safety & Industry Certificates",
+          "links": [
+            [
+              "ID06",
+              "https://id06.se"
+            ],
+            [
+              "SSG (Standard Solutions Group)",
+              "https://www.ssg.se"
+            ],
+            [
+              "Brandskyddsföreningen (Hot Works)",
+              "https://www.brandskyddsforeningen.se"
+            ],
+            [
+              "Säker Vatten (Safe Water)",
+              "https://sakervatten.se"
+            ],
+            [
+              "GVK (Safe Wet Rooms)",
+              "https://www.gvk.se"
+            ],
+            [
+              "Byggföretagen (Safe Construction Training)",
+              "https://www.byggforetagen.se"
+            ],
+            [
+              "Energiföretagen (ESA/EBR)",
+              "https://www.energiforetagen.se"
+            ],
+            [
+              "GWO (Global Wind Safety)",
+              "https://www.globalwindsafety.org"
+            ],
+            [
+              "Säkerhetsparken (Safety Park)",
+              "https://Byggsakerhetsparken.se"
+            ]
+          ]
+        },
+        "ovrigt": {
+          "title": "Other References",
+          "links": [
+            [
+              "Incert (Refrigeration/F-gas)",
+              "https://www.incert.se"
+            ],
+            [
+              "SSF (Security Association/Alarms)",
+              "https://www.stoldskyddsforeningen.se"
+            ],
+            [
+              "Säker Skog (Safe Forestry)",
+              "https://sakerskog.se"
+            ]
+          ]
+        }
+      }
+    },
     "CTA": {
       "title": "Ready to get started?",
       "description": "Whether you are a private individual, employee, machine operator, subcontractor, or a work team looking for the next project — register today and let us connect you with opportunities across Sweden.",
@@ -730,11 +901,59 @@
       "phone": "Phone",
       "company": "Company (optional)",
       "type": "I apply as",
-      "typeOptions": ["Subcontractor", "Individual with F-tax", "Private individual without F-tax"],
+      "typeOptions": [
+        "Subcontractor",
+        "Individual with F-tax",
+        "Private individual without F-tax"
+      ],
       "roles": "Roles I'm interested in",
-      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag", "Träarbetare (Snickare)", "Betongarbetare", "Murare", "Plattsättare", "Golvläggare", "Takmontör", "Målare", "Byggnadsplåtslagare", "Ventilationsplåtslagare", "VVS-montör", "Elektriker", "Ställningsbyggare", "Håltagare", "Svetsare", "Bergarbetare", "Stenmontör", "Beläggningsarbetare", "Anläggningsdykare", "Trädgårdsanläggare", "Brandskyddsmålare", "Kyl- och värmepumpstekniker", "Larmtekniker", "Isoleringsmontör", "Ventilationsmontör", "Platschef", "Arbetsledare", "Mättekniker", "KMA-samordnare", "Projektledare / Kalkylator"],
+      "roleOptions": [
+        "Anläggare",
+        "Maskinförare",
+        "Arbetslag",
+        "Träarbetare (Snickare)",
+        "Betongarbetare",
+        "VVS-montör",
+        "Elektriker",
+        "Ställningsbyggare",
+        "Håltagare",
+        "Svetsare",
+        "Bergarbetare",
+        "Stenmontör",
+        "Beläggningsarbetare",
+        "Anläggningsdykare",
+        "Trädgårdsanläggare",
+        "Brandskyddsmålare",
+        "Platschef",
+        "Arbetsledare",
+        "Mättekniker",
+        "KMA-samordnare",
+        "Projektledare / Kalkylator"
+      ],
       "locations": "Locations",
-      "locationOptions": ["Blekinge län", "Dalarnas län", "Gotlands län", "Gävleborgs län", "Hallands län", "Jämtlands län", "Jönköpings län", "Kalmar län", "Kronobergs län", "Norrbottens län", "Skåne län", "Stockholms län", "Södermanlands län", "Uppsala län", "Värmlands län", "Västerbottens län", "Västernorrlands län", "Västmanlands län", "Västra Götalands län", "Örebro län", "Östergötlands län"],
+      "locationOptions": [
+        "Blekinge län",
+        "Dalarnas län",
+        "Gotlands län",
+        "Gävleborgs län",
+        "Hallands län",
+        "Jämtlands län",
+        "Jönköpings län",
+        "Kalmar län",
+        "Kronobergs län",
+        "Norrbottens län",
+        "Skåne län",
+        "Stockholms län",
+        "Södermanlands län",
+        "Uppsala län",
+        "Värmlands län",
+        "Västerbottens län",
+        "Västernorrlands län",
+        "Västmanlands län",
+        "Västra Götalands län",
+        "Örebro län",
+        "Östergötlands län"
+      ],
       "certifications": "Certifications I hold",
       "certOptions": [
         "ID06",
@@ -760,13 +979,10 @@
         "Asbestos remediation (Asbestsanering)",
         "PCB remediation (PCB-sanering)",
         "Welding certificate ISO 9606-1 (Svetscertifikat)",
-        "Epoxy/Isocyanates (Härdplaster)",
         "Mobile work platforms (Skylift/Sax)",
         "Nail gun / Powder-actuated tool (Bultpistol)",
         "Fall protection training (Fallskyddsutbildning)",
         "Safe snow removal (Skotta Säkert)",
-        "Soldering certificate (Lödning VVS/kyla)",
-        "Load coupling (Lastkoppling)",
         "Chainsaw license Level A (Motorsågskörkort A)",
         "Chainsaw license Level B (Motorsågskörkort B)",
         "Chainsaw license Level C (Motorsågskörkort C)",
@@ -778,14 +994,7 @@
         "BAS-P Railway (BAS-P Järnväg)",
         "BAS-U Railway (BAS-U Järnväg)",
         "ESA (Electrical Safety Instructions)",
-        "Kvartsdamm (Quartz dust training)",
-        "GWO (Global Wind Organisation)",
         "HLR med Hjärtstartare (CPR with defibrillator)",
-        "Heta Arbeten / Brandvakt (Hot works / Fire watch)",
-        "Säkra Lyft / Lastkoppling (Safe lifting / Load coupling)",
-        "Svetscertifikat / Lödning (Welding / Soldering)",
-        "Asbest / PCB (Asbestos / PCB remediation)",
-        "Fallskydd & Räddning (Fall protection & rescue)",
         "BAS-P / BAS-U Järnväg (BAS-P / BAS-U Railway)"
       ],
       "machineLicenses": "Machine operator licenses",
@@ -805,7 +1014,6 @@
         "Pålmaskin (Pile driver)",
         "Spontmaskin (Sheet piling rig)",
         "Sopmaskin (Sweeper)",
-        "Traverskran (Overhead crane)",
         "Sugbil / Spolbil (Suction / Jet vacuum truck)",
         "Kranbil (Crane truck)"
       ],
@@ -828,31 +1036,18 @@
         "Väg- och anläggningsarbetare (Road worker)",
         "Betongarbetare (Concrete worker)",
         "Träarbetare (Carpenter/Joiner)",
-        "Murare (Bricklayer)",
-        "Plattsättare (Tiler)",
-        "Golvläggare (Floor layer)",
         "Ställningsbyggare (Scaffolder)",
-        "Takmontör (Roofer)",
-        "Bergarbetare (Rock worker)",
         "Beläggningsarbetare (Paving worker)",
         "Håltagare (Core driller)",
         "Stenmontör (Stone installer)",
-        "Målare (Painter)",
-        "Byggnadsplåtslagare (Sheet metal worker)",
-        "Ventilationsplåtslagare (Ventilation sheet metal worker)",
+        "Bergarbetare (Rock worker)",
         "Anläggningsdykare (Civil engineering diver)",
         "Trädgårdsanläggare (Landscape gardener)",
         "VVS-montör (HVAC fitter)",
         "Elektriker (Electrician)",
-        "Kyl- och värmepumpstekniker (Refrigeration technician)",
-        "Larmtekniker (Alarm technician SSF)",
-        "Isoleringsmontör (Insulation fitter)",
-        "Ventilationsmontör (Ventilation fitter)",
         "Brandskyddsmålare (Fire protection painter)",
-        "Träarbetare - Prefab (Carpenter - Prefab)",
         "Rörläggare VA (Pipe layer)",
-        "Grov- & Rivningsarbetare (Demolition & earthwork laborer)",
-        "Solcellsmontör (Solar panel installer)"
+        "Grov- & Rivningsarbetare (Demolition & earthwork laborer)"
       ],
       "applyingFor": "Applying for",
       "cv": "CV / Experience",

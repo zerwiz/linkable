@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight, Shield, Clock, MapPin, FileCheck, Users, HardHat, Truck, Wrench,
-  ChevronRight, CheckCircle2, Camera,
+  ChevronRight, CheckCircle2, Camera, ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -829,7 +829,7 @@ export function CertificationGuideSection() {
             variant="secondary"
             className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
           >
-            Guide
+            {t("Guide.badge")}
           </Badge>
           <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t("Guide.title")}
@@ -843,10 +843,12 @@ export function CertificationGuideSection() {
           {sections.map((section, si) => (
             <motion.div
               key={section.key}
+              id={section.key}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: si * 0.08 }}
+              className="opacity-0"
             >
               <div className="mb-6">
                 <h2 className="text-2xl font-bold tracking-tight text-foreground">
@@ -865,7 +867,7 @@ export function CertificationGuideSection() {
                   const items = t.raw(`Guide.sections.${section.key}.groups.${group}.items`) as string[];
 
                   return (
-                    <div key={group}>
+                    <div key={group} id={`${section.key}-${group}`}>
                       {groupTitle && (
                         <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                           <span className="inline-block h-2 w-2 rounded-full bg-amber-500" />
@@ -883,7 +885,7 @@ export function CertificationGuideSection() {
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true, margin: "-40px" }}
                               transition={{ duration: 0.3, delay: ii * 0.04 }}
-                              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4 transition-all hover:border-amber-300/60 hover:shadow-sm"
+                              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4 transition-all hover:border-amber-300/60 hover:shadow-sm opacity-0"
                             >
                               <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
                               <div>
@@ -911,11 +913,11 @@ export function CertificationGuideSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.4 }}
-          className="mt-14 rounded-xl border border-amber-200 bg-amber-50 p-6"
+          className="mt-14 rounded-xl border border-amber-200 bg-amber-50 p-6 opacity-0"
         >
           <h3 className="text-base font-semibold text-amber-800 flex items-center gap-2">
             <span className="text-lg">💡</span>
-            Tips
+            {t("Guide.tipBadge")}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-amber-700">
             {t("Guide.tip")}
@@ -1235,7 +1237,7 @@ export function CertificationGuideBanner() {
             variant="secondary"
             className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-400"
           >
-            Guide
+            {t("Guide.badge")}
           </Badge>
           <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
             {t("Guide.title")}
@@ -1246,7 +1248,7 @@ export function CertificationGuideBanner() {
           <div className="mt-8">
             <Link href="/guide">
               <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
-                Se hela guiden
+                {t("Guide.showFullGuide")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -1292,6 +1294,85 @@ export function ApplySection({ selectedProjectId, selectedRole }: { selectedProj
             </CardContent>
           </Card>
         </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Link Collection                                                    */
+/* ------------------------------------------------------------------ */
+export function LinkCollectionSection() {
+  const t = useTranslations("Index");
+  const groupKeys = ["myndigheter", "yrkesnamnder", "sakerhet", "ovrigt"] as const;
+
+  return (
+    <section className="bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <Badge
+            variant="secondary"
+            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
+          >
+            {t("LinkCollection.badge")}
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {t("LinkCollection.title")}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            {t("LinkCollection.description")}
+          </p>
+        </motion.div>
+
+        <div className="mt-14 space-y-12">
+          {groupKeys.map((groupKey, gi) => {
+            const group = t.raw(`LinkCollection.groups.${groupKey}`) as {
+              title: string;
+              links: [string, string][];
+            };
+
+            return (
+              <motion.div
+                key={groupKey}
+                id={`links-${groupKey}`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: gi * 0.08 }}
+                className="opacity-0"
+              >
+                <h3 className="text-xl font-bold tracking-tight text-foreground mb-5 flex items-center gap-2">
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-amber-500" />
+                  {group.title}
+                </h3>
+                <div className="grid gap-3">
+                  {group.links.map(([name, url]) => (
+                    <a
+                      key={url}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 rounded-xl border border-border/60 bg-card p-4 transition-all hover:border-amber-300/60 hover:shadow-sm group"
+                    >
+                      <ExternalLink className="h-5 w-5 shrink-0 text-amber-500" />
+                      <div className="flex-1 min-w-0">
+                        <span className="font-medium text-foreground">{name}</span>
+                        <span className="block text-xs text-muted-foreground truncate">{url}</span>
+                      </div>
+                      <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1" />
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
