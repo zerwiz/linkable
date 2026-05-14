@@ -81,6 +81,7 @@ function Navbar() {
 
           <div ref={extraRef} className="relative">
             <button
+              type="button"
               onClick={() => setExtraOpen(!extraOpen)}
               className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-foreground ${
                 extraOpen ? "text-foreground" : "text-muted-foreground"
@@ -119,6 +120,7 @@ function Navbar() {
           </Link>
 
           <button
+            type="button"
             onClick={toggleLocale}
             className="flex h-8 w-8 items-center justify-center rounded-full border border-border/60 text-xs font-bold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             title={locale === "en" ? "Byt till svenska" : "Switch to English"}
@@ -138,12 +140,14 @@ function Navbar() {
 
         <div className="flex items-center gap-4 md:hidden">
           <button
+            type="button"
             onClick={toggleLocale}
             className="flex h-8 w-8 items-center justify-center rounded-full border border-border/60 text-xs font-bold text-muted-foreground"
           >
             {locale === "en" ? "SV" : "EN"}
           </button>
           <button
+            type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={t("Navbar.toggleMenu")}
           >
@@ -335,15 +339,15 @@ function Footer() {
             &copy; {new Date().getFullYear()} LinkableWork. {t("Footer.rights")}
           </p>
           <div className="flex gap-6 text-xs text-muted-foreground">
-            <a href="#" className="transition-colors hover:text-foreground">
+            <Link href="/" className="transition-colors hover:text-foreground">
               {t("Footer.privacy")}
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
+            </Link>
+            <Link href="/" className="transition-colors hover:text-foreground">
               {t("Footer.terms")}
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
+            </Link>
+            <Link href="/" className="transition-colors hover:text-foreground">
               {t("Footer.cookie")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
