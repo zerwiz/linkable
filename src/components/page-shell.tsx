@@ -191,22 +191,38 @@ function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2 font-medium text-foreground">
                 <Link href="/contact" className="hover:text-amber-600 transition-colors">
-                  {t("Footer.contact.jorgen")}
+                  {t("Footer.contact.thomas")}
                 </Link>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href={`mailto:${t("Footer.contact.jorgenEmail")}`} className="transition-colors hover:text-foreground">
-                  {t("Footer.contact.jorgenEmail")}
+                <a href={`mailto:${t("Footer.contact.thomasEmail")}`} className="transition-colors hover:text-foreground">
+                  {t("Footer.contact.thomasEmail")}
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href={`tel:${t("Footer.contact.thomasPhone").replace(/\s/g, "")}`} className="transition-colors hover:text-foreground">
+                  {t("Footer.contact.thomasPhone")}
+                </a>
+              </li>
+              <li className="flex items-center gap-2 pt-1 font-medium text-foreground">
+                <Link href="/contact" className="hover:text-amber-600 transition-colors">
+                  {t("Footer.contact.christer")}
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                <a href={`mailto:${t("Footer.contact.christerEmail")}`} className="transition-colors hover:text-foreground">
+                  {t("Footer.contact.christerEmail")}
                 </a>
               </li>
               <li className="flex items-center gap-2 pb-2">
                 <Phone className="h-4 w-4" />
-                <a href={`tel:${t("Footer.contact.jorgenPhone").replace(/\s/g, "")}`} className="transition-colors hover:text-foreground">
-                  {t("Footer.contact.jorgenPhone")}
+                <a href={`tel:${t("Footer.contact.christerPhone").replace(/\s/g, "")}`} className="transition-colors hover:text-foreground">
+                  {t("Footer.contact.christerPhone")}
                 </a>
               </li>
-              <li className="border-t border-border/40 pt-2 text-xs opacity-50">General Support</li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:info@linkable.se" className="transition-colors hover:text-foreground">
