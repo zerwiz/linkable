@@ -86,7 +86,8 @@
       "requestWorkers": "Need Workers?",
       "requestJob": "Need a Job Done?",
       "howItWorks": "How It Works",
-      "whyLinkable": "Why LinkableWork",
+      "whyLinkable": "Why LinkableWork?",
+      "guide": "Cert Guide",
       "contact": "Contact",
       "applyNow": "Apply Now",
       "toggleMenu": "Toggle menu"
@@ -466,6 +467,165 @@
         "ftax": "F-tax Status"
       }
     },
+    "Guide": {
+      "title": "Guide: Swedish Professional Certificates & Trade Licenses",
+      "description": "An overview of the most common professional certificates and licenses in the Swedish construction and civil engineering industry, organized by category and issuing body.",
+      "tip": "When applying via LinkableWork you can upload digital copies of your trade certificates and licenses directly in the portal. Have a certificate number from BYN or TYA? Include it in your application for faster verification.",
+      "sections": {
+        "byn": {
+          "title": "1. BYN & Other Trade Boards",
+          "subtitle": "These usually require completed apprenticeship and a passed theoretical exam.",
+          "groups": {
+            "tra": {
+              "title": "Wood, Concrete, Masonry & Interior",
+              "items": [
+                "Carpenter: Trade certificate for house building and wood construction.",
+                "Concrete Worker: Includes casting, reinforcement and grinding.",
+                "Mason: Trade certificate for bricklaying and plastering.",
+                "Tiler: Trade certificate for wall and floor tiles.",
+                "Floor Layer: Trade certificate for flooring, parquet and grinding.",
+                "Roof Fitter: Specialist in waterproofing and roof materials.",
+                "Painter (MYN): Trade certificate for interior and exterior painting."
+              ]
+            },
+            "plåt": {
+              "title": "Sheet Metal & Ventilation (PVF)",
+              "items": [
+                "Construction Sheet Metal Worker: Roof and facade sheet metal work.",
+                "Ventilation Sheet Metal Worker: Manufacturing and installation of ventilation systems."
+              ]
+            },
+            "mark": {
+              "title": "Ground & Civil Works",
+              "items": [
+                "Road and Civil Worker: Basic competence for infrastructure, pipe laying and site preparation.",
+                "Civil Engineering Diver: Specialist for heavy underwater work.",
+                "Stone Installer: Specialization in curbstones, paving stones.",
+                "Paving Worker: Asphalt work and surface layers.",
+                "Rock Worker: Drilling and blasting (often requires blasting certificate).",
+                "Landscape Gardener (TSY): Specialist in green areas and planting."
+              ]
+            }
+          }
+        },
+        "maskin": {
+          "title": "2. Machine & Crane (BYN / TYA)",
+          "subtitle": "Machine operators require specific trade certificates for each machine type.",
+          "groups": {
+            "grav": {
+              "title": "Excavation & Earthmoving",
+              "items": [
+                "Excavator: Trade certificate for tracked and wheeled excavators.",
+                "Backhoe Loader: Combination machine for excavation and loading.",
+                "Trencher: For heavy trenching and terrain grading.",
+                "Motor Grader: Advanced machine for fine grading of road surfaces.",
+                "Dumper: For transporting materials in terrain.",
+                "Roller/Compactor: For compaction of soil, gravel or asphalt."
+              ]
+            },
+            "lyft": {
+              "title": "Lifting & Special Machines",
+              "items": [
+                "Wheel Loader: Trade certificate for construction and material handling.",
+                "Telehandler: For high lifts and material handling.",
+                "Mobile Crane / Tower Crane: Requires extensive training and crane operator certificate.",
+                "Concrete Pump Operator: Machine for precision placement of concrete.",
+                "Asphalt Paver: Specialist machine for road paving.",
+                "Pile Driver / Sheet Piling Rig: Critical role for foundations."
+              ]
+            }
+          }
+        },
+        "installation": {
+          "title": "3. Installation, Electrical & HVAC",
+          "subtitle": "These are often legal requirements or insurance company demands.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "HVAC Fitter: Trade license via VVS-YN and 'Safe Water' authorization.",
+                "Electrician: Authorization via the Swedish Electrical Safety Authority.",
+                "Refrigeration & Heat Pump Technician (Incert): Required for work with refrigerants.",
+                "Alarm Technician (SSF): Certification for burglar alarms and security systems.",
+                "Insulation Fitter: Technical insulation of pipes and ventilation.",
+                "Ventilation Fitter: Often linked to OVK certification."
+              ]
+            }
+          }
+        },
+        "special": {
+          "title": "4. Specialties & Environment",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Welding Certificate (ISO 9606-1): Required for load-bearing steel structures.",
+                "Asbestos Remediation: Requires special training approved by the Work Environment Authority.",
+                "PCB Remediation: Specialist competence for hazardous waste handling.",
+                "Epoxy/Isocyanates: Training required for chemical risk work.",
+                "Scaffolder: Divided into levels — Special (over 9m), General (2–9m).",
+                "Core Driller: Specialists in drilling and sawing concrete.",
+                "Fire Protection Painter: Certification for applying fire-retardant paint."
+              ]
+            }
+          }
+        },
+        "certs": {
+          "title": "5. Important Industry Certificates & Courses",
+          "subtitle": "These require regular renewal (usually every 5 years).",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "ID06: Mandatory ID system for construction sites.",
+                "Safe Construction Training: Online safety course.",
+                "Work on Road (APV): Levels 1.1–3 depending on responsibility and vehicle type.",
+                "Hot Works: Certificate for fire hazardous work.",
+                "BAS P / BAS U: Construction environment coordinator.",
+                "Mobile Work Platforms (Cherry Picker/Scissor Lift): Training per SS-ISO 18878.",
+                "Nail Gun: Training for powder-actuated tools.",
+                "CPR: Often with focus on construction sites.",
+                "Safe Lifting / Load Coupling: Required for all who attach loads to cranes.",
+                "ADR-S 1.3: Transport of dangerous goods.",
+                "Stockholm City Course: Required for work on city land."
+              ]
+            }
+          }
+        },
+        "drivers": {
+          "title": "7. Driver's License Categories (Transportstyrelsen)",
+          "subtitle": "For roles involving transport of materials, machines or personnel.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "B: Car and light truck (basic requirement for most roles).",
+                "BE: Car with heavy trailer (common for installers with machine trailers).",
+                "C: Heavy truck (e.g. for dump trucks or crane trucks).",
+                "CE: Heavy truck with trailer (for heavy transport and logistics).",
+                "YKB (Professional competence certificate): Legal requirement for professional goods transport with C/CE license.",
+                "Digital tachograph card: Required for drivers of vehicles with tachographs."
+              ]
+            }
+          }
+        },
+        "rail": {
+          "title": "6. Railway (Trafikverket)",
+          "subtitle": "Infrastructure projects related to railways require specific Trafikverket authorizations.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Protection and Safety Leader (SoS): Responsible for safety during track work.",
+                "Supervisor (TSM): Responsible for traffic safety.",
+                "BAS-P/U Railway: Specific focus on track environment."
+              ]
+            }
+          }
+        }
+      }
+    },
     "CTA": {
       "title": "Ready to get started?",
       "description": "Whether you are a private individual, employee, machine operator, subcontractor, or a work team looking for the next project — register today and let us connect you with opportunities across Sweden.",
@@ -498,7 +658,16 @@
         "HLR (CPR)",
         "Säkra lyft (Safe lifting)",
         "ADR-S 1.3",
-        "Stockholm Stad kurs"
+        "Stockholm Stad kurs",
+        "Asbestos remediation (Asbestsanering)",
+        "PCB remediation (PCB-sanering)",
+        "Welding certificate ISO 9606-1 (Svetscertifikat)",
+        "Epoxy/Isocyanates (Härdplaster)",
+        "Mobile work platforms (Skylift/Sax)",
+        "Nail gun / Powder-actuated tool (Bultpistol)",
+        "Trafikverket SoS-ledare (Rail safety)",
+        "Trafikverket Tillsyningsman TSM (Rail supervisor)",
+        "BAS-P/U Railway (BAS-P/U Järnväg)"
       ],
       "machineLicenses": "Machine operator licenses",
       "machineOptions": [
@@ -517,6 +686,15 @@
         "Pålmaskin / Spontmaskin (Pile driver)"
       ],
       "tradeCertificates": "Trade certificates",
+      "driverLicenses": "Driver's license",
+      "driverLicenseOptions": [
+        "B (Car)",
+        "BE (Car with heavy trailer)",
+        "C (Heavy truck)",
+        "CE (Heavy truck with trailer)",
+        "YKB (Professional competence)",
+        "Digital tachograph card"
+      ],
       "tradeOptions": [
         "Anläggningsförare (Construction driver)",
         "Väg- och anläggningsarbetare (Road worker)",
@@ -530,12 +708,30 @@
         "Bergarbetare (Rock worker)",
         "Beläggningsarbetare (Paving worker)",
         "Håltagare (Core driller)",
-        "Stenmontör (Stone installer)"
+        "Stenmontör (Stone installer)",
+        "Målare (Painter)",
+        "Byggnadsplåtslagare (Sheet metal worker)",
+        "Ventilationsplåtslagare (Ventilation sheet metal worker)",
+        "Anläggningsdykare (Civil engineering diver)",
+        "Trädgårdsanläggare (Landscape gardener)",
+        "VVS-montör (HVAC fitter)",
+        "Elektriker (Electrician)",
+        "Kyl- och värmepumpstekniker (Refrigeration technician)",
+        "Larmtekniker (Alarm technician SSF)",
+        "Isoleringsmontör (Insulation fitter)",
+        "Ventilationsmontör (Ventilation fitter)",
+        "Brandskyddsmålare (Fire protection painter)"
       ],
       "applyingFor": "Applying for",
       "cv": "CV / Experience",
       "cvHint": "Paste your CV, describe your experience, or link to your LinkedIn profile",
       "cvPlaceholder": "For example: 10+ years as excavator operator...",
+      "references": "References",
+      "referencesHint": "Previous employers, projects, or clients we can contact",
+      "referencesPlaceholder": "Company, contact person, phone...",
+      "extraCertifications": "Extra certifications (optional)",
+      "extraCertificationsHint": "List any certificates or trade licenses not in the options above",
+      "extraCertificationsPlaceholder": "e.g. Painter (MYN), HVAC fitter, Welding cert ISO 9606-1...",
       "message": "Message (optional)",
       "messagePlaceholder": "Tell us about your experience, team size, availability...",
       "submit": "Send Application",
@@ -552,6 +748,7 @@
         "howItWorks": "How It Works",
         "applyNow": "Apply Now",
         "contact": "Contact",
+        "guide": "Cert Guide",
         "login": "Partner Login"
       },
       "certs": {

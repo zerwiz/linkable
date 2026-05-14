@@ -771,6 +771,153 @@ export function CertificationsBanner() {
 /* ------------------------------------------------------------------ */
 /*  CTA Section                                                        */
 /* ------------------------------------------------------------------ */
+/* ------------------------------------------------------------------ */
+/*  Certification Guide                                                */
+/* ------------------------------------------------------------------ */
+export function CertificationGuideSection() {
+  const t = useTranslations("Index");
+
+  const sections = [
+    {
+      key: "byn",
+      groups: ["tra", "plåt", "mark"],
+    },
+    {
+      key: "maskin",
+      groups: ["grav", "lyft"],
+    },
+    {
+      key: "installation",
+      groups: ["items"],
+    },
+    {
+      key: "special",
+      groups: ["items"],
+    },
+    {
+      key: "certs",
+      groups: ["items"],
+    },
+    {
+      key: "drivers",
+      groups: ["items"],
+    },
+    {
+      key: "rail",
+      groups: ["items"],
+    },
+  ] as const;
+
+  return (
+    <section className="bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <Badge
+            variant="secondary"
+            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
+          >
+            Guide
+          </Badge>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {t("Guide.title")}
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            {t("Guide.description")}
+          </p>
+        </motion.div>
+
+        <div className="mt-14 space-y-12">
+          {sections.map((section, si) => (
+            <motion.div
+              key={section.key}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: si * 0.08 }}
+            >
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">
+                  {t(`Guide.sections.${section.key}.title`)}
+                </h2>
+                {t.raw(`Guide.sections.${section.key}.subtitle`) && (
+                  <p className="mt-2 text-muted-foreground">
+                    {t(`Guide.sections.${section.key}.subtitle`)}
+                  </p>
+                )}
+              </div>
+
+              <div className="space-y-6">
+                {section.groups.map((group, gi) => {
+                  const groupTitle = t(`Guide.sections.${section.key}.groups.${group}.title`);
+                  const items = t.raw(`Guide.sections.${section.key}.groups.${group}.items`) as string[];
+
+                  return (
+                    <div key={group}>
+                      {groupTitle && (
+                        <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                          <span className="inline-block h-2 w-2 rounded-full bg-amber-500" />
+                          {groupTitle}
+                        </h3>
+                      )}
+                      <div className="grid gap-3">
+                        {items.map((item, ii) => {
+                          const [name, ...descParts] = item.split(":");
+                          const desc = descParts.join(":").trim();
+                          return (
+                            <motion.div
+                              key={ii}
+                              initial={{ opacity: 0, x: -8 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true, margin: "-40px" }}
+                              transition={{ duration: 0.3, delay: ii * 0.04 }}
+                              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4 transition-all hover:border-amber-300/60 hover:shadow-sm"
+                            >
+                              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+                              <div>
+                                <span className="font-medium text-foreground">{name}</span>
+                                {desc && (
+                                  <span className="text-muted-foreground">
+                                    : {desc}
+                                  </span>
+                                )}
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.4 }}
+          className="mt-14 rounded-xl border border-amber-200 bg-amber-50 p-6"
+        >
+          <h3 className="text-base font-semibold text-amber-800 flex items-center gap-2">
+            <span className="text-lg">💡</span>
+            Tips
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-amber-700">
+            {t("Guide.tip")}
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 export function CTASection() {
   const t = useTranslations("Index");
   return (
@@ -830,7 +977,10 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
     certifications: [] as string[],
     machineLicenses: [] as string[],
     tradeCertificates: [] as string[],
+    driverLicenses: [] as string[],
     cv: "",
+    references: "",
+    extraCertifications: "",
     message: "",
   });
   const roleOptions = t.raw("Form.roleOptions") as string[];
@@ -845,10 +995,8 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
   }, [selectedRole, roleOptions]);
 
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
-  const [submitting, setSubmitting] = useState(false);
 
-  const handleCheckbox = (field: "roles" | "locations" | "certifications" | "machineLicenses" | "tradeCertificates", value: string) => {
+  const handleCheckbox = (field: "roles" | "locations" | "certifications" | "machineLicenses" | "tradeCertificates" | "driverLicenses", value: string) => {
     setData((prev) => {
       const arr = prev[field];
       if (arr.includes(value)) return { ...prev, [field]: arr.filter((v) => v !== value) };
@@ -856,39 +1004,43 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    setError("");
 
-    const formPayload = new FormData();
-    formPayload.append("form-name", "application");
-    formPayload.append("name", data.name);
-    formPayload.append("email", data.email);
-    formPayload.append("phone", data.phone);
-    formPayload.append("company", data.company);
-    formPayload.append("type", data.type);
-    data.roles.forEach((r) => formPayload.append("roles[]", r));
-    data.locations.forEach((l) => formPayload.append("locations[]", l));
-    data.certifications.forEach((c) => formPayload.append("certifications[]", c));
-    data.machineLicenses.forEach((m) => formPayload.append("machineLicenses[]", m));
-    data.tradeCertificates.forEach((t) => formPayload.append("tradeCertificates[]", t));
-    formPayload.append("cv", data.cv);
-    formPayload.append("message", data.message);
+    const parts = [
+      "Namn: " + data.name,
+      "E-post: " + data.email,
+      "Telefon: " + data.phone,
+      "Företag: " + data.company,
+      "Typ: " + data.type,
+      "Roller: " + (data.roles.join(", ") || "-"),
+      "Platser: " + (data.locations.join(", ") || "-"),
+      "Certifieringar: " + (data.certifications.join(", ") || "-"),
+      "Maskinkort: " + (data.machineLicenses.join(", ") || "-"),
+      "F-skattebevis: " + (data.tradeCertificates.join(", ") || "-"),
+      "Körkortsbehörighet: " + (data.driverLicenses.join(", ") || "-"),
+      "Extra certifieringar: " + (data.extraCertifications || "-"),
+    ];
+
     if (selectedProjectId) {
-      formPayload.append("project", selectedProjectId);
-      formPayload.append("projectTitle", t(`Projects.items.${selectedProjectId}.title`));
+      parts.push("Projekt: " + t(`Projects.items.${selectedProjectId}.title`));
     }
 
-    try {
-      const res = await fetch("/", { method: "POST", body: formPayload });
-      if (!res.ok) throw new Error("Failed");
-      setSubmitted(true);
-    } catch {
-      setError(t("Form.error"));
-    } finally {
-      setSubmitting(false);
-    }
+    parts.push("");
+    parts.push("CV:");
+    parts.push(data.cv || "-");
+    parts.push("");
+    parts.push("Referenser:");
+    parts.push(data.references || "-");
+    parts.push("");
+    parts.push("Meddelande:");
+    parts.push(data.message || "-");
+
+    const subject = encodeURIComponent("Ansökan via LinkableWork");
+    const body = encodeURIComponent(parts.join("\n"));
+
+    window.location.href = `mailto:lexcoab@gmail.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -906,10 +1058,10 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
   const certOptions = t.raw("Form.certOptions") as string[];
   const machineOptions = t.raw("Form.machineOptions") as string[];
   const tradeOptions = t.raw("Form.tradeOptions") as string[];
+  const driverLicenseOptions = t.raw("Form.driverLicenseOptions") as string[];
 
   return (
-    <form onSubmit={handleSubmit} data-netlify="true" name="application" className="space-y-6">
-      <input type="hidden" name="form-name" value="application" />
+    <form onSubmit={handleSubmit} className="space-y-6">
 
       {selectedProjectId && (
         <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
@@ -1009,9 +1161,33 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
       </div>
 
       <div>
+        <Label>{t("Form.driverLicenses")}</Label>
+        <div className="mt-2 flex flex-wrap gap-3">
+          {driverLicenseOptions.map((dl) => (
+            <label key={dl} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+              <input type="checkbox" name="driverLicenses[]" value={dl} checked={data.driverLicenses.includes(dl)} onChange={() => handleCheckbox("driverLicenses", dl)} className="sr-only" />
+              {dl}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
         <Label htmlFor="cv">{t("Form.cv")}</Label>
         <p className="mt-1 text-xs text-muted-foreground">{t("Form.cvHint")}</p>
         <Textarea id="cv" rows={6} value={data.cv} onChange={(e) => setData((p) => ({ ...p, cv: e.target.value }))} className="mt-1" placeholder={t("Form.cvPlaceholder")} />
+      </div>
+
+      <div>
+        <Label htmlFor="references">{t("Form.references")}</Label>
+        <p className="mt-1 text-xs text-muted-foreground">{t("Form.referencesHint")}</p>
+        <Textarea id="references" rows={4} value={data.references} onChange={(e) => setData((p) => ({ ...p, references: e.target.value }))} className="mt-1" placeholder={t("Form.referencesPlaceholder")} />
+      </div>
+
+      <div>
+        <Label htmlFor="extraCertifications">{t("Form.extraCertifications")}</Label>
+        <p className="mt-1 text-xs text-muted-foreground">{t("Form.extraCertificationsHint")}</p>
+        <Textarea id="extraCertifications" rows={3} value={data.extraCertifications} onChange={(e) => setData((p) => ({ ...p, extraCertifications: e.target.value }))} className="mt-1" placeholder={t("Form.extraCertificationsPlaceholder")} />
       </div>
 
       <div>
@@ -1019,13 +1195,51 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Textarea id="message" rows={4} value={data.message} onChange={(e) => setData((p) => ({ ...p, message: e.target.value }))} className="mt-1" placeholder={t("Form.messagePlaceholder")} />
       </div>
 
-      {error && <p className="text-sm text-red-500">{error}</p>}
-
-      <Button type="submit" disabled={submitting} size="lg" className="w-full rounded-full bg-amber-500 text-white hover:bg-amber-600">
-        {submitting ? t("Form.sending") : t("Form.submit")}
+      <Button type="submit" size="lg" className="w-full rounded-full bg-amber-500 text-white hover:bg-amber-600">
+        {t("Form.submit")}
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </form>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Certification Guide Banner                                         */
+/* ------------------------------------------------------------------ */
+export function CertificationGuideBanner() {
+  const t = useTranslations("Index");
+  return (
+    <section className="bg-slate-900 py-16">
+      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+        >
+          <Badge
+            variant="secondary"
+            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-400"
+          >
+            Guide
+          </Badge>
+          <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            {t("Guide.title")}
+          </h3>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-slate-400">
+            {t("Guide.description")}
+          </p>
+          <div className="mt-8">
+            <Link href="/guide">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                Se hela guiden
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 

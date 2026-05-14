@@ -10,20 +10,38 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { Users, LayoutDashboard, ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Users, LayoutDashboard, ShieldCheck, ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
+import { Link } from "@/routing";
+import { CertificationGuideBanner } from "@/components/sections";
 
 export default function RequestWorkersPage() {
   const t = useTranslations("Index.RequestWorkers");
   const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const form = e.currentTarget as HTMLFormElement;
+    const fd = new FormData(form);
+
+    const subject = encodeURIComponent("Förfrågan om personal från LinkableWork");
+    const body = encodeURIComponent(
+      [
+        "Företagsnamn: " + (fd.get("companyName") as string),
+        "Kontaktperson: " + (fd.get("contactPerson") as string),
+        "E-post: " + (fd.get("email") as string),
+        "Telefon: " + (fd.get("phone") as string),
+        "Plats: " + (fd.get("projectLocation") as string),
+        "Typ av arbete: " + (fd.get("workType") as string),
+        "Antal personer: " + (fd.get("workersNeeded") as string),
+        "Startdatum: " + (fd.get("startDate") as string),
+        "",
+        "Beskrivning:",
+        fd.get("description") as string,
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:lexcoab@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
-    setSubmitting(false);
   };
 
   const benefits = [
@@ -80,7 +98,7 @@ export default function RequestWorkersPage() {
             </div>
 
             {/* Right - Form */}
-            <div>
+            <div className="space-y-6">
               <Card className="border-border/60 shadow-xl">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold">{t("form.title")}</h2>
@@ -95,6 +113,17 @@ export default function RequestWorkersPage() {
                       <div className="space-y-2">
                         <Label htmlFor="contactPerson">{t("form.contactPerson")}</Label>
                         <Input id="contactPerson" required />
+                      </div>
+                    </div>
+
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div className="space-y-2">
+                        <Label htmlFor="email">E-post *</Label>
+                        <Input id="email" type="email" required />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Telefon *</Label>
+                        <Input id="phone" type="tel" required />
                       </div>
                     </div>
 
@@ -125,17 +154,38 @@ export default function RequestWorkersPage() {
                       <Textarea id="description" rows={4} required />
                     </div>
 
-                    <Button type="submit" disabled={submitting} className="w-full rounded-full bg-amber-500 py-6 text-lg font-bold text-white hover:bg-amber-600">
-                      {submitting ? "Sending..." : t("form.submit")}
+                    <Button type="submit" className="w-full rounded-full bg-amber-500 py-6 text-lg font-bold text-white hover:bg-amber-600">
+                      {t("form.submit")}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </form>
+                </CardContent>
+              </Card>
+
+              {/* Contact Info */}
+              <Card className="border-amber-500/20 bg-amber-50/50 shadow-sm">
+                <CardContent className="p-6">
+                  <p className="text-sm font-semibold text-foreground">Eller kontakta oss direkt</p>
+                  <div className="mt-4 flex flex-wrap gap-6">
+                    <Link href="tel:+46701234567" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-amber-600">
+                      <Phone className="h-4 w-4 text-amber-500" />
+                      +46 70 123 45 67
+                    </Link>
+                    <Link href="mailto:info@linkable.se" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-amber-600">
+                      <Mail className="h-4 w-4 text-amber-500" />
+                      info@linkable.se
+                    </Link>
+                    <Link href="/contact" className="flex items-center gap-2 text-sm font-medium text-amber-600 hover:text-amber-700">
+                      Alla kontakter →
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </div>
+      <CertificationGuideBanner />
     </PageShell>
   );
 }

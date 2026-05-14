@@ -11,19 +11,42 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { ShieldCheck, FileText, Building2, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, FileText, Building2, ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
+import { CertificationGuideBanner } from "@/components/sections";
 
 export default function RequestJobPage() {
   const t = useTranslations("Index.RequestJob");
   const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const form = e.currentTarget as HTMLFormElement;
+    const fd = new FormData(form);
+
+    const getSelect = (name: string) => {
+      const el = form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null;
+      return el?.value ?? "";
+    };
+
+    const subject = encodeURIComponent("Offertförfrågan från LinkableWork");
+    const body = encodeURIComponent(
+      [
+        "Namn: " + fd.get("name"),
+        "E-post: " + fd.get("email"),
+        "Telefon: " + fd.get("phone"),
+        "Företag: " + (fd.get("company") as string),
+        "Typ av arbete: " + getSelect("jobType"),
+        "Plats: " + fd.get("location"),
+        "Budget: " + getSelect("budget"),
+        "Tidsplan: " + fd.get("timeline"),
+        "",
+        "Beskrivning:",
+        fd.get("description") as string,
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:lexcoab@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
-    setSubmitting(false);
   };
 
   const benefits = [
@@ -93,8 +116,7 @@ export default function RequestJobPage() {
                   <h2 className="text-2xl font-bold">{t("form.title")}</h2>
                   <p className="mt-2 text-sm text-muted-foreground">{t("form.description")}</p>
 
-                  <form onSubmit={handleSubmit} data-netlify="true" name="request-job" className="mt-8 space-y-6">
-                    <input type="hidden" name="form-name" value="request-job" />
+                  <form onSubmit={handleSubmit} className="mt-8 space-y-6">
 
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
@@ -162,17 +184,38 @@ export default function RequestJobPage() {
                       <Textarea id="description" rows={5} required placeholder={t("form.descriptionPlaceholder")} />
                     </div>
 
-                    <Button type="submit" disabled={submitting} className="w-full rounded-full bg-amber-500 py-6 text-lg font-bold text-white hover:bg-amber-600">
-                      {submitting ? t("form.sending") : t("form.submit")}
+                    <Button type="submit" className="w-full rounded-full bg-amber-500 py-6 text-lg font-bold text-white hover:bg-amber-600">
+                      {t("form.submit")}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </form>
+                </CardContent>
+              </Card>
+
+              {/* Contact Info */}
+              <Card className="border-amber-500/20 bg-amber-50/50 shadow-sm">
+                <CardContent className="p-6">
+                  <p className="text-sm font-semibold text-foreground">Eller kontakta oss direkt</p>
+                  <div className="mt-4 flex flex-wrap gap-6">
+                    <a href="tel:+46701234567" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-amber-600">
+                      <Phone className="h-4 w-4 text-amber-500" />
+                      +46 70 123 45 67
+                    </a>
+                    <a href="mailto:info@linkable.se" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-amber-600">
+                      <Mail className="h-4 w-4 text-amber-500" />
+                      info@linkable.se
+                    </a>
+                    <a href="/contact" className="flex items-center gap-2 text-sm font-medium text-amber-600 hover:text-amber-700">
+                      Alla kontakter →
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </div>
+      <CertificationGuideBanner />
     </PageShell>
   );
 }
