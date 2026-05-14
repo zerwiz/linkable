@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight, Shield, Clock, MapPin, FileCheck, Users, HardHat, Truck, Wrench,
-  ChevronRight, CheckCircle2,
+  ChevronRight, CheckCircle2, Camera,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,9 +11,10 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useState, useEffect } from "react";
-import { Link, usePathname, useRouter } from "@/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { useState } from "react";
+import { Link } from "@/routing";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 /* ------------------------------------------------------------------ */
 /*  Hero Section                                                       */
@@ -48,12 +49,14 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-slate-900">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/hero-bg.png"
           alt="Construction site background"
-          className="h-full w-full object-cover opacity-30"
+          fill
+          priority
+          className="object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
@@ -374,13 +377,36 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
 /* ------------------------------------------------------------------ */
 export function HowItWorksSection() {
   const t = useTranslations("Index");
+  const [activeTab, setActiveTab] = useState<"worker" | "company" | "client">("worker");
 
-  const steps = [
-    { id: "apply", step: "01", icon: <ArrowRight className="h-6 w-6" /> },
-    { id: "step2", step: "02", icon: <FileCheck className="h-6 w-6" /> },
-    { id: "step3", step: "03", icon: <CheckCircle2 className="h-6 w-6" /> },
-    { id: "step1", step: "04", icon: <Users className="h-6 w-6" /> },
+  const tabs = [
+    { id: "worker" as const, icon: <Users className="h-5 w-5" /> },
+    { id: "company" as const, icon: <HardHat className="h-5 w-5" /> },
+    { id: "client" as const, icon: <FileCheck className="h-5 w-5" /> },
   ];
+
+  const flowSteps: Record<string, { id: string; icon: React.ReactNode }[]> = {
+    worker: [
+      { id: "apply", icon: <ArrowRight className="h-6 w-6" /> },
+      { id: "upload", icon: <FileCheck className="h-6 w-6" /> },
+      { id: "match", icon: <CheckCircle2 className="h-6 w-6" /> },
+      { id: "profile", icon: <Users className="h-6 w-6" /> },
+    ],
+    company: [
+      { id: "post", icon: <FileCheck className="h-6 w-6" /> },
+      { id: "review", icon: <Users className="h-6 w-6" /> },
+      { id: "hire", icon: <CheckCircle2 className="h-6 w-6" /> },
+      { id: "start", icon: <ArrowRight className="h-6 w-6" /> },
+    ],
+    client: [
+      { id: "describe", icon: <FileCheck className="h-6 w-6" /> },
+      { id: "quote", icon: <ArrowRight className="h-6 w-6" /> },
+      { id: "approve", icon: <CheckCircle2 className="h-6 w-6" /> },
+      { id: "done", icon: <HardHat className="h-6 w-6" /> },
+    ],
+  };
+
+  const steps = flowSteps[activeTab];
 
   return (
     <section className="border-y border-border/40 bg-muted/30 py-20 sm:py-28">
@@ -393,9 +419,11 @@ export function HowItWorksSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <img
+            <Image
               src="/how-it-works.png"
               alt={t("HowItWorks.title")}
+              width={1200}
+              height={800}
               className="w-full rounded-2xl border border-border/60 shadow-xl"
             />
             <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-amber-100" />
@@ -422,14 +450,50 @@ export function HowItWorksSection() {
               </p>
             </motion.div>
 
-            <div className="mt-10 space-y-8">
+            {/* Tabs */}
+            <div className="mt-8 flex gap-2 rounded-xl border border-border/60 bg-background p-1.5">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
+                    activeTab === tab.id
+                      ? "bg-amber-500 text-white shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {tab.icon}
+                  {t(`HowItWorks.tabs.${tab.id}`)}
+                </button>
+              ))}
+            </div>
+
+            {/* Flow title & description */}
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-8"
+            >
+              <h3 className="text-xl font-bold text-foreground">
+                {t(`HowItWorks.titles.${activeTab}`)}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {t(`HowItWorks.descriptions.${activeTab}`)}
+              </p>
+            </motion.div>
+
+            {/* Steps */}
+            <div className="mt-8 space-y-8">
               {steps.map((step, i) => (
                 <motion.div
                   key={step.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.45, delay: i * 0.15 }}
+                  transition={{ duration: 0.45, delay: i * 0.1 }}
                   className="flex gap-5"
                 >
                   <div className="flex flex-col items-center gap-2">
@@ -437,23 +501,57 @@ export function HowItWorksSection() {
                       {step.icon}
                     </div>
                     {i < steps.length - 1 && (
-                      <div className="h-full w-px bg-gradient-to-b from-amber-300 to-transparent" />
+                      <div className="h-full w-px bg-linear-to-b from-amber-300 to-transparent" />
                     )}
                   </div>
                   <div className="pb-2">
                     <span className="text-xs font-bold tracking-widest text-amber-500">
-                      {t("HowItWorks.step")} {step.step}
+                      {t("HowItWorks.step")} 0{i + 1}
                     </span>
                     <h3 className="mt-1 text-lg font-semibold text-foreground">
-                      {t(`HowItWorks.steps.${step.id}.title`)}
+                      {t(`HowItWorks.flows.${activeTab}.steps.${step.id}.title`)}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {t(`HowItWorks.steps.${step.id}.description`)}
+                      {t(`HowItWorks.flows.${activeTab}.steps.${step.id}.description`)}
                     </p>
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            {/* CTA */}
+            <motion.div
+              key={`cta-${activeTab}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className="mt-10"
+            >
+              {activeTab === "worker" && (
+                <Link href="/projects#apply">
+                  <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
+                    {t("Navbar.applyNow")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              )}
+              {activeTab === "company" && (
+                <Link href="/request-workers">
+                  <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
+                    {t("Navbar.requestWorkers")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              )}
+              {activeTab === "client" && (
+                <Link href="/request-job">
+                  <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
+                    {t("Navbar.requestJob")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              )}
+            </motion.div>
           </div>
         </div>
       </div>
@@ -466,44 +564,116 @@ export function HowItWorksSection() {
 /* ------------------------------------------------------------------ */
 export function WhySection() {
   const t = useTranslations("Index");
+  const [activeTab, setActiveTab] = useState<"worker" | "company" | "client">("worker");
 
-  const benefits = [
-    { id: "matching", icon: <Clock className="h-6 w-6" /> },
-    { id: "location", icon: <MapPin className="h-6 w-6" /> },
-    { id: "secure", icon: <Shield className="h-6 w-6" /> },
-    { id: "teams", icon: <Users className="h-6 w-6" /> },
-    { id: "transparent", icon: <FileCheck className="h-6 w-6" /> },
-    { id: "mobile", icon: <HardHat className="h-6 w-6" /> },
+  const tabs = [
+    { id: "worker" as const, icon: <Users className="h-5 w-5" /> },
+    { id: "company" as const, icon: <HardHat className="h-5 w-5" /> },
+    { id: "client" as const, icon: <FileCheck className="h-5 w-5" /> },
   ];
+
+  const benefitKeys: Record<string, string[]> = {
+    worker: ["matching", "location", "secure", "teams", "transparent", "mobile"],
+    company: ["speed", "vetted", "flexible", "support", "quality", "network"],
+    client: ["freeQuote", "vetted", "allSizes", "support", "insurance", "timely"],
+  };
+
+  const benefitIcons: Record<string, React.ReactNode> = {
+    matching: <Clock className="h-6 w-6" />,
+    location: <MapPin className="h-6 w-6" />,
+    secure: <Shield className="h-6 w-6" />,
+    teams: <Users className="h-6 w-6" />,
+    transparent: <FileCheck className="h-6 w-6" />,
+    mobile: <HardHat className="h-6 w-6" />,
+    speed: <Clock className="h-6 w-6" />,
+    vetted: <Shield className="h-6 w-6" />,
+    flexible: <FileCheck className="h-6 w-6" />,
+    support: <Users className="h-6 w-6" />,
+    freeQuote: <FileCheck className="h-6 w-6" />,
+    allSizes: <HardHat className="h-6 w-6" />,
+    quality: <Shield className="h-6 w-6" />,
+    network: <MapPin className="h-6 w-6" />,
+    insurance: <Shield className="h-6 w-6" />,
+    timely: <Clock className="h-6 w-6" />,
+  };
+
+  const benefits = benefitKeys[activeTab];
 
   return (
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge
+              variant="secondary"
+              className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
+            >
+              {t("Why.badge")}
+            </Badge>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              {t("Why.title")}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {t("Why.description")}
+            </p>
+          </motion.div>
+
+          {/* Tabs */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="mt-10 flex gap-2 rounded-xl border border-border/60 bg-muted/30 p-1.5"
+          >
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
+                  activeTab === tab.id
+                    ? "bg-amber-500 text-white shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {tab.icon}
+                {t(`Why.tabs.${tab.id}`)}
+              </button>
+            ))}
+          </motion.div>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-2xl text-center"
+          key={activeTab}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="mx-auto mt-12 max-w-2xl text-center"
         >
           <Badge
             variant="secondary"
             className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
           >
-            {t("Why.badge")}
+            {t(`Why.${activeTab}.badge`)}
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {t("Why.title")}
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("Why.description")}
+          <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            {t(`Why.${activeTab}.title`)}
+          </h3>
+          <p className="mt-3 text-base text-muted-foreground">
+            {t(`Why.${activeTab}.description`)}
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((b, i) => (
             <motion.div
-              key={b.id}
+              key={b}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -512,19 +682,53 @@ export function WhySection() {
               <Card className="group h-full border border-border/60 bg-card transition-all hover:border-amber-300/60 hover:shadow-md">
                 <CardContent className="p-6">
                   <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-amber-500/10 text-amber-600 transition-colors group-hover:bg-amber-500 group-hover:text-white">
-                    {b.icon}
+                    {benefitIcons[b]}
                   </div>
                   <h3 className="mt-4 text-base font-semibold text-foreground">
-                    {t(`Why.benefits.${b.id}.title`)}
+                    {t(`Why.${activeTab}.benefits.${b}.title`)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {t(`Why.benefits.${b.id}.description`)}
+                    {t(`Why.${activeTab}.benefits.${b}.description`)}
                   </p>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          key={`cta-${activeTab}`}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="mt-12 text-center"
+        >
+          {activeTab === "worker" && (
+            <Link href="/projects#apply">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.applyNow")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          )}
+          {activeTab === "company" && (
+            <Link href="/request-workers">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.requestWorkers")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          )}
+          {activeTab === "client" && (
+            <Link href="/request-job">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.requestJob")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          )}
+        </motion.div>
       </div>
     </section>
   );
@@ -572,8 +776,156 @@ export function CertificationsBanner() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  CTA Section                                                        */
+/*  Certification Guide                                                */
 /* ------------------------------------------------------------------ */
+export function CertificationGuideSection() {
+  const t = useTranslations("Index");
+
+  const sections = [
+    {
+      key: "byn",
+      groups: ["tra", "plåt", "mark", "specialmontage"],
+    },
+    {
+      key: "maskin",
+      groups: ["grav", "lyft"],
+    },
+    {
+      key: "management",
+      groups: ["items"],
+    },
+    {
+      key: "installation",
+      groups: ["items"],
+    },
+    {
+      key: "special",
+      groups: ["items"],
+    },
+    {
+      key: "certs",
+      groups: ["safety", "technical", "health", "equipment"],
+    },
+    {
+      key: "rail",
+      groups: ["items", "skog"],
+    },
+    {
+      key: "drivers",
+      groups: ["items"],
+    },
+  ] as const;
+
+  return (
+    <section className="bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <Badge
+            variant="secondary"
+            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
+          >
+            Guide
+          </Badge>
+          <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {t("Guide.title")}
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            {t("Guide.description")}
+          </p>
+        </motion.div>
+
+        <div className="mt-14 space-y-12">
+          {sections.map((section, si) => (
+            <motion.div
+              key={section.key}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: si * 0.08 }}
+            >
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold tracking-tight text-foreground">
+                  {t(`Guide.sections.${section.key}.title`)}
+                </h2>
+                {t.raw(`Guide.sections.${section.key}.subtitle`) && (
+                  <p className="mt-2 text-muted-foreground">
+                    {t(`Guide.sections.${section.key}.subtitle`)}
+                  </p>
+                )}
+              </div>
+
+              <div className="space-y-6">
+                {section.groups.map((group) => {
+                  const groupTitle = t(`Guide.sections.${section.key}.groups.${group}.title`);
+                  const items = t.raw(`Guide.sections.${section.key}.groups.${group}.items`) as string[];
+
+                  return (
+                    <div key={group}>
+                      {groupTitle && (
+                        <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                          <span className="inline-block h-2 w-2 rounded-full bg-amber-500" />
+                          {groupTitle}
+                        </h3>
+                      )}
+                      <div className="grid gap-3">
+                        {items.map((item, ii) => {
+                          const [name, ...descParts] = item.split(":");
+                          const desc = descParts.join(":").trim();
+                          return (
+                            <motion.div
+                              key={item}
+                              initial={{ opacity: 0, x: -8 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true, margin: "-40px" }}
+                              transition={{ duration: 0.3, delay: ii * 0.04 }}
+                              className="flex items-start gap-3 rounded-xl border border-border/60 bg-card p-4 transition-all hover:border-amber-300/60 hover:shadow-sm"
+                            >
+                              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+                              <div>
+                                <span className="font-medium text-foreground">{name}</span>
+                                {desc && (
+                                  <span className="text-muted-foreground">
+                                    : {desc}
+                                  </span>
+                                )}
+                              </div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.4 }}
+          className="mt-14 rounded-xl border border-amber-200 bg-amber-50 p-6"
+        >
+          <h3 className="text-base font-semibold text-amber-800 flex items-center gap-2">
+            <span className="text-lg">💡</span>
+            Tips
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-amber-700">
+            {t("Guide.tip")}
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 export function CTASection() {
   const t = useTranslations("Index");
   return (
@@ -592,7 +944,7 @@ export function CTASection() {
             {t("CTA.description")}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/projects">
+            <Link href="/request-workers">
               <Button
                 size="lg"
                 className="rounded-full bg-white px-8 text-base font-semibold text-amber-600 shadow-lg hover:bg-amber-50"
@@ -601,7 +953,7 @@ export function CTASection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <a href="#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 variant="outline"
@@ -609,7 +961,7 @@ export function CTASection() {
               >
                 {t("CTA.talkToTeam")}
               </Button>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -633,25 +985,27 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
     certifications: [] as string[],
     machineLicenses: [] as string[],
     tradeCertificates: [] as string[],
+    driverLicenses: [] as string[],
     cv: "",
+    references: "",
+    extraCertifications: "",
     message: "",
   });
   const roleOptions = t.raw("Form.roleOptions") as string[];
 
-  useEffect(() => {
+  const [prevSelectedRole, setPrevSelectedRole] = useState(selectedRole);
+  if (selectedRole !== prevSelectedRole) {
+    setPrevSelectedRole(selectedRole);
     if (selectedRole && roleOptions.includes(selectedRole)) {
-      setData((prev) => {
-        if (prev.roles.includes(selectedRole)) return prev;
-        return { ...prev, roles: [...prev.roles, selectedRole] };
-      });
+      if (!data.roles.includes(selectedRole)) {
+        setData((p) => ({ ...p, roles: [...p.roles, selectedRole] }));
+      }
     }
-  }, [selectedRole, roleOptions]);
+  }
 
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState("");
-  const [submitting, setSubmitting] = useState(false);
 
-  const handleCheckbox = (field: "roles" | "locations" | "certifications" | "machineLicenses" | "tradeCertificates", value: string) => {
+  const handleCheckbox = (field: "roles" | "locations" | "certifications" | "machineLicenses" | "tradeCertificates" | "driverLicenses", value: string) => {
     setData((prev) => {
       const arr = prev[field];
       if (arr.includes(value)) return { ...prev, [field]: arr.filter((v) => v !== value) };
@@ -659,39 +1013,43 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    setError("");
 
-    const formPayload = new FormData();
-    formPayload.append("form-name", "application");
-    formPayload.append("name", data.name);
-    formPayload.append("email", data.email);
-    formPayload.append("phone", data.phone);
-    formPayload.append("company", data.company);
-    formPayload.append("type", data.type);
-    data.roles.forEach((r) => formPayload.append("roles[]", r));
-    data.locations.forEach((l) => formPayload.append("locations[]", l));
-    data.certifications.forEach((c) => formPayload.append("certifications[]", c));
-    data.machineLicenses.forEach((m) => formPayload.append("machineLicenses[]", m));
-    data.tradeCertificates.forEach((t) => formPayload.append("tradeCertificates[]", t));
-    formPayload.append("cv", data.cv);
-    formPayload.append("message", data.message);
+    const parts = [
+      "Namn: " + data.name,
+      "E-post: " + data.email,
+      "Telefon: " + data.phone,
+      "Företag: " + data.company,
+      "Typ: " + data.type,
+      "Roller: " + (data.roles.join(", ") || "-"),
+      "Platser: " + (data.locations.join(", ") || "-"),
+      "Certifieringar: " + (data.certifications.join(", ") || "-"),
+      "Maskinkort: " + (data.machineLicenses.join(", ") || "-"),
+      "F-skattebevis: " + (data.tradeCertificates.join(", ") || "-"),
+      "Körkortsbehörighet: " + (data.driverLicenses.join(", ") || "-"),
+      "Extra certifieringar: " + (data.extraCertifications || "-"),
+    ];
+
     if (selectedProjectId) {
-      formPayload.append("project", selectedProjectId);
-      formPayload.append("projectTitle", t(`Projects.items.${selectedProjectId}.title`));
+      parts.push("Projekt: " + t(`Projects.items.${selectedProjectId}.title`));
     }
 
-    try {
-      const res = await fetch("/", { method: "POST", body: formPayload });
-      if (!res.ok) throw new Error("Failed");
-      setSubmitted(true);
-    } catch {
-      setError(t("Form.error"));
-    } finally {
-      setSubmitting(false);
-    }
+    parts.push("");
+    parts.push("CV:");
+    parts.push(data.cv || "-");
+    parts.push("");
+    parts.push("Referenser:");
+    parts.push(data.references || "-");
+    parts.push("");
+    parts.push("Meddelande:");
+    parts.push(data.message || "-");
+
+    const subject = encodeURIComponent("Ansökan via LinkableWork");
+    const body = encodeURIComponent(parts.join("\n"));
+
+    window.location.href = `mailto:lexcoab@gmail.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -709,10 +1067,10 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
   const certOptions = t.raw("Form.certOptions") as string[];
   const machineOptions = t.raw("Form.machineOptions") as string[];
   const tradeOptions = t.raw("Form.tradeOptions") as string[];
+  const driverLicenseOptions = t.raw("Form.driverLicenseOptions") as string[];
 
   return (
-    <form onSubmit={handleSubmit} data-netlify="true" name="application" className="space-y-6">
-      <input type="hidden" name="form-name" value="application" />
+    <form onSubmit={handleSubmit} className="space-y-6">
 
       {selectedProjectId && (
         <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
@@ -743,7 +1101,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.type")} *</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {types.map((type) => (
-            <label key={type} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={type} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="radio" name="type" value={type} required checked={data.type === type} onChange={(e) => setData((p) => ({ ...p, type: e.target.value }))} className="sr-only" />
               {type}
             </label>
@@ -755,7 +1113,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.roles")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {roleOptions.map((role) => (
-            <label key={role} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={role} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="roles[]" value={role} checked={data.roles.includes(role)} onChange={() => handleCheckbox("roles", role)} className="sr-only" />
               {role}
             </label>
@@ -767,7 +1125,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.locations")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {locationOptions.map((loc) => (
-            <label key={loc} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={loc} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="locations[]" value={loc} checked={data.locations.includes(loc)} onChange={() => handleCheckbox("locations", loc)} className="sr-only" />
               {loc}
             </label>
@@ -779,7 +1137,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.certifications")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {certOptions.map((cert) => (
-            <label key={cert} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={cert} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="certifications[]" value={cert} checked={data.certifications.includes(cert)} onChange={() => handleCheckbox("certifications", cert)} className="sr-only" />
               {cert}
             </label>
@@ -791,7 +1149,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.machineLicenses")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {machineOptions.map((machine) => (
-            <label key={machine} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={machine} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="machineLicenses[]" value={machine} checked={data.machineLicenses.includes(machine)} onChange={() => handleCheckbox("machineLicenses", machine)} className="sr-only" />
               {machine}
             </label>
@@ -803,9 +1161,21 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.tradeCertificates")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {tradeOptions.map((trade) => (
-            <label key={trade} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={trade} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="tradeCertificates[]" value={trade} checked={data.tradeCertificates.includes(trade)} onChange={() => handleCheckbox("tradeCertificates", trade)} className="sr-only" />
               {trade}
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <Label>{t("Form.driverLicenses")}</Label>
+        <div className="mt-2 flex flex-wrap gap-3">
+          {driverLicenseOptions.map((dl) => (
+            <label key={dl} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
+              <input type="checkbox" name="driverLicenses[]" value={dl} checked={data.driverLicenses.includes(dl)} onChange={() => handleCheckbox("driverLicenses", dl)} className="sr-only" />
+              {dl}
             </label>
           ))}
         </div>
@@ -818,17 +1188,72 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
       </div>
 
       <div>
+        <Label htmlFor="references">{t("Form.references")}</Label>
+        <p className="mt-1 text-xs text-muted-foreground">{t("Form.referencesHint")}</p>
+        <Textarea id="references" rows={4} value={data.references} onChange={(e) => setData((p) => ({ ...p, references: e.target.value }))} className="mt-1" placeholder={t("Form.referencesPlaceholder")} />
+      </div>
+
+      <div>
+        <Label htmlFor="extraCertifications">{t("Form.extraCertifications")}</Label>
+        <p className="mt-1 text-xs text-muted-foreground">{t("Form.extraCertificationsHint")}</p>
+        <Textarea id="extraCertifications" rows={3} value={data.extraCertifications} onChange={(e) => setData((p) => ({ ...p, extraCertifications: e.target.value }))} className="mt-1" placeholder={t("Form.extraCertificationsPlaceholder")} />
+      </div>
+
+      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 flex items-start gap-3">
+        <Camera className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+        <span>{t("Form.uploadHint")}</span>
+      </div>
+
+      <div>
         <Label htmlFor="message">{t("Form.message")}</Label>
         <Textarea id="message" rows={4} value={data.message} onChange={(e) => setData((p) => ({ ...p, message: e.target.value }))} className="mt-1" placeholder={t("Form.messagePlaceholder")} />
       </div>
 
-      {error && <p className="text-sm text-red-500">{error}</p>}
-
-      <Button type="submit" disabled={submitting} size="lg" className="w-full rounded-full bg-amber-500 text-white hover:bg-amber-600">
-        {submitting ? t("Form.sending") : t("Form.submit")}
+      <Button type="submit" size="lg" className="w-full rounded-full bg-amber-500 text-white hover:bg-amber-600">
+        {t("Form.submit")}
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
     </form>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Certification Guide Banner                                         */
+/* ------------------------------------------------------------------ */
+export function CertificationGuideBanner() {
+  const t = useTranslations("Index");
+  return (
+    <section className="bg-slate-900 py-16">
+      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+        >
+          <Badge
+            variant="secondary"
+            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-400"
+          >
+            Guide
+          </Badge>
+          <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            {t("Guide.title")}
+          </h3>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-slate-400">
+            {t("Guide.description")}
+          </p>
+          <div className="mt-8">
+            <Link href="/guide">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                Se hela guiden
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 

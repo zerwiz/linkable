@@ -8,6 +8,46 @@
     "twitterDescription": "Hitta byggprojekt eller anställning i hela Sverige."
   },
   "Index": {
+    "RequestJob": {
+      "badge": "För Privatpersoner & Företag",
+      "title": "Behöver du ett jobb utfört?",
+      "description": "Oavsett om du är privatperson som vill bygga altan, gräva pool eller renovera hemma — eller ett företag med ett större entreprenadbehov. Beskriv vad du behöver så återkommer vi med en offert.",
+      "benefits": {
+        "vetted": {
+          "title": "Verifierade utförare",
+          "description": "Alla våra samarbetspartners har giltiga certifikat, ID06 och ansvarsförsäkring. Trygghet från start."
+        },
+        "offer": {
+          "title": "Offert utan förbindelse",
+          "description": "Beskriv ditt behov så får du en kostnadsfri offert. Inga dolda avgifter — bara tydliga priser."
+        },
+        "scope": {
+          "title": "Allt från litet till stort",
+          "description": "Från poolgrävning och husgrund till stora infrastrukturprojekt. Vi hittar rätt utförare för varje jobb."
+        }
+      },
+      "form": {
+        "title": "Berätta om ditt projekt",
+        "description": "Fyll i formuläret så kontaktar vi dig med en offert.",
+        "name": "Namn",
+        "email": "E-post",
+        "phone": "Telefon",
+        "company": "Företag (valfritt)",
+        "jobType": "Typ av arbete",
+        "jobTypeOptions": ["Husgrund & markarbete", "Pool & trädgård", "Renovering & ombyggnad", "Nybyggnation", "Infrastruktur & väg", "Industri & lager", "Tak & fasad", "El & VVS", "Murnings- & betongarbete", "Övrigt"],
+        "location": "Plats för arbetet",
+        "budget": "Ungefärlig budget (valfritt)",
+        "budgetOptions": ["Under 50 000 kr", "50 000–200 000 kr", "200 000–500 000 kr", "500 000–1 000 000 kr", "Över 1 000 000 kr", "Vet ej"],
+        "timeline": "Önskad tidsplan",
+        "descriptionLabel": "Beskriv vad som ska göras",
+        "descriptionPlaceholder": "Berätta så utförligt som möjligt om vad du behöver få gjort...",
+        "submit": "Begär offert",
+        "sending": "Skickar...",
+        "success": "Tack för din förfrågan!",
+        "successDescription": "Vi återkommer till dig med en offert inom 24 timmar.",
+        "error": "Kunde inte skicka. Försök igen."
+      }
+    },
     "RequestWorkers": {
       "badge": "För Företag",
       "title": "Behöver du personal?",
@@ -44,8 +84,10 @@
     "Navbar": {
       "projects": "Projekt",
       "requestWorkers": "Behöver du personal?",
+      "requestJob": "Behöver du ett jobb utfört?",
       "howItWorks": "Så fungerar det",
-      "whyLinkable": "Varför LinkableWork",
+      "whyLinkable": "Varför LinkableWork?",
+      "guide": "Yrkesbevis & Cert",
       "contact": "Kontakt",
       "applyNow": "Ansök nu",
       "toggleMenu": "Öppna meny"
@@ -222,56 +264,187 @@
     },
     "HowItWorks": {
       "badge": "Så fungerar det",
-      "title": "Fyra steg till ditt nästa projekt",
-      "description": "Vår strömlinjeformade process är designad för byggproffs. Ansök från din telefon mellan arbetsmomenten, inget pappersarbete krävs.",
+      "title": "Tre sätt att använda LinkableWork",
+      "description": "Oavsett om du söker arbete, behöver personal eller vill få ett jobb utfört — vi har en process för dig.",
       "step": "STEG",
-      "steps": {
-        "apply": {
-          "title": "Ansök till projekt",
-          "description": "Bläddra bland lediga tjänster och ansök direkt till projekt som matchar dina färdigheter och preferenser. Vårt strömlinjeformade formulär fångar all information rekryterare behöver — roller, certifieringar, erfarenhet — så du kan ansöka på några minuter från din telefon."
+      "tabs": {
+        "worker": "Sök jobb",
+        "company": "Hyr personal",
+        "client": "Beställ arbete"
+      },
+      "titles": {
+        "worker": "Fyra steg till ditt nästa projekt",
+        "company": "Fyra steg till rätt personal",
+        "client": "Fyra steg till ett utfört jobb"
+      },
+      "descriptions": {
+        "worker": "Vår strömlinjeformade process är designad för byggproffs. Ansök från din telefon mellan arbetsmomenten, inget pappersarbete krävs.",
+        "company": "Hitta kvalificerade arbetare och arbetslag för ditt projekt. Vi hanterar hela processen från publicering till uppstart.",
+        "client": "Beskriv vad du behöver få gjort — från pool och altan till större byggprojekt — så återkommer vi med en offert."
+      },
+      "flows": {
+        "worker": {
+          "steps": {
+            "apply": {
+              "title": "Ansök till projekt",
+              "description": "Bläddra bland lediga tjänster och ansök direkt till projekt som matchar dina färdigheter och preferenser. Vårt strömlinjeformade formulär fångar all information rekryterare behöver — roller, certifieringar, erfarenhet — så du kan ansöka på några minuter från din telefon."
+            },
+            "upload": {
+              "title": "Ladda upp certifikat",
+              "description": "Ladda upp dina obligatoriska certifieringar säkert — ID06, Säkerhet på bygget, APV (Arbete på väg) och maskinförarbevis. Har du inget ID06? Vi kan ordna det vid anställning."
+            },
+            "match": {
+              "title": "Bli matchad",
+              "description": "Vårt team granskar din ansökning eller profil och matchar dig med aktiva projekt baserat på dina geografiska önskemål, certifieringar och tillgänglighet. Sökande med hög matchning får omedelbara aviseringar via e-post så att du aldrig missar rätt möjlighet."
+            },
+            "profile": {
+              "title": "Registrera din profil (kommer snart)",
+              "description": "Skapa ditt partnerkonto på under 5 minuter. Berätta om ditt företag eller din enskilda firma, primära roller, specialiseringar och teamkapacitet. Formuläret är anpassat för snabb ifyllnad även på mobilen ute på bygget."
+            }
+          }
         },
-        "step2": {
-          "title": "Ladda upp certifikat",
-          "description": "Ladda upp dina obligatoriska certifieringar säkert — ID06, Säkerhet på bygget, APV (Arbete på väg) och maskinförarbevis. Har du inget ID06? Vi kan ordna det vid anställning."
+        "company": {
+          "steps": {
+            "post": {
+              "title": "Publicera ditt behov",
+              "description": "Ladda upp ditt projekt eller beskriv vilken personal du behöver — antal, roller, certifieringskrav och önskad startperiod. Vi hjälper dig att formulera annonsen för bästa matchning."
+            },
+            "review": {
+              "title": "Granska kandidater",
+              "description": "Vårt team screener och matchar kvalificerade kandidater mot dina krav. Du får en kuraterad lista med verifierade arbetare och underentreprenörer redo för intervju."
+            },
+            "hire": {
+              "title": "Välj & anställ",
+              "description": "Välj ut de kandidater som passar bäst. Vi hanterar kontrakt, ID06-registrering och all administration så att du snabbt kan komma igång."
+            },
+            "start": {
+              "title": "Starta arbetet",
+              "description": "Personalen är på plats enligt överenskommen tidplan. Vi följer upp under projektets gång för att säkerställa att allt fungerar."
+            }
+          }
         },
-        "step3": {
-          "title": "Bli matchad",
-          "description": "Vårt team granskar din ansökning eller profil och matchar dig med aktiva projekt baserat på dina geografiska önskemål, certifieringar och tillgänglighet. Sökande med hög matchning får omedelbara aviseringar via e-post så att du aldrig missar rätt möjlighet."
-        },
-        "step1": {
-          "title": "Registrera din profil (kommer snart)",
-          "description": "Skapa ditt partnerkonto på under 5 minuter. Berätta om ditt företag eller din enskilda firma, primära roller, specialiseringar och teamkapacitet. Formuläret är anpassat för snabb ifyllnad även på mobilen ute på bygget."
+        "client": {
+          "steps": {
+            "describe": {
+              "title": "Beskriv ditt projekt",
+              "description": "Berätta vad du behöver få gjort — oavsett om det är en pool, altan, husgrund eller större entreprenad. Ange plats, budget och önskad tidsplan."
+            },
+            "quote": {
+              "title": "Få en offert",
+              "description": "Vi granskar ditt projekt och återkommer med en kostnadsfri offert inom 24 timmar. Tydliga priser utan dolda avgifter."
+            },
+            "approve": {
+              "title": "Godkänn & boka",
+              "description": "Offerten passar? Godkänn så bokar vi in startdatum och samordnar alla nödvändiga resurser, certifieringar och utrustning."
+            },
+            "done": {
+              "title": "Jobbet utförs",
+              "description": "Våra verifierade utförare genomför arbetet enligt överenskommelse. Vi finns med som stöd genom hela processen."
+            }
+          }
         }
       }
     },
     "Why": {
-      "badge": "Varför LinkableWork",
-      "title": "Det smartare sättet att hitta bygguppdrag",
-      "description": "Vi tar bort friktionen mellan skickliga arbetare och de projekt som behöver dem. Här är vad som skiljer oss från traditionell rekrytering.",
-      "benefits": {
-        "matching": {
-          "title": "Snabb matchning",
-          "description": "Våra rekryterare granskar ansökningar inom 24 timmar. Kandidater med eftertraktade certifieringar som APV och maskinförarbevis prioriteras och kontaktas omedelbart."
-        },
-        "location": {
-          "title": "Projekt över hela Sverige",
-          "description": "Från Luleå till Göteborg samarbetar vi med stora byggbolag för att ge dig projekt i din föredragna region. Ange dina geografiska önskemål under registreringen."
-        },
-        "secure": {
-          "title": "Säkert & regelefterlevande",
-          "description": "Alla uppladdade dokument krypteras och lagras säkert. Vi hanterar F-skatteverifiering, ID06-kontroller och validering av certifikat så att du kan fokusera på arbetet som betyder något."
-        },
-        "teams": {
-          "title": "Byggt för team & individer",
-          "description": "Oavsett om du är en stor underentreprenör, ett litet företag eller en individ med F-skatt, anpassas vår portal till din profil. Registrera dig som ett team på 20 personer eller som en solist."
-        },
-        "transparent": {
-          "title": "Tydliga krav",
-          "description": "Varje projektannons anger tydligt krav på certifieringar, förväntningar på rollen och varaktighet. Inga överraskningar — du vet exakt vad som krävs innan du ansöker."
-        },
-        "mobile": {
-          "title": "Designat för byggbranschen",
-          "description": "Vår portal är byggd med mobilen i fokus eftersom vi vet att du ofta är ute på fältet. Ansökningsformuläret fungerar sömlöst på alla smartphones, surfplattor och datorer."
+      "badge": "Varför LinkableWork?",
+      "title": "Varför företag, arbetare och beställare väljer oss",
+      "description": "Oavsett vem du är — vi gör byggprocessen smidigare, snabbare och tryggare.",
+      "tabs": {
+        "worker": "För arbetssökande",
+        "company": "För företag",
+        "client": "För beställare"
+      },
+      "worker": {
+        "badge": "För dig som söker jobb",
+        "title": "Det smartare sättet att hitta bygguppdrag",
+        "description": "Vi tar bort friktionen mellan skickliga arbetare och de projekt som behöver dem. Här är vad som skiljer oss från traditionell rekrytering.",
+        "benefits": {
+          "matching": {
+            "title": "Snabb matchning",
+            "description": "Våra rekryterare granskar ansökningar inom 24 timmar. Kandidater med eftertraktade certifieringar som APV och maskinförarbevis prioriteras och kontaktas omedelbart."
+          },
+          "location": {
+            "title": "Projekt över hela Sverige",
+            "description": "Från Luleå till Göteborg samarbetar vi med stora byggbolag för att ge dig projekt i din föredragna region. Ange dina geografiska önskemål under registreringen."
+          },
+          "secure": {
+            "title": "Säkert & regelefterlevande",
+            "description": "Alla uppladdade dokument krypteras och lagras säkert. Vi hanterar F-skatteverifiering, ID06-kontroller och validering av certifikat så att du kan fokusera på arbetet som betyder något."
+          },
+          "teams": {
+            "title": "Byggt för team & individer",
+            "description": "Oavsett om du är en stor underentreprenör, ett litet företag eller en individ med F-skatt, anpassas vår portal till din profil. Registrera dig som ett team på 20 personer eller som en solist."
+          },
+          "transparent": {
+            "title": "Tydliga krav",
+            "description": "Varje projektannons anger tydligt krav på certifieringar, förväntningar på rollen och varaktighet. Inga överraskningar — du vet exakt vad som krävs innan du ansöker."
+          },
+          "mobile": {
+            "title": "Designat för byggbranschen",
+            "description": "Vår portal är byggd med mobilen i fokus eftersom vi vet att du ofta är ute på fältet. Ansökningsformuläret fungerar sömlöst på alla smartphones, surfplattor och datorer."
+          }
+        }
+      },
+      "company": {
+        "badge": "För företag som behöver personal",
+        "title": "Hyr kvalificerade byggarbetare — snabbt och smidigt",
+        "description": "Vi gör det enkelt för företag att hitta verifierade arbetare, oavsett om du behöver en maskinförare eller ett helt arbetslag.",
+        "benefits": {
+          "speed": {
+            "title": "Personal inom 48 timmar",
+            "description": "Behöver du personal snabbt? Vår process från publicering till matchning tar oftast mindre än två dagar. Vi screener alla kandidater i förväg."
+          },
+          "vetted": {
+            "title": "Verifierade arbetare",
+            "description": "Alla kandidater är förhandsgranskade med giltiga ID06, certifikat och F-skatt. Ingen administration — bara färdiga att börja."
+          },
+          "flexible": {
+            "title": "Flexibel bemanning",
+            "description": "Hyr per timme, per projekt eller långsiktigt. Skala upp eller ner efter behov. Inga långa uppsägningstider."
+          },
+          "support": {
+            "title": "Dedikerad kontakt",
+            "description": "Du får en personlig rekryteringsansvarig som känner ditt företag och dina behov. Samma kontakt varje gång."
+          },
+          "quality": {
+            "title": "Kvalitetssäkrad matchning",
+            "description": "Vi matchar inte bara på kompetens — vi tar hänsyn till personkemi, arbetskultur och tidigare erfarenheter för bästa resultat."
+          },
+          "network": {
+            "title": "Stort nätverk",
+            "description": "Tillgång till tusentals förhandsgranskade arbetare, maskinförare och underentreprenörer över hela Sverige."
+          }
+        }
+      },
+      "client": {
+        "badge": "För dig som behöver ett jobb utfört",
+        "title": "Få offert på ditt byggprojekt — utan förbindelse",
+        "description": "Oavsett om du är privatperson eller företag, vi hjälper dig hitta rätt utförare för jobbet.",
+        "benefits": {
+          "freeQuote": {
+            "title": "Offert utan kostnad",
+            "description": "Beskriv vad du behöver så får du en kostnadsfri offert inom 24 timmar. Inga dolda avgifter — bara tydliga priser."
+          },
+          "vetted": {
+            "title": "Verifierade utförare",
+            "description": "Alla våra utförare har giltiga certifikat, ID06 och ansvarsförsäkring. Du kan känna dig trygg från dag ett."
+          },
+          "allSizes": {
+            "title": "Allt från litet till stort",
+            "description": "Från poolgrävning och altanbygge till större entreprenader och infrastrukturprojekt. Inget jobb är för litet eller för stort."
+          },
+          "support": {
+            "title": "Stöd genom hela processen",
+            "description": "Vi finns med från offert till färdigt resultat. Har du frågor eller problem? Kontakta oss så löser vi det."
+          },
+          "insurance": {
+            "title": "Försäkrad trygghet",
+            "description": "Alla utförare har ansvarsförsäkring och vi verifierar ID06 och certifikat. Du är trygg från start till mål."
+          },
+          "timely": {
+            "title": "Tidsgaranti",
+            "description": "Vi återkommer med offert inom 24 timmar och arbetet påbörjas enligt överenskommen tidplan — punktligt och professionellt."
+          }
         }
       }
     },
@@ -285,13 +458,261 @@
         "apv2": "APV 2.1, 2.2, 2.3 (Arbete på väg)",
         "apv3": "APV 3 (Arbete på väg)",
         "heta": "Heta arbeten",
-        "bas": "BAS P / BAS U",
+        "basP": "BAS P (Planering)",
+        "basU": "BAS U (Utförande)",
         "hlr": "HLR (Hjärt- och lungräddning)",
         "sakralyft": "Säkra lyft",
+        "lastkoppling": "Lastkoppling",
         "adr": "ADR-S 1.3",
         "stockholm": "Stockholm Stad kurs",
+        "ebr": "EBR (Elsäkerhet bygg & rivning)",
+        "ssgEntre": "SSG Entré",
+        "ssgSafety": "SSG Säkerhet",
+        "ssgSbn": "SSG SBN",
         "machine": "Maskinförarbevis",
-        "ftax": "F-skatt"
+        "ftax": "F-skatt",
+        "esa": "ESA (Elsäkerhetsanvisningarna)",
+        "kvartsdamm": "Kvartsdamm (Kvartsamm)",
+        "gwo": "GWO (Global Wind Organisation)",
+        "hlrHjartstartare": "HLR med Hjärtstartare",
+        "hetaBrandvakt": "Heta Arbeten / Brandvakt",
+        "sakraLyftLastkoppling": "Säkra Lyft / Lastkoppling",
+        "svetsLodning": "Svetscertifikat / Lödning",
+        "asbestPcb": "Asbest / PCB",
+        "fallskyddRaddning": "Fallskydd & Räddning"
+      }
+    },
+    "Guide": {
+      "title": "Guide: Svenska Yrkesbevis och Branschcertifikat",
+      "description": "Här är en översikt över de vanligaste yrkesbevisen och certifikaten inom svensk bygg- och anläggningsindustri, uppdelat efter kategori och utfärdare.",
+      "tip": "Hos LinkableWork kan du enkelt ladda upp alla dina yrkesbevis och certifikat digitalt direkt i portalen. Ange dina giltighetstider så påminner vi dig i god tid innan ett certifikat löper ut. Har du ett Yrkesbevisnummer från BYN eller TYA? Ange det i ansökan för snabbare verifiering.\n\nHar du kompetens från Gruv- eller Vindkraftsindustrin? Se till att nämna detta då det är hög efterfrågan i våra projekt i norra Sverige.",
+      "sections": {
+        "byn": {
+          "title": "1. Byggnadsindustrins Yrkesnämnd (BYN) & Övriga Yrkesnämnder",
+          "subtitle": "Dessa kräver oftast en genomförd lärlingstid och ett godkänt yrkesteoretiskt prov.",
+          "groups": {
+            "tra": {
+              "title": "Trä, Betong, Mur & Inredning",
+              "items": [
+                "Träarbetare (Snickare): Yrkesbevis för husbyggnad och träkonstruktioner.",
+                "Betongarbetare: Innefattar både gjutning, armering och slipning.",
+                "Murare: Yrkesbevis för murning och putsning.",
+                "Plattsättare: Yrkesbevis för kakel och klinker i våtrum och torra utrymmen.",
+                "Golvläggare: Yrkesbevis för mattläggning, parkett och slipning.",
+                "Takmontör: Specialist på tätskikt och montering av takmaterial.",
+                "Målare (MYN): Yrkesbevis för invändigt och utvändigt måleri.",
+                "Träarbetare - Prefab: Montage av färdiga byggmoduler.",
+                "Murare & Plattsättare: Murning, putsning och kakel/klinker (inkl. våtrumsbehörighet)."
+              ]
+            },
+            "plåt": {
+              "title": "Plåt & Ventilation (PVF)",
+              "items": [
+                "Byggnadsplåtslagare: Arbete med tak- och fasadplåt.",
+                "Ventilationsplåtslagare: Tillverkning och montering av ventilationssystem."
+              ]
+            },
+            "mark": {
+              "title": "Mark & Anläggning",
+              "items": [
+                "Anläggningsförare: Yrkesbevis för maskinförare inom anläggning.",
+                "Väg- och anläggningsarbetare: Grundläggande kompetens för infrastruktur, rörläggning och markberedning.",
+                "Anläggningsdykare: Specialistroll för tungt arbete under vatten.",
+                "Stenmontör: Specialisering inom kantsten, gatsten och plattläggning.",
+                "Beläggningsarbetare: Arbete med asfalt, utläggning och ytskikt.",
+                "Bergarbetare: Innefattar borrning och sprängning (kräver ofta Sprängkort).",
+                "Trädgårdsanläggare (TSY): Specialist på grönytor, plantering och finplanering.",
+                "Rörläggare (VA): Specialist på vatten och avlopp (kräver ofta VAV/STC).",
+                "Grov- & Rivningsarbetare: Grovplanering, manuell rivning och byggstädning."
+              ]
+            },
+            "specialmontage": {
+              "title": "Specialmontage & Service",
+              "items": [
+                "Solcellsmontör: Montage av paneler och bärsystem (DC-sidan)."
+              ]
+            }
+          }
+        },
+        "maskin": {
+          "title": "2. Maskin & Kran (BYN / TYA)",
+          "subtitle": "För maskinförare (Anläggningsförare) krävs specifika yrkesbevis för varje maskintyp.",
+          "groups": {
+            "grav": {
+              "title": "Gräv- & Schaktmaskiner",
+              "items": [
+                "Grävmaskin: Yrkesbevis för både band- och hjulburna maskiner.",
+                "Grävlastare: Kombinationsmaskin för schakt och lastning.",
+                "Bandschaktare: För tunga schaktarbeten och terrängplanering.",
+                "Väghyvel: Avancerad maskin för finjustering av vägytor.",
+                "Dumper: För transport av massor i terräng.",
+                "Vält: För packning av jord, grus eller asfalt.",
+                "Sopmaskin: För väghållning och städning av anläggningsområden."
+              ]
+            },
+            "lyft": {
+              "title": "Lyft- & Specialmaskiner",
+              "items": [
+                "Hjullastare: Yrkesbevis för anläggningsarbete och godshantering.",
+                "Teleskoptruck: För höga lyft och materialhantering.",
+                "Mobilkran: Kräver omfattande utbildning och yrkesbevis för kranförare.",
+                "Tornkran: Kräver omfattande utbildning och yrkesbevis för kranförare.",
+                "Traverskran: För tunga lyft inom industri och prefab-montage.",
+                "Betongpumpförare: Maskin för precisionsutläggning av flytbetong.",
+                "Asfaltsläggare: Specialistmaskin för vägbeläggning.",
+                "Pålmaskin: Kritisk roll för grundläggning.",
+                "Spontmaskin: Stödkonstruktioner och schaktning.",
+                "Sugbil / Spolbil: Sanering, tömning och högtrycksspolning.",
+                "Kranbil: Transport och montage med lastbilsmonterad kran."
+              ]
+            }
+          }
+        },
+        "management": {
+          "title": "3. Tjänstemän & Ledarskap",
+          "subtitle": "Vi tillsätter även ledande roller för effektiv projektstyrning.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Platschef: Helhetsansvar för produktion, ekonomi och säkerhet på bygget.",
+                "Arbetsledare: Operativ ledning av arbetslag och underentreprenörer.",
+                "Mättekniker: Utsättning, inmätning och mängdreglering.",
+                "KMA-samordnare: Ansvarig för Kvalitet, Miljö och Arbetsmiljö.",
+                "Projektledare / Kalkylator: Planering och ekonomisk beräkning."
+              ]
+            }
+          }
+        },
+        "installation": {
+          "title": "3. Installation, El & VVS",
+          "subtitle": "Dessa är ofta lagkrav eller krav från försäkringsbolag.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "VVS-montör: Branschlegitimation via VVS-YN och 'Säker Vatten'-auktorisation.",
+                "Elektriker: Auktorisation via Elsäkerhetsverket (Auktoriserad elinstallatör).",
+                "Kyl- och värmepumpstekniker (Incert): Krävs för arbete med köldmedier.",
+                "Larmtekniker (SSF): Certifiering för inbrottslarm och säkerhetssystem.",
+                "Isoleringsmontör: Innefattar teknisk isolering av rör och ventilation.",
+                "Ventilationsmontör: Ofta kopplat till OVK-certifiering."
+              ]
+            }
+          }
+        },
+        "special": {
+          "title": "4. Specialiteter & Miljö",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Svetscertifikat (ISO 9606-1): Krav för bärande stålkonstruktioner (ofta kopplat till EN 1090).",
+                "Lödning: Specifika certifikat för VVS och kylanläggningar.",
+                "Asbestsanering: Kräver särskild utbildning godkänd av Arbetsmiljöverket.",
+                "PCB-sanering: Specialistkompetens för hantering av miljöfarligt avfall.",
+                "Härdplaster (Epoxi/Isocyanater): Utbildning krävs för arbete med dessa kemiska risker.",
+                "Ställningsbyggare: Uppdelat i nivåer — Särskild (över 9 m), Allmän (2–9 m).",
+                "Håltagare: Specialister på att borra och såga i betong.",
+                "Brandskyddsmålare: Certifiering för att applicera brandhämmande färg."
+              ]
+            }
+          }
+        },
+        "certs": {
+          "title": "5. Branschspecifika Certifikat & Krav",
+          "subtitle": "Dessa kräver regelbunden förnyelse (oftast vart 5:e år).",
+          "groups": {
+            "safety": {
+              "title": "Säkerhet & Arbetsmiljö",
+              "items": [
+                "ID06: Obligatoriskt för alla på byggarbetsplatsen.",
+                "Säkerhet på bygget (Safe Construction Training): Webbutbildning krävd av de flesta större entreprenörer.",
+                "SSG Entré: Gemensamt ID-kort för industri- och energianläggningar.",
+                "SSG Grundläggande Säkerhet: Säkerhetsutbildning för industriella miljöer.",
+                "SSG SBN-nivåer: Säkerhets- och beredskapsnivåer för industriarbete.",
+                "Bas P (Planering): Byggarbetsmiljösamordnare för Planering.",
+                "Bas U (Utförande): Byggarbetsmiljösamordnare för Utförande.",
+                "Heta Arbeten / Brandvakt: Certifikat för brandfarliga arbeten."
+              ]
+            },
+            "technical": {
+              "title": "Tekniska Certifikat",
+              "items": [
+                "Arbete på väg (APV): Nivå 1.1, 1.2, 1.3, 2 och 3 beroende på ansvar och fordon.",
+                "EBR (Elsäkerhet bygg & rivning): Elsäkerhetsföreskrifter för bygg- och rivningsarbete.",
+                "ESA (Elsäkerhetsanvisningarna): ESA Grund och ESA Skötsel (nära kraftledningar).",
+                "Svetscertifikat / Lödning: ISO 9606-1 för bärande stålkonstruktioner.",
+                "Stockholm Stad kurs: Krav för arbete på stadens mark."
+              ]
+            },
+            "health": {
+              "title": "Hälsa & Miljö",
+              "items": [
+                "Kvartsdamm (Kvartsamm): Utbildning om risker och skyddsåtgärder vid stendamm.",
+                "Härdplaster: Utbildning och medicinsk kontroll för Epoxi/Isocyanater.",
+                "Asbest / PCB: Särskild utbildning och tillstånd för sanering.",
+                "GWO (Global Wind Organisation): Krav för arbete inom vindkraft."
+              ]
+            },
+            "equipment": {
+              "title": "Utrustning & Räddning",
+              "items": [
+                "Säkra Lyft / Lastkoppling: För alla som arbetar med kranlyft.",
+                "Fallskydd & Räddning: För arbete på höjd, tak och ställning.",
+                "Skotta Säkert: Licens för säker snöskottning på tak.",
+                "Mobila Arbetsplattformar (Skylift/Sax): Utbildning enligt SS-ISO 18878.",
+                "Bultpistol: Utbildning för användning av skjutverktyg.",
+                "HLR med Hjärtstartare: Förstahjälpen-kompetens på byggplatsen."
+              ]
+            }
+          }
+        },
+        "drivers": {
+          "title": "7. Transport & Logistik",
+          "subtitle": "För roller som innefattar transport av material, maskiner eller personal.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Körkort B: Personbil och lätt lastbil (grundkrav).",
+                "Körkort BE: Personbil med tungt släp (vanligt för maskinsläp).",
+                "Körkort C / CE: Tung lastbil med/utan släp.",
+                "YKB (Yrkeskompetensbevis): Krav för yrkesmässig godstransport.",
+                "Digitalt färdskrivarkort: Krävs för förare av fordon med färdskrivare.",
+                "ADR-S 1.3: Transport av farligt gods (t.ex. diesel i IBC-tank)."
+              ]
+            }
+          }
+        },
+        "rail": {
+          "title": "6. Järnväg & Skog",
+          "subtitle": "För infrastrukturprojekt kopplade till järnväg samt skogsarbete krävs specifika behörigheter.",
+          "groups": {
+            "items": {
+              "title": "Järnväg",
+              "items": [
+                "Skydds- och säkerhetsledare (SoS-ledare): Säkerhet vid spårarbete.",
+                "Tillsyningsman (TSM): Ansvarar för trafiksäkerheten på spår.",
+                "BAS-P Järnväg: Specifik inriktning mot spårmiljö.",
+                "BAS-U Järnväg: Specifik inriktning mot spårmiljö.",
+                "BAS-P / BAS-U Järnväg: Specifik inriktning mot spårmiljö."
+              ]
+            },
+            "skog": {
+              "title": "Skog (Motorsåg & Röjsåg)",
+              "items": [
+                "Motorsågskörkort Nivå A: Grundläggande motorsågsarbete.",
+                "Motorsågskörkort Nivå B: Motorsågsarbete på mark med riskmoment.",
+                "Motorsågskörkort Nivå C: Motorsågsarbete på höjd och i träd.",
+                "Motorsågskörkort Nivå D: Motorsågsarbete i svår terräng och röjning.",
+                "Röjsågskörkort Nivå RA: Grundläggande röjning med röjsåg.",
+                "Röjsågskörkort Nivå RB: Avancerad röjning och markberedning."
+              ]
+            }
+          }
+        }
       }
     },
     "CTA": {
@@ -303,30 +724,69 @@
     "Form": {
       "badge": "Ansök nu",
       "title": "Ansök till projekt eller anställningsroll",
-      "description": "LinkableWork söker nya anställda, underleverantörer, företag och personer med F-skatt för uppdrag inom mark, anläggning, infrastruktur och entreprenad. Uppdrag löper från maj till oktober.",
+      "description": "LinkableWork söker nya anställda, underleverantörer och personer med F-skatt för uppdrag inom mark, anläggning, infrastruktur och entreprenad. Uppdrag löper från maj till oktober.",
       "name": "Namn",
       "email": "E-post",
       "phone": "Telefon",
       "company": "Företag (valfritt)",
       "type": "Jag ansöker som",
-      "typeOptions": ["Underleverantör", "Företag", "Privatperson med F-skatt", "Privatperson utan F-skatt"],
+      "typeOptions": ["Underleverantör", "Privatperson med F-skatt", "Privatperson utan F-skatt"],
       "roles": "Roller jag är intresserad av",
-      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag"],
+      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag", "Träarbetare (Snickare)", "Betongarbetare", "Murare", "Plattsättare", "Golvläggare", "Takmontör", "Målare", "Byggnadsplåtslagare", "Ventilationsplåtslagare", "VVS-montör", "Elektriker", "Ställningsbyggare", "Håltagare", "Svetsare", "Bergarbetare", "Stenmontör", "Beläggningsarbetare", "Anläggningsdykare", "Trädgårdsanläggare", "Brandskyddsmålare", "Kyl- och värmepumpstekniker", "Larmtekniker", "Isoleringsmontör", "Ventilationsmontör", "Platschef", "Arbetsledare", "Mättekniker", "KMA-samordnare", "Projektledare / Kalkylator"],
       "locations": "Områden",
-      "locationOptions": ["Luleå", "Skellefteå", "Umeå", "Stockholm", "Göteborg"],
+      "locationOptions": ["Blekinge län", "Dalarnas län", "Gotlands län", "Gävleborgs län", "Hallands län", "Jämtlands län", "Jönköpings län", "Kalmar län", "Kronobergs län", "Norrbottens län", "Skåne län", "Stockholms län", "Södermanlands län", "Uppsala län", "Värmlands län", "Västerbottens län", "Västernorrlands län", "Västmanlands län", "Västra Götalands län", "Örebro län", "Östergötlands län"],
       "certifications": "Certifieringar jag innehar",
       "certOptions": [
         "ID06",
         "Säkerhet på bygget (Safe Construction Training)",
-        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
-        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "APV 1.1 (Arbete på väg)",
+        "APV 1.2 (Arbete på väg)",
+        "APV 1.3 (Arbete på väg)",
+        "APV 2.1 (Arbete på väg)",
+        "APV 2.2 (Arbete på väg)",
+        "APV 2.3 (Arbete på väg)",
         "APV 3 (Arbete på väg)",
         "Heta arbeten",
-        "BAS P / BAS U",
+        "BAS P (Planering)",
+        "BAS U (Utförande)",
         "HLR (Hjärt- och lungräddning)",
         "Säkra lyft",
         "ADR-S 1.3",
-        "Stockholm Stad kurs"
+        "Stockholm Stad kurs",
+        "EBR (Elsäkerhet bygg & rivning)",
+        "SSG Entré (Industriellt ID-kort)",
+        "SSG Grundläggande Säkerhet",
+        "SSG SBN-nivåer",
+        "Asbestsanering",
+        "PCB-sanering",
+        "Svetscertifikat (ISO 9606-1)",
+        "Härdplaster (Epoxi/Isocyanater)",
+        "Mobila arbetsplattformar (Skylift/Sax)",
+        "Bultpistol",
+        "Fallskyddsutbildning",
+        "Skotta Säkert",
+        "Lödning (VVS/kyla)",
+        "Lastkoppling",
+        "Motorsågskörkort Nivå A",
+        "Motorsågskörkort Nivå B",
+        "Motorsågskörkort Nivå C",
+        "Motorsågskörkort Nivå D",
+        "Röjsågskörkort Nivå RA",
+        "Röjsågskörkort Nivå RB",
+        "Trafikverket SoS-ledare",
+        "Trafikverket Tillsyningsman (TSM)",
+        "BAS-P Järnväg",
+        "BAS-U Järnväg",
+        "ESA (Elsäkerhetsanvisningarna)",
+        "Kvartsdamm (Kvartsamm)",
+        "GWO (Global Wind Organisation)",
+        "HLR med Hjärtstartare",
+        "Heta Arbeten / Brandvakt",
+        "Säkra Lyft / Lastkoppling",
+        "Svetscertifikat / Lödning",
+        "Asbest / PCB",
+        "Fallskydd & Räddning",
+        "BAS-P / BAS-U Järnväg"
       ],
       "machineLicenses": "Maskinförarbevis",
       "machineOptions": [
@@ -342,14 +802,32 @@
         "Tornkran",
         "Betongpump",
         "Asfaltsläggare",
-        "Pålmaskin / Spontmaskin"
+        "Pålmaskin",
+        "Spontmaskin",
+        "Sopmaskin",
+        "Traverskran",
+        "Sugbil / Spolbil",
+        "Kranbil"
       ],
       "tradeCertificates": "Yrkesbevis",
+      "driverLicenses": "Körkortsbehörighet",
+      "driverLicenseOptions": [
+        "B (Personbil)",
+        "BE (Personbil med tungt släp)",
+        "C (Tung lastbil)",
+        "CE (Tung lastbil med släp)",
+        "YKB (Yrkeskompetensbevis)",
+        "Digitalt färdskrivarkort",
+        "ADR-S 1.3",
+        "Körkort B",
+        "Körkort BE",
+        "Körkort C / CE"
+      ],
       "tradeOptions": [
         "Anläggningsförare",
         "Väg- och anläggningsarbetare",
         "Betongarbetare",
-        "Träarbetare",
+        "Träarbetare (Snickare)",
         "Murare",
         "Plattsättare",
         "Golvläggare",
@@ -358,12 +836,35 @@
         "Bergarbetare",
         "Beläggningsarbetare",
         "Håltagare",
-        "Stenmontör"
+        "Stenmontör",
+        "Målare",
+        "Byggnadsplåtslagare",
+        "Ventilationsplåtslagare",
+        "Anläggningsdykare",
+        "Trädgårdsanläggare",
+        "VVS-montör",
+        "Elektriker (Auktoriserad elinstallatör)",
+        "Kyl- och värmepumpstekniker",
+        "Larmtekniker (SSF)",
+        "Isoleringsmontör",
+        "Ventilationsmontör",
+        "Brandskyddsmålare",
+        "Träarbetare - Prefab",
+        "Rörläggare (VA)",
+        "Grov- & Rivningsarbetare",
+        "Solcellsmontör"
       ],
       "applyingFor": "Ansöker till",
       "cv": "CV / Erfarenhet",
       "cvHint": "Klistra in ditt CV, beskriv din erfarenhet, eller länka till din LinkedIn-profil",
       "cvPlaceholder": "Till exempel: 10+ års erfarenhet som grävmaskinist...",
+      "references": "Referenser",
+      "referencesHint": "Tidigare arbetsgivare, projekt eller beställare vi kan kontakta",
+      "referencesPlaceholder": "Företag, kontaktperson, telefon...",
+      "extraCertifications": "Extra certifieringar (valfritt)",
+      "extraCertificationsHint": "Lista certifikat eller yrkesbevis som inte finns i listan ovan",
+      "uploadHint": "Tips: Ta kort på dina certifikat med synligt slutdatum och bifoga i mejlet. Det påskyndar verifieringen.",
+      "extraCertificationsPlaceholder": "Till exempel: Målare (MYN), VVS-montör, Svetscertifikat ISO 9606-1...",
       "message": "Meddelande (valfritt)",
       "messagePlaceholder": "Berätta om din erfarenhet, teamstorlek, tillgänglighet...",
       "submit": "Skicka ansökan",
@@ -380,6 +881,7 @@
         "howItWorks": "Så fungerar det",
         "applyNow": "Ansök nu",
         "contact": "Kontakt",
+        "guide": "Yrkesbevis & Cert",
         "login": "Partnerinloggning"
       },
       "certs": {
@@ -387,6 +889,7 @@
       },
       "contact": {
         "title": "Kontakt",
+        "subtitle": "Har du frågor om rekrytering, projekt eller vill du begära en offert? Kontakta oss så hjälper vi dig.",
         "thomas": "Thomas",
         "thomasEmail": "thomas@linkable.se",
         "thomasPhone": "070-xxx xx xx",

@@ -90,10 +90,24 @@ All pages are served under `/[locale]` prefix (`/sv/projects`, `/en/projects`).
 
 ### Project data per item
 - `title`, `roles`, `locations`, `startDate`, `applyDeadline`
+- `salary` — hourly rate range (e.g. "250–350 kr/tim")
 - `accommodation` — "Baracker / hotell ingår" for northern projects
 - `locationCerts` — "Stockholm Stad kurs" if applicable (array, else `[]`)
 - `description`
 - `id06Note` — rendered via shared key on every card
+
+### Project Detail Page
+Each project has a dedicated detail page at `/projects/[id]` with:
+- Quick Facts (location, start, deadline, salary, accommodation)
+- About the project (description)
+- Roles we're looking for
+- Machine list (shown only for projects seeking Maskinförare)
+- Certification requirements
+- Working conditions & equipment (language, tools, insurance)
+- Compensation & finance (payment terms, F-tax requirement)
+- Contact person
+- Application checklist (with Project ID, F-tax, certs, references, deadline)
+- CTA buttons (Apply / Ask a Question)
 
 ## i18n
 
@@ -111,52 +125,7 @@ All pages are served under `/[locale]` prefix (`/sv/projects`, `/en/projects`).
 - Active page indicator — amber underline (desktop) / bold text (mobile)
 
 ### Footer
-- LinkableWork brand, nav links, contact info
+- LinkableWork brand, nav links, contact info (Thomas + Christer) 
 
-### Sections (`sections.tsx`)
-All page sections are in this file:
-- `HeroSection` — main hero with CTA
-- `CertificationsBanner` — certification logos/cards
-- `ProjectsSection` — grouped project cards with clickable roles
-- `ApplySection` → `ApplicationForm` — Netlify form with fields
-- `HowItWorksSection` — 4-step process
-- `WhyLinkableSection` — benefits
-- `RequestWorkersSection` — company form
-- `CTASection` — bottom CTA
-
-## Forms
-
-Netlify Forms with `data-netlify="true"` auto-detection. Two forms:
-1. **Application form** (`/projects`) — name, email, phone, type, roles, locations, certs, machines, trades, CV textarea
-2. **Request Workers form** (`/request-workers`) — company name, contact, location, work type, worker count, start date, description
-
-Form keys in translations: `Index.Form.*`, `Index.RequestWorkers.form.*`
-
-## Key Behaviors
-
-- Clicking a role on a project card pre-selects that role in the application form and scrolls to it
-- Northern projects (Umeå, Luleå, Skellefteå, Piteå) show accommodation info
-- ID06 note shown on all project cards — "can be arranged upon employment"
-- `locationCerts` is an empty array `[]` on projects without location-specific certs to prevent next-intl MISSING_MESSAGE errors
-
-## Deployment
-
-- **Host:** Netlify
-- **Build:** `next build` (Node 22)
-- **Env vars:** `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
-- **Headers:** Security headers + immutable cache for `/assets/*`
-- **Redirects:** `/api/*` → Netlify Functions
-
-## Development
-
-```bash
-bun install
-bun run dev        # http://localhost:3000
-bun run build      # Production build
-```
-
-## Brand
-
-- Renamed from "Linkable" → "LinkableWork" throughout
-- OG image at `public/og-image.svg` (1200×630)
+- OG image at `public/og-image.png` (1200×630 PNG)
 - PWA manifest at `src/app/manifest.ts`
