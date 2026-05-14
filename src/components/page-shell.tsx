@@ -18,6 +18,7 @@ function Navbar() {
     { label: t("Navbar.projects"), href: "/projects" as const },
     { label: t("Navbar.howItWorks"), href: "/how-it-works" as const },
     { label: t("Navbar.requestWorkers"), href: "/request-workers" as const },
+    { label: t("Navbar.requestJob"), href: "/request-job" as const },
     { label: t("Navbar.whyLinkable"), href: "/why-linkable" as const },
     { label: t("Navbar.contact"), href: "/contact" as const },
   ];

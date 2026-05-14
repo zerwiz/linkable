@@ -8,6 +8,46 @@
     "twitterDescription": "Hitta byggprojekt eller anställning i hela Sverige."
   },
   "Index": {
+    "RequestJob": {
+      "badge": "För Privatpersoner & Företag",
+      "title": "Behöver du ett jobb utfört?",
+      "description": "Oavsett om du är privatperson som vill bygga altan, gräva pool eller renovera hemma — eller ett företag med ett större entreprenadbehov. Beskriv vad du behöver så återkommer vi med en offert.",
+      "benefits": {
+        "vetted": {
+          "title": "Verifierade utförare",
+          "description": "Alla våra samarbetspartners har giltiga certifikat, ID06 och ansvarsförsäkring. Trygghet från start."
+        },
+        "offer": {
+          "title": "Offert utan förbindelse",
+          "description": "Beskriv ditt behov så får du en kostnadsfri offert. Inga dolda avgifter — bara tydliga priser."
+        },
+        "scope": {
+          "title": "Allt från litet till stort",
+          "description": "Från poolgrävning och husgrund till stora infrastrukturprojekt. Vi hittar rätt utförare för varje jobb."
+        }
+      },
+      "form": {
+        "title": "Berätta om ditt projekt",
+        "description": "Fyll i formuläret så kontaktar vi dig med en offert.",
+        "name": "Namn",
+        "email": "E-post",
+        "phone": "Telefon",
+        "company": "Företag (valfritt)",
+        "jobType": "Typ av arbete",
+        "jobTypeOptions": ["Husgrund & markarbete", "Pool & trädgård", "Renovering & ombyggnad", "Nybyggnation", "Infrastruktur & väg", "Industri & lager", "Tak & fasad", "El & VVS", "Murnings- & betongarbete", "Övrigt"],
+        "location": "Plats för arbetet",
+        "budget": "Ungefärlig budget (valfritt)",
+        "budgetOptions": ["Under 50 000 kr", "50 000–200 000 kr", "200 000–500 000 kr", "500 000–1 000 000 kr", "Över 1 000 000 kr", "Vet ej"],
+        "timeline": "Önskad tidsplan",
+        "descriptionLabel": "Beskriv vad som ska göras",
+        "descriptionPlaceholder": "Berätta så utförligt som möjligt om vad du behöver få gjort...",
+        "submit": "Begär offert",
+        "sending": "Skickar...",
+        "success": "Tack för din förfrågan!",
+        "successDescription": "Vi återkommer till dig med en offert inom 24 timmar.",
+        "error": "Kunde inte skicka. Försök igen."
+      }
+    },
     "RequestWorkers": {
       "badge": "För Företag",
       "title": "Behöver du personal?",
@@ -44,6 +84,7 @@
     "Navbar": {
       "projects": "Projekt",
       "requestWorkers": "Behöver du personal?",
+      "requestJob": "Behöver du ett jobb utfört?",
       "howItWorks": "Så fungerar det",
       "whyLinkable": "Varför LinkableWork",
       "contact": "Kontakt",
@@ -222,56 +263,187 @@
     },
     "HowItWorks": {
       "badge": "Så fungerar det",
-      "title": "Fyra steg till ditt nästa projekt",
-      "description": "Vår strömlinjeformade process är designad för byggproffs. Ansök från din telefon mellan arbetsmomenten, inget pappersarbete krävs.",
+      "title": "Tre sätt att använda LinkableWork",
+      "description": "Oavsett om du söker arbete, behöver personal eller vill få ett jobb utfört — vi har en process för dig.",
       "step": "STEG",
-      "steps": {
-        "apply": {
-          "title": "Ansök till projekt",
-          "description": "Bläddra bland lediga tjänster och ansök direkt till projekt som matchar dina färdigheter och preferenser. Vårt strömlinjeformade formulär fångar all information rekryterare behöver — roller, certifieringar, erfarenhet — så du kan ansöka på några minuter från din telefon."
+      "tabs": {
+        "worker": "Sök jobb",
+        "company": "Hyr personal",
+        "client": "Beställ arbete"
+      },
+      "titles": {
+        "worker": "Fyra steg till ditt nästa projekt",
+        "company": "Fyra steg till rätt personal",
+        "client": "Fyra steg till ett utfört jobb"
+      },
+      "descriptions": {
+        "worker": "Vår strömlinjeformade process är designad för byggproffs. Ansök från din telefon mellan arbetsmomenten, inget pappersarbete krävs.",
+        "company": "Hitta kvalificerade arbetare och arbetslag för ditt projekt. Vi hanterar hela processen från publicering till uppstart.",
+        "client": "Beskriv vad du behöver få gjort — från pool och altan till större byggprojekt — så återkommer vi med en offert."
+      },
+      "flows": {
+        "worker": {
+          "steps": {
+            "apply": {
+              "title": "Ansök till projekt",
+              "description": "Bläddra bland lediga tjänster och ansök direkt till projekt som matchar dina färdigheter och preferenser. Vårt strömlinjeformade formulär fångar all information rekryterare behöver — roller, certifieringar, erfarenhet — så du kan ansöka på några minuter från din telefon."
+            },
+            "upload": {
+              "title": "Ladda upp certifikat",
+              "description": "Ladda upp dina obligatoriska certifieringar säkert — ID06, Säkerhet på bygget, APV (Arbete på väg) och maskinförarbevis. Har du inget ID06? Vi kan ordna det vid anställning."
+            },
+            "match": {
+              "title": "Bli matchad",
+              "description": "Vårt team granskar din ansökning eller profil och matchar dig med aktiva projekt baserat på dina geografiska önskemål, certifieringar och tillgänglighet. Sökande med hög matchning får omedelbara aviseringar via e-post så att du aldrig missar rätt möjlighet."
+            },
+            "profile": {
+              "title": "Registrera din profil (kommer snart)",
+              "description": "Skapa ditt partnerkonto på under 5 minuter. Berätta om ditt företag eller din enskilda firma, primära roller, specialiseringar och teamkapacitet. Formuläret är anpassat för snabb ifyllnad även på mobilen ute på bygget."
+            }
+          }
         },
-        "step2": {
-          "title": "Ladda upp certifikat",
-          "description": "Ladda upp dina obligatoriska certifieringar säkert — ID06, Säkerhet på bygget, APV (Arbete på väg) och maskinförarbevis. Har du inget ID06? Vi kan ordna det vid anställning."
+        "company": {
+          "steps": {
+            "post": {
+              "title": "Publicera ditt behov",
+              "description": "Ladda upp ditt projekt eller beskriv vilken personal du behöver — antal, roller, certifieringskrav och önskad startperiod. Vi hjälper dig att formulera annonsen för bästa matchning."
+            },
+            "review": {
+              "title": "Granska kandidater",
+              "description": "Vårt team screener och matchar kvalificerade kandidater mot dina krav. Du får en kuraterad lista med verifierade arbetare och underentreprenörer redo för intervju."
+            },
+            "hire": {
+              "title": "Välj & anställ",
+              "description": "Välj ut de kandidater som passar bäst. Vi hanterar kontrakt, ID06-registrering och all administration så att du snabbt kan komma igång."
+            },
+            "start": {
+              "title": "Starta arbetet",
+              "description": "Personalen är på plats enligt överenskommen tidplan. Vi följer upp under projektets gång för att säkerställa att allt fungerar."
+            }
+          }
         },
-        "step3": {
-          "title": "Bli matchad",
-          "description": "Vårt team granskar din ansökning eller profil och matchar dig med aktiva projekt baserat på dina geografiska önskemål, certifieringar och tillgänglighet. Sökande med hög matchning får omedelbara aviseringar via e-post så att du aldrig missar rätt möjlighet."
-        },
-        "step1": {
-          "title": "Registrera din profil (kommer snart)",
-          "description": "Skapa ditt partnerkonto på under 5 minuter. Berätta om ditt företag eller din enskilda firma, primära roller, specialiseringar och teamkapacitet. Formuläret är anpassat för snabb ifyllnad även på mobilen ute på bygget."
+        "client": {
+          "steps": {
+            "describe": {
+              "title": "Beskriv ditt projekt",
+              "description": "Berätta vad du behöver få gjort — oavsett om det är en pool, altan, husgrund eller större entreprenad. Ange plats, budget och önskad tidsplan."
+            },
+            "quote": {
+              "title": "Få en offert",
+              "description": "Vi granskar ditt projekt och återkommer med en kostnadsfri offert inom 24 timmar. Tydliga priser utan dolda avgifter."
+            },
+            "approve": {
+              "title": "Godkänn & boka",
+              "description": "Offerten passar? Godkänn så bokar vi in startdatum och samordnar alla nödvändiga resurser, certifieringar och utrustning."
+            },
+            "done": {
+              "title": "Jobbet utförs",
+              "description": "Våra verifierade utförare genomför arbetet enligt överenskommelse. Vi finns med som stöd genom hela processen."
+            }
+          }
         }
       }
     },
     "Why": {
       "badge": "Varför LinkableWork",
-      "title": "Det smartare sättet att hitta bygguppdrag",
-      "description": "Vi tar bort friktionen mellan skickliga arbetare och de projekt som behöver dem. Här är vad som skiljer oss från traditionell rekrytering.",
-      "benefits": {
-        "matching": {
-          "title": "Snabb matchning",
-          "description": "Våra rekryterare granskar ansökningar inom 24 timmar. Kandidater med eftertraktade certifieringar som APV och maskinförarbevis prioriteras och kontaktas omedelbart."
-        },
-        "location": {
-          "title": "Projekt över hela Sverige",
-          "description": "Från Luleå till Göteborg samarbetar vi med stora byggbolag för att ge dig projekt i din föredragna region. Ange dina geografiska önskemål under registreringen."
-        },
-        "secure": {
-          "title": "Säkert & regelefterlevande",
-          "description": "Alla uppladdade dokument krypteras och lagras säkert. Vi hanterar F-skatteverifiering, ID06-kontroller och validering av certifikat så att du kan fokusera på arbetet som betyder något."
-        },
-        "teams": {
-          "title": "Byggt för team & individer",
-          "description": "Oavsett om du är en stor underentreprenör, ett litet företag eller en individ med F-skatt, anpassas vår portal till din profil. Registrera dig som ett team på 20 personer eller som en solist."
-        },
-        "transparent": {
-          "title": "Tydliga krav",
-          "description": "Varje projektannons anger tydligt krav på certifieringar, förväntningar på rollen och varaktighet. Inga överraskningar — du vet exakt vad som krävs innan du ansöker."
-        },
-        "mobile": {
-          "title": "Designat för byggbranschen",
-          "description": "Vår portal är byggd med mobilen i fokus eftersom vi vet att du ofta är ute på fältet. Ansökningsformuläret fungerar sömlöst på alla smartphones, surfplattor och datorer."
+      "title": "Varför företag, arbetare och beställare väljer oss",
+      "description": "Oavsett vem du är — vi gör byggprocessen smidigare, snabbare och tryggare.",
+      "tabs": {
+        "worker": "För arbetssökande",
+        "company": "För företag",
+        "client": "För beställare"
+      },
+      "worker": {
+        "badge": "För dig som söker jobb",
+        "title": "Det smartare sättet att hitta bygguppdrag",
+        "description": "Vi tar bort friktionen mellan skickliga arbetare och de projekt som behöver dem. Här är vad som skiljer oss från traditionell rekrytering.",
+        "benefits": {
+          "matching": {
+            "title": "Snabb matchning",
+            "description": "Våra rekryterare granskar ansökningar inom 24 timmar. Kandidater med eftertraktade certifieringar som APV och maskinförarbevis prioriteras och kontaktas omedelbart."
+          },
+          "location": {
+            "title": "Projekt över hela Sverige",
+            "description": "Från Luleå till Göteborg samarbetar vi med stora byggbolag för att ge dig projekt i din föredragna region. Ange dina geografiska önskemål under registreringen."
+          },
+          "secure": {
+            "title": "Säkert & regelefterlevande",
+            "description": "Alla uppladdade dokument krypteras och lagras säkert. Vi hanterar F-skatteverifiering, ID06-kontroller och validering av certifikat så att du kan fokusera på arbetet som betyder något."
+          },
+          "teams": {
+            "title": "Byggt för team & individer",
+            "description": "Oavsett om du är en stor underentreprenör, ett litet företag eller en individ med F-skatt, anpassas vår portal till din profil. Registrera dig som ett team på 20 personer eller som en solist."
+          },
+          "transparent": {
+            "title": "Tydliga krav",
+            "description": "Varje projektannons anger tydligt krav på certifieringar, förväntningar på rollen och varaktighet. Inga överraskningar — du vet exakt vad som krävs innan du ansöker."
+          },
+          "mobile": {
+            "title": "Designat för byggbranschen",
+            "description": "Vår portal är byggd med mobilen i fokus eftersom vi vet att du ofta är ute på fältet. Ansökningsformuläret fungerar sömlöst på alla smartphones, surfplattor och datorer."
+          }
+        }
+      },
+      "company": {
+        "badge": "För företag som behöver personal",
+        "title": "Hyr kvalificerade byggarbetare — snabbt och smidigt",
+        "description": "Vi gör det enkelt för företag att hitta verifierade arbetare, oavsett om du behöver en maskinförare eller ett helt arbetslag.",
+        "benefits": {
+          "speed": {
+            "title": "Personal inom 48 timmar",
+            "description": "Behöver du personal snabbt? Vår process från publicering till matchning tar oftast mindre än två dagar. Vi screener alla kandidater i förväg."
+          },
+          "vetted": {
+            "title": "Verifierade arbetare",
+            "description": "Alla kandidater är förhandsgranskade med giltiga ID06, certifikat och F-skatt. Ingen administration — bara färdiga att börja."
+          },
+          "flexible": {
+            "title": "Flexibel bemanning",
+            "description": "Hyr per timme, per projekt eller långsiktigt. Skala upp eller ner efter behov. Inga långa uppsägningstider."
+          },
+          "support": {
+            "title": "Dedikerad kontakt",
+            "description": "Du får en personlig rekryteringsansvarig som känner ditt företag och dina behov. Samma kontakt varje gång."
+          },
+          "quality": {
+            "title": "Kvalitetssäkrad matchning",
+            "description": "Vi matchar inte bara på kompetens — vi tar hänsyn till personkemi, arbetskultur och tidigare erfarenheter för bästa resultat."
+          },
+          "network": {
+            "title": "Stort nätverk",
+            "description": "Tillgång till tusentals förhandsgranskade arbetare, maskinförare och underentreprenörer över hela Sverige."
+          }
+        }
+      },
+      "client": {
+        "badge": "För dig som behöver ett jobb utfört",
+        "title": "Få offert på ditt byggprojekt — utan förbindelse",
+        "description": "Oavsett om du är privatperson eller företag, vi hjälper dig hitta rätt utförare för jobbet.",
+        "benefits": {
+          "freeQuote": {
+            "title": "Offert utan kostnad",
+            "description": "Beskriv vad du behöver så får du en kostnadsfri offert inom 24 timmar. Inga dolda avgifter — bara tydliga priser."
+          },
+          "vetted": {
+            "title": "Verifierade utförare",
+            "description": "Alla våra utförare har giltiga certifikat, ID06 och ansvarsförsäkring. Du kan känna dig trygg från dag ett."
+          },
+          "allSizes": {
+            "title": "Allt från litet till stort",
+            "description": "Från poolgrävning och altanbygge till större entreprenader och infrastrukturprojekt. Inget jobb är för litet eller för stort."
+          },
+          "support": {
+            "title": "Stöd genom hela processen",
+            "description": "Vi finns med från offert till färdigt resultat. Har du frågor eller problem? Kontakta oss så löser vi det."
+          },
+          "insurance": {
+            "title": "Försäkrad trygghet",
+            "description": "Alla utförare har ansvarsförsäkring och vi verifierar ID06 och certifikat. Du är trygg från start till mål."
+          },
+          "timely": {
+            "title": "Tidsgaranti",
+            "description": "Vi återkommer med offert inom 24 timmar och arbetet påbörjas enligt överenskommen tidplan — punktligt och professionellt."
+          }
         }
       }
     },
@@ -387,6 +559,7 @@
       },
       "contact": {
         "title": "Kontakt",
+        "subtitle": "Har du frågor om rekrytering, projekt eller vill du begära en offert? Kontakta oss så hjälper vi dig.",
         "thomas": "Thomas",
         "thomasEmail": "thomas@linkable.se",
         "thomasPhone": "070-xxx xx xx",

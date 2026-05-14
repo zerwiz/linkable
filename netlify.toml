@@ -6,6 +6,9 @@
   NODE_VERSION = "22"
   NEXT_PRIVATE_STANDALONE = "false"
 
+[cache]
+  path = ".next/cache"
+
 [[headers]]
   for = "/*"
   [headers.values]

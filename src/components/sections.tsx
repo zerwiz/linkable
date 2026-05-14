@@ -374,13 +374,36 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
 /* ------------------------------------------------------------------ */
 export function HowItWorksSection() {
   const t = useTranslations("Index");
+  const [activeTab, setActiveTab] = useState<"worker" | "company" | "client">("worker");
 
-  const steps = [
-    { id: "apply", step: "01", icon: <ArrowRight className="h-6 w-6" /> },
-    { id: "step2", step: "02", icon: <FileCheck className="h-6 w-6" /> },
-    { id: "step3", step: "03", icon: <CheckCircle2 className="h-6 w-6" /> },
-    { id: "step1", step: "04", icon: <Users className="h-6 w-6" /> },
+  const tabs = [
+    { id: "worker" as const, icon: <Users className="h-5 w-5" /> },
+    { id: "company" as const, icon: <HardHat className="h-5 w-5" /> },
+    { id: "client" as const, icon: <FileCheck className="h-5 w-5" /> },
   ];
+
+  const flowSteps: Record<string, { id: string; icon: React.ReactNode }[]> = {
+    worker: [
+      { id: "apply", icon: <ArrowRight className="h-6 w-6" /> },
+      { id: "upload", icon: <FileCheck className="h-6 w-6" /> },
+      { id: "match", icon: <CheckCircle2 className="h-6 w-6" /> },
+      { id: "profile", icon: <Users className="h-6 w-6" /> },
+    ],
+    company: [
+      { id: "post", icon: <FileCheck className="h-6 w-6" /> },
+      { id: "review", icon: <Users className="h-6 w-6" /> },
+      { id: "hire", icon: <CheckCircle2 className="h-6 w-6" /> },
+      { id: "start", icon: <ArrowRight className="h-6 w-6" /> },
+    ],
+    client: [
+      { id: "describe", icon: <FileCheck className="h-6 w-6" /> },
+      { id: "quote", icon: <ArrowRight className="h-6 w-6" /> },
+      { id: "approve", icon: <CheckCircle2 className="h-6 w-6" /> },
+      { id: "done", icon: <HardHat className="h-6 w-6" /> },
+    ],
+  };
+
+  const steps = flowSteps[activeTab];
 
   return (
     <section className="border-y border-border/40 bg-muted/30 py-20 sm:py-28">
@@ -422,14 +445,49 @@ export function HowItWorksSection() {
               </p>
             </motion.div>
 
-            <div className="mt-10 space-y-8">
+            {/* Tabs */}
+            <div className="mt-8 flex gap-2 rounded-xl border border-border/60 bg-background p-1.5">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
+                    activeTab === tab.id
+                      ? "bg-amber-500 text-white shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {tab.icon}
+                  {t(`HowItWorks.tabs.${tab.id}`)}
+                </button>
+              ))}
+            </div>
+
+            {/* Flow title & description */}
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-8"
+            >
+              <h3 className="text-xl font-bold text-foreground">
+                {t(`HowItWorks.titles.${activeTab}`)}
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {t(`HowItWorks.descriptions.${activeTab}`)}
+              </p>
+            </motion.div>
+
+            {/* Steps */}
+            <div className="mt-8 space-y-8">
               {steps.map((step, i) => (
                 <motion.div
                   key={step.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.45, delay: i * 0.15 }}
+                  transition={{ duration: 0.45, delay: i * 0.1 }}
                   className="flex gap-5"
                 >
                   <div className="flex flex-col items-center gap-2">
@@ -442,18 +500,52 @@ export function HowItWorksSection() {
                   </div>
                   <div className="pb-2">
                     <span className="text-xs font-bold tracking-widest text-amber-500">
-                      {t("HowItWorks.step")} {step.step}
+                      {t("HowItWorks.step")} 0{i + 1}
                     </span>
                     <h3 className="mt-1 text-lg font-semibold text-foreground">
-                      {t(`HowItWorks.steps.${step.id}.title`)}
+                      {t(`HowItWorks.flows.${activeTab}.steps.${step.id}.title`)}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {t(`HowItWorks.steps.${step.id}.description`)}
+                      {t(`HowItWorks.flows.${activeTab}.steps.${step.id}.description`)}
                     </p>
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            {/* CTA */}
+            <motion.div
+              key={`cta-${activeTab}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className="mt-10"
+            >
+              {activeTab === "worker" && (
+                <Link href="/projects#apply">
+                  <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
+                    {t("Navbar.applyNow")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              )}
+              {activeTab === "company" && (
+                <Link href="/request-workers">
+                  <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
+                    {t("Navbar.requestWorkers")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              )}
+              {activeTab === "client" && (
+                <Link href="/request-job">
+                  <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
+                    {t("Navbar.requestJob")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              )}
+            </motion.div>
           </div>
         </div>
       </div>
@@ -466,44 +558,115 @@ export function HowItWorksSection() {
 /* ------------------------------------------------------------------ */
 export function WhySection() {
   const t = useTranslations("Index");
+  const [activeTab, setActiveTab] = useState<"worker" | "company" | "client">("worker");
 
-  const benefits = [
-    { id: "matching", icon: <Clock className="h-6 w-6" /> },
-    { id: "location", icon: <MapPin className="h-6 w-6" /> },
-    { id: "secure", icon: <Shield className="h-6 w-6" /> },
-    { id: "teams", icon: <Users className="h-6 w-6" /> },
-    { id: "transparent", icon: <FileCheck className="h-6 w-6" /> },
-    { id: "mobile", icon: <HardHat className="h-6 w-6" /> },
+  const tabs = [
+    { id: "worker" as const, icon: <Users className="h-5 w-5" /> },
+    { id: "company" as const, icon: <HardHat className="h-5 w-5" /> },
+    { id: "client" as const, icon: <FileCheck className="h-5 w-5" /> },
   ];
+
+  const benefitKeys: Record<string, string[]> = {
+    worker: ["matching", "location", "secure", "teams", "transparent", "mobile"],
+    company: ["speed", "vetted", "flexible", "support", "quality", "network"],
+    client: ["freeQuote", "vetted", "allSizes", "support", "insurance", "timely"],
+  };
+
+  const benefitIcons: Record<string, React.ReactNode> = {
+    matching: <Clock className="h-6 w-6" />,
+    location: <MapPin className="h-6 w-6" />,
+    secure: <Shield className="h-6 w-6" />,
+    teams: <Users className="h-6 w-6" />,
+    transparent: <FileCheck className="h-6 w-6" />,
+    mobile: <HardHat className="h-6 w-6" />,
+    speed: <Clock className="h-6 w-6" />,
+    vetted: <Shield className="h-6 w-6" />,
+    flexible: <FileCheck className="h-6 w-6" />,
+    support: <Users className="h-6 w-6" />,
+    freeQuote: <FileCheck className="h-6 w-6" />,
+    allSizes: <HardHat className="h-6 w-6" />,
+    quality: <Shield className="h-6 w-6" />,
+    network: <MapPin className="h-6 w-6" />,
+    insurance: <Shield className="h-6 w-6" />,
+    timely: <Clock className="h-6 w-6" />,
+  };
+
+  const benefits = benefitKeys[activeTab];
 
   return (
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <Badge
+              variant="secondary"
+              className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
+            >
+              {t("Why.badge")}
+            </Badge>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              {t("Why.title")}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {t("Why.description")}
+            </p>
+          </motion.div>
+
+          {/* Tabs */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="mt-10 flex gap-2 rounded-xl border border-border/60 bg-muted/30 p-1.5"
+          >
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
+                  activeTab === tab.id
+                    ? "bg-amber-500 text-white shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {tab.icon}
+                {t(`Why.tabs.${tab.id}`)}
+              </button>
+            ))}
+          </motion.div>
+        </div>
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-2xl text-center"
+          key={activeTab}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="mx-auto mt-12 max-w-2xl text-center"
         >
           <Badge
             variant="secondary"
             className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
           >
-            {t("Why.badge")}
+            {t(`Why.${activeTab}.badge`)}
           </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {t("Why.title")}
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("Why.description")}
+          <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+            {t(`Why.${activeTab}.title`)}
+          </h3>
+          <p className="mt-3 text-base text-muted-foreground">
+            {t(`Why.${activeTab}.description`)}
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((b, i) => (
             <motion.div
-              key={b.id}
+              key={b}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -512,19 +675,53 @@ export function WhySection() {
               <Card className="group h-full border border-border/60 bg-card transition-all hover:border-amber-300/60 hover:shadow-md">
                 <CardContent className="p-6">
                   <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-amber-500/10 text-amber-600 transition-colors group-hover:bg-amber-500 group-hover:text-white">
-                    {b.icon}
+                    {benefitIcons[b]}
                   </div>
                   <h3 className="mt-4 text-base font-semibold text-foreground">
-                    {t(`Why.benefits.${b.id}.title`)}
+                    {t(`Why.${activeTab}.benefits.${b}.title`)}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {t(`Why.benefits.${b.id}.description`)}
+                    {t(`Why.${activeTab}.benefits.${b}.description`)}
                   </p>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          key={`cta-${activeTab}`}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="mt-12 text-center"
+        >
+          {activeTab === "worker" && (
+            <Link href="/projects#apply">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.applyNow")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          )}
+          {activeTab === "company" && (
+            <Link href="/request-workers">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.requestWorkers")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          )}
+          {activeTab === "client" && (
+            <Link href="/request-job">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.requestJob")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          )}
+        </motion.div>
       </div>
     </section>
   );
@@ -592,7 +789,7 @@ export function CTASection() {
             {t("CTA.description")}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/projects">
+            <Link href="/request-workers">
               <Button
                 size="lg"
                 className="rounded-full bg-white px-8 text-base font-semibold text-amber-600 shadow-lg hover:bg-amber-50"
@@ -601,7 +798,7 @@ export function CTASection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <a href="#contact">
+            <Link href="/contact">
               <Button
                 size="lg"
                 variant="outline"
@@ -609,7 +806,7 @@ export function CTASection() {
               >
                 {t("CTA.talkToTeam")}
               </Button>
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

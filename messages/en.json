@@ -8,6 +8,46 @@
     "twitterDescription": "Find construction projects or employment across Sweden."
   },
   "Index": {
+    "RequestJob": {
+      "badge": "For Individuals & Companies",
+      "title": "Need a Job Done?",
+      "description": "Whether you're a homeowner needing a deck, pool, or renovation — or a company with a larger construction need. Describe what you need and we'll get back to you with a quote.",
+      "benefits": {
+        "vetted": {
+          "title": "Vetted Contractors",
+          "description": "All our partners hold valid certifications, ID06, and liability insurance. Peace of mind from the start."
+        },
+        "offer": {
+          "title": "Free Quote",
+          "description": "Describe your needs and receive a no-obligation quote. No hidden fees — just clear pricing."
+        },
+        "scope": {
+          "title": "Small Jobs to Large Projects",
+          "description": "From pool excavation and foundations to major infrastructure projects. We find the right contractor for every job."
+        }
+      },
+      "form": {
+        "title": "Tell Us About Your Project",
+        "description": "Fill in the form and we'll contact you with a quote.",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "company": "Company (optional)",
+        "jobType": "Type of Work",
+        "jobTypeOptions": ["Foundations & Groundwork", "Pool & Garden", "Renovation & Remodeling", "New Construction", "Infrastructure & Road", "Industrial & Warehouse", "Roof & Facade", "Electrical & Plumbing", "Masonry & Concrete", "Other"],
+        "location": "Work Location",
+        "budget": "Estimated Budget (optional)",
+        "budgetOptions": ["Under 50,000 SEK", "50,000–200,000 SEK", "200,000–500,000 SEK", "500,000–1,000,000 SEK", "Over 1,000,000 SEK", "Not Sure"],
+        "timeline": "Desired Timeline",
+        "descriptionLabel": "Describe the Work Needed",
+        "descriptionPlaceholder": "Tell us as much as possible about what needs to be done...",
+        "submit": "Request Quote",
+        "sending": "Sending...",
+        "success": "Thank you for your request!",
+        "successDescription": "We will get back to you with a quote within 24 hours.",
+        "error": "Could not send. Please try again."
+      }
+    },
     "RequestWorkers": {
       "badge": "For Companies",
       "title": "Need Workers?",
@@ -44,6 +84,7 @@
     "Navbar": {
       "projects": "Projects",
       "requestWorkers": "Need Workers?",
+      "requestJob": "Need a Job Done?",
       "howItWorks": "How It Works",
       "whyLinkable": "Why LinkableWork",
       "contact": "Contact",
@@ -222,56 +263,187 @@
     },
     "HowItWorks": {
       "badge": "How It Works",
-      "title": "Four steps to your next project",
-      "description": "Our streamlined process is designed for construction professionals. Apply from your phone between tasks, no paperwork required.",
+      "title": "Three ways to use LinkableWork",
+      "description": "Whether you're looking for work, need workers, or want a job done — we have a process for you.",
       "step": "STEP",
-      "steps": {
-        "apply": {
-          "title": "Apply to Project",
-          "description": "Browse open positions and apply directly to the projects that match your skills and preferences. Our streamlined application form captures all the information recruiters need — roles, certifications, experience — so you can apply in minutes from your phone."
+      "tabs": {
+        "worker": "Find Work",
+        "company": "Hire Workers",
+        "client": "Get Work Done"
+      },
+      "titles": {
+        "worker": "Four steps to your next project",
+        "company": "Four steps to the right workers",
+        "client": "Four steps to getting it done"
+      },
+      "descriptions": {
+        "worker": "Our streamlined process is designed for construction professionals. Apply from your phone between tasks, no paperwork required.",
+        "company": "Find qualified workers and crews for your project. We handle the entire process from posting to onboarding.",
+        "client": "Describe what needs to be done — from pools and decks to larger construction projects — and we'll get back to you with a quote."
+      },
+      "flows": {
+        "worker": {
+          "steps": {
+            "apply": {
+              "title": "Apply to Project",
+              "description": "Browse open positions and apply directly to the projects that match your skills and preferences. Our streamlined application form captures all the information recruiters need — roles, certifications, experience — so you can apply in minutes from your phone."
+            },
+            "upload": {
+              "title": "Upload Credentials",
+              "description": "Securely upload your mandatory certifications — ID06, Safe Construction, APV (Arbete pa vag), and Maskinforarbevis. Don't have ID06? We can arrange it for you upon employment."
+            },
+            "match": {
+              "title": "Get Matched",
+              "description": "Our team reviews your application or profile and matches you with active projects based on your location preferences, certifications, and availability. High-match applicants receive instant notifications via email, ensuring you never miss the right opportunity."
+            },
+            "profile": {
+              "title": "Register Your Profile (coming soon)",
+              "description": "Create your partner account in under 5 minutes. Tell us about your company or individual F-tax status, primary roles, specializations, and team capacity. The form is designed for quick completion even on mobile devices at the construction site."
+            }
+          }
         },
-        "step2": {
-          "title": "Upload Credentials",
-          "description": "Securely upload your mandatory certifications — ID06, Safe Construction, APV (Arbete pa vag), and Maskinforarbevis. Don't have ID06? We can arrange it for you upon employment."
+        "company": {
+          "steps": {
+            "post": {
+              "title": "Post Your Need",
+              "description": "Upload your project or describe the workers you need — numbers, roles, certification requirements, and desired start period. We help you craft the listing for the best match."
+            },
+            "review": {
+              "title": "Review Candidates",
+              "description": "Our team screens and matches qualified candidates against your requirements. You receive a curated list of verified workers and subcontractors ready for interview."
+            },
+            "hire": {
+              "title": "Select & Hire",
+              "description": "Choose the candidates that fit best. We handle contracts, ID06 registration, and all administration so you can get started quickly."
+            },
+            "start": {
+              "title": "Start the Work",
+              "description": "The workers are on site according to the agreed schedule. We follow up throughout the project to ensure everything runs smoothly."
+            }
+          }
         },
-        "step3": {
-          "title": "Get Matched",
-          "description": "Our team reviews your application or profile and matches you with active projects based on your location preferences, certifications, and availability. High-match applicants receive instant notifications via email, ensuring you never miss the right opportunity."
-        },
-        "step1": {
-          "title": "Register Your Profile (coming soon)",
-          "description": "Create your partner account in under 5 minutes. Tell us about your company or individual F-tax status, primary roles, specializations, and team capacity. The form is designed for quick completion even on mobile devices at the construction site."
+        "client": {
+          "steps": {
+            "describe": {
+              "title": "Describe Your Project",
+              "description": "Tell us what needs to be done — whether it's a pool, deck, foundation, or larger contract. Specify location, budget, and desired timeline."
+            },
+            "quote": {
+              "title": "Get a Quote",
+              "description": "We review your project and get back to you with a free, no-obligation quote within 24 hours. Clear pricing with no hidden fees."
+            },
+            "approve": {
+              "title": "Approve & Book",
+              "description": "Happy with the quote? Approve and we'll schedule the start date and coordinate all necessary resources, certifications, and equipment."
+            },
+            "done": {
+              "title": "Work Gets Done",
+              "description": "Our verified contractors carry out the work as agreed. We're there as support throughout the entire process."
+            }
+          }
         }
       }
     },
     "Why": {
       "badge": "Why LinkableWork",
-      "title": "The smarter way to find construction work",
-      "description": "We eliminate the friction between skilled workers and the projects that need them. Here is what sets us apart from traditional recruitment.",
-      "benefits": {
-        "matching": {
-          "title": "Fast Matching",
-          "description": "Our recruiters review applications within 24 hours. High-match candidates with in-demand certifications like APV and Machine Operator licenses are prioritized and contacted immediately."
-        },
-        "location": {
-          "title": "Projects Across Sweden",
-          "description": "From Lulea to Goteborg, we partner with major construction firms to bring you projects in your preferred region. Specify your geographic preferences and willingness to travel during onboarding."
-        },
-        "secure": {
-          "title": "Secure & Compliant",
-          "description": "All uploaded documents are encrypted and stored securely. We handle F-tax verification, ID06 checks, and certification validation so you can focus on the work that matters."
-        },
-        "teams": {
-          "title": "Built for Teams & Individuals",
-          "description": "Whether you are a large subcontractor, a small company, or an individual with F-tax status, our portal adapts to your profile. Register as a crew of 20 or a solo specialist."
-        },
-        "transparent": {
-          "title": "Transparent Requirements",
-          "description": "Every project listing clearly states required certifications, role expectations, and duration. No surprises — you know exactly what is needed before you apply."
-        },
-        "mobile": {
-          "title": "Construction-First Design",
-          "description": "Our portal is built mobile-first because we know you are often on-site. The application form works seamlessly on any smartphone, tablet, or desktop browser."
+      "title": "Why businesses, workers, and clients choose us",
+      "description": "No matter who you are — we make the construction process smoother, faster, and safer.",
+      "tabs": {
+        "worker": "For Job Seekers",
+        "company": "For Companies",
+        "client": "For Clients"
+      },
+      "worker": {
+        "badge": "For Job Seekers",
+        "title": "The smarter way to find construction work",
+        "description": "We eliminate the friction between skilled workers and the projects that need them. Here is what sets us apart from traditional recruitment.",
+        "benefits": {
+          "matching": {
+            "title": "Fast Matching",
+            "description": "Our recruiters review applications within 24 hours. High-match candidates with in-demand certifications like APV and Machine Operator licenses are prioritized and contacted immediately."
+          },
+          "location": {
+            "title": "Projects Across Sweden",
+            "description": "From Lulea to Goteborg, we partner with major construction firms to bring you projects in your preferred region. Specify your geographic preferences and willingness to travel during onboarding."
+          },
+          "secure": {
+            "title": "Secure & Compliant",
+            "description": "All uploaded documents are encrypted and stored securely. We handle F-tax verification, ID06 checks, and certification validation so you can focus on the work that matters."
+          },
+          "teams": {
+            "title": "Built for Teams & Individuals",
+            "description": "Whether you are a large subcontractor, a small company, or an individual with F-tax status, our portal adapts to your profile. Register as a crew of 20 or a solo specialist."
+          },
+          "transparent": {
+            "title": "Transparent Requirements",
+            "description": "Every project listing clearly states required certifications, role expectations, and duration. No surprises — you know exactly what is needed before you apply."
+          },
+          "mobile": {
+            "title": "Construction-First Design",
+            "description": "Our portal is built mobile-first because we know you are often on-site. The application form works seamlessly on any smartphone, tablet, or desktop browser."
+          }
+        }
+      },
+      "company": {
+        "badge": "For Companies Needing Workers",
+        "title": "Hire qualified construction workers — fast and easy",
+        "description": "We make it easy for companies to find verified workers, whether you need a single machine operator or an entire crew.",
+        "benefits": {
+          "speed": {
+            "title": "Workers Within 48 Hours",
+            "description": "Need staff quickly? Our process from posting to matching usually takes less than two days. We pre-screen all candidates."
+          },
+          "vetted": {
+            "title": "Verified Workers",
+            "description": "All candidates are pre-vetted with valid ID06, certifications, and F-tax status. No admin — just ready to start."
+          },
+          "flexible": {
+            "title": "Flexible Staffing",
+            "description": "Hire by the hour, by the project, or long-term. Scale up or down as needed. No long notice periods."
+          },
+          "support": {
+            "title": "Dedicated Contact",
+            "description": "You get a personal recruitment manager who knows your company and needs. The same contact every time."
+          },
+          "quality": {
+            "title": "Quality-Assured Matching",
+            "description": "We match on more than just skills — we consider personality, work culture, and past experience for the best results."
+          },
+          "network": {
+            "title": "Large Network",
+            "description": "Access to thousands of pre-vetted workers, machine operators, and subcontractors across Sweden."
+          }
+        }
+      },
+      "client": {
+        "badge": "For Those Needing Work Done",
+        "title": "Get a quote for your construction project — no obligation",
+        "description": "Whether you're a homeowner or a business, we help you find the right contractor for the job.",
+        "benefits": {
+          "freeQuote": {
+            "title": "Free Quote",
+            "description": "Describe what you need and get a free, no-obligation quote within 24 hours. No hidden fees — just clear pricing."
+          },
+          "vetted": {
+            "title": "Vetted Contractors",
+            "description": "All our contractors hold valid certifications, ID06, and liability insurance. Peace of mind from day one."
+          },
+          "allSizes": {
+            "title": "Small Jobs to Large Projects",
+            "description": "From pool digging and deck building to major contracts and infrastructure projects. No job is too small or too large."
+          },
+          "support": {
+            "title": "Support Throughout",
+            "description": "We're with you from quote to completed result. Have questions or issues? Contact us and we'll sort it out."
+          },
+          "insurance": {
+            "title": "Insured Peace of Mind",
+            "description": "All contractors have liability insurance and we verify ID06 and certifications. You're safe from start to finish."
+          },
+          "timely": {
+            "title": "Timely Service",
+            "description": "We get back with a quote within 24 hours and work starts according to the agreed schedule — punctual and professional."
+          }
         }
       }
     },
@@ -387,6 +559,7 @@
       },
       "contact": {
         "title": "Contact",
+        "subtitle": "Have questions about recruitment, projects, or want to request a quote? Get in touch and we'll help you.",
         "thomas": "Thomas",
         "thomasEmail": "thomas@linkable.se",
         "thomasPhone": "070-xxx xx xx",
