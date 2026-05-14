@@ -451,13 +451,13 @@ export function HowItWorksSection() {
             </motion.div>
 
             {/* Tabs */}
-            <div className="mt-8 flex gap-2 rounded-xl border border-border/60 bg-background p-1.5">
+            <div className="mt-8 flex flex-col gap-2 rounded-xl border border-border/60 bg-background p-1.5 sm:flex-row">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
+                  className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-all sm:px-4 ${
                     activeTab === tab.id
                       ? "bg-amber-500 text-white shadow-sm"
                       : "text-muted-foreground hover:text-foreground"
@@ -629,14 +629,14 @@ export function WhySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="mt-10 flex gap-2 rounded-xl border border-border/60 bg-muted/30 p-1.5"
+            className="mt-10 flex flex-col gap-2 rounded-xl border border-border/60 bg-muted/30 p-1.5 sm:flex-row"
           >
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
+                className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-all sm:px-4 ${
                   activeTab === tab.id
                     ? "bg-amber-500 text-white shadow-sm"
                     : "text-muted-foreground hover:text-foreground"
@@ -1304,7 +1304,7 @@ export function ApplySection({ selectedProjectId, selectedRole }: { selectedProj
 /* ------------------------------------------------------------------ */
 export function LinkCollectionSection() {
   const t = useTranslations("Index");
-  const groupKeys = ["myndigheter", "yrkesnamnder", "sakerhet", "ovrigt"] as const;
+  const groupKeys = ["myndigheter", "apv", "stockholm", "yrkesnamnder", "sakerhet", "entreprenadjuridik", "ovrigt"] as const;
 
   return (
     <section className="bg-background py-20 sm:py-28">

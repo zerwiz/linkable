@@ -194,7 +194,7 @@ function Navbar() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-foreground ${
+                  className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
                     isActive(l.href) ? "text-foreground font-semibold" : "text-muted-foreground"
                   }`}
                 >
@@ -204,7 +204,7 @@ function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className={`text-sm font-medium transition-colors hover:text-foreground ${
+                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
                   isActive("/contact") ? "text-foreground font-semibold" : "text-muted-foreground"
                 }`}
               >
