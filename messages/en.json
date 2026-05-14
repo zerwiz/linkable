@@ -151,7 +151,7 @@
       "activeRecruiting": "Active recruiting",
       "projectId": "Project ID",
       "quickFacts": "Quick Facts",
-      "detailSubtitle": "Here you will find detailed information about the project and how to apply.",
+      "childDetailSubtitle": "Here you will find detailed information about the project and how to apply.",
       "rolesSubtitle": "We are looking for reinforcement in the following categories:",
       "machineNote": "Please specify in your application which machines you have experience with and which operator licenses you hold.",
       "about": "About the project",
@@ -553,239 +553,228 @@
         "machine": "Machine Operator License",
         "ftax": "F-tax Status",
         "esa": "ESA (Electrical Safety Instructions)",
-        "lodning": "Soldering (HVAC/refrigeration)"
+        "lodning": "Soldering (HVAC/refrigeration)",
+        "kvartsdamm": "Quartz Dust",
+        "gwo": "GWO (Global Wind Organisation)",
+        "hlrHjartstartare": "CPR with Defibrillator",
+        "hetaBrandvakt": "Hot Works / Fire Watch",
+        "sakraLyftLastkoppling": "Safe Lifting / Load Coupling",
+        "svetsLodning": "Welding / Soldering",
+        "asbestPcb": "Asbestos / PCB",
+        "fallskyddRaddning": "Fall Protection & Rescue"
       }
     },
     "Guide": {
       "badge": "Guide",
       "title": "Guide: Swedish Professional Certificates & Trade Licenses",
-      "description": "An overview of the most common professional certificates and licenses in the Swedish construction and civil engineering industry, organized by category and issuing body.",
-      "tipBadge": "Tip",
-      "tip": "At LinkableWork you can easily upload all your trade certificates and licenses digitally directly in the portal. Enter your validity periods and we will remind you well before a certificate expires. Have a certificate number from BYN or TYA? Include it in your application for faster verification.\n\nDo you have competence from the Mining or Wind Power industry? Make sure to mention this as it is in high demand in our projects in northern Sweden.",
+      "description": "A complete overview of the most common professional certificates and licenses in the Swedish construction and civil engineering industry, organized by category and issuing body.",
+      "tipBadge": "Application Tips",
+      "tip": "ID06: Always provide your card number. Documentation: Take photos of your professional certificates and licenses (both sides) and attach to your application. YKB/APV: Check expiration dates – we cannot deploy personnel with expired certificates.",
       "showFullGuide": "View full guide",
       "sections": {
+        "roles": {
+          "title": "Main Roles & Professions",
+          "subtitle": "We recruit personnel within a wide range of roles for our projects.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Groundworker / Civil Worker",
+                "Machine Operator (Excavator, Wheel Loader, etc.)",
+                "Work Crew (Complete teams for contracts)",
+                "Civil Engineering Diver (Specialist roles)",
+                "Landscape Gardener & Site Developer",
+                "Site Manager & Foreman",
+                "Survey Technician (Setting out & Measuring)",
+                "QHSE Coordinator (Quality, Health, Safety, Environment)",
+                "Project Manager / Estimator"
+              ]
+            }
+          }
+        },
         "byn": {
-          "title": "1. BYN & Other Trade Boards",
+          "title": "1. Skilled Workers (BYN & Other Trade Boards)",
           "subtitle": "These usually require completed apprenticeship and a passed theoretical exam.",
           "groups": {
             "tra": {
               "title": "Wood, Concrete, Masonry & Interior",
               "items": [
-                "Carpenter: Trade certificate for house building and wood construction.",
-                "Concrete Worker: Includes casting, reinforcement and grinding.",
-                "Mason: Trade certificate for bricklaying and plastering.",
-                "Tiler: Trade certificate for wall and floor tiles.",
-                "Floor Layer: Trade certificate for flooring, parquet and grinding.",
-                "Roof Fitter: Specialist in waterproofing and roof materials.",
-                "Painter (MYN): Trade certificate for interior and exterior painting.",
+                "Carpenter: Professional certificate for house building and wood construction.",
                 "Carpenter - Prefab: Assembly of prefabricated building modules.",
-                "Mason & Tiler: Bricklaying, plastering and tiles (incl. wet room certification)."
-              ]
-            },
-            "plåt": {
-              "title": "Sheet Metal & Ventilation (PVF)",
-              "items": [
-                "Construction Sheet Metal Worker: Roof and facade sheet metal work.",
-                "Ventilation Sheet Metal Worker: Manufacturing and installation of ventilation systems."
+                "Concrete Worker: Casting, reinforcement, and concrete grinding.",
+                "Concrete Competence Class 1 & 2: Requirement for responsible personnel when casting load-bearing structures.",
+                "Mason & Tiler: Bricklaying and tile/clinker. Wet room authorization via GVK, BKR, or MVK.",
+                "Floor Layer: Professional certificate for floor laying, parquet, and grinding.",
+                "Roof Fitter: Specialist in waterproofing and roof material installation."
               ]
             },
             "mark": {
               "title": "Ground & Civil Works",
               "items": [
-                "Construction Driver (Anläggningsförare): Trade certificate for machine operators in construction.",
-                "Road and Civil Worker: Basic competence for infrastructure, pipe laying and site preparation.",
-                "Civil Engineering Diver: Specialist for heavy underwater work.",
-                "Stone Installer: Specialization in curbstones, paving stones.",
-                "Paving Worker: Asphalt work and surface layers.",
-                "Rock Worker: Drilling and blasting (often requires blasting certificate).",
-                "Landscape Gardener (TSY): Specialist in green areas and planting.",
-                "Pipe Layer (VA): Water and sewage specialist (often requires VAV/STC).",
-                "Demolition & Earthwork Laborer: Rough grading, manual demolition and construction cleaning."
-              ]
-            },
-            "specialmontage": {
-              "title": "Special Assembly & Service",
-              "items": [
-                "Solar Panel Installer: Installation of panels and support systems (DC side)."
+                "Road and Civil Worker: Basic competence for infrastructure and site preparation.",
+                "Pipe Layer (VA): Water and sewage specialist (often requires VAV/STC authorization).",
+                "Civil Engineering Diver: Specialist role (Class A or B certificate from the Work Environment Authority).",
+                "Stone Installer: Specialization in curbstones, paving stones, and slab laying.",
+                "Paving Worker / Asphalt Worker: Work with pavers, rollers, and adjustment.",
+                "Rock Worker / Blaster: Requires Blasting Card class A or B and often knowledge of rock reinforcement.",
+                "Laborer & Demolition Worker: Rough grading, heavy demolition, and site cleaning.",
+                "Core Driller: Diamond drilling and concrete sawing in heavy structures.",
+                "Scaffolder: Professional certificate for scaffolding assembly."
               ]
             }
           }
         },
         "maskin": {
           "title": "2. Machine & Crane (BYN / TYA)",
-          "subtitle": "Machine operators require specific trade certificates for each machine type.",
+          "subtitle": "Machine operators require specific professional certificates for each machine type.",
           "groups": {
             "grav": {
               "title": "Excavation & Earthmoving",
               "items": [
-                "Excavator: Trade certificate for tracked and wheeled excavators.",
+                "Excavator: Tracked and wheeled machines.",
                 "Backhoe Loader: Combination machine for excavation and loading.",
-                "Trencher: For heavy trenching and terrain grading.",
-                "Motor Grader: Advanced machine for fine grading of road surfaces.",
-                "Dumper: For transporting materials in terrain.",
-                "Roller/Compactor: For compaction of soil, gravel or asphalt.",
-                "Sweeper: For road maintenance and cleaning of construction areas."
+                "Bulldozer: For heavy earthmoving and terrain grading.",
+                "Motor Grader: For precision grading in road construction.",
+                "Dumper: Transport of materials in terrain.",
+                "Roller: For compaction of soil, gravel, or asphalt.",
+                "Sweeper: For road maintenance and cleaning."
               ]
             },
             "lyft": {
-              "title": "Lifting & Special Machines",
+              "title": "Lifting, Forklift & Special Machines",
               "items": [
-                "Wheel Loader: Trade certificate for construction and material handling.",
-                "Telehandler: For high lifts and material handling.",
-                "Mobile Crane: Requires extensive training and crane operator certificate.",
-                "Tower Crane: Requires extensive training and crane operator certificate.",
-                "Overhead Crane: For heavy lifting in industrial and prefab assembly.",
-                "Concrete Pump Operator: Machine for precision placement of concrete.",
-                "Asphalt Paver: Specialist machine for road paving.",
-                "Pile Driver: Critical role for foundations.",
-                "Sheet Piling Rig: For support structures and excavation.",
-                "Suction Truck / Jet Vacuum Truck: Sanitation, emptying and high-pressure flushing.",
-                "Crane Truck: Transport and assembly with truck-mounted crane."
+                "Wheel Loader: Divided into Construction (BYN) and Goods Handling (TYA).",
+                "Telehandler: All-round machine for high lifts.",
+                "Mobile Crane / Tower Crane: Requires extensive professional certificates for crane operators.",
+                "Crane Truck: Training certificate for truck-mounted cranes (>18 ton-meters).",
+                "Overhead Crane / Safe Lifting: For heavy lifting in industry/prefab.",
+                "Pile Driver / Sheet Piling Rig: Foundations and support structures.",
+                "Suction Truck / Jet Vacuum Truck: Sanitation and high-pressure flushing.",
+                "Concrete Pump: Machine for concrete placement.",
+                "Asphalt Paver: For road paving.",
+                "Forklift License (A1-D2): For counterbalanced forklifts, stackers, etc."
               ]
             }
           }
         },
         "management": {
           "title": "3. Management & Leadership",
-          "subtitle": "We also fill leading roles for effective project management.",
-          "groups": {
-            "items": {
-              "title": "",
-              "items": [
-                "Site Manager: Overall responsibility for production, finances and safety on site.",
-                "Foreman: Operational management of work teams and subcontractors.",
-                "Survey Technician: Setting out, measuring and quantity regulation.",
-                "QHSE Coordinator: Responsible for Quality, Environment and Work Environment.",
-                "Project Manager / Estimator: Planning and financial calculation."
-              ]
-            }
-          }
-        },
-        "installation": {
-          "title": "3. Installation, Electrical & HVAC",
-          "subtitle": "These are often legal requirements or insurance company demands.",
-          "groups": {
-            "items": {
-              "title": "",
-              "items": [
-                "HVAC Fitter: Trade license via VVS-YN and 'Safe Water' authorization.",
-                "Electrician: Authorization via the Swedish Electrical Safety Authority.",
-                "Refrigeration & Heat Pump Technician (Incert): Required for work with refrigerants.",
-                "Alarm Technician (SSF): Certification for burglar alarms and security systems.",
-                "Insulation Fitter: Technical insulation of pipes and ventilation.",
-                "Ventilation Fitter: Often linked to OVK certification."
-              ]
-            }
-          }
-        },
-        "special": {
-          "title": "4. Specialties & Environment",
           "subtitle": "",
           "groups": {
             "items": {
               "title": "",
               "items": [
-                "Welding Certificate (ISO 9606-1): Required for load-bearing steel structures.",
-                "Soldering: Specific certificates for HVAC and refrigeration systems.",
-                "Asbestos Remediation: Requires special training approved by the Work Environment Authority.",
-                "PCB Remediation: Specialist competence for hazardous waste handling.",
-                "Epoxy/Isocyanates: Training required for chemical risk work.",
-                "Scaffolder: Divided into levels — Special (over 9m), General (2–9m).",
-                "Core Driller: Specialists in drilling and sawing concrete.",
-                "Fire Protection Painter: Certification for applying fire-retardant paint."
+                "Site Manager / Foreman: Overall responsibility for production and safety.",
+                "Certified Quality Controller (KA): Certified according to PBL.",
+                "Contract Engineer: Purchasing, estimation, and project support.",
+                "Survey Technician: Setting out and quantity regulation.",
+                "QHSE Coordinator: Responsible for Quality, Health, Safety, and Environment.",
+                "Climate Declaration Competence: Knowledge of Boverket's requirements for climate declarations of buildings."
+              ]
+            }
+          }
+        },
+        "installation": {
+          "title": "4. Installation, Electrical & Plumbing",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Electrician: Authorization via the Swedish Electrical Safety Authority (AL, A, or B).",
+                "ESA (Electrical Safety Instructions): ESA Basic & Maintenance (mandatory when working near power grids).",
+                "EBR (Electrical Power Network Guidelines): Specific for power grid projects.",
+                "Plumber: Trade license and \"Safe Water\".",
+                "Refrigeration Technician: Certified for F-gases (Incert).",
+                "Fiber Technician (BCT): Industry-certified technician for robust fiber.",
+                "Alarm & Security: Certification for alarms, CCTV, and access systems (SSF)."
+              ]
+            }
+          }
+        },
+        "special": {
+          "title": "5. Specialties & Environment",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Welding Certificate (ISO 9606-1): For load-bearing steel (EN 1090). Often requires IWS/Welding Coordinator on site.",
+                "Asbestos Remediation / PCB Remediation: Special training certificate and permit from AV.",
+                "Thermosetting Plastics: Statutory training + medical check (e.g., for epoxy).",
+                "Quartz Dust: Training on risks when working with concrete and stone.",
+                "GWO (Global Wind Organisation): Requirement for work in wind power."
               ]
             }
           }
         },
         "certs": {
-          "title": "5. Industry-Specific Certificates & Requirements",
-          "subtitle": "These require regular renewal (usually every 5 years).",
-          "groups": {
-            "safety": {
-              "title": "Safety & Work Environment",
-              "items": [
-                "ID06: Mandatory for everyone on construction sites.",
-                "Safe Construction Training: Online course required by most major contractors.",
-                "SSG Entré: Common ID card for industrial and energy facilities.",
-                "SSG Basic Safety: Safety training for industrial environments.",
-                "SSG SBN levels: Safety and preparedness levels for industrial work.",
-                "BAS P (Planning): Construction environment coordinator for planning.",
-                "BAS U (Execution): Construction environment coordinator for execution.",
-                "Hot Works / Fire Watch: Certificate for fire hazardous work."
-              ]
-            },
-            "technical": {
-              "title": "Technical Certificates",
-              "items": [
-                "Work on Road (APV): Levels 1.1, 1.2, 1.3, 2 and 3 depending on responsibility and vehicle.",
-                "EBR (Electrical safety construction): Electrical safety regulations for construction and demolition.",
-                "ESA (Electrical Safety Instructions): ESA Basic and ESA Maintenance (near power lines).",
-                "Welding Certificate / Soldering: ISO 9606-1 for load-bearing steel structures.",
-                "Stockholm City Course: Required for work on city land."
-              ]
-            },
-            "health": {
-              "title": "Health & Environment",
-              "items": [
-                "Quartz Dust (Kvartsamm): Training on risks and protective measures against stone dust.",
-                "Epoxy/Isocyanates: Training and medical checks for Epoxy/Isocyanates.",
-                "Asbestos / PCB: Special training and permit for remediation.",
-                "GWO (Global Wind Organisation): Required for wind power work."
-              ]
-            },
-            "equipment": {
-              "title": "Equipment & Rescue",
-              "items": [
-                "Safe Lifting / Load Coupling: For everyone working with crane lifts.",
-                "Fall Protection & Rescue: For work at height, roofs and scaffolding.",
-                "Safe Snow Removal: License for safe snow removal from roofs.",
-                "Mobile Work Platforms (Cherry Picker/Scissor Lift): Training per SS-ISO 18878.",
-                "Nail Gun: Training for powder-actuated tools.",
-                "CPR with Defibrillator: First aid competence on construction sites."
-              ]
-            }
-          }
-        },
-        "drivers": {
-          "title": "7. Transport & Logistics",
-          "subtitle": "For roles involving transport of materials, machines or personnel.",
+          "title": "6. Industry-Specific Certificates & Courses",
+          "subtitle": "",
           "groups": {
             "items": {
               "title": "",
               "items": [
-                "Driver's License B: Car and light truck (basic requirement).",
-                "Driver's License BE: Car with heavy trailer (common for machine trailers).",
-                "Driver's License C / CE: Heavy truck with/without trailer.",
-                "YKB (Professional competence): Required for professional goods transport.",
-                "Digital tachograph card: Required for drivers of vehicles with tachographs.",
-                "ADR-S 1.3: Transport of dangerous goods (e.g. diesel in IBC tank)."
+                "ID06: Mandatory identification system.",
+                "Safety on Site: (Safe Construction Training).",
+                "SSG Entré: Required for access to almost all heavy industry in Sweden.",
+                "Bas P (Planning) / Bas U (Execution): Construction health and safety coordinators.",
+                "BAM (Better Work Environment) / SAM: Basic training for safety representatives and managers.",
+                "Hot Works / Fire Watch: Certificate for fire-hazardous work.",
+                "Work on Road (APV): Levels 1.1, 1.2, 1.3, 2.1, 2.2, 2.3 and 3.",
+                "Traffic Arrangement Planning: Knowledge of traffic arrangement plans.",
+                "Fall Protection & Rescue: For work at height.",
+                "Signaller / Flagman: Competence for controlling crane lifts or traffic manually.",
+                "Safe Lifting: For everyone coupling loads to crane or lifting device.",
+                "Stockholm City Course: Required for work on city land.",
+                "CPR (HLR): First aid competence."
               ]
             }
           }
         },
         "rail": {
-          "title": "6. Railway & Forestry",
-          "subtitle": "Infrastructure projects related to railways and forestry work require specific authorizations.",
+          "title": "7. Railway & Forestry",
+          "subtitle": "",
           "groups": {
             "items": {
-              "title": "Railway",
+              "title": "",
               "items": [
-                "Protection and Safety Leader (SoS): Safety during track work.",
-                "Supervisor (TSM): Responsible for traffic safety on tracks.",
-                "BAS-P Railway: Specific focus on track environment.",
-                "BAS-U Railway: Specific focus on track environment.",
-                "BAS-P / BAS-U Railway: Specific focus on track environment."
+                "SoS Leader / TSM: Safety and security leader at railway tracks.",
+                "Chainsaw License (Level A-D): Basic to advanced tree felling.",
+                "Brush Cutter License (RA, RB): Site preparation."
               ]
-            },
-            "skog": {
-              "title": "Forestry (Chainsaw & Brush Cutter)",
+            }
+          }
+        },
+        "drivers": {
+          "title": "8. Driver Licenses & Transport",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
               "items": [
-                "Chainsaw License Level A: Basic chainsaw work.",
-                "Chainsaw License Level B: Chainsaw work on ground with risk moments.",
-                "Chainsaw License Level C: Chainsaw work at height and in trees.",
-                "Chainsaw License Level D: Chainsaw work in difficult terrain.",
-                "Brush Cutter License Level RA: Basic clearing with brush cutter.",
-                "Brush Cutter License Level RB: Advanced clearing and ground preparation."
+                "B / BE: Car with/without heavy trailer.",
+                "C / CE: Heavy truck with/without trailer.",
+                "Professional Competence Certificate (YKB): Legal requirement for commercial goods transport.",
+                "ADR-S 1.3: Transport of dangerous goods (e.g., fuel in tanks).",
+                "Digital Tachograph Card: For heavy vehicle drivers."
+              ]
+            }
+          }
+        },
+        "locations": {
+          "title": "Regions & Areas",
+          "subtitle": "We have projects and need for personnel in the following counties.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Stockholm, Uppsala, Södermanland",
+                "Västra Götaland, Halland, Skåne",
+                "Norrbotten, Västerbotten, Västernorrland",
+                "Östergötland, Jönköping, Kronoberg, Kalmar",
+                "Blekinge, Gotland, Örebro, Västmanland",
+                "Dalarna, Gävleborg, Värmland, Jämtland"
               ]
             }
           }
@@ -919,7 +908,7 @@
             ],
             [
               "BKK (Construction Contracts Committee)",
-              "https://www.byggandetskontraktskommitte.se"
+              "https://foreningenbkk.se/"
             ],
             [
               "Byggföretagen - Contract Law",
@@ -971,24 +960,28 @@
         "Anläggare",
         "Maskinförare",
         "Arbetslag",
-        "Träarbetare (Snickare)",
-        "Betongarbetare",
-        "VVS-montör",
-        "Elektriker",
-        "Ställningsbyggare",
-        "Håltagare",
-        "Svetsare",
-        "Bergarbetare",
-        "Stenmontör",
-        "Beläggningsarbetare",
-        "Anläggningsdykare",
-        "Trädgårdsanläggare",
-        "Brandskyddsmålare",
-        "Platschef",
-        "Arbetsledare",
-        "Mättekniker",
-        "KMA-samordnare",
-        "Projektledare / Kalkylator"
+        "Anläggningsdykare (Civil engineering diver)",
+        "Trädgårdsanläggare (Landscape gardener)",
+        "Site Manager (Platschef)",
+        "Foreman (Arbetsledare)",
+        "Survey Technician (Mättekniker)",
+        "QHSE Coordinator (KMA-samordnare)",
+        "Project Manager / Estimator"
+      ],
+      "roleOptionsOverall": [
+        "Construction Driver (Anläggningsförare)",
+        "Road and Civil Worker",
+        "Concrete Worker",
+        "Carpenter",
+        "Mason",
+        "Tiler",
+        "Floor Layer",
+        "Scaffolder",
+        "Roof Fitter",
+        "Rock Worker",
+        "Paving Worker",
+        "Core Driller",
+        "Stone Installer"
       ],
       "locations": "Locations",
       "locationOptions": [
@@ -1025,37 +1018,26 @@
         "APV 2.2 (Arbete på väg)",
         "APV 2.3 (Arbete på väg)",
         "APV 3 (Arbete på väg)",
-        "Heta arbeten (Hot works)",
+        "Hot Works (Heta arbeten)",
         "BAS P (Planning)",
         "BAS U (Execution)",
-        "HLR (CPR)",
-        "Säkra lyft (Safe lifting)",
+        "CPR (HLR)",
+        "Safe Lifting (Säkra lyft)",
         "ADR-S 1.3",
-        "Stockholm Stad kurs",
-        "EBR (Electrical safety construction)",
-        "SSG Entré (Industrial ID card)",
-        "SSG Basic Safety (Grundläggande Säkerhet)",
-        "SSG SBN levels",
-        "Asbestos remediation (Asbestsanering)",
-        "PCB remediation (PCB-sanering)",
-        "Welding certificate ISO 9606-1 (Svetscertifikat)",
-        "Mobile work platforms (Skylift/Sax)",
-        "Nail gun / Powder-actuated tool (Bultpistol)",
-        "Fall protection training (Fallskyddsutbildning)",
-        "Safe snow removal (Skotta Säkert)",
-        "Chainsaw license Level A (Motorsågskörkort A)",
-        "Chainsaw license Level B (Motorsågskörkort B)",
-        "Chainsaw license Level C (Motorsågskörkort C)",
-        "Chainsaw license Level D (Motorsågskörkort D)",
-        "Brush cutter license Level RA (Röjsågskörkort RA)",
-        "Brush cutter license Level RB (Röjsågskörkort RB)",
-        "Trafikverket SoS-ledare (Rail safety)",
-        "Trafikverket Tillsyningsman TSM (Rail supervisor)",
-        "BAS-P Railway (BAS-P Järnväg)",
-        "BAS-U Railway (BAS-U Järnväg)",
-        "ESA (Electrical Safety Instructions)",
-        "HLR med Hjärtstartare (CPR with defibrillator)",
-        "BAS-P / BAS-U Järnväg (BAS-P / BAS-U Railway)"
+        "Stockholm City Course"
+      ],
+      "certOptionsOverall": [
+        "ID06",
+        "Safe Construction Training",
+        "APV 1.1, 1.2, 1.3 (Work on Road)",
+        "APV 2.1, 2.2, 2.3 (Work on Road)",
+        "APV 3 (Work on Road)",
+        "Hot Works",
+        "BAS P / BAS U",
+        "CPR (HLR)",
+        "Safe Lifting",
+        "ADR-S 1.3",
+        "Stockholm City Course"
       ],
       "machineLicenses": "Machine operator licenses",
       "machineOptions": [
@@ -1072,10 +1054,22 @@
         "Betongpump (Concrete pump)",
         "Asfaltsläggare (Asphalt paver)",
         "Pålmaskin (Pile driver)",
-        "Spontmaskin (Sheet piling rig)",
-        "Sopmaskin (Sweeper)",
-        "Sugbil / Spolbil (Suction / Jet vacuum truck)",
-        "Kranbil (Crane truck)"
+        "Spontmaskin (Sheet piling rig)"
+      ],
+      "machineOptionsOverall": [
+        "Excavator (Grävmaskin)",
+        "Wheel Loader (Hjullastare)",
+        "Backhoe Loader (Grävlastare)",
+        "Trencher (Bandschaktare)",
+        "Motor Grader (Väghyvel)",
+        "Dumper",
+        "Roller/Compactor (Vält)",
+        "Telehandler (Teleskoptruck)",
+        "Mobile Crane (Mobilkran)",
+        "Tower Crane (Tornkran)",
+        "Concrete Pump (Betongpump)",
+        "Asphalt Paver (Asfaltsläggare)",
+        "Pile Driver / Sheet Piling Rig (Pålmaskin / Spontmaskin)"
       ],
       "tradeCertificates": "Trade certificates",
       "driverLicenses": "Driver's license",
@@ -1091,6 +1085,8 @@
         "Körkort BE (Driver's license BE)",
         "Körkort C / CE (Driver's license C / CE)"
       ],
+      "certNumber": "Certificate Number (BYN/TYA)",
+      "expiryDates": "Expiry Dates (e.g., YKB, APV, Hot Works)",
       "tradeOptions": [
         "Anläggningsförare (Construction driver)",
         "Väg- och anläggningsarbetare (Road worker)",
@@ -1127,6 +1123,32 @@
       "success": "Thank you for your application!",
       "successDescription": "We will get back to you within 24 hours.",
       "error": "Could not send application. Please try again."
+    },
+    "ApplyInfo": {
+      "entreprenadformer": {
+        "title": "Contract Forms & Legal",
+        "description": "To ensure clear responsibility boundaries in our projects, we apply the industry's standard agreements.",
+        "items": [
+          "AB 04: General conditions for design-bid-build contracts (where the client is responsible for design).",
+          "ABT 06: General conditions for design-build contracts (where the contractor handles both design and construction).",
+          "AB-U 07 / ABT-U 07: Standard agreements specifically designed for subcontractors linked to the main contracts AB 04 or ABT 06."
+        ]
+      },
+      "references": {
+        "title": "Important Websites & References",
+        "items": [
+          ["BKK (Construction Contracts Committee)", "https://foreningenbkk.se/"]
+        ]
+      },
+      "tips": {
+        "title": "Tips for Your Application",
+        "items": [
+          "Enter your trade certificate number from BYN or TYA in your application for faster verification.",
+          "Attach copies of your certificates with visible expiry dates.",
+          "Have experience from mining or wind power? Mention it — high demand in northern Sweden.",
+          "Provide your ID06 number if you already have a card."
+        ]
+      }
     },
     "Footer": {
       "description": "Connecting skilled construction professionals with projects across Sweden. Fast, secure, and built for the industry.",

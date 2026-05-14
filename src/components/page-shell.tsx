@@ -27,6 +27,7 @@ function Navbar() {
   }, []);
 
   const extraLinks = [
+    { label: t("Navbar.applyNow"), href: "/apply" as const },
     { label: t("Navbar.projects"), href: "/projects" as const },
     { label: t("Navbar.howItWorks"), href: "/how-it-works" as const },
     { label: t("Navbar.requestWorkers"), href: "/request-workers" as const },
@@ -63,9 +64,9 @@ function Navbar() {
 
         <nav className="hidden items-center gap-8 md:flex">
           <Link
-            href="/projects"
+            href="/anlaggningprojects"
             className={`relative text-sm font-medium transition-colors hover:text-foreground ${
-              isActive("/projects")
+              isActive("/anlaggningprojects")
                 ? "text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-amber-500"
                 : "text-muted-foreground"
             }`}
@@ -73,8 +74,12 @@ function Navbar() {
             {t("Navbar.anlaggningProjects")}
           </Link>
           <Link
-            href="/projects#apply"
-            className="relative text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            href="/anlaggningapply"
+            className={`relative text-sm font-medium transition-colors hover:text-foreground ${
+              isActive("/anlaggningapply")
+                ? "text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-amber-500"
+                : "text-muted-foreground"
+            }`}
           >
             {t("Navbar.applyAnlaggning")}
           </Link>
@@ -130,7 +135,7 @@ function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/projects#apply">
+          <Link href="/anlaggningapply">
             <Button size="sm" className="rounded-full bg-amber-500 px-5 font-semibold text-white hover:bg-amber-600">
               {t("Navbar.applyNow")}
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -166,19 +171,21 @@ function Navbar() {
           <div className="flex flex-col gap-4 px-4 py-6">
             <div className="pb-2">
               <Link
-                href="/projects"
+                href="/anlaggningprojects"
                 onClick={() => setMobileOpen(false)}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
-                  isActive("/projects") ? "text-foreground font-semibold" : "text-muted-foreground"
+                  isActive("/anlaggningprojects") ? "text-foreground font-semibold" : "text-muted-foreground"
                 }`}
               >
                 <HardHat className="h-4 w-4 text-amber-500" />
                 {t("Navbar.anlaggningProjects")}
               </Link>
               <Link
-                href="/projects#apply"
+                href="/anlaggningapply"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
+                  isActive("/anlaggningapply") ? "text-foreground font-semibold" : "text-muted-foreground"
+                }`}
               >
                 <ArrowRight className="h-4 w-4 text-amber-500" />
                 {t("Navbar.applyAnlaggning")}
@@ -212,7 +219,7 @@ function Navbar() {
               </Link>
             </div>
 
-            <Link href="/projects#apply" onClick={() => setMobileOpen(false)}>
+            <Link href="/anlaggningapply" onClick={() => setMobileOpen(false)}>
               <Button className="w-full rounded-full bg-amber-500 font-semibold text-white hover:bg-amber-600">
                 {t("Navbar.applyNow")}
                 <ArrowRight className="ml-2 h-4 w-4" />

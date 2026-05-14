@@ -288,7 +288,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
 
           {/* CTA */}
           <div className="flex flex-col gap-4 border-t border-border/40 pt-8 sm:flex-row">
-            <Link href="/projects#apply" className="flex-1">
+            <Link href="/apply" className="flex-1">
               <Button size="lg" className="w-full rounded-full bg-amber-500 text-white hover:bg-amber-600">
                 {t("Projects.applyNow")}
               </Button>

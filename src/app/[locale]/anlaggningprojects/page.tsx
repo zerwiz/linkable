@@ -4,7 +4,7 @@ import { useState, useCallback } from "react";
 import { PageShell } from "@/components/page-shell";
 import { ProjectsSection, CertificationGuideBanner, ApplySection } from "@/components/sections";
 
-export default function ProjectsPage() {
+export default function AnlaggningProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
 
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
     <PageShell>
       <ProjectsSection onSelectProject={handleSelectProject} />
       <CertificationGuideBanner />
-      <ApplySection selectedProjectId={selectedProject} selectedRole={selectedRole} mode="overall" />
+      <ApplySection selectedProjectId={selectedProject} selectedRole={selectedRole} mode="anlaggning" />
     </PageShell>
   );
 }
