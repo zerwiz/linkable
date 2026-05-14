@@ -34,10 +34,28 @@
         "phone": "Telefon",
         "company": "Företag (valfritt)",
         "jobType": "Typ av arbete",
-        "jobTypeOptions": ["Husgrund & markarbete", "Pool & trädgård", "Renovering & ombyggnad", "Nybyggnation", "Infrastruktur & väg", "Industri & lager", "Tak & fasad", "El & VVS", "Murnings- & betongarbete", "Övrigt"],
+        "jobTypeOptions": [
+          "Husgrund & markarbete",
+          "Pool & trädgård",
+          "Renovering & ombyggnad",
+          "Nybyggnation",
+          "Infrastruktur & väg",
+          "Industri & lager",
+          "Tak & fasad",
+          "El & VVS",
+          "Murnings- & betongarbete",
+          "Övrigt"
+        ],
         "location": "Plats för arbetet",
         "budget": "Ungefärlig budget (valfritt)",
-        "budgetOptions": ["Under 50 000 kr", "50 000–200 000 kr", "200 000–500 000 kr", "500 000–1 000 000 kr", "Över 1 000 000 kr", "Vet ej"],
+        "budgetOptions": [
+          "Under 50 000 kr",
+          "50 000–200 000 kr",
+          "200 000–500 000 kr",
+          "500 000–1 000 000 kr",
+          "Över 1 000 000 kr",
+          "Vet ej"
+        ],
         "timeline": "Önskad tidsplan",
         "descriptionLabel": "Beskriv vad som ska göras",
         "descriptionPlaceholder": "Berätta så utförligt som möjligt om vad du behöver få gjort...",
@@ -88,6 +106,10 @@
       "howItWorks": "Så fungerar det",
       "whyLinkable": "Varför LinkableWork?",
       "guide": "Yrkesbevis & Cert",
+      "extra": "Extra",
+      "anlaggning": "Anläggning",
+      "anlaggningProjects": "Anläggningsprojekt",
+      "applyAnlaggning": "Sök anläggning",
       "contact": "Kontakt",
       "applyNow": "Ansök nu",
       "toggleMenu": "Öppna meny"
@@ -174,8 +196,14 @@
       "items": {
         "groundworks": {
           "title": "Markarbete",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Flera orter"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Flera orter"
+          ],
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -185,8 +213,13 @@
         },
         "infrastructure": {
           "title": "Infrastruktur",
-          "roles": ["Maskinförare", "Arbetslag"],
-          "locations": ["Flera orter"],
+          "roles": [
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Flera orter"
+          ],
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
@@ -196,8 +229,12 @@
         },
         "specialized": {
           "title": "Specialiserat maskinarbete",
-          "roles": ["Maskinförare"],
-          "locations": ["Flera orter"],
+          "roles": [
+            "Maskinförare"
+          ],
+          "locations": [
+            "Flera orter"
+          ],
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -207,8 +244,13 @@
         },
         "building": {
           "title": "Bygg & anläggning",
-          "roles": ["Anläggare", "Arbetslag"],
-          "locations": ["Flera orter"],
+          "roles": [
+            "Anläggare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Flera orter"
+          ],
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -218,8 +260,14 @@
         },
         "umea-centrum": {
           "title": "Umeå centrumbyggnation",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Umeå"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Umeå"
+          ],
           "startDate": "Juni 2026",
           "applyDeadline": "20 maj 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -229,8 +277,13 @@
         },
         "lulea-hamn": {
           "title": "Luleå hamnutbyggnad",
-          "roles": ["Maskinförare", "Arbetslag"],
-          "locations": ["Luleå"],
+          "roles": [
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Luleå"
+          ],
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -240,8 +293,14 @@
         },
         "skelleftea-campus": {
           "title": "Skellefteå campusområde",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Skellefteå"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Skellefteå"
+          ],
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -251,8 +310,13 @@
         },
         "pitea-industri": {
           "title": "Piteå industriområde",
-          "roles": ["Anläggare", "Arbetslag"],
-          "locations": ["Piteå"],
+          "roles": [
+            "Anläggare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Piteå"
+          ],
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -483,9 +547,12 @@
       }
     },
     "Guide": {
+      "badge": "Guide",
       "title": "Guide: Svenska Yrkesbevis och Branschcertifikat",
       "description": "Här är en översikt över de vanligaste yrkesbevisen och certifikaten inom svensk bygg- och anläggningsindustri, uppdelat efter kategori och utfärdare.",
+      "tipBadge": "Tips",
       "tip": "Hos LinkableWork kan du enkelt ladda upp alla dina yrkesbevis och certifikat digitalt direkt i portalen. Ange dina giltighetstider så påminner vi dig i god tid innan ett certifikat löper ut. Har du ett Yrkesbevisnummer från BYN eller TYA? Ange det i ansökan för snabbare verifiering.\n\nHar du kompetens från Gruv- eller Vindkraftsindustrin? Se till att nämna detta då det är hög efterfrågan i våra projekt i norra Sverige.",
+      "showFullGuide": "Se hela guiden",
       "sections": {
         "byn": {
           "title": "1. Byggnadsindustrins Yrkesnämnd (BYN) & Övriga Yrkesnämnder",
@@ -715,6 +782,117 @@
         }
       }
     },
+    "LinkCollection": {
+      "badge": "Länkar",
+      "title": "Länksamling: Myndigheter & Certifiering",
+      "description": "Här är en komplett lista över webbadresser för verifiering av behörigheter och bokning av utbildningar.",
+      "groups": {
+        "myndigheter": {
+          "title": "Myndigheter",
+          "links": [
+            [
+              "Arbetsmiljöverket",
+              "https://www.av.se"
+            ],
+            [
+              "Elsäkerhetsverket",
+              "https://www.elsakerhetsverket.se"
+            ],
+            [
+              "Transportstyrelsen",
+              "https://www.transportstyrelsen.se"
+            ],
+            [
+              "Trafikverket",
+              "https://www.trafikverket.se"
+            ]
+          ]
+        },
+        "yrkesnamnder": {
+          "title": "Yrkesnämnder (Yrkesbevis)",
+          "links": [
+            [
+              "BYN (Byggnadsindustrins Yrkesnämnd)",
+              "https://www.byn.se"
+            ],
+            [
+              "TYA (Transportfackens Yrkesnämnd)",
+              "https://www.tya.se"
+            ],
+            [
+              "MYN (Måleribranschens Yrkesnämnd)",
+              "https://www.maleryrkesnamnd.se"
+            ],
+            [
+              "PVF (Plåt & Ventilation)",
+              "https://www.pvf.se"
+            ],
+            [
+              "TSY (Trädgårdsnäringens Yrkesnämnd)",
+              "https://www.tsy.se"
+            ]
+          ]
+        },
+        "sakerhet": {
+          "title": "Säkerhet & Branschcertifikat",
+          "links": [
+            [
+              "ID06",
+              "https://id06.se"
+            ],
+            [
+              "SSG (Standard Solutions Group)",
+              "https://www.ssg.se"
+            ],
+            [
+              "Brandskyddsföreningen (Heta Arbeten)",
+              "https://www.brandskyddsforeningen.se"
+            ],
+            [
+              "Säker Vatten",
+              "https://sakervatten.se"
+            ],
+            [
+              "GVK (Säkra Våtrum)",
+              "https://www.gvk.se"
+            ],
+            [
+              "Byggföretagen (Safe Construction Training)",
+              "https://www.byggforetagen.se"
+            ],
+            [
+              "Energiföretagen (ESA/EBR)",
+              "https://www.energiforetagen.se"
+            ],
+            [
+              "GWO (Global Wind Safety)",
+              "https://www.globalwindsafety.org"
+            ],
+            [
+              "Säkerhetsparken",
+              "https://Byggsakerhetsparken.se"
+            ]
+          ]
+        },
+        "ovrigt": {
+          "title": "Övriga referenser",
+          "links": [
+            [
+              "Incert (Kylteknik/F-gas)",
+              "https://www.incert.se"
+            ],
+            [
+              "SSF (Stöldskyddsföreningen/Larm)",
+              "https://www.stoldskyddsforeningen.se"
+            ],
+            [
+              "Säker Skog (Motorsåg/Röjsåg)",
+              "https://sakerskog.se"
+            ]
+          ]
+        }
+      }
+    },
     "CTA": {
       "title": "Redo att komma igång?",
       "description": "Oavsett om du är privatperson, anställd, maskinförare, underentreprenör eller ett arbetslag som letar efter nästa projekt — registrera dig idag så kopplar vi ihop dig med möjligheter över hela Sverige.",
@@ -730,11 +908,58 @@
       "phone": "Telefon",
       "company": "Företag (valfritt)",
       "type": "Jag ansöker som",
-      "typeOptions": ["Underleverantör", "Privatperson med F-skatt", "Privatperson utan F-skatt"],
+      "typeOptions": [
+        "Underleverantör",
+        "Privatperson med F-skatt",
+        "Privatperson utan F-skatt"
+      ],
       "roles": "Roller jag är intresserad av",
-      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag", "Träarbetare (Snickare)", "Betongarbetare", "Murare", "Plattsättare", "Golvläggare", "Takmontör", "Målare", "Byggnadsplåtslagare", "Ventilationsplåtslagare", "VVS-montör", "Elektriker", "Ställningsbyggare", "Håltagare", "Svetsare", "Bergarbetare", "Stenmontör", "Beläggningsarbetare", "Anläggningsdykare", "Trädgårdsanläggare", "Brandskyddsmålare", "Kyl- och värmepumpstekniker", "Larmtekniker", "Isoleringsmontör", "Ventilationsmontör", "Platschef", "Arbetsledare", "Mättekniker", "KMA-samordnare", "Projektledare / Kalkylator"],
+      "roleOptions": [
+        "Anläggare",
+        "Maskinförare",
+        "Arbetslag",
+        "Träarbetare (Snickare)",
+        "Betongarbetare",
+        "VVS-montör",
+        "Elektriker",
+        "Ställningsbyggare",
+        "Håltagare",
+        "Svetsare",
+        "Bergarbetare",
+        "Stenmontör",
+        "Beläggningsarbetare",
+        "Anläggningsdykare",
+        "Trädgårdsanläggare",
+        "Platschef",
+        "Arbetsledare",
+        "Mättekniker",
+        "KMA-samordnare",
+        "Projektledare / Kalkylator"
+      ],
       "locations": "Områden",
-      "locationOptions": ["Blekinge län", "Dalarnas län", "Gotlands län", "Gävleborgs län", "Hallands län", "Jämtlands län", "Jönköpings län", "Kalmar län", "Kronobergs län", "Norrbottens län", "Skåne län", "Stockholms län", "Södermanlands län", "Uppsala län", "Värmlands län", "Västerbottens län", "Västernorrlands län", "Västmanlands län", "Västra Götalands län", "Örebro län", "Östergötlands län"],
+      "locationOptions": [
+        "Blekinge län",
+        "Dalarnas län",
+        "Gotlands län",
+        "Gävleborgs län",
+        "Hallands län",
+        "Jämtlands län",
+        "Jönköpings län",
+        "Kalmar län",
+        "Kronobergs län",
+        "Norrbottens län",
+        "Skåne län",
+        "Stockholms län",
+        "Södermanlands län",
+        "Uppsala län",
+        "Värmlands län",
+        "Västerbottens län",
+        "Västernorrlands län",
+        "Västmanlands län",
+        "Västra Götalands län",
+        "Örebro län",
+        "Östergötlands län"
+      ],
       "certifications": "Certifieringar jag innehar",
       "certOptions": [
         "ID06",
@@ -760,32 +985,16 @@
         "Asbestsanering",
         "PCB-sanering",
         "Svetscertifikat (ISO 9606-1)",
-        "Härdplaster (Epoxi/Isocyanater)",
         "Mobila arbetsplattformar (Skylift/Sax)",
         "Bultpistol",
         "Fallskyddsutbildning",
         "Skotta Säkert",
-        "Lödning (VVS/kyla)",
-        "Lastkoppling",
-        "Motorsågskörkort Nivå A",
-        "Motorsågskörkort Nivå B",
-        "Motorsågskörkort Nivå C",
-        "Motorsågskörkort Nivå D",
-        "Röjsågskörkort Nivå RA",
-        "Röjsågskörkort Nivå RB",
         "Trafikverket SoS-ledare",
         "Trafikverket Tillsyningsman (TSM)",
         "BAS-P Järnväg",
         "BAS-U Järnväg",
         "ESA (Elsäkerhetsanvisningarna)",
-        "Kvartsdamm (Kvartsamm)",
-        "GWO (Global Wind Organisation)",
         "HLR med Hjärtstartare",
-        "Heta Arbeten / Brandvakt",
-        "Säkra Lyft / Lastkoppling",
-        "Svetscertifikat / Lödning",
-        "Asbest / PCB",
-        "Fallskydd & Räddning",
         "BAS-P / BAS-U Järnväg"
       ],
       "machineLicenses": "Maskinförarbevis",
@@ -805,7 +1014,6 @@
         "Pålmaskin",
         "Spontmaskin",
         "Sopmaskin",
-        "Traverskran",
         "Sugbil / Spolbil",
         "Kranbil"
       ],
@@ -828,31 +1036,17 @@
         "Väg- och anläggningsarbetare",
         "Betongarbetare",
         "Träarbetare (Snickare)",
-        "Murare",
-        "Plattsättare",
-        "Golvläggare",
         "Ställningsbyggare",
-        "Takmontör",
-        "Bergarbetare",
         "Beläggningsarbetare",
         "Håltagare",
         "Stenmontör",
-        "Målare",
-        "Byggnadsplåtslagare",
-        "Ventilationsplåtslagare",
+        "Bergarbetare",
         "Anläggningsdykare",
         "Trädgårdsanläggare",
         "VVS-montör",
         "Elektriker (Auktoriserad elinstallatör)",
-        "Kyl- och värmepumpstekniker",
-        "Larmtekniker (SSF)",
-        "Isoleringsmontör",
-        "Ventilationsmontör",
-        "Brandskyddsmålare",
-        "Träarbetare - Prefab",
         "Rörläggare (VA)",
-        "Grov- & Rivningsarbetare",
-        "Solcellsmontör"
+        "Grov- & Rivningsarbetare"
       ],
       "applyingFor": "Ansöker till",
       "cv": "CV / Erfarenhet",
