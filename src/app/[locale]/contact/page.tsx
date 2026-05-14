@@ -4,6 +4,7 @@ import { PageShell } from "@/components/page-shell";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const t = await getTranslations("Index");
-  
+
   return (
     <PageShell>
       <div className="bg-muted/30 py-20">
@@ -23,14 +24,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Left - Image */}
             <div className="relative">
-              <img
+              <Image
                 src="/contact-hero.svg"
                 alt="Contact LinkableWork"
+                width={800}
+                height={600}
                 className="w-full rounded-2xl border border-border/60 bg-background p-8 shadow-xl"
               />
               <div className="absolute -bottom-4 -left-4 -z-10 h-full w-full rounded-2xl bg-amber-100" />
             </div>
-
             {/* Right - Header */}
             <div>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">

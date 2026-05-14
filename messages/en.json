@@ -458,19 +458,34 @@
         "apv2": "APV 2.1, 2.2, 2.3 (Work on Road)",
         "apv3": "APV 3 (Work on Road)",
         "heta": "Hot Works",
-        "bas": "BAS P / BAS U",
+        "basP": "BAS P (Planning)",
+        "basU": "BAS U (Execution)",
         "hlr": "CPR (HLR)",
         "sakralyft": "Safe Lifting",
+        "lastkoppling": "Load Coupling",
         "adr": "ADR-S 1.3",
         "stockholm": "Stockholm City Course",
+        "ebr": "EBR (Electrical safety)",
+        "ssgEntre": "SSG Entré",
+        "ssgSafety": "SSG Safety",
+        "ssgSbn": "SSG SBN",
         "machine": "Machine Operator License",
-        "ftax": "F-tax Status"
+        "ftax": "F-tax Status",
+        "esa": "ESA (Electrical Safety Instructions)",
+        "kvartsdamm": "Quartz Dust (Kvartsamm)",
+        "gwo": "GWO (Global Wind Organisation)",
+        "hlrHjartstartare": "CPR with Defibrillator",
+        "hetaBrandvakt": "Hot Works / Fire Watch",
+        "sakraLyftLastkoppling": "Safe Lifting / Load Coupling",
+        "svetsLodning": "Welding Certificate / Soldering",
+        "asbestPcb": "Asbestos / PCB",
+        "fallskyddRaddning": "Fall Protection & Rescue"
       }
     },
     "Guide": {
       "title": "Guide: Swedish Professional Certificates & Trade Licenses",
       "description": "An overview of the most common professional certificates and licenses in the Swedish construction and civil engineering industry, organized by category and issuing body.",
-      "tip": "When applying via LinkableWork you can upload digital copies of your trade certificates and licenses directly in the portal. Have a certificate number from BYN or TYA? Include it in your application for faster verification.",
+      "tip": "At LinkableWork you can easily upload all your trade certificates and licenses digitally directly in the portal. Enter your validity periods and we will remind you well before a certificate expires. Have a certificate number from BYN or TYA? Include it in your application for faster verification.\n\nDo you have competence from the Mining or Wind Power industry? Make sure to mention this as it is in high demand in our projects in northern Sweden.",
       "sections": {
         "byn": {
           "title": "1. BYN & Other Trade Boards",
@@ -485,7 +500,9 @@
                 "Tiler: Trade certificate for wall and floor tiles.",
                 "Floor Layer: Trade certificate for flooring, parquet and grinding.",
                 "Roof Fitter: Specialist in waterproofing and roof materials.",
-                "Painter (MYN): Trade certificate for interior and exterior painting."
+                "Painter (MYN): Trade certificate for interior and exterior painting.",
+                "Carpenter - Prefab: Assembly of prefabricated building modules.",
+                "Mason & Tiler: Bricklaying, plastering and tiles (incl. wet room certification)."
               ]
             },
             "plåt": {
@@ -498,12 +515,21 @@
             "mark": {
               "title": "Ground & Civil Works",
               "items": [
+                "Construction Driver (Anläggningsförare): Trade certificate for machine operators in construction.",
                 "Road and Civil Worker: Basic competence for infrastructure, pipe laying and site preparation.",
                 "Civil Engineering Diver: Specialist for heavy underwater work.",
                 "Stone Installer: Specialization in curbstones, paving stones.",
                 "Paving Worker: Asphalt work and surface layers.",
                 "Rock Worker: Drilling and blasting (often requires blasting certificate).",
-                "Landscape Gardener (TSY): Specialist in green areas and planting."
+                "Landscape Gardener (TSY): Specialist in green areas and planting.",
+                "Pipe Layer (VA): Water and sewage specialist (often requires VAV/STC).",
+                "Demolition & Earthwork Laborer: Rough grading, manual demolition and construction cleaning."
+              ]
+            },
+            "specialmontage": {
+              "title": "Special Assembly & Service",
+              "items": [
+                "Solar Panel Installer: Installation of panels and support systems (DC side)."
               ]
             }
           }
@@ -520,7 +546,8 @@
                 "Trencher: For heavy trenching and terrain grading.",
                 "Motor Grader: Advanced machine for fine grading of road surfaces.",
                 "Dumper: For transporting materials in terrain.",
-                "Roller/Compactor: For compaction of soil, gravel or asphalt."
+                "Roller/Compactor: For compaction of soil, gravel or asphalt.",
+                "Sweeper: For road maintenance and cleaning of construction areas."
               ]
             },
             "lyft": {
@@ -528,10 +555,31 @@
               "items": [
                 "Wheel Loader: Trade certificate for construction and material handling.",
                 "Telehandler: For high lifts and material handling.",
-                "Mobile Crane / Tower Crane: Requires extensive training and crane operator certificate.",
+                "Mobile Crane: Requires extensive training and crane operator certificate.",
+                "Tower Crane: Requires extensive training and crane operator certificate.",
+                "Overhead Crane: For heavy lifting in industrial and prefab assembly.",
                 "Concrete Pump Operator: Machine for precision placement of concrete.",
                 "Asphalt Paver: Specialist machine for road paving.",
-                "Pile Driver / Sheet Piling Rig: Critical role for foundations."
+                "Pile Driver: Critical role for foundations.",
+                "Sheet Piling Rig: For support structures and excavation.",
+                "Suction Truck / Jet Vacuum Truck: Sanitation, emptying and high-pressure flushing.",
+                "Crane Truck: Transport and assembly with truck-mounted crane."
+              ]
+            }
+          }
+        },
+        "management": {
+          "title": "3. Management & Leadership",
+          "subtitle": "We also fill leading roles for effective project management.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Site Manager: Overall responsibility for production, finances and safety on site.",
+                "Foreman: Operational management of work teams and subcontractors.",
+                "Survey Technician: Setting out, measuring and quantity regulation.",
+                "QHSE Coordinator: Responsible for Quality, Environment and Work Environment.",
+                "Project Manager / Estimator: Planning and financial calculation."
               ]
             }
           }
@@ -561,6 +609,7 @@
               "title": "",
               "items": [
                 "Welding Certificate (ISO 9606-1): Required for load-bearing steel structures.",
+                "Soldering: Specific certificates for HVAC and refrigeration systems.",
                 "Asbestos Remediation: Requires special training approved by the Work Environment Authority.",
                 "PCB Remediation: Specialist competence for hazardous waste handling.",
                 "Epoxy/Isocyanates: Training required for chemical risk work.",
@@ -572,54 +621,94 @@
           }
         },
         "certs": {
-          "title": "5. Important Industry Certificates & Courses",
+          "title": "5. Industry-Specific Certificates & Requirements",
           "subtitle": "These require regular renewal (usually every 5 years).",
           "groups": {
-            "items": {
-              "title": "",
+            "safety": {
+              "title": "Safety & Work Environment",
               "items": [
-                "ID06: Mandatory ID system for construction sites.",
-                "Safe Construction Training: Online safety course.",
-                "Work on Road (APV): Levels 1.1–3 depending on responsibility and vehicle type.",
-                "Hot Works: Certificate for fire hazardous work.",
-                "BAS P / BAS U: Construction environment coordinator.",
+                "ID06: Mandatory for everyone on construction sites.",
+                "Safe Construction Training: Online course required by most major contractors.",
+                "SSG Entré: Common ID card for industrial and energy facilities.",
+                "SSG Basic Safety: Safety training for industrial environments.",
+                "SSG SBN levels: Safety and preparedness levels for industrial work.",
+                "BAS P (Planning): Construction environment coordinator for planning.",
+                "BAS U (Execution): Construction environment coordinator for execution.",
+                "Hot Works / Fire Watch: Certificate for fire hazardous work."
+              ]
+            },
+            "technical": {
+              "title": "Technical Certificates",
+              "items": [
+                "Work on Road (APV): Levels 1.1, 1.2, 1.3, 2 and 3 depending on responsibility and vehicle.",
+                "EBR (Electrical safety construction): Electrical safety regulations for construction and demolition.",
+                "ESA (Electrical Safety Instructions): ESA Basic and ESA Maintenance (near power lines).",
+                "Welding Certificate / Soldering: ISO 9606-1 for load-bearing steel structures.",
+                "Stockholm City Course: Required for work on city land."
+              ]
+            },
+            "health": {
+              "title": "Health & Environment",
+              "items": [
+                "Quartz Dust (Kvartsamm): Training on risks and protective measures against stone dust.",
+                "Epoxy/Isocyanates: Training and medical checks for Epoxy/Isocyanates.",
+                "Asbestos / PCB: Special training and permit for remediation.",
+                "GWO (Global Wind Organisation): Required for wind power work."
+              ]
+            },
+            "equipment": {
+              "title": "Equipment & Rescue",
+              "items": [
+                "Safe Lifting / Load Coupling: For everyone working with crane lifts.",
+                "Fall Protection & Rescue: For work at height, roofs and scaffolding.",
+                "Safe Snow Removal: License for safe snow removal from roofs.",
                 "Mobile Work Platforms (Cherry Picker/Scissor Lift): Training per SS-ISO 18878.",
                 "Nail Gun: Training for powder-actuated tools.",
-                "CPR: Often with focus on construction sites.",
-                "Safe Lifting / Load Coupling: Required for all who attach loads to cranes.",
-                "ADR-S 1.3: Transport of dangerous goods.",
-                "Stockholm City Course: Required for work on city land."
+                "CPR with Defibrillator: First aid competence on construction sites."
               ]
             }
           }
         },
         "drivers": {
-          "title": "7. Driver's License Categories (Transportstyrelsen)",
+          "title": "7. Transport & Logistics",
           "subtitle": "For roles involving transport of materials, machines or personnel.",
           "groups": {
             "items": {
               "title": "",
               "items": [
-                "B: Car and light truck (basic requirement for most roles).",
-                "BE: Car with heavy trailer (common for installers with machine trailers).",
-                "C: Heavy truck (e.g. for dump trucks or crane trucks).",
-                "CE: Heavy truck with trailer (for heavy transport and logistics).",
-                "YKB (Professional competence certificate): Legal requirement for professional goods transport with C/CE license.",
-                "Digital tachograph card: Required for drivers of vehicles with tachographs."
+                "Driver's License B: Car and light truck (basic requirement).",
+                "Driver's License BE: Car with heavy trailer (common for machine trailers).",
+                "Driver's License C / CE: Heavy truck with/without trailer.",
+                "YKB (Professional competence): Required for professional goods transport.",
+                "Digital tachograph card: Required for drivers of vehicles with tachographs.",
+                "ADR-S 1.3: Transport of dangerous goods (e.g. diesel in IBC tank)."
               ]
             }
           }
         },
         "rail": {
-          "title": "6. Railway (Trafikverket)",
-          "subtitle": "Infrastructure projects related to railways require specific Trafikverket authorizations.",
+          "title": "6. Railway & Forestry",
+          "subtitle": "Infrastructure projects related to railways and forestry work require specific authorizations.",
           "groups": {
             "items": {
-              "title": "",
+              "title": "Railway",
               "items": [
-                "Protection and Safety Leader (SoS): Responsible for safety during track work.",
-                "Supervisor (TSM): Responsible for traffic safety.",
-                "BAS-P/U Railway: Specific focus on track environment."
+                "Protection and Safety Leader (SoS): Safety during track work.",
+                "Supervisor (TSM): Responsible for traffic safety on tracks.",
+                "BAS-P Railway: Specific focus on track environment.",
+                "BAS-U Railway: Specific focus on track environment.",
+                "BAS-P / BAS-U Railway: Specific focus on track environment."
+              ]
+            },
+            "skog": {
+              "title": "Forestry (Chainsaw & Brush Cutter)",
+              "items": [
+                "Chainsaw License Level A: Basic chainsaw work.",
+                "Chainsaw License Level B: Chainsaw work on ground with risk moments.",
+                "Chainsaw License Level C: Chainsaw work at height and in trees.",
+                "Chainsaw License Level D: Chainsaw work in difficult terrain.",
+                "Brush Cutter License Level RA: Basic clearing with brush cutter.",
+                "Brush Cutter License Level RB: Advanced clearing and ground preparation."
               ]
             }
           }
@@ -635,39 +724,69 @@
     "Form": {
       "badge": "Apply Now",
       "title": "Apply for projects or employment role",
-      "description": "LinkableWork is looking for new employees, subcontractors, companies, and individuals with F-tax for assignments in groundworks, construction, infrastructure, and contracting. Assignments run from May through October.",
+      "description": "LinkableWork is looking for new employees, subcontractors, and individuals with F-tax for assignments in groundworks, construction, infrastructure, and contracting. Assignments run from May through October.",
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
       "company": "Company (optional)",
       "type": "I apply as",
-      "typeOptions": ["Subcontractor", "Company", "Individual with F-tax", "Private individual without F-tax"],
+      "typeOptions": ["Subcontractor", "Individual with F-tax", "Private individual without F-tax"],
       "roles": "Roles I'm interested in",
-      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag"],
+      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag", "Träarbetare (Snickare)", "Betongarbetare", "Murare", "Plattsättare", "Golvläggare", "Takmontör", "Målare", "Byggnadsplåtslagare", "Ventilationsplåtslagare", "VVS-montör", "Elektriker", "Ställningsbyggare", "Håltagare", "Svetsare", "Bergarbetare", "Stenmontör", "Beläggningsarbetare", "Anläggningsdykare", "Trädgårdsanläggare", "Brandskyddsmålare", "Kyl- och värmepumpstekniker", "Larmtekniker", "Isoleringsmontör", "Ventilationsmontör", "Platschef", "Arbetsledare", "Mättekniker", "KMA-samordnare", "Projektledare / Kalkylator"],
       "locations": "Locations",
-      "locationOptions": ["Luleå", "Skellefteå", "Umeå", "Stockholm", "Göteborg"],
+      "locationOptions": ["Blekinge län", "Dalarnas län", "Gotlands län", "Gävleborgs län", "Hallands län", "Jämtlands län", "Jönköpings län", "Kalmar län", "Kronobergs län", "Norrbottens län", "Skåne län", "Stockholms län", "Södermanlands län", "Uppsala län", "Värmlands län", "Västerbottens län", "Västernorrlands län", "Västmanlands län", "Västra Götalands län", "Örebro län", "Östergötlands län"],
       "certifications": "Certifications I hold",
       "certOptions": [
         "ID06",
         "Safe Construction Training (Säkerhet på bygget)",
-        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
-        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "APV 1.1 (Arbete på väg)",
+        "APV 1.2 (Arbete på väg)",
+        "APV 1.3 (Arbete på väg)",
+        "APV 2.1 (Arbete på väg)",
+        "APV 2.2 (Arbete på väg)",
+        "APV 2.3 (Arbete på väg)",
         "APV 3 (Arbete på väg)",
         "Heta arbeten (Hot works)",
-        "BAS P / BAS U",
+        "BAS P (Planning)",
+        "BAS U (Execution)",
         "HLR (CPR)",
         "Säkra lyft (Safe lifting)",
         "ADR-S 1.3",
         "Stockholm Stad kurs",
+        "EBR (Electrical safety construction)",
+        "SSG Entré (Industrial ID card)",
+        "SSG Basic Safety (Grundläggande Säkerhet)",
+        "SSG SBN levels",
         "Asbestos remediation (Asbestsanering)",
         "PCB remediation (PCB-sanering)",
         "Welding certificate ISO 9606-1 (Svetscertifikat)",
         "Epoxy/Isocyanates (Härdplaster)",
         "Mobile work platforms (Skylift/Sax)",
         "Nail gun / Powder-actuated tool (Bultpistol)",
+        "Fall protection training (Fallskyddsutbildning)",
+        "Safe snow removal (Skotta Säkert)",
+        "Soldering certificate (Lödning VVS/kyla)",
+        "Load coupling (Lastkoppling)",
+        "Chainsaw license Level A (Motorsågskörkort A)",
+        "Chainsaw license Level B (Motorsågskörkort B)",
+        "Chainsaw license Level C (Motorsågskörkort C)",
+        "Chainsaw license Level D (Motorsågskörkort D)",
+        "Brush cutter license Level RA (Röjsågskörkort RA)",
+        "Brush cutter license Level RB (Röjsågskörkort RB)",
         "Trafikverket SoS-ledare (Rail safety)",
         "Trafikverket Tillsyningsman TSM (Rail supervisor)",
-        "BAS-P/U Railway (BAS-P/U Järnväg)"
+        "BAS-P Railway (BAS-P Järnväg)",
+        "BAS-U Railway (BAS-U Järnväg)",
+        "ESA (Electrical Safety Instructions)",
+        "Kvartsdamm (Quartz dust training)",
+        "GWO (Global Wind Organisation)",
+        "HLR med Hjärtstartare (CPR with defibrillator)",
+        "Heta Arbeten / Brandvakt (Hot works / Fire watch)",
+        "Säkra Lyft / Lastkoppling (Safe lifting / Load coupling)",
+        "Svetscertifikat / Lödning (Welding / Soldering)",
+        "Asbest / PCB (Asbestos / PCB remediation)",
+        "Fallskydd & Räddning (Fall protection & rescue)",
+        "BAS-P / BAS-U Järnväg (BAS-P / BAS-U Railway)"
       ],
       "machineLicenses": "Machine operator licenses",
       "machineOptions": [
@@ -683,7 +802,12 @@
         "Tornkran (Tower crane)",
         "Betongpump (Concrete pump)",
         "Asfaltsläggare (Asphalt paver)",
-        "Pålmaskin / Spontmaskin (Pile driver)"
+        "Pålmaskin (Pile driver)",
+        "Spontmaskin (Sheet piling rig)",
+        "Sopmaskin (Sweeper)",
+        "Traverskran (Overhead crane)",
+        "Sugbil / Spolbil (Suction / Jet vacuum truck)",
+        "Kranbil (Crane truck)"
       ],
       "tradeCertificates": "Trade certificates",
       "driverLicenses": "Driver's license",
@@ -693,7 +817,11 @@
         "C (Heavy truck)",
         "CE (Heavy truck with trailer)",
         "YKB (Professional competence)",
-        "Digital tachograph card"
+        "Digital tachograph card",
+        "ADR-S 1.3",
+        "Körkort B (Driver's license B)",
+        "Körkort BE (Driver's license BE)",
+        "Körkort C / CE (Driver's license C / CE)"
       ],
       "tradeOptions": [
         "Anläggningsförare (Construction driver)",
@@ -720,7 +848,11 @@
         "Larmtekniker (Alarm technician SSF)",
         "Isoleringsmontör (Insulation fitter)",
         "Ventilationsmontör (Ventilation fitter)",
-        "Brandskyddsmålare (Fire protection painter)"
+        "Brandskyddsmålare (Fire protection painter)",
+        "Träarbetare - Prefab (Carpenter - Prefab)",
+        "Rörläggare VA (Pipe layer)",
+        "Grov- & Rivningsarbetare (Demolition & earthwork laborer)",
+        "Solcellsmontör (Solar panel installer)"
       ],
       "applyingFor": "Applying for",
       "cv": "CV / Experience",
@@ -731,6 +863,7 @@
       "referencesPlaceholder": "Company, contact person, phone...",
       "extraCertifications": "Extra certifications (optional)",
       "extraCertificationsHint": "List any certificates or trade licenses not in the options above",
+      "uploadHint": "Tip: Take photos of your certificates with visible expiry dates and attach them in the email. It speeds up verification.",
       "extraCertificationsPlaceholder": "e.g. Painter (MYN), HVAC fitter, Welding cert ISO 9606-1...",
       "message": "Message (optional)",
       "messagePlaceholder": "Tell us about your experience, team size, availability...",

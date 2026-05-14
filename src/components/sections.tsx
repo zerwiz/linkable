@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight, Shield, Clock, MapPin, FileCheck, Users, HardHat, Truck, Wrench,
-  ChevronRight, CheckCircle2,
+  ChevronRight, CheckCircle2, Camera,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,9 +11,10 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { useState, useEffect } from "react";
-import { Link, usePathname, useRouter } from "@/routing";
-import { useLocale, useTranslations } from "next-intl";
+import { useState } from "react";
+import { Link } from "@/routing";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 /* ------------------------------------------------------------------ */
 /*  Hero Section                                                       */
@@ -48,12 +49,14 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-slate-900">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/hero-bg.png"
           alt="Construction site background"
-          className="h-full w-full object-cover opacity-30"
+          fill
+          priority
+          className="object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
@@ -416,9 +419,11 @@ export function HowItWorksSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <img
+            <Image
               src="/how-it-works.png"
               alt={t("HowItWorks.title")}
+              width={1200}
+              height={800}
               className="w-full rounded-2xl border border-border/60 shadow-xl"
             />
             <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-amber-100" />
@@ -450,6 +455,7 @@ export function HowItWorksSection() {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
+                  type="button"
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
                     activeTab === tab.id
@@ -495,7 +501,7 @@ export function HowItWorksSection() {
                       {step.icon}
                     </div>
                     {i < steps.length - 1 && (
-                      <div className="h-full w-px bg-gradient-to-b from-amber-300 to-transparent" />
+                      <div className="h-full w-px bg-linear-to-b from-amber-300 to-transparent" />
                     )}
                   </div>
                   <div className="pb-2">
@@ -628,6 +634,7 @@ export function WhySection() {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all ${
                   activeTab === tab.id
@@ -769,9 +776,6 @@ export function CertificationsBanner() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  CTA Section                                                        */
-/* ------------------------------------------------------------------ */
-/* ------------------------------------------------------------------ */
 /*  Certification Guide                                                */
 /* ------------------------------------------------------------------ */
 export function CertificationGuideSection() {
@@ -780,11 +784,15 @@ export function CertificationGuideSection() {
   const sections = [
     {
       key: "byn",
-      groups: ["tra", "plåt", "mark"],
+      groups: ["tra", "plåt", "mark", "specialmontage"],
     },
     {
       key: "maskin",
       groups: ["grav", "lyft"],
+    },
+    {
+      key: "management",
+      groups: ["items"],
     },
     {
       key: "installation",
@@ -796,14 +804,14 @@ export function CertificationGuideSection() {
     },
     {
       key: "certs",
-      groups: ["items"],
-    },
-    {
-      key: "drivers",
-      groups: ["items"],
+      groups: ["safety", "technical", "health", "equipment"],
     },
     {
       key: "rail",
+      groups: ["items", "skog"],
+    },
+    {
+      key: "drivers",
       groups: ["items"],
     },
   ] as const;
@@ -852,7 +860,7 @@ export function CertificationGuideSection() {
               </div>
 
               <div className="space-y-6">
-                {section.groups.map((group, gi) => {
+                {section.groups.map((group) => {
                   const groupTitle = t(`Guide.sections.${section.key}.groups.${group}.title`);
                   const items = t.raw(`Guide.sections.${section.key}.groups.${group}.items`) as string[];
 
@@ -870,7 +878,7 @@ export function CertificationGuideSection() {
                           const desc = descParts.join(":").trim();
                           return (
                             <motion.div
-                              key={ii}
+                              key={item}
                               initial={{ opacity: 0, x: -8 }}
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true, margin: "-40px" }}
@@ -985,14 +993,15 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
   });
   const roleOptions = t.raw("Form.roleOptions") as string[];
 
-  useEffect(() => {
+  const [prevSelectedRole, setPrevSelectedRole] = useState(selectedRole);
+  if (selectedRole !== prevSelectedRole) {
+    setPrevSelectedRole(selectedRole);
     if (selectedRole && roleOptions.includes(selectedRole)) {
-      setData((prev) => {
-        if (prev.roles.includes(selectedRole)) return prev;
-        return { ...prev, roles: [...prev.roles, selectedRole] };
-      });
+      if (!data.roles.includes(selectedRole)) {
+        setData((p) => ({ ...p, roles: [...p.roles, selectedRole] }));
+      }
     }
-  }, [selectedRole, roleOptions]);
+  }
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -1092,7 +1101,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.type")} *</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {types.map((type) => (
-            <label key={type} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={type} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="radio" name="type" value={type} required checked={data.type === type} onChange={(e) => setData((p) => ({ ...p, type: e.target.value }))} className="sr-only" />
               {type}
             </label>
@@ -1104,7 +1113,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.roles")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {roleOptions.map((role) => (
-            <label key={role} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={role} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="roles[]" value={role} checked={data.roles.includes(role)} onChange={() => handleCheckbox("roles", role)} className="sr-only" />
               {role}
             </label>
@@ -1116,7 +1125,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.locations")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {locationOptions.map((loc) => (
-            <label key={loc} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={loc} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="locations[]" value={loc} checked={data.locations.includes(loc)} onChange={() => handleCheckbox("locations", loc)} className="sr-only" />
               {loc}
             </label>
@@ -1128,7 +1137,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.certifications")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {certOptions.map((cert) => (
-            <label key={cert} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={cert} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="certifications[]" value={cert} checked={data.certifications.includes(cert)} onChange={() => handleCheckbox("certifications", cert)} className="sr-only" />
               {cert}
             </label>
@@ -1140,7 +1149,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.machineLicenses")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {machineOptions.map((machine) => (
-            <label key={machine} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={machine} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="machineLicenses[]" value={machine} checked={data.machineLicenses.includes(machine)} onChange={() => handleCheckbox("machineLicenses", machine)} className="sr-only" />
               {machine}
             </label>
@@ -1152,7 +1161,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.tradeCertificates")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {tradeOptions.map((trade) => (
-            <label key={trade} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={trade} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="tradeCertificates[]" value={trade} checked={data.tradeCertificates.includes(trade)} onChange={() => handleCheckbox("tradeCertificates", trade)} className="sr-only" />
               {trade}
             </label>
@@ -1164,7 +1173,7 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label>{t("Form.driverLicenses")}</Label>
         <div className="mt-2 flex flex-wrap gap-3">
           {driverLicenseOptions.map((dl) => (
-            <label key={dl} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-[:checked]:border-amber-500 has-[:checked]:bg-amber-50">
+            <label key={dl} className="flex cursor-pointer items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm hover:border-amber-300/60 has-checked:border-amber-500 has-checked:bg-amber-50">
               <input type="checkbox" name="driverLicenses[]" value={dl} checked={data.driverLicenses.includes(dl)} onChange={() => handleCheckbox("driverLicenses", dl)} className="sr-only" />
               {dl}
             </label>
@@ -1188,6 +1197,11 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <Label htmlFor="extraCertifications">{t("Form.extraCertifications")}</Label>
         <p className="mt-1 text-xs text-muted-foreground">{t("Form.extraCertificationsHint")}</p>
         <Textarea id="extraCertifications" rows={3} value={data.extraCertifications} onChange={(e) => setData((p) => ({ ...p, extraCertifications: e.target.value }))} className="mt-1" placeholder={t("Form.extraCertificationsPlaceholder")} />
+      </div>
+
+      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 flex items-start gap-3">
+        <Camera className="mt-0.5 h-5 w-5 shrink-0 text-amber-500" />
+        <span>{t("Form.uploadHint")}</span>
       </div>
 
       <div>
