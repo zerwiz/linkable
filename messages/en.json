@@ -1,11 +1,11 @@
 {
   "Metadata": {
     "title": "LinkableWork | Partner Portal for Construction Recruitment",
-    "description": "Streamlined digital portal for subcontractors, companies, and individuals to apply for construction projects across Sweden. Submit credentials, specify availability, and get matched with the right projects.",
+    "description": "We recruit both companies and individuals for construction assignments across Sweden. Apply as a subcontractor, company, work crew, or individual — we match you with the right project or employment.",
     "ogTitle": "LinkableWork Partner Portal",
-    "ogDescription": "Connect with construction projects across Sweden. Apply as a subcontractor, company, or individual with F-tax.",
+    "ogDescription": "Find construction projects or employment across Sweden. Apply as a company, subcontractor, or individual.",
     "twitterTitle": "LinkableWork Partner Portal",
-    "twitterDescription": "Connect with construction projects across Sweden."
+    "twitterDescription": "Find construction projects or employment across Sweden."
   },
   "Index": {
     "RequestWorkers": {

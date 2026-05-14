@@ -1,11 +1,11 @@
 {
   "Metadata": {
     "title": "LinkableWork | Partnerportal för byggrekrytering",
-    "description": "Strömlinjeformad digital portal för underentreprenörer, företag och privatpersoner för att söka byggprojekt i hela Sverige. Skicka in meriter, ange tillgänglighet och bli matchad med rätt projekt.",
+    "description": "Vi rekryterar både företag och privatpersoner för bygguppdrag i hela Sverige. Sök som underentreprenör, företag, arbetslag eller enskild individ — vi matchar dig med rätt projekt eller anställning.",
     "ogTitle": "LinkableWork Partnerportal",
-    "ogDescription": "Anslut till byggprojekt i hela Sverige. Ansök som underentreprenör, företag eller individ med F-skatt.",
+    "ogDescription": "Hitta byggprojekt eller anställning i hela Sverige. Ansök som företag, underentreprenör eller privatperson.",
     "twitterTitle": "LinkableWork Partnerportal",
-    "twitterDescription": "Anslut till byggprojekt i hela Sverige."
+    "twitterDescription": "Hitta byggprojekt eller anställning i hela Sverige."
   },
   "Index": {
     "RequestWorkers": {

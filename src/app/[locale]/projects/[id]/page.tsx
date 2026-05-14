@@ -211,11 +211,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
                 {t("Projects.applyNow")}
               </Button>
             </Link>
-            <a href="#contact" className="flex-1">
+            <Link href="/contact" className="flex-1">
               <Button size="lg" variant="outline" className="w-full rounded-full border-border/60 hover:bg-muted/50">
                 {t("Projects.askQuestion")}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </main>
