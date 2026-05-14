@@ -785,7 +785,7 @@
     "LinkCollection": {
       "badge": "Länkar",
       "title": "Länksamling: Myndigheter & Certifiering",
-      "description": "Här är en komplett lista över webbadresser för verifiering av behörigheter och bokning av utbildningar.",
+      "description": "Här är en komplett lista över webbadresser för verifiering av behörigheter, bokning av utbildningar och kontroll av branschregler.",
       "groups": {
         "myndigheter": {
           "title": "Myndigheter",
@@ -799,12 +799,38 @@
               "https://www.elsakerhetsverket.se"
             ],
             [
-              "Transportstyrelsen",
+              "Transportstyrelsen (Körkort & YKB)",
               "https://www.transportstyrelsen.se"
             ],
             [
               "Trafikverket",
               "https://www.trafikverket.se"
+            ]
+          ]
+        },
+        "apv": {
+          "title": "Arbete på väg (APV) 1, 2 & 3",
+          "links": [
+            [
+              "Trafikverket - Krav för APV",
+              "https://bransch.trafikverket.se/apv"
+            ],
+            [
+              "Verifiera APV-kompetens",
+              "https://www.trafikverket.se/tjanster/kompetensportalen/"
+            ]
+          ]
+        },
+        "stockholm": {
+          "title": "Stockholm Stad (Gräv & APV)",
+          "links": [
+            [
+              "Gräv i Stockholm Stad",
+              "https://foretagsservice.stockholm/tillstand-regler-och-tillsyn/markupplatelse/grava-i-gatumark/"
+            ],
+            [
+              "APV-kurs Stockholm Stad",
+              "https://foretagsservice.stockholm/evenemang-utbildningar/utbildningar/arbete-pa-vag/"
             ]
           ]
         },
@@ -871,6 +897,23 @@
             [
               "Säkerhetsparken",
               "https://Byggsakerhetsparken.se"
+            ]
+          ]
+        },
+        "entreprenadjuridik": {
+          "title": "Entreprenadjuridik & Standardavtal (AB 04 / ABT 06)",
+          "links": [
+            [
+              "ME (Maskinentreprenörerna)",
+              "https://www.me.se"
+            ],
+            [
+              "BKK (Byggandets Kontraktskommitté)",
+              "https://www.byggandetskontraktskommitte.se"
+            ],
+            [
+              "Byggföretagen - Entreprenadjuridik",
+              "https://byggforetagen.se/radgivning/entreprenadjuridik/"
             ]
           ]
         },

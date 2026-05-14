@@ -778,7 +778,7 @@
     "LinkCollection": {
       "badge": "Links",
       "title": "Link Collection: Authorities & Certification",
-      "description": "A complete list of websites for verification of qualifications and booking of training.",
+      "description": "A complete list of websites for verification of qualifications, booking of training, and checking industry regulations.",
       "groups": {
         "myndigheter": {
           "title": "Authorities",
@@ -792,12 +792,38 @@
               "https://www.elsakerhetsverket.se"
             ],
             [
-              "Transportstyrelsen (Swedish Transport Agency)",
+              "Transportstyrelsen (Driving Licenses & YKB)",
               "https://www.transportstyrelsen.se"
             ],
             [
               "Trafikverket (Swedish Transport Administration)",
               "https://www.trafikverket.se"
+            ]
+          ]
+        },
+        "apv": {
+          "title": "Work on Roads (APV) 1, 2 & 3",
+          "links": [
+            [
+              "Trafikverket - APV Requirements",
+              "https://bransch.trafikverket.se/apv"
+            ],
+            [
+              "Verify APV Competence",
+              "https://www.trafikverket.se/tjanster/kompetensportalen/"
+            ]
+          ]
+        },
+        "stockholm": {
+          "title": "Stockholm City (Excavation & APV)",
+          "links": [
+            [
+              "Excavation in Stockholm City",
+              "https://foretagsservice.stockholm/tillstand-regler-och-tillsyn/markupplatelse/grava-i-gatumark/"
+            ],
+            [
+              "APV Course Stockholm City",
+              "https://foretagsservice.stockholm/evenemang-utbildningar/utbildningar/arbete-pa-vag/"
             ]
           ]
         },
@@ -864,6 +890,23 @@
             [
               "Säkerhetsparken (Safety Park)",
               "https://Byggsakerhetsparken.se"
+            ]
+          ]
+        },
+        "entreprenadjuridik": {
+          "title": "Contract Law & Standard Agreements (AB 04 / ABT 06)",
+          "links": [
+            [
+              "ME (Machine Entrepreneurs)",
+              "https://www.me.se"
+            ],
+            [
+              "BKK (Construction Contracts Committee)",
+              "https://www.byggandetskontraktskommitte.se"
+            ],
+            [
+              "Byggföretagen - Contract Law",
+              "https://byggforetagen.se/radgivning/entreprenadjuridik/"
             ]
           ]
         },
