@@ -22,6 +22,11 @@ function Navbar() {
     { label: t("Navbar.contact"), href: "/contact" as const },
   ];
 
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   const toggleLocale = () => {
     const nextLocale = locale === "en" ? "sv" : "en";
     router.replace(pathname, { locale: nextLocale });
@@ -49,7 +54,11 @@ function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className={`relative text-sm font-medium transition-colors hover:text-foreground ${
+                isActive(l.href)
+                  ? "text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-amber-500"
+                  : "text-muted-foreground"
+              }`}
             >
               {l.label}
             </Link>
@@ -64,7 +73,7 @@ function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/projects">
+          <Link href="/projects#apply">
             <Button size="sm" className="rounded-full bg-amber-500 px-5 font-semibold text-white hover:bg-amber-600">
               {t("Navbar.applyNow")}
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -101,12 +110,14 @@ function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className={`text-sm font-medium transition-colors hover:text-foreground ${
+                  isActive(l.href) ? "text-foreground font-semibold" : "text-muted-foreground"
+                }`}
               >
                 {l.label}
               </Link>
             ))}
-            <Link href="/projects" onClick={() => setMobileOpen(false)}>
+            <Link href="/projects#apply" onClick={() => setMobileOpen(false)}>
               <Button className="w-full rounded-full bg-amber-500 font-semibold text-white hover:bg-amber-600">
                 {t("Navbar.applyNow")}
                 <ArrowRight className="ml-2 h-4 w-4" />

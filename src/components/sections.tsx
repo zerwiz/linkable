@@ -197,43 +197,34 @@ export function HeroSection() {
 export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: string, role?: string) => void }) {
   const t = useTranslations("Index");
 
-  const openProjects = [
+  const roleProjects = [
     { id: "groundworks", urgency: "high" },
     { id: "infrastructure", urgency: "medium" },
     { id: "specialized", urgency: "high" },
     { id: "building", urgency: "low" },
+  ];
+
+  const worksiteProjects = [
     { id: "umea-centrum", urgency: "high" },
     { id: "lulea-hamn", urgency: "medium" },
     { id: "skelleftea-campus", urgency: "high" },
     { id: "pitea-industri", urgency: "low" },
   ];
 
-  return (
-    <section id="projects" className="bg-background py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+  function renderProjectGrid(projects: typeof roleProjects, sectionKey: string) {
+    return (
+      <>
+        <motion.h3
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-2xl text-center"
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.4 }}
+          className="mb-6 text-xl font-semibold tracking-tight text-foreground"
         >
-          <Badge
-            variant="secondary"
-            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
-          >
-            {t("Projects.badge")}
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {t("Projects.title")}
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("Projects.description")}
-          </p>
-        </motion.div>
-
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {openProjects.map((project, i) => (
+          {t(`Projects.${sectionKey}`)}
+        </motion.h3>
+        <div className="mb-14 grid gap-6 sm:grid-cols-2">
+          {projects.map((project, i) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 24 }}
@@ -244,9 +235,9 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
               <Card className="group h-full border border-border/60 bg-card transition-all hover:border-amber-300/60 hover:shadow-lg hover:shadow-amber-500/5">
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-lg font-semibold text-foreground">
+                    <h4 className="text-lg font-semibold text-foreground">
                       {t(`Projects.items.${project.id}.title`)}
-                    </h3>
+                    </h4>
                     <Badge
                       className={`shrink-0 rounded-full text-[10px] font-bold ${
                         project.urgency === "high"
@@ -302,11 +293,14 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                         {t("Projects.accommodation")}: {t(`Projects.items.${project.id}.accommodation`)}
                       </span>
                     )}
-                    {["infrastructure", "building"].includes(project.id) && (
-                      <span className="text-amber-600">
-                        {t("Projects.locationCertsTitle")}: {(t.raw(`Projects.items.${project.id}.locationCerts`) as string[]).join(", ")}
-                      </span>
-                    )}
+                    {(() => {
+                      const certs = t.raw(`Projects.items.${project.id}.locationCerts`);
+                      return Array.isArray(certs) && certs.length > 0 ? (
+                        <span className="text-amber-600">
+                          {t("Projects.locationCertsTitle")}: {certs.join(", ")}
+                        </span>
+                      ) : null;
+                    })()}
                     <span className="text-blue-600">
                       {t("Projects.id06Note")}
                     </span>
@@ -337,6 +331,36 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
             </motion.div>
           ))}
         </div>
+      </>
+    );
+  }
+
+  return (
+    <section id="projects" className="bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <Badge
+            variant="secondary"
+            className="mb-4 rounded-full border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-amber-600"
+          >
+            {t("Projects.badge")}
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {t("Projects.title")}
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            {t("Projects.description")}
+          </p>
+        </motion.div>
+
+        {renderProjectGrid(roleProjects, "roleSpecific")}
+        {renderProjectGrid(worksiteProjects, "worksites")}
       </div>
     </section>
   );

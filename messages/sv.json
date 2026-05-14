@@ -95,6 +95,8 @@
         "recruiting": "REKRYTERAR",
         "open": "ÖPPEN"
       },
+      "roleSpecific": "Rollspecifika uppdrag",
+      "worksites": "Platser / Arbetsplatser",
       "applyButton": "Ansök till detta projekt",
       "moreInfo": "Mer info",
       "startDate": "Start",
@@ -106,21 +108,22 @@
         "groundworks": {
           "title": "Markarbete",
           "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Luleå", "Skellefteå", "Umeå"],
+          "locations": ["Flera orter"],
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
+          "locationCerts": [],
           "description": "Grundarbete, schaktning och platsförberedelse för nya bostads- och kommersiella projekt i Norrbotten och Västerbotten. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
         },
         "infrastructure": {
           "title": "Infrastruktur",
           "roles": ["Maskinförare", "Arbetslag"],
-          "locations": ["Stockholm", "Göteborg"],
+          "locations": ["Flera orter"],
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
-          "locationCerts": ["Stockholm Stad kurs"],
-          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i Sveriges två största storstadsområden. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
+          "locationCerts": [],
+          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
         },
         "specialized": {
           "title": "Specialiserat maskinarbete",
@@ -129,16 +132,17 @@
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
+          "locationCerts": [],
           "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Giltigt maskinförarbevis och Arbete på väg (APV) krävs. Konkurrenskraftiga timlöner."
         },
         "building": {
           "title": "Bygg & anläggning",
           "roles": ["Anläggare", "Arbetslag"],
-          "locations": ["Umeå", "Stockholm"],
+          "locations": ["Flera orter"],
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
-          "locationCerts": ["Stockholm Stad kurs"],
+          "locationCerts": [],
           "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
         },
         "umea-centrum": {
@@ -148,6 +152,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "20 maj 2026",
           "accommodation": "Baracker / hotell ingår",
+          "locationCerts": [],
           "description": "Blandad bebyggelse i centrala Umeå med kommersiella och bostadsdelar. Grundarbete, betongkonstruktioner och inredningsarbeten. Erfarna team med ID06 och säkerhetsutbildning på bygget önskas."
         },
         "lulea-hamn": {
@@ -157,6 +162,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
+          "locationCerts": [],
           "description": "Utbyggnad av Luleå hamn med nya kajer, lastutrymmen och järnvägsanslutning. Tunga schaktarbeten, pålning och asfaltering. Maskinförare med APV-certifiering behövs."
         },
         "skelleftea-campus": {
@@ -166,6 +172,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
+          "locationCerts": [],
           "description": "Nya utbildningsbyggnader och omgivande infrastruktur vid Skellefteå campus. Markarbete, grundläggning och platsförberedelse för Fas 1 av byggnationen med omedelbar start."
         },
         "pitea-industri": {
@@ -175,6 +182,7 @@
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
+          "locationCerts": [],
           "description": "Industriområdesutveckling i utkanten av Piteå. Nya vägnät, ledningsdragning och grundläggning för kommersiella byggnader. Idealisk för team med erfarenhet av infrastruktur och markarbete."
         }
       }
@@ -261,7 +269,7 @@
     },
     "Form": {
       "badge": "Ansök nu",
-      "title": "Ansök till projekt",
+      "title": "Ansök till projekt eller anställningsroll",
       "description": "LinkableWork söker nya anställda, underleverantörer, företag och personer med F-skatt för uppdrag inom mark, anläggning, infrastruktur och entreprenad. Uppdrag löper från maj till oktober.",
       "name": "Namn",
       "email": "E-post",

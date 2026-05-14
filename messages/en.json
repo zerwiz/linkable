@@ -95,6 +95,8 @@
         "recruiting": "RECRUITING",
         "open": "OPEN"
       },
+      "roleSpecific": "Role-Specific Opportunities",
+      "worksites": "Worksites",
       "applyButton": "Apply for this project",
       "moreInfo": "More info",
       "startDate": "Start",
@@ -106,21 +108,22 @@
         "groundworks": {
           "title": "Groundworks",
           "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
-          "locations": ["Lulea", "Skelleftea", "Umea"],
+          "locations": ["Multiple Locations"],
           "startDate": "June 2026",
           "applyDeadline": "May 30, 2026",
           "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
           "description": "Foundation work, excavation, and site preparation for new residential and commercial developments across Norrbotten and Vasterbotten. Immediate starts available for crews with valid ID06 and APV certification."
         },
         "infrastructure": {
           "title": "Infrastructure",
           "roles": ["Maskinforare", "Arbetslag"],
-          "locations": ["Stockholm", "Goteborg"],
+          "locations": ["Multiple Locations"],
           "startDate": "Aug 2026",
           "applyDeadline": "June 15, 2026",
           "accommodation": "",
-          "locationCerts": ["Stockholm City Course"],
-          "description": "Road construction, utilities installation, and civil infrastructure projects in Sweden's two largest metropolitan areas. Looking for experienced teams with safe construction training and machine operator licenses."
+          "locationCerts": [],
+          "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with safe construction training and machine operator licenses."
         },
         "specialized": {
           "title": "Specialized Machine Work",
@@ -129,16 +132,17 @@
           "startDate": "July 2026",
           "applyDeadline": "June 1, 2026",
           "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
           "description": "Skilled machine operators needed for grading, paving, and heavy earthmoving operations. Valid Maskinforarbevis and Arbete pa vag (APV) certification required. Competitive hourly rates."
         },
         "building": {
           "title": "Building & Construction",
           "roles": ["Anlaggare", "Arbetslag"],
-          "locations": ["Umea", "Stockholm"],
+          "locations": ["Multiple Locations"],
           "startDate": "May 2026",
           "applyDeadline": "April 30, 2026",
           "accommodation": "Barracks / hotel included",
-          "locationCerts": ["Stockholm City Course"],
+          "locationCerts": [],
           "description": "General construction crews needed for residential building projects from foundation to finishing. F-tax status required for individual applicants. Teams of 3-8 preferred."
         },
         "umea-centrum": {
@@ -148,6 +152,7 @@
           "startDate": "June 2026",
           "applyDeadline": "May 20, 2026",
           "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
           "description": "Mixed-use development in central Umea with commercial and residential units. Foundation work, concrete structures, and interior finishing phases. Experienced teams with ID06 and safe construction training preferred."
         },
         "lulea-hamn": {
@@ -157,6 +162,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "July 1, 2026",
           "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
           "description": "Expansion of Lulea harbour facilities including new quay, cargo handling areas, and rail connection. Heavy earthmoving, piling, and asphalt work. Machine operators with APV certification needed."
         },
         "skelleftea-campus": {
@@ -166,6 +172,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "Aug 10, 2026",
           "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
           "description": "New educational buildings and surrounding infrastructure at Skelleftea campus. Groundworks, foundation laying, and site preparation for Phase 1 construction starting immediately."
         },
         "pitea-industri": {
@@ -175,6 +182,7 @@
           "startDate": "Oct 2026",
           "applyDeadline": "Sep 1, 2026",
           "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
           "description": "Industrial park development on the outskirts of Pitea. New road networks, utility installation, and commercial building foundations. Ideal for teams with experience in infrastructure and site development."
         }
       }
@@ -261,7 +269,7 @@
     },
     "Form": {
       "badge": "Apply Now",
-      "title": "Apply for projects",
+      "title": "Apply for projects or employment role",
       "description": "LinkableWork is looking for new employees, subcontractors, companies, and individuals with F-tax for assignments in groundworks, construction, infrastructure, and contracting. Assignments run from May through October.",
       "name": "Name",
       "email": "Email",
