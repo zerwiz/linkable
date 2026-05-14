@@ -1,0 +1,367 @@
+{
+  "Metadata": {
+    "title": "LinkableWork | Partner Portal for Construction Recruitment",
+    "description": "Streamlined digital portal for subcontractors, companies, and individuals to apply for construction projects across Sweden. Submit credentials, specify availability, and get matched with the right projects.",
+    "ogTitle": "LinkableWork Partner Portal",
+    "ogDescription": "Connect with construction projects across Sweden. Apply as a subcontractor, company, or individual with F-tax.",
+    "twitterTitle": "LinkableWork Partner Portal",
+    "twitterDescription": "Connect with construction projects across Sweden."
+  },
+  "Index": {
+    "RequestWorkers": {
+      "badge": "For Companies",
+      "title": "Need Workers?",
+      "description": "Do you have a project that lacks competent hands? We supply skilled workers and work teams to your site. We can also upload your project to our portal to find the perfect match.",
+      "benefits": {
+        "supply": {
+          "title": "We Supply Labor",
+          "description": "Whether you need a single machine operator or a full team of 20, we arrange it quickly and securely."
+        },
+        "portal": {
+          "title": "Upload to Portal",
+          "description": "Reach thousands of verified subcontractors and skilled workers by uploading your project to our platform."
+        },
+        "vetted": {
+          "title": "Vetted Competence",
+          "description": "All our workers have valid certificates like ID06, Safe Construction, and APV. We handle all verification."
+        }
+      },
+      "form": {
+        "title": "Upload Your Project",
+        "description": "Tell us a bit about what you need, and we'll contact you to find the right solution.",
+        "companyName": "Company Name",
+        "contactPerson": "Contact Person",
+        "projectLocation": "Project Location",
+        "workType": "Type of Work",
+        "workersNeeded": "Number of Workers Needed",
+        "startDate": "Desired Start Date",
+        "descriptionLabel": "Description of Needs",
+        "submit": "Send Request",
+        "success": "Thank you for your request!",
+        "successDescription": "We will review your needs and get back to you as soon as possible."
+      }
+    },
+    "Navbar": {
+      "projects": "Projects",
+      "requestWorkers": "Need Workers?",
+      "howItWorks": "How It Works",
+      "whyLinkable": "Why LinkableWork",
+      "contact": "Contact",
+      "applyNow": "Apply Now",
+      "toggleMenu": "Toggle menu"
+    },
+    "Hero": {
+      "badge": "Now recruiting for Summer & Autumn 2026",
+      "titlePart1": "Your skills.",
+      "titlePart2": "Our projects.",
+      "titlePart3": "Built together.",
+      "description": "LinkableWork connects private individuals, employees, skilled subcontractors, machine operators, and work teams with construction projects across Sweden. Register once, get matched instantly.",
+      "applyButton": "Apply as Partner",
+      "viewProjects": "View Open Projects",
+      "trust": {
+        "secure": "Secure document uploads",
+        "response": "Response within 24 h",
+        "projects": "Projects across Sweden"
+      },
+      "recruiting": {
+        "title": "Currently Recruiting",
+        "urgent": "URGENT",
+        "scroll": "Scroll down to see all open positions",
+        "items": {
+          "groundworks": "Groundworks & Excavation",
+          "groundworksLoc": "Lulea, Skelleftea, Umea",
+          "infrastructure": "Infrastructure & Road Works",
+          "infrastructureLoc": "Stockholm, Goteborg",
+          "machine": "Machine Operators (APV Licensed)",
+          "machineLoc": "Multiple Locations"
+        }
+      }
+    },
+    "Projects": {
+      "badge": "Open Projects",
+      "title": "Find the right project for your skills",
+      "description": "We are actively recruiting across Sweden for groundworks, infrastructure, and specialized construction roles. Browse current openings and apply in minutes.",
+      "location": "Location",
+      "responseTime": "Response time",
+      "status": "Status",
+      "activeRecruiting": "Active recruiting",
+      "about": "About the project",
+      "rolesTitle": "Roles we are looking for",
+      "requirements": "Required certifications",
+      "applyNow": "Apply Now",
+      "askQuestion": "Ask a Question",
+      "urgency": {
+        "urgent": "URGENT",
+        "recruiting": "RECRUITING",
+        "open": "OPEN"
+      },
+      "roleSpecific": "Role-Specific Opportunities",
+      "worksites": "Worksites",
+      "applyButton": "Apply for this project",
+      "moreInfo": "More info",
+      "startDate": "Start",
+      "applyDeadline": "Apply by",
+      "accommodation": "Accommodation",
+      "id06Note": "ID06 can be arranged by LinkableWork upon employment",
+      "locationCertsTitle": "Location-specific certifications",
+      "items": {
+        "groundworks": {
+          "title": "Groundworks",
+          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
+          "locations": ["Multiple Locations"],
+          "startDate": "June 2026",
+          "applyDeadline": "May 30, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "Foundation work, excavation, and site preparation for new residential and commercial developments across Norrbotten and Vasterbotten. Immediate starts available for crews with valid ID06 and APV certification."
+        },
+        "infrastructure": {
+          "title": "Infrastructure",
+          "roles": ["Maskinforare", "Arbetslag"],
+          "locations": ["Multiple Locations"],
+          "startDate": "Aug 2026",
+          "applyDeadline": "June 15, 2026",
+          "accommodation": "",
+          "locationCerts": [],
+          "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with safe construction training and machine operator licenses."
+        },
+        "specialized": {
+          "title": "Specialized Machine Work",
+          "roles": ["Maskinforare"],
+          "locations": ["Multiple Locations"],
+          "startDate": "July 2026",
+          "applyDeadline": "June 1, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "Skilled machine operators needed for grading, paving, and heavy earthmoving operations. Valid Maskinforarbevis and Arbete pa vag (APV) certification required. Competitive hourly rates."
+        },
+        "building": {
+          "title": "Building & Construction",
+          "roles": ["Anlaggare", "Arbetslag"],
+          "locations": ["Multiple Locations"],
+          "startDate": "May 2026",
+          "applyDeadline": "April 30, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "General construction crews needed for residential building projects from foundation to finishing. F-tax status required for individual applicants. Teams of 3-8 preferred."
+        },
+        "umea-centrum": {
+          "title": "Umea City Centre Development",
+          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
+          "locations": ["Umea"],
+          "startDate": "June 2026",
+          "applyDeadline": "May 20, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "Mixed-use development in central Umea with commercial and residential units. Foundation work, concrete structures, and interior finishing phases. Experienced teams with ID06 and safe construction training preferred."
+        },
+        "lulea-hamn": {
+          "title": "Lulea Harbour Expansion",
+          "roles": ["Maskinforare", "Arbetslag"],
+          "locations": ["Lulea"],
+          "startDate": "Aug 2026",
+          "applyDeadline": "July 1, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "Expansion of Lulea harbour facilities including new quay, cargo handling areas, and rail connection. Heavy earthmoving, piling, and asphalt work. Machine operators with APV certification needed."
+        },
+        "skelleftea-campus": {
+          "title": "Skelleftea Campus Area",
+          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
+          "locations": ["Skelleftea"],
+          "startDate": "Sep 2026",
+          "applyDeadline": "Aug 10, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "New educational buildings and surrounding infrastructure at Skelleftea campus. Groundworks, foundation laying, and site preparation for Phase 1 construction starting immediately."
+        },
+        "pitea-industri": {
+          "title": "Pitea Industrial Park",
+          "roles": ["Anlaggare", "Arbetslag"],
+          "locations": ["Pitea"],
+          "startDate": "Oct 2026",
+          "applyDeadline": "Sep 1, 2026",
+          "accommodation": "Barracks / hotel included",
+          "locationCerts": [],
+          "description": "Industrial park development on the outskirts of Pitea. New road networks, utility installation, and commercial building foundations. Ideal for teams with experience in infrastructure and site development."
+        }
+      }
+    },
+    "HowItWorks": {
+      "badge": "How It Works",
+      "title": "Four steps to your next project",
+      "description": "Our streamlined process is designed for construction professionals. Apply from your phone between tasks, no paperwork required.",
+      "step": "STEP",
+      "steps": {
+        "apply": {
+          "title": "Apply to Project",
+          "description": "Browse open positions and apply directly to the projects that match your skills and preferences. Our streamlined application form captures all the information recruiters need — roles, certifications, experience — so you can apply in minutes from your phone."
+        },
+        "step2": {
+          "title": "Upload Credentials",
+          "description": "Securely upload your mandatory certifications — ID06, Safe Construction, APV (Arbete pa vag), and Maskinforarbevis. Don't have ID06? We can arrange it for you upon employment."
+        },
+        "step3": {
+          "title": "Get Matched",
+          "description": "Our team reviews your application or profile and matches you with active projects based on your location preferences, certifications, and availability. High-match applicants receive instant notifications via email, ensuring you never miss the right opportunity."
+        },
+        "step1": {
+          "title": "Register Your Profile (coming soon)",
+          "description": "Create your partner account in under 5 minutes. Tell us about your company or individual F-tax status, primary roles, specializations, and team capacity. The form is designed for quick completion even on mobile devices at the construction site."
+        }
+      }
+    },
+    "Why": {
+      "badge": "Why LinkableWork",
+      "title": "The smarter way to find construction work",
+      "description": "We eliminate the friction between skilled workers and the projects that need them. Here is what sets us apart from traditional recruitment.",
+      "benefits": {
+        "matching": {
+          "title": "Fast Matching",
+          "description": "Our recruiters review applications within 24 hours. High-match candidates with in-demand certifications like APV and Machine Operator licenses are prioritized and contacted immediately."
+        },
+        "location": {
+          "title": "Projects Across Sweden",
+          "description": "From Lulea to Goteborg, we partner with major construction firms to bring you projects in your preferred region. Specify your geographic preferences and willingness to travel during onboarding."
+        },
+        "secure": {
+          "title": "Secure & Compliant",
+          "description": "All uploaded documents are encrypted and stored securely. We handle F-tax verification, ID06 checks, and certification validation so you can focus on the work that matters."
+        },
+        "teams": {
+          "title": "Built for Teams & Individuals",
+          "description": "Whether you are a large subcontractor, a small company, or an individual with F-tax status, our portal adapts to your profile. Register as a crew of 20 or a solo specialist."
+        },
+        "transparent": {
+          "title": "Transparent Requirements",
+          "description": "Every project listing clearly states required certifications, role expectations, and duration. No surprises — you know exactly what is needed before you apply."
+        },
+        "mobile": {
+          "title": "Construction-First Design",
+          "description": "Our portal is built mobile-first because we know you are often on-site. The application form works seamlessly on any smartphone, tablet, or desktop browser."
+        }
+      }
+    },
+    "Certs": {
+      "title": "Certifications We Verify",
+      "description": "Upload your certifications during onboarding — we handle validation",
+      "items": {
+        "id06": "ID06",
+        "safe": "Safe Construction Training",
+        "apv1": "APV 1.1, 1.2, 1.3 (Work on Road)",
+        "apv2": "APV 2.1, 2.2, 2.3 (Work on Road)",
+        "apv3": "APV 3 (Work on Road)",
+        "heta": "Hot Works",
+        "bas": "BAS P / BAS U",
+        "hlr": "CPR (HLR)",
+        "sakralyft": "Safe Lifting",
+        "adr": "ADR-S 1.3",
+        "stockholm": "Stockholm City Course",
+        "machine": "Machine Operator License",
+        "ftax": "F-tax Status"
+      }
+    },
+    "CTA": {
+      "title": "Ready to get started?",
+      "description": "Whether you are a private individual, employee, machine operator, subcontractor, or a work team looking for the next project — register today and let us connect you with opportunities across Sweden.",
+      "applyButton": "Apply as Partner",
+      "talkToTeam": "Talk to Our Team"
+    },
+    "Form": {
+      "badge": "Apply Now",
+      "title": "Apply for projects or employment role",
+      "description": "LinkableWork is looking for new employees, subcontractors, companies, and individuals with F-tax for assignments in groundworks, construction, infrastructure, and contracting. Assignments run from May through October.",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company (optional)",
+      "type": "I apply as",
+      "typeOptions": ["Subcontractor", "Company", "Individual with F-tax", "Private individual without F-tax"],
+      "roles": "Roles I'm interested in",
+      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag"],
+      "locations": "Locations",
+      "locationOptions": ["Luleå", "Skellefteå", "Umeå", "Stockholm", "Göteborg"],
+      "certifications": "Certifications I hold",
+      "certOptions": [
+        "ID06",
+        "Safe Construction Training (Säkerhet på bygget)",
+        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
+        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "APV 3 (Arbete på väg)",
+        "Heta arbeten (Hot works)",
+        "BAS P / BAS U",
+        "HLR (CPR)",
+        "Säkra lyft (Safe lifting)",
+        "ADR-S 1.3",
+        "Stockholm Stad kurs"
+      ],
+      "machineLicenses": "Machine operator licenses",
+      "machineOptions": [
+        "Grävmaskin (Excavator)",
+        "Hjullastare (Wheel loader)",
+        "Grävlastare (Backhoe loader)",
+        "Bandschaktare (Trencher)",
+        "Väghyvel (Motor grader)",
+        "Dumper",
+        "Vält (Roller/Compactor)",
+        "Teleskoptruck (Telehandler)",
+        "Mobilkran (Mobile crane)",
+        "Tornkran (Tower crane)",
+        "Betongpump (Concrete pump)",
+        "Asfaltsläggare (Asphalt paver)",
+        "Pålmaskin / Spontmaskin (Pile driver)"
+      ],
+      "tradeCertificates": "Trade certificates",
+      "tradeOptions": [
+        "Anläggningsförare (Construction driver)",
+        "Väg- och anläggningsarbetare (Road worker)",
+        "Betongarbetare (Concrete worker)",
+        "Träarbetare (Carpenter/Joiner)",
+        "Murare (Bricklayer)",
+        "Plattsättare (Tiler)",
+        "Golvläggare (Floor layer)",
+        "Ställningsbyggare (Scaffolder)",
+        "Takmontör (Roofer)",
+        "Bergarbetare (Rock worker)",
+        "Beläggningsarbetare (Paving worker)",
+        "Håltagare (Core driller)",
+        "Stenmontör (Stone installer)"
+      ],
+      "applyingFor": "Applying for",
+      "cv": "CV / Experience",
+      "cvHint": "Paste your CV, describe your experience, or link to your LinkedIn profile",
+      "cvPlaceholder": "For example: 10+ years as excavator operator...",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Tell us about your experience, team size, availability...",
+      "submit": "Send Application",
+      "sending": "Sending...",
+      "success": "Thank you for your application!",
+      "successDescription": "We will get back to you within 24 hours.",
+      "error": "Could not send application. Please try again."
+    },
+    "Footer": {
+      "description": "Connecting skilled construction professionals with projects across Sweden. Fast, secure, and built for the industry.",
+      "portal": {
+        "title": "Portal",
+        "projects": "Open Projects",
+        "howItWorks": "How It Works",
+        "applyNow": "Apply Now",
+        "contact": "Contact",
+        "login": "Partner Login"
+      },
+      "certs": {
+        "title": "Certifications"
+      },
+      "contact": {
+        "title": "Contact",
+        "jorgen": "Jörgen",
+        "jorgenEmail": "jörgen@gmail.com",
+        "jorgenPhone": "070-xxx xx xx"
+      },
+      "rights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookie": "Cookie Policy"
+    }
+  }
+}

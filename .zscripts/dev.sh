@@ -125,6 +125,12 @@ echo "[BUN] Installing dependencies..."
 bun install
 log_step_end "bun install"
 
+# Load environment variables from .env if it exists
+if [ -f "$PROJECT_DIR/.env" ]; then
+	echo "[ENV] Loading .env file..."
+	export $(grep -v '^#' "$PROJECT_DIR/.env" | xargs)
+fi
+
 log_step_start "bun run db:push"
 echo "[BUN] Setting up database..."
 bun run db:push
@@ -149,6 +155,17 @@ log_step_end "Health check"
 start_mini_services
 
 echo "Next.js dev server is running in background (PID: $DEV_PID)."
+echo "Opening browser at http://localhost:3000..."
+
+# Open browser based on OS
+if command -v xdg-open >/dev/null 2>&1; then
+  xdg-open http://localhost:3000 >/dev/null 2>&1 &
+elif command -v open >/dev/null 2>&1; then
+  open http://localhost:3000 >/dev/null 2>&1 &
+elif command -v explorer.exe >/dev/null 2>&1; then
+  explorer.exe http://localhost:3000 >/dev/null 2>&1 &
+fi
+
 echo "Use 'kill $DEV_PID' to stop it."
 disown "$DEV_PID" 2>/dev/null || true
 unset DEV_PID
