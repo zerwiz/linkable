@@ -1,0 +1,359 @@
+{
+  "Metadata": {
+    "title": "LinkableWork | Partnerportal för byggrekrytering",
+    "description": "Strömlinjeformad digital portal för underentreprenörer, företag och privatpersoner för att söka byggprojekt i hela Sverige. Skicka in meriter, ange tillgänglighet och bli matchad med rätt projekt.",
+    "ogTitle": "LinkableWork Partnerportal",
+    "ogDescription": "Anslut till byggprojekt i hela Sverige. Ansök som underentreprenör, företag eller individ med F-skatt.",
+    "twitterTitle": "LinkableWork Partnerportal",
+    "twitterDescription": "Anslut till byggprojekt i hela Sverige."
+  },
+  "Index": {
+    "RequestWorkers": {
+      "badge": "För Företag",
+      "title": "Behöver du personal?",
+      "description": "Har du ett projekt som saknar kompetenta händer? Vi levererar skickliga arbetare och arbetslag till din arbetsplats. Vi kan även publicera ditt projekt i vår portal för att hitta den perfekta matchningen.",
+      "benefits": {
+        "supply": {
+          "title": "Vi levererar personal",
+          "description": "Oavsett om du behöver en enskild maskinförare eller ett helt arbetslag på 20 personer, så ordnar vi det snabbt och säkert."
+        },
+        "portal": {
+          "title": "Publicera i portalen",
+          "description": "Nå ut till tusentals verifierade underentreprenörer och yrkesarbetare genom att ladda upp ditt projekt till vår plattform."
+        },
+        "vetted": {
+          "title": "Verifierad kompetens",
+          "description": "Alla våra arbetare har giltiga certifikat som ID06, Säkerhet på bygget och APV. Vi sköter all kontroll."
+        }
+      },
+      "form": {
+        "title": "Ladda upp ditt projekt",
+        "description": "Berätta lite om vad du behöver, så kontaktar vi dig för att hitta rätt lösning.",
+        "companyName": "Företagsnamn",
+        "contactPerson": "Kontaktperson",
+        "projectLocation": "Plats för projektet",
+        "workType": "Typ av arbete",
+        "workersNeeded": "Antal personer som behövs",
+        "startDate": "Önskat startdatum",
+        "descriptionLabel": "Beskrivning av behovet",
+        "submit": "Skicka förfrågan",
+        "success": "Tack för din förfrågan!",
+        "successDescription": "Vi granskar ditt behov och återkommer till dig så snart som möjligt."
+      }
+    },
+    "Navbar": {
+      "projects": "Projekt",
+      "requestWorkers": "Behöver du personal?",
+      "howItWorks": "Så fungerar det",
+      "whyLinkable": "Varför LinkableWork",
+      "contact": "Kontakt",
+      "applyNow": "Ansök nu",
+      "toggleMenu": "Öppna meny"
+    },
+    "Hero": {
+      "badge": "Nu rekryterar vi för sommar & höst 2026",
+      "titlePart1": "Din kompetens.",
+      "titlePart2": "Våra projekt.",
+      "titlePart3": "Byggt tillsammans.",
+      "description": "LinkableWork kopplar samman privatpersoner, anställda, skickliga underentreprenörer, maskinförare och arbetslag med byggprojekt över hela Sverige. Registrera dig en gång, bli matchad direkt.",
+      "applyButton": "Ansök som partner",
+      "viewProjects": "Visa lediga projekt",
+      "trust": {
+        "secure": "Säker dokumentuppladdning",
+        "response": "Svar inom 24 timmar",
+        "projects": "Projekt över hela Sverige"
+      },
+      "recruiting": {
+        "title": "Vi rekryterar just nu",
+        "urgent": "BRÅDSKANDE",
+        "scroll": "Scrolla ner för att se alla lediga tjänster",
+        "items": {
+          "groundworks": "Markarbete & grävning",
+          "groundworksLoc": "Luleå, Skellefteå, Umeå",
+          "infrastructure": "Infrastruktur & vägarbeten",
+          "infrastructureLoc": "Stockholm, Göteborg",
+          "machine": "Maskinförare (APV-licensierade)",
+          "machineLoc": "Flera orter"
+        }
+      }
+    },
+    "Projects": {
+      "badge": "Lediga projekt",
+      "title": "Hitta rätt projekt för din kompetens",
+      "description": "Vi rekryterar aktivt över hela Sverige för markarbete, infrastruktur och specialiserade byggroller. Bläddra bland aktuella öppningar och ansök på några minuter.",
+      "location": "Plats",
+      "responseTime": "Svarstid",
+      "status": "Status",
+      "activeRecruiting": "Aktiv rekrytering",
+      "about": "Om projektet",
+      "rolesTitle": "Roller vi söker",
+      "requirements": "Krav på certifieringar",
+      "applyNow": "Ansök nu",
+      "askQuestion": "Fråga oss",
+      "urgency": {
+        "urgent": "BRÅDSKANDE",
+        "recruiting": "REKRYTERAR",
+        "open": "ÖPPEN"
+      },
+      "applyButton": "Ansök till detta projekt",
+      "moreInfo": "Mer info",
+      "startDate": "Start",
+      "applyDeadline": "Sista ansökan",
+      "accommodation": "Inkvartering",
+      "id06Note": "ID06 kan ordnas av LinkableWork vid anställning",
+      "locationCertsTitle": "Platsspecifika certifikat",
+      "items": {
+        "groundworks": {
+          "title": "Markarbete",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Luleå", "Skellefteå", "Umeå"],
+          "startDate": "Juni 2026",
+          "applyDeadline": "30 maj 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "description": "Grundarbete, schaktning och platsförberedelse för nya bostads- och kommersiella projekt i Norrbotten och Västerbotten. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
+        },
+        "infrastructure": {
+          "title": "Infrastruktur",
+          "roles": ["Maskinförare", "Arbetslag"],
+          "locations": ["Stockholm", "Göteborg"],
+          "startDate": "Aug 2026",
+          "applyDeadline": "15 juni 2026",
+          "accommodation": "",
+          "locationCerts": ["Stockholm Stad kurs"],
+          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i Sveriges två största storstadsområden. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
+        },
+        "specialized": {
+          "title": "Specialiserat maskinarbete",
+          "roles": ["Maskinförare"],
+          "locations": ["Flera orter"],
+          "startDate": "Juli 2026",
+          "applyDeadline": "1 juni 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Giltigt maskinförarbevis och Arbete på väg (APV) krävs. Konkurrenskraftiga timlöner."
+        },
+        "building": {
+          "title": "Bygg & anläggning",
+          "roles": ["Anläggare", "Arbetslag"],
+          "locations": ["Umeå", "Stockholm"],
+          "startDate": "Maj 2026",
+          "applyDeadline": "30 april 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "locationCerts": ["Stockholm Stad kurs"],
+          "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
+        },
+        "umea-centrum": {
+          "title": "Umeå centrumbyggnation",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Umeå"],
+          "startDate": "Juni 2026",
+          "applyDeadline": "20 maj 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "description": "Blandad bebyggelse i centrala Umeå med kommersiella och bostadsdelar. Grundarbete, betongkonstruktioner och inredningsarbeten. Erfarna team med ID06 och säkerhetsutbildning på bygget önskas."
+        },
+        "lulea-hamn": {
+          "title": "Luleå hamnutbyggnad",
+          "roles": ["Maskinförare", "Arbetslag"],
+          "locations": ["Luleå"],
+          "startDate": "Aug 2026",
+          "applyDeadline": "1 juli 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "description": "Utbyggnad av Luleå hamn med nya kajer, lastutrymmen och järnvägsanslutning. Tunga schaktarbeten, pålning och asfaltering. Maskinförare med APV-certifiering behövs."
+        },
+        "skelleftea-campus": {
+          "title": "Skellefteå campusområde",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Skellefteå"],
+          "startDate": "Sep 2026",
+          "applyDeadline": "10 aug 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "description": "Nya utbildningsbyggnader och omgivande infrastruktur vid Skellefteå campus. Markarbete, grundläggning och platsförberedelse för Fas 1 av byggnationen med omedelbar start."
+        },
+        "pitea-industri": {
+          "title": "Piteå industriområde",
+          "roles": ["Anläggare", "Arbetslag"],
+          "locations": ["Piteå"],
+          "startDate": "Okt 2026",
+          "applyDeadline": "1 sep 2026",
+          "accommodation": "Baracker / hotell ingår",
+          "description": "Industriområdesutveckling i utkanten av Piteå. Nya vägnät, ledningsdragning och grundläggning för kommersiella byggnader. Idealisk för team med erfarenhet av infrastruktur och markarbete."
+        }
+      }
+    },
+    "HowItWorks": {
+      "badge": "Så fungerar det",
+      "title": "Fyra steg till ditt nästa projekt",
+      "description": "Vår strömlinjeformade process är designad för byggproffs. Ansök från din telefon mellan arbetsmomenten, inget pappersarbete krävs.",
+      "step": "STEG",
+      "steps": {
+        "apply": {
+          "title": "Ansök till projekt",
+          "description": "Bläddra bland lediga tjänster och ansök direkt till projekt som matchar dina färdigheter och preferenser. Vårt strömlinjeformade formulär fångar all information rekryterare behöver — roller, certifieringar, erfarenhet — så du kan ansöka på några minuter från din telefon."
+        },
+        "step2": {
+          "title": "Ladda upp certifikat",
+          "description": "Ladda upp dina obligatoriska certifieringar säkert — ID06, Säkerhet på bygget, APV (Arbete på väg) och maskinförarbevis. Har du inget ID06? Vi kan ordna det vid anställning."
+        },
+        "step3": {
+          "title": "Bli matchad",
+          "description": "Vårt team granskar din ansökning eller profil och matchar dig med aktiva projekt baserat på dina geografiska önskemål, certifieringar och tillgänglighet. Sökande med hög matchning får omedelbara aviseringar via e-post så att du aldrig missar rätt möjlighet."
+        },
+        "step1": {
+          "title": "Registrera din profil (kommer snart)",
+          "description": "Skapa ditt partnerkonto på under 5 minuter. Berätta om ditt företag eller din enskilda firma, primära roller, specialiseringar och teamkapacitet. Formuläret är anpassat för snabb ifyllnad även på mobilen ute på bygget."
+        }
+      }
+    },
+    "Why": {
+      "badge": "Varför LinkableWork",
+      "title": "Det smartare sättet att hitta bygguppdrag",
+      "description": "Vi tar bort friktionen mellan skickliga arbetare och de projekt som behöver dem. Här är vad som skiljer oss från traditionell rekrytering.",
+      "benefits": {
+        "matching": {
+          "title": "Snabb matchning",
+          "description": "Våra rekryterare granskar ansökningar inom 24 timmar. Kandidater med eftertraktade certifieringar som APV och maskinförarbevis prioriteras och kontaktas omedelbart."
+        },
+        "location": {
+          "title": "Projekt över hela Sverige",
+          "description": "Från Luleå till Göteborg samarbetar vi med stora byggbolag för att ge dig projekt i din föredragna region. Ange dina geografiska önskemål under registreringen."
+        },
+        "secure": {
+          "title": "Säkert & regelefterlevande",
+          "description": "Alla uppladdade dokument krypteras och lagras säkert. Vi hanterar F-skatteverifiering, ID06-kontroller och validering av certifikat så att du kan fokusera på arbetet som betyder något."
+        },
+        "teams": {
+          "title": "Byggt för team & individer",
+          "description": "Oavsett om du är en stor underentreprenör, ett litet företag eller en individ med F-skatt, anpassas vår portal till din profil. Registrera dig som ett team på 20 personer eller som en solist."
+        },
+        "transparent": {
+          "title": "Tydliga krav",
+          "description": "Varje projektannons anger tydligt krav på certifieringar, förväntningar på rollen och varaktighet. Inga överraskningar — du vet exakt vad som krävs innan du ansöker."
+        },
+        "mobile": {
+          "title": "Designat för byggbranschen",
+          "description": "Vår portal är byggd med mobilen i fokus eftersom vi vet att du ofta är ute på fältet. Ansökningsformuläret fungerar sömlöst på alla smartphones, surfplattor och datorer."
+        }
+      }
+    },
+    "Certs": {
+      "title": "Certifieringar vi verifierar",
+      "description": "Ladda upp dina certifikat under registreringen — vi sköter valideringen",
+      "items": {
+        "id06": "ID06",
+        "safe": "Säkerhet på bygget",
+        "apv1": "APV 1.1, 1.2, 1.3 (Arbete på väg)",
+        "apv2": "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "apv3": "APV 3 (Arbete på väg)",
+        "heta": "Heta arbeten",
+        "bas": "BAS P / BAS U",
+        "hlr": "HLR (Hjärt- och lungräddning)",
+        "sakralyft": "Säkra lyft",
+        "adr": "ADR-S 1.3",
+        "stockholm": "Stockholm Stad kurs",
+        "machine": "Maskinförarbevis",
+        "ftax": "F-skatt"
+      }
+    },
+    "CTA": {
+      "title": "Redo att komma igång?",
+      "description": "Oavsett om du är privatperson, anställd, maskinförare, underentreprenör eller ett arbetslag som letar efter nästa projekt — registrera dig idag så kopplar vi ihop dig med möjligheter över hela Sverige.",
+      "applyButton": "Ansök som partner",
+      "talkToTeam": "Prata med vårt team"
+    },
+    "Form": {
+      "badge": "Ansök nu",
+      "title": "Ansök till projekt",
+      "description": "LinkableWork söker nya anställda, underleverantörer, företag och personer med F-skatt för uppdrag inom mark, anläggning, infrastruktur och entreprenad. Uppdrag löper från maj till oktober.",
+      "name": "Namn",
+      "email": "E-post",
+      "phone": "Telefon",
+      "company": "Företag (valfritt)",
+      "type": "Jag ansöker som",
+      "typeOptions": ["Underleverantör", "Företag", "Privatperson med F-skatt", "Privatperson utan F-skatt"],
+      "roles": "Roller jag är intresserad av",
+      "roleOptions": ["Anläggare", "Maskinförare", "Arbetslag"],
+      "locations": "Områden",
+      "locationOptions": ["Luleå", "Skellefteå", "Umeå", "Stockholm", "Göteborg"],
+      "certifications": "Certifieringar jag innehar",
+      "certOptions": [
+        "ID06",
+        "Säkerhet på bygget (Safe Construction Training)",
+        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
+        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "APV 3 (Arbete på väg)",
+        "Heta arbeten",
+        "BAS P / BAS U",
+        "HLR (Hjärt- och lungräddning)",
+        "Säkra lyft",
+        "ADR-S 1.3",
+        "Stockholm Stad kurs"
+      ],
+      "machineLicenses": "Maskinförarbevis",
+      "machineOptions": [
+        "Grävmaskin",
+        "Hjullastare",
+        "Grävlastare",
+        "Bandschaktare",
+        "Väghyvel",
+        "Dumper",
+        "Vält",
+        "Teleskoptruck",
+        "Mobilkran",
+        "Tornkran",
+        "Betongpump",
+        "Asfaltsläggare",
+        "Pålmaskin / Spontmaskin"
+      ],
+      "tradeCertificates": "Yrkesbevis",
+      "tradeOptions": [
+        "Anläggningsförare",
+        "Väg- och anläggningsarbetare",
+        "Betongarbetare",
+        "Träarbetare",
+        "Murare",
+        "Plattsättare",
+        "Golvläggare",
+        "Ställningsbyggare",
+        "Takmontör",
+        "Bergarbetare",
+        "Beläggningsarbetare",
+        "Håltagare",
+        "Stenmontör"
+      ],
+      "applyingFor": "Ansöker till",
+      "cv": "CV / Erfarenhet",
+      "cvHint": "Klistra in ditt CV, beskriv din erfarenhet, eller länka till din LinkedIn-profil",
+      "cvPlaceholder": "Till exempel: 10+ års erfarenhet som grävmaskinist...",
+      "message": "Meddelande (valfritt)",
+      "messagePlaceholder": "Berätta om din erfarenhet, teamstorlek, tillgänglighet...",
+      "submit": "Skicka ansökan",
+      "sending": "Skickar...",
+      "success": "Tack för din ansökan!",
+      "successDescription": "Vi återkommer till dig inom 24 timmar.",
+      "error": "Kunde inte skicka ansökan. Försök igen."
+    },
+    "Footer": {
+      "description": "Kopplar samman skickliga byggproffs med projekt över hela Sverige. Snabbt, säkert och byggt för branschen.",
+      "portal": {
+        "title": "Portal",
+        "projects": "Lediga projekt",
+        "howItWorks": "Så fungerar det",
+        "applyNow": "Ansök nu",
+        "contact": "Kontakt",
+        "login": "Partnerinloggning"
+      },
+      "certs": {
+        "title": "Certifieringar"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "jorgen": "Jörgen",
+        "jorgenEmail": "jörgen@gmail.com",
+        "jorgenPhone": "070-xxx xx xx"
+      },
+      "rights": "Med ensamrätt.",
+      "privacy": "Integritetspolicy",
+      "terms": "Användarvillkor",
+      "cookie": "Cookiepolicy"
+    }
+  }
+}
