@@ -192,8 +192,25 @@
       "accommodation": "Inkvartering",
       "id06Note": "ID06 kan ordnas av LinkableWork vid anställning",
       "locationCertsTitle": "Platsspecifika certifikat",
-      "salary": "Lön",
+      "individual": "Individuell",
       "items": {
+        "skagersvagen": {
+          "title": "Stockholm",
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Stockholm"
+          ],
+          "startDate": "Juni 2026",
+          "applyDeadline": "15 maj 2026",
+          "accommodation": "",
+          "individual": "Individuell",
+          "locationCerts": [],
+          "description": "Dagvatten- och dräneringsarbeten vid Skagersvägen. Arbetet omfattar handgrävning/sugbil, grävmaskin + markgubbe, återfyllning, bortforsling, läggning rör, återställning, stenkistor samt dränering med skivor pordrän, markduk, plugg, dränrör, markrör och allt arbete kopplat till montering och läggning. Även återställning med matjord och gräsfrö, omläggning av vattenservisledning, projektering, samordning och arbetsledning ingår. Arbetet bedöms ta ca 4 månader från igångsättning till avetablering och återställning. Vi förutsätter rena jordmassor – provtagning ingår. Byggbod/personalutrymme med dusch/toa tillhandahålls av kund eller debiteras."
+        },
         "groundworks": {
           "title": "Markarbete",
           "roles": [
@@ -207,7 +224,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "250–350 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Grundarbete, schaktning och platsförberedelse för nya bostads- och kommersiella projekt i Norrbotten och Västerbotten. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
         },
@@ -223,7 +240,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
-          "salary": "275–375 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
         },
@@ -238,7 +255,7 @@
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "300–400 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Giltigt maskinförarbevis och Arbete på väg (APV) krävs. Konkurrenskraftiga timlöner."
         },
@@ -254,7 +271,7 @@
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "250–350 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
         },
@@ -271,7 +288,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "20 maj 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "260–360 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Blandad bebyggelse i centrala Umeå med kommersiella och bostadsdelar. Grundarbete, betongkonstruktioner och inredningsarbeten. Erfarna team med ID06 och säkerhetsutbildning på bygget önskas."
         },
@@ -287,7 +304,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "275–375 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Utbyggnad av Luleå hamn med nya kajer, lastutrymmen och järnvägsanslutning. Tunga schaktarbeten, pålning och asfaltering. Maskinförare med APV-certifiering behövs."
         },
@@ -304,7 +321,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "250–350 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Nya utbildningsbyggnader och omgivande infrastruktur vid Skellefteå campus. Markarbete, grundläggning och platsförberedelse för Fas 1 av byggnationen med omedelbar start."
         },
@@ -320,7 +337,7 @@
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "240–340 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Industriområdesutveckling i utkanten av Piteå. Nya vägnät, ledningsdragning och grundläggning för kommersiella byggnader. Idealisk för team med erfarenhet av infrastruktur och markarbete."
         }
@@ -1128,10 +1145,10 @@
         "title": "Kontakt",
         "subtitle": "Har du frågor om rekrytering, projekt eller vill du begära en offert? Kontakta oss så hjälper vi dig.",
         "thomas": "Thomas",
-        "thomasEmail": "thomas@linkable.se",
-        "thomasPhone": "070-xxx xx xx",
+        "thomasEmail": "lexcoab@gmail.com",
+        "thomasPhone": "+46760952921",
         "christer": "Christer",
-        "christerEmail": "christer@linkable.se",
+        "christerEmail": "lexcoab@gmail.com",
         "christerPhone": "070-xxx xx xx"
       },
       "rights": "Med ensamrätt.",

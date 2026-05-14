@@ -96,9 +96,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <h3 className="mt-6 text-xl font-bold">General Support</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Response within 24 hours</p>
                 <div className="mt-6 space-y-4">
-                  <a href="mailto:info@linkable.se" className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                  <a href="mailto:lexcoab@gmail.com" className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
                     <Mail className="h-4 w-4 text-slate-400" />
-                    info@linkable.se
+                    lexcoab@gmail.com
                   </a>
                   <a href="tel:+46701234567" className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
                     <Phone className="h-4 w-4 text-slate-400" />

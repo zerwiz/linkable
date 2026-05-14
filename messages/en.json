@@ -192,8 +192,25 @@
       "accommodation": "Accommodation",
       "id06Note": "ID06 can be arranged by LinkableWork upon employment",
       "locationCertsTitle": "Location-specific certifications",
-      "salary": "Salary",
+      "individual": "Individual",
       "items": {
+        "skagersvagen": {
+          "title": "Stockholm",
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Stockholm"
+          ],
+          "startDate": "June 2026",
+          "applyDeadline": "May 15, 2026",
+          "accommodation": "",
+          "individual": "Individual",
+          "locationCerts": [],
+          "description": "Stormwater and drainage work at Skagersvägen. The work includes manual excavation/suction truck, excavator + ground crew, backfilling, removal, pipe laying, restoration, stone pits, as well as drainage with drainage boards, geotextile, plugs, drain pipes, ground pipes, and all work related to installation. Also restoration with topsoil and grass seed, relocation of water service lines, planning, coordination, and site management. The work is estimated to take approx. 4 months from start to demobilization and restoration. We assume clean soil masses – sampling is included. Construction hut/staff facilities with shower/toilet are provided by the customer or charged separately."
+        },
         "groundworks": {
           "title": "Groundworks",
           "roles": [
@@ -207,7 +224,7 @@
           "startDate": "June 2026",
           "applyDeadline": "May 30, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "250–350 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "Foundation work, excavation, and site preparation for new residential and commercial developments across Norrbotten and Vasterbotten. Immediate starts available for crews with valid ID06 and APV certification."
         },
@@ -223,7 +240,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "June 15, 2026",
           "accommodation": "",
-          "salary": "275–375 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with safe construction training and machine operator licenses."
         },
@@ -238,7 +255,7 @@
           "startDate": "July 2026",
           "applyDeadline": "June 1, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "300–400 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "Skilled machine operators needed for grading, paving, and heavy earthmoving operations. Valid Maskinforarbevis and Arbete pa vag (APV) certification required. Competitive hourly rates."
         },
@@ -254,7 +271,7 @@
           "startDate": "May 2026",
           "applyDeadline": "April 30, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "250–350 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "General construction crews needed for residential building projects from foundation to finishing. F-tax status required for individual applicants. Teams of 3-8 preferred."
         },
@@ -271,7 +288,7 @@
           "startDate": "June 2026",
           "applyDeadline": "May 20, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "260–360 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "Mixed-use development in central Umea with commercial and residential units. Foundation work, concrete structures, and interior finishing phases. Experienced teams with ID06 and safe construction training preferred."
         },
@@ -287,7 +304,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "July 1, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "275–375 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "Expansion of Lulea harbour facilities including new quay, cargo handling areas, and rail connection. Heavy earthmoving, piling, and asphalt work. Machine operators with APV certification needed."
         },
@@ -304,7 +321,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "Aug 10, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "250–350 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "New educational buildings and surrounding infrastructure at Skelleftea campus. Groundworks, foundation laying, and site preparation for Phase 1 construction starting immediately."
         },
@@ -320,7 +337,7 @@
           "startDate": "Oct 2026",
           "applyDeadline": "Sep 1, 2026",
           "accommodation": "Barracks / hotel included",
-          "salary": "240–340 SEK/hr",
+          "individual": "Individual",
           "locationCerts": [],
           "description": "Industrial park development on the outskirts of Pitea. New road networks, utility installation, and commercial building foundations. Ideal for teams with experience in infrastructure and site development."
         }
@@ -1129,10 +1146,10 @@
         "title": "Contact",
         "subtitle": "Have questions about recruitment, projects, or want to request a quote? Get in touch and we'll help you.",
         "thomas": "Thomas",
-        "thomasEmail": "thomas@linkable.se",
-        "thomasPhone": "070-xxx xx xx",
+        "thomasEmail": "lexcoab@gmail.com",
+        "thomasPhone": "+46760952921",
         "christer": "Christer",
-        "christerEmail": "christer@linkable.se",
+        "christerEmail": "lexcoab@gmail.com",
         "christerPhone": "070-xxx xx xx"
       },
       "rights": "All rights reserved.",

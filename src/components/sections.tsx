@@ -208,6 +208,7 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
   ];
 
   const worksiteProjects = [
+    { id: "skagersvagen", urgency: "high" },
     { id: "umea-centrum", urgency: "high" },
     { id: "lulea-hamn", urgency: "medium" },
     { id: "skelleftea-campus", urgency: "high" },
@@ -292,7 +293,7 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                       {t("Projects.applyDeadline")}: {t(`Projects.items.${project.id}.applyDeadline`)}
                     </span>
                     <span className="text-green-600">
-                      {t("Projects.salary")}: {t(`Projects.items.${project.id}.salary`)}
+                      {t("Projects.individual")}: {t(`Projects.items.${project.id}.individual`)}
                     </span>
                     {t.raw(`Projects.items.${project.id}.accommodation`) && (
                       <span className="text-emerald-600">

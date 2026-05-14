@@ -318,18 +318,6 @@ function Footer() {
                   {t("Footer.contact.christerPhone")}
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@linkable.se" className="transition-colors hover:text-foreground">
-                  info@linkable.se
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+46701234567" className="transition-colors hover:text-foreground">
-                  +46 70 123 45 67
-                </a>
-              </li>
             </ul>
           </div>
         </div>
