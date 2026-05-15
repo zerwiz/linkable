@@ -171,9 +171,9 @@ export default function RequestWorkersPage() {
                       <Phone className="h-4 w-4 text-amber-500" />
                       +46 70 123 45 67
                     </Link>
-                    <Link href="mailto:info@linkable.se" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-amber-600">
+                    <Link href="mailto:lexcoab@gmail.com" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-amber-600">
                       <Mail className="h-4 w-4 text-amber-500" />
-                      info@linkable.se
+                      lexcoab@gmail.com
                     </Link>
                     <Link href="/contact" className="flex items-center gap-2 text-sm font-medium text-amber-600 hover:text-amber-700">
                       Alla kontakter →

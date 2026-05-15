@@ -192,8 +192,25 @@
       "accommodation": "Inkvartering",
       "id06Note": "ID06 kan ordnas av LinkableWork vid anställning",
       "locationCertsTitle": "Platsspecifika certifikat",
-      "salary": "Lön",
+      "individual": "Individuell",
       "items": {
+        "skagersvagen": {
+          "title": "Stockholm",
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Stockholm"
+          ],
+          "startDate": "Juni 2026",
+          "applyDeadline": "15 maj 2026",
+          "accommodation": "",
+          "individual": "Individuell",
+          "locationCerts": [],
+          "description": "Dagvatten- och dräneringsarbeten vid Skagersvägen. Arbetet omfattar handgrävning/sugbil, grävmaskin + markgubbe, återfyllning, bortforsling, läggning rör, återställning, stenkistor samt dränering med skivor pordrän, markduk, plugg, dränrör, markrör och allt arbete kopplat till montering och läggning. Även återställning med matjord och gräsfrö, omläggning av vattenservisledning, projektering, samordning och arbetsledning ingår. Arbetet bedöms ta ca 4 månader från igångsättning till avetablering och återställning. Vi förutsätter rena jordmassor – provtagning ingår. Byggbod/personalutrymme med dusch/toa tillhandahålls av kund eller debiteras."
+        },
         "groundworks": {
           "title": "Markarbete",
           "roles": [
@@ -207,7 +224,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "250–350 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Grundarbete, schaktning och platsförberedelse för nya bostads- och kommersiella projekt i Norrbotten och Västerbotten. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
         },
@@ -223,7 +240,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
-          "salary": "275–375 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
         },
@@ -238,7 +255,7 @@
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "300–400 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Giltigt maskinförarbevis och Arbete på väg (APV) krävs. Konkurrenskraftiga timlöner."
         },
@@ -254,7 +271,7 @@
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "250–350 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
         },
@@ -271,7 +288,7 @@
           "startDate": "Juni 2026",
           "applyDeadline": "20 maj 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "260–360 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Blandad bebyggelse i centrala Umeå med kommersiella och bostadsdelar. Grundarbete, betongkonstruktioner och inredningsarbeten. Erfarna team med ID06 och säkerhetsutbildning på bygget önskas."
         },
@@ -287,7 +304,7 @@
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "275–375 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Utbyggnad av Luleå hamn med nya kajer, lastutrymmen och järnvägsanslutning. Tunga schaktarbeten, pålning och asfaltering. Maskinförare med APV-certifiering behövs."
         },
@@ -304,7 +321,7 @@
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "250–350 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Nya utbildningsbyggnader och omgivande infrastruktur vid Skellefteå campus. Markarbete, grundläggning och platsförberedelse för Fas 1 av byggnationen med omedelbar start."
         },
@@ -320,7 +337,7 @@
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
-          "salary": "240–340 kr/tim",
+          "individual": "Individuell",
           "locationCerts": [],
           "description": "Industriområdesutveckling i utkanten av Piteå. Nya vägnät, ledningsdragning och grundläggning för kommersiella byggnader. Idealisk för team med erfarenhet av infrastruktur och markarbete."
         }
@@ -549,54 +566,59 @@
     "Guide": {
       "badge": "Guide",
       "title": "Guide: Svenska Yrkesbevis och Branschcertifikat",
-      "description": "Här är en översikt över de vanligaste yrkesbevisen och certifikaten inom svensk bygg- och anläggningsindustri, uppdelat efter kategori och utfärdare.",
-      "tipBadge": "Tips",
-      "tip": "Hos LinkableWork kan du enkelt ladda upp alla dina yrkesbevis och certifikat digitalt direkt i portalen. Ange dina giltighetstider så påminner vi dig i god tid innan ett certifikat löper ut. Har du ett Yrkesbevisnummer från BYN eller TYA? Ange det i ansökan för snabbare verifiering.\n\nHar du kompetens från Gruv- eller Vindkraftsindustrin? Se till att nämna detta då det är hög efterfrågan i våra projekt i norra Sverige.",
+      "description": "Här är en komplett översikt över de vanligaste yrkesbevisen och certifikaten inom svensk bygg- och anläggningsindustri, uppdelat efter kategori och utfärdare.",
+      "tipBadge": "Tips för ansökan",
+      "tip": "ID06: Ange alltid ditt kortnummer. Dokumentation: Fota dina yrkesbevis och certifikat (båda sidor) och bifoga ansökan. YKB/APV: Kontrollera utgångsdatum – vi kan inte skicka ut personal med utgångna certifikat.",
       "showFullGuide": "Se hela guiden",
       "sections": {
+        "roles": {
+          "title": "Huvudsakliga Roller & Yrken",
+          "subtitle": "Vi rekryterar personal inom ett brett spektrum av roller för våra projekt.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Anläggare / Mark- och anläggningsarbetare",
+                "Maskinförare (Grävmaskin, Hjullastare m.m.)",
+                "Arbetslag (Kompletta team för entreprenad)",
+                "Anläggningsdykare (Specialistroller)",
+                "Trädgårdsanläggare & Finplanerare",
+                "Platschef & Arbetsledare",
+                "Mättekniker (Utsättning & Inmätning)",
+                "KMA-samordnare (Kvalitet, Miljö, Arbetsmiljö)",
+                "Projektledare / Kalkylator"
+              ]
+            }
+          }
+        },
         "byn": {
-          "title": "1. Byggnadsindustrins Yrkesnämnd (BYN) & Övriga Yrkesnämnder",
+          "title": "1. Yrkesarbetare (BYN & Övriga Nämnder)",
           "subtitle": "Dessa kräver oftast en genomförd lärlingstid och ett godkänt yrkesteoretiskt prov.",
           "groups": {
             "tra": {
               "title": "Trä, Betong, Mur & Inredning",
               "items": [
                 "Träarbetare (Snickare): Yrkesbevis för husbyggnad och träkonstruktioner.",
-                "Betongarbetare: Innefattar både gjutning, armering och slipning.",
-                "Murare: Yrkesbevis för murning och putsning.",
-                "Plattsättare: Yrkesbevis för kakel och klinker i våtrum och torra utrymmen.",
-                "Golvläggare: Yrkesbevis för mattläggning, parkett och slipning.",
-                "Takmontör: Specialist på tätskikt och montering av takmaterial.",
-                "Målare (MYN): Yrkesbevis för invändigt och utvändigt måleri.",
                 "Träarbetare - Prefab: Montage av färdiga byggmoduler.",
-                "Murare & Plattsättare: Murning, putsning och kakel/klinker (inkl. våtrumsbehörighet)."
-              ]
-            },
-            "plåt": {
-              "title": "Plåt & Ventilation (PVF)",
-              "items": [
-                "Byggnadsplåtslagare: Arbete med tak- och fasadplåt.",
-                "Ventilationsplåtslagare: Tillverkning och montering av ventilationssystem."
+                "Betongarbetare: Gjutning, armering och betongslipning.",
+                "Betongkompetens Klass 1 & 2: Krav för ansvarig personal vid gjutning av bärande konstruktioner (Utfärdas av bl.a. Betongföreningen).",
+                "Murare & Plattsättare: Murning och kakel/klinker. Våtrumsbehörighet via GVK, BKR eller MVK (målare).",
+                "Golvläggare: Yrkesbevis för mattläggning, parkett och slipning.",
+                "Takmontör: Specialist på tätskikt och montering av takmaterial."
               ]
             },
             "mark": {
               "title": "Mark & Anläggning",
               "items": [
-                "Anläggningsförare: Yrkesbevis för maskinförare inom anläggning.",
-                "Väg- och anläggningsarbetare: Grundläggande kompetens för infrastruktur, rörläggning och markberedning.",
-                "Anläggningsdykare: Specialistroll för tungt arbete under vatten.",
+                "Väg- och anläggningsarbetare: Grundläggning och markberedning.",
+                "Rörläggare (VA): Specialist på vatten och avlopp (kräver ofta VAV/STC-auktorisation).",
+                "Anläggningsdykare: Specialistroll (Klass A eller B-certifikat krävs från Arbetsmiljöverket).",
                 "Stenmontör: Specialisering inom kantsten, gatsten och plattläggning.",
-                "Beläggningsarbetare: Arbete med asfalt, utläggning och ytskikt.",
-                "Bergarbetare: Innefattar borrning och sprängning (kräver ofta Sprängkort).",
-                "Trädgårdsanläggare (TSY): Specialist på grönytor, plantering och finplanering.",
-                "Rörläggare (VA): Specialist på vatten och avlopp (kräver ofta VAV/STC).",
-                "Grov- & Rivningsarbetare: Grovplanering, manuell rivning och byggstädning."
-              ]
-            },
-            "specialmontage": {
-              "title": "Specialmontage & Service",
-              "items": [
-                "Solcellsmontör: Montage av paneler och bärsystem (DC-sidan)."
+                "Beläggningsarbetare / Asfaltsarbetare: Arbete med utläggare, vält och justering.",
+                "Bergarbetare / Bergsprängare: Kräver Sprängkort klass A eller B samt ofta kunskap om bergförstärkning.",
+                "Grov- & Rivningsarbetare: Grovplanering, tung rivning och byggstädning.",
+                "Håltagare: Diamantborrning och betongsågning i tunga konstruktioner.",
+                "Ställningsbyggare: Yrkesbevis för montage av byggställningar."
               ]
             }
           }
@@ -608,174 +630,150 @@
             "grav": {
               "title": "Gräv- & Schaktmaskiner",
               "items": [
-                "Grävmaskin: Yrkesbevis för både band- och hjulburna maskiner.",
+                "Grävmaskin: Band- och hjulburna maskiner.",
                 "Grävlastare: Kombinationsmaskin för schakt och lastning.",
                 "Bandschaktare: För tunga schaktarbeten och terrängplanering.",
-                "Väghyvel: Avancerad maskin för finjustering av vägytor.",
-                "Dumper: För transport av massor i terräng.",
+                "Väghyvel: För precisionsplanering vid vägbyggnad.",
+                "Dumper: Transport av massor i terräng.",
                 "Vält: För packning av jord, grus eller asfalt.",
-                "Sopmaskin: För väghållning och städning av anläggningsområden."
+                "Sopmaskin: För väghållning och städning."
               ]
             },
             "lyft": {
-              "title": "Lyft- & Specialmaskiner",
+              "title": "Lyft-, Truck & Specialmaskiner",
               "items": [
-                "Hjullastare: Yrkesbevis för anläggningsarbete och godshantering.",
-                "Teleskoptruck: För höga lyft och materialhantering.",
-                "Mobilkran: Kräver omfattande utbildning och yrkesbevis för kranförare.",
-                "Tornkran: Kräver omfattande utbildning och yrkesbevis för kranförare.",
-                "Traverskran: För tunga lyft inom industri och prefab-montage.",
-                "Betongpumpförare: Maskin för precisionsutläggning av flytbetong.",
-                "Asfaltsläggare: Specialistmaskin för vägbeläggning.",
-                "Pålmaskin: Kritisk roll för grundläggning.",
-                "Spontmaskin: Stödkonstruktioner och schaktning.",
-                "Sugbil / Spolbil: Sanering, tömning och högtrycksspolning.",
-                "Kranbil: Transport och montage med lastbilsmonterad kran."
+                "Hjullastare: Uppdelat på Anläggning (BYN) och Godshantering (TYA).",
+                "Teleskoptruck: Allroundmaskin för höga lyft.",
+                "Mobilkran / Tornkran: Kräver omfattande yrkesbevis för kranförare.",
+                "Kranbil: Utbildningsintyg för lastbilsmonterad kran (>18 tonmeter).",
+                "Traverskran / Säkra Lyft: För tunga lyft inom industri/prefab.",
+                "Pålmaskin / Spontmaskin: Grundläggning och stödkonstruktioner.",
+                "Sugbil / Spolbil: Sanering och högtrycksspolning.",
+                "Betongpump: Maskin för utläggning av betong.",
+                "Asfaltsläggare: För utläggning av vägbeläggning.",
+                "Truckkort (A1-D2): För motviktstruck, ledstaplare m.m."
               ]
             }
           }
         },
         "management": {
           "title": "3. Tjänstemän & Ledarskap",
-          "subtitle": "Vi tillsätter även ledande roller för effektiv projektstyrning.",
-          "groups": {
-            "items": {
-              "title": "",
-              "items": [
-                "Platschef: Helhetsansvar för produktion, ekonomi och säkerhet på bygget.",
-                "Arbetsledare: Operativ ledning av arbetslag och underentreprenörer.",
-                "Mättekniker: Utsättning, inmätning och mängdreglering.",
-                "KMA-samordnare: Ansvarig för Kvalitet, Miljö och Arbetsmiljö.",
-                "Projektledare / Kalkylator: Planering och ekonomisk beräkning."
-              ]
-            }
-          }
-        },
-        "installation": {
-          "title": "3. Installation, El & VVS",
-          "subtitle": "Dessa är ofta lagkrav eller krav från försäkringsbolag.",
-          "groups": {
-            "items": {
-              "title": "",
-              "items": [
-                "VVS-montör: Branschlegitimation via VVS-YN och 'Säker Vatten'-auktorisation.",
-                "Elektriker: Auktorisation via Elsäkerhetsverket (Auktoriserad elinstallatör).",
-                "Kyl- och värmepumpstekniker (Incert): Krävs för arbete med köldmedier.",
-                "Larmtekniker (SSF): Certifiering för inbrottslarm och säkerhetssystem.",
-                "Isoleringsmontör: Innefattar teknisk isolering av rör och ventilation.",
-                "Ventilationsmontör: Ofta kopplat till OVK-certifiering."
-              ]
-            }
-          }
-        },
-        "special": {
-          "title": "4. Specialiteter & Miljö",
           "subtitle": "",
           "groups": {
             "items": {
               "title": "",
               "items": [
-                "Svetscertifikat (ISO 9606-1): Krav för bärande stålkonstruktioner (ofta kopplat till EN 1090).",
-                "Lödning: Specifika certifikat för VVS och kylanläggningar.",
-                "Asbestsanering: Kräver särskild utbildning godkänd av Arbetsmiljöverket.",
-                "PCB-sanering: Specialistkompetens för hantering av miljöfarligt avfall.",
-                "Härdplaster (Epoxi/Isocyanater): Utbildning krävs för arbete med dessa kemiska risker.",
-                "Ställningsbyggare: Uppdelat i nivåer — Särskild (över 9 m), Allmän (2–9 m).",
-                "Håltagare: Specialister på att borra och såga i betong.",
-                "Brandskyddsmålare: Certifiering för att applicera brandhämmande färg."
+                "Platschef / Arbetsledare: Helhetsansvar för produktion och säkerhet.",
+                "Kontrollansvarig (KA): Certifierad enligt PBL.",
+                "Entreprenadingenjör: Inköp, kalkylering och projektstöd.",
+                "Mättekniker: Utsättning och mängdreglering.",
+                "KMA-samordnare: Ansvarig för Kvalitet, Miljö och Arbetsmiljö.",
+                "Klimatdeklarations-kompetens: Kunskap om Boverkets krav på klimatdeklaration av byggnader."
+              ]
+            }
+          }
+        },
+        "installation": {
+          "title": "4. Installation, El & VVS",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Elektriker: Auktorisation via Elsäkerhetsverket (AL, A eller B).",
+                "ESA (Elsäkerhetsanvisningarna): ESA Grund & Skötsel (obligatoriskt vid arbete nära elnät).",
+                "EBR (Elnätets Branschriktlinjer): Specifikt för elnätsprojekt.",
+                "VVS-montör: Branschlegitimation och \"Säker Vatten\".",
+                "Kyltekniker: Certifierad för F-gaser (Incert).",
+                "Fibertekniker (BCT): Branschcertifierad tekniker för robust fiber.",
+                "Larm & Säkerhet: Certifiering för larm, CCTV och passagesystem (SSF)."
+              ]
+            }
+          }
+        },
+        "special": {
+          "title": "5. Specialiteter & Miljö",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Svetscertifikat (ISO 9606-1): För bärande stål (EN 1090). Kräver ofta IWS/Svetssamordnare på plats.",
+                "Asbestsanering / PCB-sanering: Särskilt utbildningsintyg och tillstånd från AV.",
+                "Härdplaster: Lagstadgad utbildning + medicinsk kontroll (för t.ex. epoxi).",
+                "Kvartsamm (Kvartsdamm): Utbildning om risker vid arbete med betong och sten.",
+                "GWO (Global Wind Organisation): Krav för arbete inom vindkraft."
               ]
             }
           }
         },
         "certs": {
-          "title": "5. Branschspecifika Certifikat & Krav",
-          "subtitle": "Dessa kräver regelbunden förnyelse (oftast vart 5:e år).",
-          "groups": {
-            "safety": {
-              "title": "Säkerhet & Arbetsmiljö",
-              "items": [
-                "ID06: Obligatoriskt för alla på byggarbetsplatsen.",
-                "Säkerhet på bygget (Safe Construction Training): Webbutbildning krävd av de flesta större entreprenörer.",
-                "SSG Entré: Gemensamt ID-kort för industri- och energianläggningar.",
-                "SSG Grundläggande Säkerhet: Säkerhetsutbildning för industriella miljöer.",
-                "SSG SBN-nivåer: Säkerhets- och beredskapsnivåer för industriarbete.",
-                "Bas P (Planering): Byggarbetsmiljösamordnare för Planering.",
-                "Bas U (Utförande): Byggarbetsmiljösamordnare för Utförande.",
-                "Heta Arbeten / Brandvakt: Certifikat för brandfarliga arbeten."
-              ]
-            },
-            "technical": {
-              "title": "Tekniska Certifikat",
-              "items": [
-                "Arbete på väg (APV): Nivå 1.1, 1.2, 1.3, 2 och 3 beroende på ansvar och fordon.",
-                "EBR (Elsäkerhet bygg & rivning): Elsäkerhetsföreskrifter för bygg- och rivningsarbete.",
-                "ESA (Elsäkerhetsanvisningarna): ESA Grund och ESA Skötsel (nära kraftledningar).",
-                "Svetscertifikat / Lödning: ISO 9606-1 för bärande stålkonstruktioner.",
-                "Stockholm Stad kurs: Krav för arbete på stadens mark."
-              ]
-            },
-            "health": {
-              "title": "Hälsa & Miljö",
-              "items": [
-                "Kvartsdamm (Kvartsamm): Utbildning om risker och skyddsåtgärder vid stendamm.",
-                "Härdplaster: Utbildning och medicinsk kontroll för Epoxi/Isocyanater.",
-                "Asbest / PCB: Särskild utbildning och tillstånd för sanering.",
-                "GWO (Global Wind Organisation): Krav för arbete inom vindkraft."
-              ]
-            },
-            "equipment": {
-              "title": "Utrustning & Räddning",
-              "items": [
-                "Säkra Lyft / Lastkoppling: För alla som arbetar med kranlyft.",
-                "Fallskydd & Räddning: För arbete på höjd, tak och ställning.",
-                "Skotta Säkert: Licens för säker snöskottning på tak.",
-                "Mobila Arbetsplattformar (Skylift/Sax): Utbildning enligt SS-ISO 18878.",
-                "Bultpistol: Utbildning för användning av skjutverktyg.",
-                "HLR med Hjärtstartare: Förstahjälpen-kompetens på byggplatsen."
-              ]
-            }
-          }
-        },
-        "drivers": {
-          "title": "7. Transport & Logistik",
-          "subtitle": "För roller som innefattar transport av material, maskiner eller personal.",
+          "title": "6. Branschspecifika Certifikat & Kurser",
+          "subtitle": "",
           "groups": {
             "items": {
               "title": "",
               "items": [
-                "Körkort B: Personbil och lätt lastbil (grundkrav).",
-                "Körkort BE: Personbil med tungt släp (vanligt för maskinsläp).",
-                "Körkort C / CE: Tung lastbil med/utan släp.",
-                "YKB (Yrkeskompetensbevis): Krav för yrkesmässig godstransport.",
-                "Digitalt färdskrivarkort: Krävs för förare av fordon med färdskrivare.",
-                "ADR-S 1.3: Transport av farligt gods (t.ex. diesel i IBC-tank)."
+                "ID06: Obligatoriskt legitimationssystem.",
+                "Säkerhet på bygget: (Safe Construction Training).",
+                "SSG Entré: Krävs för tillträde till nästan all tung industri i Sverige.",
+                "Bas P (Planering) / Bas U (Utförande): Byggarbetsmiljösamordnare.",
+                "BAM (Bättre Arbetsmiljö) / SAM: Grundutbildning för skyddsombud och chefer.",
+                "Heta Arbeten / Brandvakt: Certifikat för brandfarliga arbeten.",
+                "Arbete på väg (APV): Nivå 1.1, 1.2, 1.3, 2.1, 2.2, 2.3 och 3.",
+                "TA-planering: Kunskap om trafikanordningsplaner.",
+                "Fallskydd & Räddning: För arbete på höjd.",
+                "Signalman / Flaggvakt: Kompetens för att styra kranlyft eller trafik manuellt.",
+                "Säkra lyft: För alla som kopplar laster till kran eller lyftanordning.",
+                "Stockholm Stad kurs: Krav för arbete på stadens mark.",
+                "HLR (Hjärt- och lungräddning): Förstahjälp-kompetens."
               ]
             }
           }
         },
         "rail": {
-          "title": "6. Järnväg & Skog",
-          "subtitle": "För infrastrukturprojekt kopplade till järnväg samt skogsarbete krävs specifika behörigheter.",
+          "title": "7. Järnväg & Skog",
+          "subtitle": "",
           "groups": {
             "items": {
-              "title": "Järnväg",
+              "title": "",
               "items": [
-                "Skydds- och säkerhetsledare (SoS-ledare): Säkerhet vid spårarbete.",
-                "Tillsyningsman (TSM): Ansvarar för trafiksäkerheten på spår.",
-                "BAS-P Järnväg: Specifik inriktning mot spårmiljö.",
-                "BAS-U Järnväg: Specifik inriktning mot spårmiljö.",
-                "BAS-P / BAS-U Järnväg: Specifik inriktning mot spårmiljö."
+                "SoS-ledare / TSM: Skydds- och säkerhetsledare vid järnvägsspår.",
+                "Motorsågskörkort (Nivå A-D): Grund till avancerad trädfällning.",
+                "Röjsågskörkort (RA, RB): Markberedning."
               ]
-            },
-            "skog": {
-              "title": "Skog (Motorsåg & Röjsåg)",
+            }
+          }
+        },
+        "drivers": {
+          "title": "8. Körkortsbehörigheter & Transport",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
               "items": [
-                "Motorsågskörkort Nivå A: Grundläggande motorsågsarbete.",
-                "Motorsågskörkort Nivå B: Motorsågsarbete på mark med riskmoment.",
-                "Motorsågskörkort Nivå C: Motorsågsarbete på höjd och i träd.",
-                "Motorsågskörkort Nivå D: Motorsågsarbete i svår terräng och röjning.",
-                "Röjsågskörkort Nivå RA: Grundläggande röjning med röjsåg.",
-                "Röjsågskörkort Nivå RB: Avancerad röjning och markberedning."
+                "B / BE: Personbil med/utan tungt släp.",
+                "C / CE: Tung lastbil med/utan släp.",
+                "YKB (Yrkeskompetensbevis): Lagkrav för yrkesmässig godstransport.",
+                "ADR-S 1.3: Transport av farligt gods (t.ex. bränsle i tankar).",
+                "Digitalt färdskrivarkort: För förare av tunga fordon."
+              ]
+            }
+          }
+        },
+        "locations": {
+          "title": "Regioner & Områden",
+          "subtitle": "Vi har projekt och behov av personal i följande län.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Stockholm, Uppsala, Södermanland",
+                "Västra Götaland, Halland, Skåne",
+                "Norrbotten, Västerbotten, Västernorrland",
+                "Östergötland, Jönköping, Kronoberg, Kalmar",
+                "Blekinge, Gotland, Örebro, Västmanland",
+                "Dalarna, Gävleborg, Värmland, Jämtland"
               ]
             }
           }
@@ -909,7 +907,7 @@
             ],
             [
               "BKK (Byggandets Kontraktskommitté)",
-              "https://www.byggandetskontraktskommitte.se"
+              "https://foreningenbkk.se/"
             ],
             [
               "Byggföretagen - Entreprenadjuridik",
@@ -961,16 +959,6 @@
         "Anläggare",
         "Maskinförare",
         "Arbetslag",
-        "Träarbetare (Snickare)",
-        "Betongarbetare",
-        "VVS-montör",
-        "Elektriker",
-        "Ställningsbyggare",
-        "Håltagare",
-        "Svetsare",
-        "Bergarbetare",
-        "Stenmontör",
-        "Beläggningsarbetare",
         "Anläggningsdykare",
         "Trädgårdsanläggare",
         "Platschef",
@@ -978,6 +966,21 @@
         "Mättekniker",
         "KMA-samordnare",
         "Projektledare / Kalkylator"
+      ],
+      "roleOptionsOverall": [
+        "Anläggningsförare",
+        "Väg- och anläggningsarbetare",
+        "Betongarbetare",
+        "Träarbetare",
+        "Murare",
+        "Plattsättare",
+        "Golvläggare",
+        "Ställningsbyggare",
+        "Takmontör",
+        "Bergarbetare",
+        "Beläggningsarbetare",
+        "Håltagare",
+        "Stenmontör"
       ],
       "locations": "Områden",
       "locationOptions": [
@@ -1020,25 +1023,20 @@
         "HLR (Hjärt- och lungräddning)",
         "Säkra lyft",
         "ADR-S 1.3",
-        "Stockholm Stad kurs",
-        "EBR (Elsäkerhet bygg & rivning)",
-        "SSG Entré (Industriellt ID-kort)",
-        "SSG Grundläggande Säkerhet",
-        "SSG SBN-nivåer",
-        "Asbestsanering",
-        "PCB-sanering",
-        "Svetscertifikat (ISO 9606-1)",
-        "Mobila arbetsplattformar (Skylift/Sax)",
-        "Bultpistol",
-        "Fallskyddsutbildning",
-        "Skotta Säkert",
-        "Trafikverket SoS-ledare",
-        "Trafikverket Tillsyningsman (TSM)",
-        "BAS-P Järnväg",
-        "BAS-U Järnväg",
-        "ESA (Elsäkerhetsanvisningarna)",
-        "HLR med Hjärtstartare",
-        "BAS-P / BAS-U Järnväg"
+        "Stockholm Stad kurs"
+      ],
+      "certOptionsOverall": [
+        "ID06",
+        "Säkerhet på bygget (Safe Construction Training)",
+        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
+        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "APV 3 (Arbete på väg)",
+        "Heta arbeten",
+        "BAS P / BAS U",
+        "HLR (Hjärt- och lungräddning)",
+        "Säkra lyft",
+        "ADR-S 1.3",
+        "Stockholm Stad kurs"
       ],
       "machineLicenses": "Maskinförarbevis",
       "machineOptions": [
@@ -1055,10 +1053,22 @@
         "Betongpump",
         "Asfaltsläggare",
         "Pålmaskin",
-        "Spontmaskin",
-        "Sopmaskin",
-        "Sugbil / Spolbil",
-        "Kranbil"
+        "Spontmaskin"
+      ],
+      "machineOptionsOverall": [
+        "Grävmaskin",
+        "Hjullastare",
+        "Grävlastare",
+        "Bandschaktare",
+        "Väghyvel",
+        "Dumper",
+        "Vält",
+        "Teleskoptruck",
+        "Mobilkran",
+        "Tornkran",
+        "Betongpump",
+        "Asfaltsläggare",
+        "Pålmaskin / Spontmaskin"
       ],
       "tradeCertificates": "Yrkesbevis",
       "driverLicenses": "Körkortsbehörighet",
@@ -1074,6 +1084,8 @@
         "Körkort BE",
         "Körkort C / CE"
       ],
+      "certNumber": "Yrkesbevisnummer (BYN/TYA)",
+      "expiryDates": "Giltighetstider (t.ex. YKB, APV, Heta Arbeten)",
       "tradeOptions": [
         "Anläggningsförare",
         "Väg- och anläggningsarbetare",
@@ -1110,6 +1122,32 @@
       "successDescription": "Vi återkommer till dig inom 24 timmar.",
       "error": "Kunde inte skicka ansökan. Försök igen."
     },
+    "ApplyInfo": {
+      "entreprenadformer": {
+        "title": "Entreprenadformer & Juridik",
+        "description": "För att säkerställa tydliga ansvarsgränser i våra projekt tillämpar vi branschens standardavtal.",
+        "items": [
+          "AB 04: Allmänna bestämmelser för utförandeentreprenader (där beställaren står för projekteringen).",
+          "ABT 06: Allmänna bestämmelser för totalentreprenader (där entreprenören står för både projektering och utförande).",
+          "AB-U 07 / ABT-U 07: Standardavtal specifikt framtagna för underentreprenörer kopplade till huvudavtalen AB 04 eller ABT 06."
+        ]
+      },
+      "references": {
+        "title": "Viktiga Webbplatser & Referenser",
+        "items": [
+          ["BKK (Byggandets Kontraktskommitté)", "https://foreningenbkk.se/"]
+        ]
+      },
+      "tips": {
+        "title": "Tips för ansökan",
+        "items": [
+          "Ange ditt Yrkesbevisnummer från BYN eller TYA i ansökan för snabbare verifiering.",
+          "Bifoga kopior på dina certifikat med synligt slutdatum.",
+          "Har du kompetens från gruv- eller vindkraftsindustrin? Nämn det — hög efterfrågan i norra Sverige.",
+          "Ange ditt ID06-nummer om du har ett befintligt kort."
+        ]
+      }
+    },
     "Footer": {
       "description": "Kopplar samman skickliga byggproffs med projekt över hela Sverige. Snabbt, säkert och byggt för branschen.",
       "portal": {
@@ -1128,10 +1166,10 @@
         "title": "Kontakt",
         "subtitle": "Har du frågor om rekrytering, projekt eller vill du begära en offert? Kontakta oss så hjälper vi dig.",
         "thomas": "Thomas",
-        "thomasEmail": "thomas@linkable.se",
-        "thomasPhone": "070-xxx xx xx",
+        "thomasEmail": "lexcoab@gmail.com",
+        "thomasPhone": "+46760952921",
         "christer": "Christer",
-        "christerEmail": "christer@linkable.se",
+        "christerEmail": "lexcoab@gmail.com",
         "christerPhone": "070-xxx xx xx"
       },
       "rights": "Med ensamrätt.",

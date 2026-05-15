@@ -31,7 +31,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
 
   // Define the available project IDs
   const projectIds = [
-    "groundworks", "infrastructure", "specialized", "building",
+    "skagersvagen", "groundworks", "infrastructure", "specialized", "building",
     "umea-centrum", "lulea-hamn", "skelleftea-campus", "pitea-industri",
   ];
 
@@ -58,7 +58,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
     t("Certs.items.safe"),
     t("Certs.items.apv1"),
     t("Certs.items.heta"),
-    t("Certs.items.bas"),
+    t("Certs.items.basP") + " / " + t("Certs.items.basU"),
     t("Certs.items.hlr"),
     t("Certs.items.sakralyft"),
     t("Certs.items.stockholm"),
@@ -138,9 +138,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  {t("Projects.salary")}
+                  {t("Projects.individual")}
                 </p>
-                <p className="mt-0.5 text-sm font-medium text-green-600">{t(`Projects.items.${id}.salary`)}</p>
+                <p className="mt-0.5 text-sm font-medium text-green-600">{t(`Projects.items.${id}.individual`)}</p>
               </div>
               {t.raw(`Projects.items.${id}.accommodation`) && (
                 <div>
@@ -260,12 +260,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
             <h2 className="text-xl font-semibold">{t("Projects.contactPerson")}</h2>
             <div className="rounded-xl border border-border/60 bg-muted/20 p-4 text-sm text-muted-foreground">
               <p>
-                <span className="font-medium text-foreground">{t("Projects.contactRecruiter")}</span>{" "}
-                LinkableWork rekrytering
+                <span className="font-medium text-foreground">{t("Footer.contact.thomas")}</span>
               </p>
               <p className="mt-1">
                 <span className="font-medium text-foreground">E-post:</span>{" "}
-                <a href="mailto:info@linkable.se" className="text-amber-600 hover:underline">info@linkable.se</a>
+                <a href="mailto:lexcoab@gmail.com" className="text-amber-600 hover:underline">lexcoab@gmail.com</a>
+              </p>
+              <p className="mt-1">
+                <span className="font-medium text-foreground">Tel:</span>{" "}
+                <a href="tel:+46760952921" className="text-amber-600 hover:underline">+46760952921</a>
               </p>
             </div>
           </div>
@@ -285,7 +288,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
 
           {/* CTA */}
           <div className="flex flex-col gap-4 border-t border-border/40 pt-8 sm:flex-row">
-            <Link href="/projects#apply" className="flex-1">
+            <Link href="/apply" className="flex-1">
               <Button size="lg" className="w-full rounded-full bg-amber-500 text-white hover:bg-amber-600">
                 {t("Projects.applyNow")}
               </Button>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight, Shield, Clock, MapPin, FileCheck, Users, HardHat, Truck, Wrench,
-  ChevronRight, CheckCircle2, Camera, ExternalLink,
+  ChevronRight, CheckCircle2, Camera, ExternalLink, Lightbulb,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -101,12 +101,12 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-8 flex flex-col gap-4 sm:flex-row"
             >
-              <Link href="/projects">
+              <Link href="/apply">
                 <Button
                   size="lg"
                   className="rounded-full bg-amber-500 px-8 text-base font-semibold text-white shadow-lg shadow-amber-500/25 hover:bg-amber-600"
                 >
-                  {t("Hero.applyButton")}
+                  {t("Navbar.applyAnlaggning")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -208,6 +208,7 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
   ];
 
   const worksiteProjects = [
+    { id: "skagersvagen", urgency: "high" },
     { id: "umea-centrum", urgency: "high" },
     { id: "lulea-hamn", urgency: "medium" },
     { id: "skelleftea-campus", urgency: "high" },
@@ -292,7 +293,7 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                       {t("Projects.applyDeadline")}: {t(`Projects.items.${project.id}.applyDeadline`)}
                     </span>
                     <span className="text-green-600">
-                      {t("Projects.salary")}: {t(`Projects.items.${project.id}.salary`)}
+                      {t("Projects.individual")}: {t(`Projects.items.${project.id}.individual`)}
                     </span>
                     {t.raw(`Projects.items.${project.id}.accommodation`) && (
                       <span className="text-emerald-600">
@@ -528,7 +529,7 @@ export function HowItWorksSection() {
               className="mt-10"
             >
               {activeTab === "worker" && (
-                <Link href="/projects#apply">
+                <Link href="/apply">
                   <Button className="w-full rounded-full bg-amber-500 py-5 text-base font-semibold text-white hover:bg-amber-600 sm:w-auto sm:px-8">
                     {t("Navbar.applyNow")}
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -705,7 +706,7 @@ export function WhySection() {
           className="mt-12 text-center"
         >
           {activeTab === "worker" && (
-            <Link href="/projects#apply">
+            <Link href="/apply">
               <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
                 {t("Navbar.applyNow")}
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -769,6 +770,20 @@ export function CertificationsBanner() {
               </span>
             ))}
           </div>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="mt-10"
+          >
+            <Link href="/apply">
+              <Button className="rounded-full bg-amber-500 px-8 py-5 text-base font-semibold text-white hover:bg-amber-600">
+                {t("Navbar.applyAnlaggning")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -783,8 +798,12 @@ export function CertificationGuideSection() {
 
   const sections = [
     {
+      key: "roles",
+      groups: ["items"],
+    },
+    {
       key: "byn",
-      groups: ["tra", "plåt", "mark", "specialmontage"],
+      groups: ["tra", "mark"],
     },
     {
       key: "maskin",
@@ -804,14 +823,18 @@ export function CertificationGuideSection() {
     },
     {
       key: "certs",
-      groups: ["safety", "technical", "health", "equipment"],
+      groups: ["items"],
     },
     {
       key: "rail",
-      groups: ["items", "skog"],
+      groups: ["items"],
     },
     {
       key: "drivers",
+      groups: ["items"],
+    },
+    {
+      key: "locations",
       groups: ["items"],
     },
   ] as const;
@@ -946,12 +969,12 @@ export function CTASection() {
             {t("CTA.description")}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/request-workers">
+            <Link href="/apply">
               <Button
                 size="lg"
                 className="rounded-full bg-white px-8 text-base font-semibold text-amber-600 shadow-lg hover:bg-amber-50"
               >
-                {t("CTA.applyButton")}
+                {t("Navbar.applyAnlaggning")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
@@ -974,7 +997,15 @@ export function CTASection() {
 /* ------------------------------------------------------------------ */
 /*  Application Form                                                   */
 /* ------------------------------------------------------------------ */
-export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedProjectId?: string | null; selectedRole?: string | null }) {
+export function ApplicationForm({ 
+  selectedProjectId, 
+  selectedRole,
+  mode = "overall"
+}: { 
+  selectedProjectId?: string | null; 
+  selectedRole?: string | null;
+  mode?: "anlaggning" | "overall";
+}) {
   const t = useTranslations("Index");
   const [data, setData] = useState({
     name: "",
@@ -992,8 +1023,15 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
     references: "",
     extraCertifications: "",
     message: "",
+    certNumber: "",
+    expiryDates: "",
   });
-  const roleOptions = t.raw("Form.roleOptions") as string[];
+
+  const roleOptionsAnlaggning = t.raw("Form.roleOptions") as string[];
+  const roleOptionsOverall = (t.raw("Form.roleOptionsOverall") as string[]) || [];
+  const roleOptions = mode === "overall" 
+    ? Array.from(new Set([...roleOptionsAnlaggning, ...roleOptionsOverall])) 
+    : roleOptionsAnlaggning;
 
   const [prevSelectedRole, setPrevSelectedRole] = useState(selectedRole);
   if (selectedRole !== prevSelectedRole) {
@@ -1030,6 +1068,8 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
       "Maskinkort: " + (data.machineLicenses.join(", ") || "-"),
       "F-skattebevis: " + (data.tradeCertificates.join(", ") || "-"),
       "Körkortsbehörighet: " + (data.driverLicenses.join(", ") || "-"),
+      "Yrkesbevisnr: " + (data.certNumber || "-"),
+      "Giltighetstider: " + (data.expiryDates || "-"),
       "Extra certifieringar: " + (data.extraCertifications || "-"),
     ];
 
@@ -1066,8 +1106,19 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
 
   const types = t.raw("Form.typeOptions") as string[];
   const locationOptions = t.raw("Form.locationOptions") as string[];
-  const certOptions = t.raw("Form.certOptions") as string[];
-  const machineOptions = t.raw("Form.machineOptions") as string[];
+  
+  const certOptionsAnlaggning = t.raw("Form.certOptions") as string[];
+  const certOptionsOverall = (t.raw("Form.certOptionsOverall") as string[]) || [];
+  const certOptions = mode === "overall" 
+    ? Array.from(new Set([...certOptionsAnlaggning, ...certOptionsOverall])) 
+    : certOptionsAnlaggning;
+
+  const machineOptionsAnlaggning = t.raw("Form.machineOptions") as string[];
+  const machineOptionsOverall = (t.raw("Form.machineOptionsOverall") as string[]) || [];
+  const machineOptions = mode === "overall" 
+    ? Array.from(new Set([...machineOptionsAnlaggning, ...machineOptionsOverall])) 
+    : machineOptionsAnlaggning;
+
   const tradeOptions = t.raw("Form.tradeOptions") as string[];
   const driverLicenseOptions = t.raw("Form.driverLicenseOptions") as string[];
 
@@ -1096,6 +1147,17 @@ export function ApplicationForm({ selectedProjectId, selectedRole }: { selectedP
         <div>
           <Label htmlFor="company">{t("Form.company")}</Label>
           <Input id="company" value={data.company} onChange={(e) => setData((p) => ({ ...p, company: e.target.value }))} className="mt-1" />
+        </div>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <Label htmlFor="certNumber">{t("Form.certNumber")}</Label>
+          <Input id="certNumber" value={data.certNumber} onChange={(e) => setData((p) => ({ ...p, certNumber: e.target.value }))} className="mt-1" placeholder="BYN / TYA nr..." />
+        </div>
+        <div>
+          <Label htmlFor="expiryDates">{t("Form.expiryDates")}</Label>
+          <Input id="expiryDates" value={data.expiryDates} onChange={(e) => setData((p) => ({ ...p, expiryDates: e.target.value }))} className="mt-1" placeholder="YKB, APV, Heta Arbeten..." />
         </div>
       </div>
 
@@ -1259,7 +1321,15 @@ export function CertificationGuideBanner() {
   );
 }
 
-export function ApplySection({ selectedProjectId, selectedRole }: { selectedProjectId?: string | null; selectedRole?: string | null }) {
+export function ApplySection({ 
+  selectedProjectId, 
+  selectedRole,
+  mode = "overall"
+}: { 
+  selectedProjectId?: string | null; 
+  selectedRole?: string | null;
+  mode?: "anlaggning" | "overall";
+}) {
   const t = useTranslations("Index");
   return (
     <section id="apply" className="bg-muted/30 py-20 sm:py-28">
@@ -1290,9 +1360,73 @@ export function ApplySection({ selectedProjectId, selectedRole }: { selectedProj
         >
           <Card className="border border-border/60 shadow-sm">
             <CardContent className="p-6 sm:p-8">
-              <ApplicationForm selectedProjectId={selectedProjectId} selectedRole={selectedRole} />
+              <ApplicationForm 
+                selectedProjectId={selectedProjectId} 
+                selectedRole={selectedRole} 
+                mode={mode}
+              />
             </CardContent>
           </Card>
+        </motion.div>
+
+
+        {/* Contract info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-16 space-y-10"
+        >
+          <div className="rounded-2xl border border-amber-200/50 bg-amber-50/50 p-6 sm:p-8">
+            <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
+              <Lightbulb className="h-5 w-5 text-amber-500" />
+              {t("ApplyInfo.tips.title")}
+            </h3>
+            <ul className="mt-4 space-y-2">
+              {(t.raw("ApplyInfo.tips.items") as string[]).map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border border-border/60 bg-card p-6 sm:p-8">
+            <h3 className="text-xl font-bold text-foreground">{t("ApplyInfo.entreprenadformer.title")}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{t("ApplyInfo.entreprenadformer.description")}</p>
+            <ul className="mt-4 space-y-2">
+              {(t.raw("ApplyInfo.entreprenadformer.items") as string[]).map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border border-border/60 bg-card p-6 sm:p-8">
+            <h3 className="text-xl font-bold text-foreground">{t("ApplyInfo.references.title")}</h3>
+            <div className="mt-4 space-y-3">
+              {(t.raw("ApplyInfo.references.items") as [string, string][]).map(([name, url]) => (
+                <a
+                  key={url}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-xl border border-border/60 bg-background p-4 transition-all hover:border-amber-300/60 hover:shadow-sm group"
+                >
+                  <ExternalLink className="h-5 w-5 shrink-0 text-amber-500" />
+                  <div className="flex-1 min-w-0">
+                    <span className="font-medium text-foreground">{name}</span>
+                    <span className="block text-xs text-muted-foreground truncate">{url}</span>
+                  </div>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1" />
+                </a>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
