@@ -162,6 +162,7 @@
       "languageReq": "Kielivaatimus: Ruotsi tai hyvä englanti työryhmässä. Vähintään yhden henkilön ryhmässä on kyettävä kommunikoimaan sujuvasti ruotsiksi turvallisuuskatsauksia varten.",
       "tools": "Työvälineet: Aliurakoitsijoiden odotetaan tuovan omat käsityökalunsa ja henkilökohtaiset suojavarusteensa (PPE).",
       "insurance": "Vakuutus: Voimassa oleva vastuuvakuus vaaditaan kaikilta aliurakoitsijoilta.",
+      "hiredBenefits": "Työsuhteen edut: Työsuhteessa maksamme tullit ja henkilökohtaiset varusteet.",
       "compensation": "Korvaus & Talous",
       "paymentTerms": "Maksuehdot: 30 päivää hyväksytyn laskun jälkeen",
       "compensationType": "Korvausmuoto: Tuntipalkka sopimuksen mukaan tai kiinteä hinta osaurakasta",
@@ -210,7 +211,6 @@
             "Kaivinkone",
             "Maanrakennustyöntekijä",
             "B (Henkilöauto)",
-            "ADR-S 1.3",
             "Tukholman kaupungin kurssi"
           ],
           "description": "Hulevesi- ja salaojitustyöt Skagersvägenillä. Työhön kuuluu käsinkaivu/imuauto, kaivinkone + maamies, täyttö, poiskuljetus, putkenasennus, ennallistus, kivikistat sekä salaojitus salaojalevyillä, suodatinkankaalla, tulpilla, salaojaputkilla, maaputkilla ja kaikki asennukseen ja asetteluun liittyvä työ. Myös ennallistus multamaalla ja nurmikon siemenellä, vesijohtolinjan siirto, suunnittelu, koordinointi ja työnjohto sisältyvät. Työn arvioidaan kestävän noin 4 kuukautta aloituksesta luovutukseen ja ennallistukseen. Oletamme puhtaita maamassoja – näytteenotto sisältyy. Työmaakoppi/henkilöstötilat suihkulla/wc:llä tarjoaa asiakas tai veloitetaan erikseen."
@@ -224,7 +224,7 @@
           "accommodation": "Parakit / hotelli sisältyy",
           "individual": "Yksilöllinen",
           "locationCerts": [],
-          "description": "Etsimme kokeneita maanrakentajia perustustöihin, kaivuuseen ja työmaan valmisteluun. Käsityötä ja käsityökaluja. Voimassa oleva ID06 vaaditaan."
+          "description": "Etsimme kokeneita maanrakentajia perustustöihin, kaivuuseen ja työmaan valmisteluun. Käsityötä ja käsityökaluja. Voimassa oleva ID06 vaaditaan.\n\nListaa kaikki sertifikaatit ja koulutukset hakemuksessasi."
         },
         "infrastructure": {
           "title": "Infrastruktuuri",
@@ -252,7 +252,7 @@
           "accommodation": "",
           "individual": "Yksilöllinen",
           "locationCerts": [],
-          "description": "Tienrakennus, johtojen vetäminen ja siviili-infrastruktuuriprojektit koko Ruotsissa. Etsimme kokeneita ryhmiä, joilla on turvallisuuskoulutus ja koneenkuljettajan todistukset.\n\nRoolit, joita etsimme:\n- Koneenkuljettaja sertifikaateilla (ID06, työturvallisuus rakennustyömaalla, APV 1.1, 1.2, 1.3)\n- Työryhmiä, joissa vähintään yksi henkilö osaa kommunikoida ruotsiksi\n- Kaikki edellä mainitut konetyypit rakennusurakoissa"
+          "description": "Tienrakennus, johtojen vetäminen ja siviili-infrastruktuuriprojektit koko Ruotsissa. Etsimme kokeneita ryhmiä, joilla on koneenkuljettajan todistukset.\n\nRoolit, joita etsimme:\n- Koneenkuljettaja sertifikaateilla (Tukholman kaupunki, Kuumat työt, APV 1.1, 1.2, 1.3)\n- Työryhmiä, joissa vähintään yksi henkilö osaa kommunikoida ruotsiksi\n- Kaikki edellä mainitut konetyypit rakennusurakoissa\n\nListaa kaikki sertifikaatit ja koulutukset hakemuksessasi."
         },
         "specialized": {
           "title": "Koneenkuljettaja",
@@ -263,7 +263,7 @@
           "accommodation": "Parakit / hotelli sisältyy",
           "individual": "Yksilöllinen",
           "locationCerts": [],
-          "description": "Taitavia koneenkuljettajia etsitään viimeistelytöihin, asfaltointiin ja raskaisiin kaivutöihin. Etsimme kuljettajia telakaivinkoneisiin, pyöräkuormaajiin, dumppereihin, kaivukuormaajiin, telapuskutraktoreihin, tiehöyliin ja jyriin. Pyöräalustaisiin kaivinkoneisiin vaaditaan B-ajokortti. Voimassa oleva koneenkuljettajan todistus vaaditaan. Kilpailukykyiset tuntipalkat."
+          "description": "Taitavia koneenkuljettajia etsitään viimeistelytöihin, asfaltointiin ja raskaisiin kaivutöihin. Etsimme kuljettajia telakaivinkoneisiin, pyöräkuormaajiin, dumppereihin, kaivukuormaajiin, telapuskutraktoreihin, tiehöyliin ja jyriin. Pyöräalustaisiin kaivinkoneisiin vaaditaan B-ajokortti. Voimassa oleva koneenkuljettajan todistus vaaditaan. Kilpailukykyiset tuntipalkat.\n\nListaa kaikki sertifikaatit ja koulutukset hakemuksessasi."
         },
         "building": {
           "title": "Tuulipuisto",
@@ -274,7 +274,7 @@
           "accommodation": "Parakit / hotelli sisältyy",
           "individual": "Yksilöllinen",
           "locationCerts": [],
-          "description": "Etsimme erikoistuneita työntekijöitä tuulipuiston rakennukseen — maanrakennus, perustukset ja kokoonpano. Haemme yksittäisiä henkilöitä, joilla on kokemusta tuulivoimaprojekteista. F-skatt vaaditaan."
+          "description": "Etsimme erikoistuneita työntekijöitä tuulipuiston rakennukseen — maanrakennus, perustukset ja kokoonpano. Haemme yksittäisiä henkilöitä, joilla on kokemusta tuulivoimaprojekteista.\n\nListaa kaikki sertifikaatit ja koulutukset hakemuksessasi."
         },
         "umea-centrum": {
           "title": "Uumaja — otamme toimeksiantoja jatkuvasti",

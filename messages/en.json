@@ -162,6 +162,7 @@
       "languageReq": "Language: Swedish or good English in the crew. At least one person per crew must be able to communicate fluently in Swedish for safety briefings.",
       "tools": "Tools: Subcontractors are expected to supply their own hand tools and personal protective equipment (PPE).",
       "insurance": "Insurance: Valid liability insurance is required for all subcontractors.",
+      "hiredBenefits": "Employment benefits: If hired, we cover tolls and personal equipment.",
       "compensation": "Compensation & Finance",
       "paymentTerms": "Payment terms: 30 days after approved invoice",
       "compensationType": "Compensation: Hourly rate according to agreement or fixed price on sub-contract",
@@ -240,7 +241,7 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Experienced construction workers needed for ground work, excavation and site preparation. Manual labor with hand tools. Valid ID06 required."
+          "description": "Experienced construction workers needed for ground work, excavation and site preparation. Manual labor with hand tools. Valid ID06 required.\n\nList all certifications and training in your application."
         },
         "infrastructure": {
           "title": "Infrastructure",
@@ -256,7 +257,7 @@
           "accommodation": "",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with safe construction training and machine operator licenses."
+          "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with machine operator certificates.\n\nRoles we're seeking:\n- Machine operators with certifications (Stockholm Stad, Heta arbeten, APV 1.1, 1.2, 1.3)\n- Work crews with at least one Swedish-speaking member\n- All above machine types for construction contracts\n\nList all certifications and training in your application."
         },
         "specialized": {
           "title": "Machine Operator",
@@ -272,7 +273,7 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Skilled machine operators sought for fine grading, asphalt paving, and heavy excavation. We need operators for tracked excavators, wheel loaders, dumpers, backhoe loaders, crawler dozers, motor graders, and rollers. Wheel excavator operators require a B driver's license. Valid machine operator certificate required. Competitive hourly wages."
+          "description": "Skilled machine operators sought for fine grading, asphalt paving, and heavy excavation. We need operators for tracked excavators, wheel loaders, dumpers, backhoe loaders, crawler dozers, motor graders, and rollers. Wheel excavator operators require a B driver's license. Valid machine operator certificate required. Competitive hourly wages.\n\nList all certifications and training in your application."
         },
         "building": {
           "title": "Wind Park",
@@ -295,7 +296,7 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Specialists needed for wind park construction — ground work, foundations and assembly. Seeking individuals with wind farm experience. F-tax status required."
+          "description": "Specialists needed for wind park construction — ground work, foundations and assembly. Seeking individuals with wind farm experience.\n\nList all certifications and training in your application."
         },
         "umea-centrum": {
           "title": "Umea — taking on assignments continuously",
