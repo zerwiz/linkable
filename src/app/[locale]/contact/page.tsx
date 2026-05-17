@@ -66,22 +66,22 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </CardContent>
             </Card>
 
-            {/* Christer */}
+            {/* Kim Pynnönen */}
             <Card className="border-amber-500/20 bg-card shadow-lg shadow-amber-500/5">
               <CardContent className="p-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500 text-white shadow-md shadow-amber-500/20">
                   <Mail className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 text-xl font-bold">{t("Footer.contact.christer")}</h3>
+                <h3 className="mt-6 text-xl font-bold">{t("Footer.contact.kim")}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Recruitment & Partnerships</p>
                 <div className="mt-6 space-y-4">
-                  <a href={`mailto:${t("Footer.contact.christerEmail")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                  <a href={`mailto:${t("Footer.contact.kimEmail")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
                     <Mail className="h-4 w-4 text-amber-500" />
-                    {t("Footer.contact.christerEmail")}
+                    {t("Footer.contact.kimEmail")}
                   </a>
-                  <a href={`tel:${t("Footer.contact.christerPhone").replace(/\s/g, "")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
+                  <a href={`tel:${t("Footer.contact.kimPhone").replace(/\s/g, "")}`} className="flex items-center gap-3 text-sm font-medium hover:text-amber-600">
                     <Phone className="h-4 w-4 text-amber-500" />
-                    {t("Footer.contact.christerPhone")}
+                    {t("Footer.contact.kimPhone")}
                   </a>
                 </div>
               </CardContent>

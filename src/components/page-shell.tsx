@@ -40,9 +40,8 @@ function Navbar() {
     return pathname.startsWith(href);
   };
 
-  const toggleLocale = () => {
-    const nextLocale = locale === "en" ? "sv" : "en";
-    router.replace(pathname, { locale: nextLocale });
+  const switchLocale = (next: string) => {
+    router.replace(pathname, { locale: next });
   };
 
   return (
@@ -124,14 +123,20 @@ function Navbar() {
             {t("Navbar.contact")}
           </Link>
 
-          <button
-            type="button"
-            onClick={toggleLocale}
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-border/60 text-xs font-bold text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            title={locale === "en" ? "Byt till svenska" : "Switch to English"}
-          >
-            {locale === "en" ? "SV" : "EN"}
-          </button>
+          {["SV", "EN", "FI"].map((l) => (
+            <button
+              key={l}
+              type="button"
+              onClick={() => switchLocale(l.toLowerCase())}
+              className={`flex h-8 w-8 items-center justify-center rounded-full border text-xs font-bold transition-colors hover:bg-muted hover:text-foreground ${
+                locale === l.toLowerCase()
+                  ? "border-amber-500 bg-amber-500/10 text-amber-600"
+                  : "border-border/60 text-muted-foreground"
+              }`}
+            >
+              {l}
+            </button>
+          ))}
         </nav>
 
         <div className="hidden md:block">
@@ -144,13 +149,20 @@ function Navbar() {
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
-          <button
-            type="button"
-            onClick={toggleLocale}
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-border/60 text-xs font-bold text-muted-foreground"
-          >
-            {locale === "en" ? "SV" : "EN"}
-          </button>
+          {["SV", "EN", "FI"].map((l) => (
+            <button
+              key={l}
+              type="button"
+              onClick={() => switchLocale(l.toLowerCase())}
+              className={`flex h-8 w-8 items-center justify-center rounded-full border text-xs font-bold transition-colors hover:bg-muted hover:text-foreground ${
+                locale === l.toLowerCase()
+                  ? "border-amber-500 bg-amber-500/10 text-amber-600"
+                  : "border-border/60 text-muted-foreground"
+              }`}
+            >
+              {l}
+            </button>
+          ))}
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -310,19 +322,19 @@ function Footer() {
               </li>
               <li className="flex items-center gap-2 pt-1 font-medium text-foreground">
                 <Link href="/contact" className="hover:text-amber-600 transition-colors">
-                  {t("Footer.contact.christer")}
+                  {t("Footer.contact.kim")}
                 </Link>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <a href={`mailto:${t("Footer.contact.christerEmail")}`} className="transition-colors hover:text-foreground">
-                  {t("Footer.contact.christerEmail")}
+                <a href={`mailto:${t("Footer.contact.kimEmail")}`} className="transition-colors hover:text-foreground">
+                  {t("Footer.contact.kimEmail")}
                 </a>
               </li>
               <li className="flex items-center gap-2 pb-2">
                 <Phone className="h-4 w-4" />
-                <a href={`tel:${t("Footer.contact.christerPhone").replace(/\s/g, "")}`} className="transition-colors hover:text-foreground">
-                  {t("Footer.contact.christerPhone")}
+                <a href={`tel:${t("Footer.contact.kimPhone").replace(/\s/g, "")}`} className="transition-colors hover:text-foreground">
+                  {t("Footer.contact.kimPhone")}
                 </a>
               </li>
             </ul>

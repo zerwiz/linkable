@@ -136,7 +136,7 @@
           "groundworksLoc": "Luleå, Skellefteå, Umeå",
           "infrastructure": "Infrastruktur & vägarbeten",
           "infrastructureLoc": "Stockholm, Göteborg",
-          "machine": "Maskinförare (APV-licensierade)",
+          "machine": "Maskinförare",
           "machineLoc": "Flera orter"
         }
       }
@@ -196,62 +196,68 @@
       "items": {
         "skagersvagen": {
           "title": "Stockholm",
-          "roles": [
-            "Anläggare",
-            "Maskinförare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Stockholm"
-          ],
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Stockholm"],
           "startDate": "Juni 2026",
           "applyDeadline": "15 maj 2026",
           "accommodation": "",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": ["Grävmaskin", "Hjullastare"],
+          "requirements": [
+            "ID06",
+            "Heta arbeten",
+            "Grävmaskin",
+            "Anläggningsförare",
+            "B (Personbil)",
+            "ADR-S 1.3",
+            "Stockholm Stad kurs"
+          ],
           "description": "Dagvatten- och dräneringsarbeten vid Skagersvägen. Arbetet omfattar handgrävning/sugbil, grävmaskin + markgubbe, återfyllning, bortforsling, läggning rör, återställning, stenkistor samt dränering med skivor pordrän, markduk, plugg, dränrör, markrör och allt arbete kopplat till montering och läggning. Även återställning med matjord och gräsfrö, omläggning av vattenservisledning, projektering, samordning och arbetsledning ingår. Arbetet bedöms ta ca 4 månader från igångsättning till avetablering och återställning. Vi förutsätter rena jordmassor – provtagning ingår. Byggbod/personalutrymme med dusch/toa tillhandahålls av kund eller debiteras."
         },
         "groundworks": {
-          "title": "Markarbete",
-          "roles": [
-            "Anläggare",
-            "Maskinförare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Flera orter"
-          ],
+          "title": "Nationell",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Luleå", "Skellefteå", "Umeå"],
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Grundarbete, schaktning och platsförberedelse för nya bostads- och kommersiella projekt i Norrbotten och Västerbotten. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
+          "description": "Groundworks & Excavation. Vi söker erfarna mark- och anläggningsarbetare för nationella uppdrag. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
         },
         "infrastructure": {
           "title": "Infrastruktur",
           "roles": [
             "Maskinförare",
-            "Arbetslag"
+            "Arbetslag",
+            "Grävmaskin",
+            "Hjullastare",
+            "Grävlastare",
+            "Bandschaktare",
+            "Väghyvel",
+            "Dumper",
+            "Vält",
+            "Teleskoptruck",
+            "Mobilkran",
+            "Tornkran",
+            "Betongpump",
+            "Asfaltsläggare",
+            "Pålmaskin",
+            "Spontmaskin"
           ],
-          "locations": [
-            "Flera orter"
-          ],
+          "locations": ["Hela Sverige"],
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis."
+          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis.\n\nRoller vi söker:\n- Maskinförare med certifieringar (ID06, säkerhet på bygget, APV 1.1, 1.2, 1.3)\n- Arbetslag med minst en person som kan kommunicera på svenska\n- Alla ovan nämnda maskintyper inom anläggningsentreprenad"
         },
         "specialized": {
           "title": "Specialiserat maskinarbete",
-          "roles": [
-            "Maskinförare"
-          ],
-          "locations": [
-            "Flera orter"
-          ],
+          "roles": ["Maskinförare"],
+          "locations": ["Flera orter"],
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -261,13 +267,8 @@
         },
         "building": {
           "title": "Bygg & anläggning",
-          "roles": [
-            "Anläggare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Flera orter"
-          ],
+          "roles": ["Anläggare", "Arbetslag"],
+          "locations": ["Flera orter"],
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -276,31 +277,20 @@
           "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
         },
         "umea-centrum": {
-          "title": "Umeå centrumbyggnation",
-          "roles": [
-            "Anläggare",
-            "Maskinförare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Umeå"
-          ],
-          "startDate": "Juni 2026",
-          "applyDeadline": "20 maj 2026",
+          "title": "Umeå — vi tar in uppdrag löpande",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Umeå med omnejd"],
+          "startDate": "Löpande",
+          "applyDeadline": "Löpande",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Blandad bebyggelse i centrala Umeå med kommersiella och bostadsdelar. Grundarbete, betongkonstruktioner och inredningsarbeten. Erfarna team med ID06 och säkerhetsutbildning på bygget önskas."
+          "description": "Vi tar in uppdrag löpande och matchar jobb mot personer vi har sökande till. Specifika arbetsplatser kommer inom kort. Sök som den yrkesroll du är så kontaktar vi dig när rätt uppdrag dyker upp."
         },
         "lulea-hamn": {
           "title": "Luleå hamnutbyggnad",
-          "roles": [
-            "Maskinförare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Luleå"
-          ],
+          "roles": ["Maskinförare", "Arbetslag"],
+          "locations": ["Luleå"],
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -310,14 +300,8 @@
         },
         "skelleftea-campus": {
           "title": "Skellefteå campusområde",
-          "roles": [
-            "Anläggare",
-            "Maskinförare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Skellefteå"
-          ],
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Skellefteå"],
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -327,13 +311,8 @@
         },
         "pitea-industri": {
           "title": "Piteå industriområde",
-          "roles": [
-            "Anläggare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Piteå"
-          ],
+          "roles": ["Anläggare", "Arbetslag"],
+          "locations": ["Piteå"],
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
@@ -788,22 +767,13 @@
         "myndigheter": {
           "title": "Myndigheter",
           "links": [
-            [
-              "Arbetsmiljöverket",
-              "https://www.av.se"
-            ],
-            [
-              "Elsäkerhetsverket",
-              "https://www.elsakerhetsverket.se"
-            ],
+            ["Arbetsmiljöverket", "https://www.av.se"],
+            ["Elsäkerhetsverket", "https://www.elsakerhetsverket.se"],
             [
               "Transportstyrelsen (Körkort & YKB)",
               "https://www.transportstyrelsen.se"
             ],
-            [
-              "Trafikverket",
-              "https://www.trafikverket.se"
-            ]
+            ["Trafikverket", "https://www.trafikverket.se"]
           ]
         },
         "apv": {
@@ -835,80 +805,41 @@
         "yrkesnamnder": {
           "title": "Yrkesnämnder (Yrkesbevis)",
           "links": [
-            [
-              "BYN (Byggnadsindustrins Yrkesnämnd)",
-              "https://www.byn.se"
-            ],
-            [
-              "TYA (Transportfackens Yrkesnämnd)",
-              "https://www.tya.se"
-            ],
+            ["BYN (Byggnadsindustrins Yrkesnämnd)", "https://www.byn.se"],
+            ["TYA (Transportfackens Yrkesnämnd)", "https://www.tya.se"],
             [
               "MYN (Måleribranschens Yrkesnämnd)",
               "https://www.maleryrkesnamnd.se"
             ],
-            [
-              "PVF (Plåt & Ventilation)",
-              "https://www.pvf.se"
-            ],
-            [
-              "TSY (Trädgårdsnäringens Yrkesnämnd)",
-              "https://www.tsy.se"
-            ]
+            ["PVF (Plåt & Ventilation)", "https://www.pvf.se"],
+            ["TSY (Trädgårdsnäringens Yrkesnämnd)", "https://www.tsy.se"]
           ]
         },
         "sakerhet": {
           "title": "Säkerhet & Branschcertifikat",
           "links": [
-            [
-              "ID06",
-              "https://id06.se"
-            ],
-            [
-              "SSG (Standard Solutions Group)",
-              "https://www.ssg.se"
-            ],
+            ["ID06", "https://id06.se"],
+            ["SSG (Standard Solutions Group)", "https://www.ssg.se"],
             [
               "Brandskyddsföreningen (Heta Arbeten)",
               "https://www.brandskyddsforeningen.se"
             ],
-            [
-              "Säker Vatten",
-              "https://sakervatten.se"
-            ],
-            [
-              "GVK (Säkra Våtrum)",
-              "https://www.gvk.se"
-            ],
+            ["Säker Vatten", "https://sakervatten.se"],
+            ["GVK (Säkra Våtrum)", "https://www.gvk.se"],
             [
               "Byggföretagen (Safe Construction Training)",
               "https://www.byggforetagen.se"
             ],
-            [
-              "Energiföretagen (ESA/EBR)",
-              "https://www.energiforetagen.se"
-            ],
-            [
-              "GWO (Global Wind Safety)",
-              "https://www.globalwindsafety.org"
-            ],
-            [
-              "Säkerhetsparken",
-              "https://Byggsakerhetsparken.se"
-            ]
+            ["Energiföretagen (ESA/EBR)", "https://www.energiforetagen.se"],
+            ["GWO (Global Wind Safety)", "https://www.globalwindsafety.org"],
+            ["Säkerhetsparken", "https://Byggsakerhetsparken.se"]
           ]
         },
         "entreprenadjuridik": {
           "title": "Entreprenadjuridik & Standardavtal (AB 04 / ABT 06)",
           "links": [
-            [
-              "ME (Maskinentreprenörerna)",
-              "https://www.me.se"
-            ],
-            [
-              "BKK (Byggandets Kontraktskommitté)",
-              "https://foreningenbkk.se/"
-            ],
+            ["ME (Maskinentreprenörerna)", "https://www.me.se"],
+            ["BKK (Byggandets Kontraktskommitté)", "https://foreningenbkk.se/"],
             [
               "Byggföretagen - Entreprenadjuridik",
               "https://byggforetagen.se/radgivning/entreprenadjuridik/"
@@ -918,18 +849,12 @@
         "ovrigt": {
           "title": "Övriga referenser",
           "links": [
-            [
-              "Incert (Kylteknik/F-gas)",
-              "https://www.incert.se"
-            ],
+            ["Incert (Kylteknik/F-gas)", "https://www.incert.se"],
             [
               "SSF (Stöldskyddsföreningen/Larm)",
               "https://www.stoldskyddsforeningen.se"
             ],
-            [
-              "Säker Skog (Motorsåg/Röjsåg)",
-              "https://sakerskog.se"
-            ]
+            ["Säker Skog (Motorsåg/Röjsåg)", "https://sakerskog.se"]
           ]
         }
       }
@@ -1168,9 +1093,9 @@
         "thomas": "Thomas",
         "thomasEmail": "lexcoab@gmail.com",
         "thomasPhone": "+46760952921",
-        "christer": "Christer",
-        "christerEmail": "lexcoab@gmail.com",
-        "christerPhone": "070-xxx xx xx"
+        "kim": "Kim Pynnönen",
+        "kimEmail": "lexcoab@gmail.com",
+        "kimPhone": "+46702583651"
       },
       "rights": "Med ensamrätt.",
       "privacy": "Integritetspolicy",

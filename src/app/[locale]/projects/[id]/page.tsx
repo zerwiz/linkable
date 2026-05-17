@@ -6,17 +6,75 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, MapPin, Clock, Shield, CheckCircle2 } from "lucide-react";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { projectNumberToKey, PROJECT_IDS, projectKeyToNumber } from "@/lib/projects";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string, id: string }> }) {
+const baseUrl = "https://linkable.se";
+
+const urgencyMap: Record<string, "high" | "medium" | "low"> = {
+  groundworks: "high",
+  specialized: "high",
+  "umea-centrum": "high",
+  "skelleftea-campus": "high",
+  infrastructure: "medium",
+  "lulea-hamn": "medium",
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string, id: string }> }): Promise<Metadata> {
   const { locale, id } = await params;
+  const projectKey = projectNumberToKey(id);
+  if (!projectKey) notFound();
+
   const t = await getTranslations({ locale, namespace: "Index.Projects.items" });
-  
-  // This is a bit tricky because the keys are dynamic. 
-  // For now, let's just use the project title if it exists.
+  const tIndex = await getTranslations({ locale, namespace: "Index.Projects" });
+
   try {
-    const title = t(`${id}.title`);
+    const title = t(`${projectKey}.title`);
+    const description = t(`${projectKey}.description`);
+    const locations = t.raw(`${projectKey}.locations`) as string[];
+    const startDate = t(`${projectKey}.startDate`);
+    const roles = t.raw(`${projectKey}.roles`) as string[];
+
+    const shortDescription = description.length > 200 
+      ? description.substring(0, 197) + "..." 
+      : description;
+
+    const ogTitle = `${title} | LinkableWork`;
+    const ogDescription = `${locations.join(", ")} • ${tIndex("startDate")}: ${startDate} • ${roles.join(", ")}`;
+
     return {
-      title: `${title} | LinkableWork`,
+      title: ogTitle,
+      description: shortDescription,
+      alternates: {
+        canonical: `${baseUrl}/${locale}/projects/${id}`,
+        languages: {
+          en: `${baseUrl}/en/projects/${id}`,
+          sv: `${baseUrl}/sv/projects/${id}`,
+          fi: `${baseUrl}/fi/projects/${id}`,
+        },
+      },
+      openGraph: {
+        title: ogTitle,
+        description: ogDescription,
+        url: `${baseUrl}/${locale}/projects/${id}`,
+        siteName: "LinkableWork",
+        type: "website",
+        locale: locale === "sv" ? "sv_SE" : locale === "fi" ? "fi_FI" : "en_SE",
+        images: [
+          {
+            url: `${baseUrl}/${locale}/projects/${id}/opengraph-image`,
+            width: 1200,
+            height: 630,
+            alt: title,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: ogTitle,
+        description: ogDescription,
+        images: [`${baseUrl}/${locale}/projects/${id}/opengraph-image`],
+      },
     };
   } catch {
     return {
@@ -27,33 +85,34 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ProjectPage({ params }: { params: Promise<{ locale: string, id: string }> }) {
   const { id } = await params;
+  const projectKey = projectNumberToKey(id);
+  if (!projectKey) notFound();
+
   const t = await getTranslations("Index");
-
-  // Define the available project IDs
-  const projectIds = [
-    "skagersvagen", "groundworks", "infrastructure", "specialized", "building",
-    "umea-centrum", "lulea-hamn", "skelleftea-campus", "pitea-industri",
-  ];
-
-  if (!projectIds.includes(id)) {
-    notFound();
-  }
 
   const project = {
     id,
-    urgency:
-      id === "groundworks" || id === "specialized" || id === "umea-centrum" || id === "skelleftea-campus"
-        ? "high"
-        : id === "infrastructure" || id === "lulea-hamn"
-          ? "medium"
-          : "low",
+    key: projectKey,
+    urgency: urgencyMap[projectKey] || "low",
   };
 
-  const roles = t.raw(`Projects.items.${id}.roles`) as string[];
-  const locations = t.raw(`Projects.items.${id}.locations`) as string[];
+  const roles = t.raw(`Projects.items.${projectKey}.roles`) as string[];
+  const locations = t.raw(`Projects.items.${projectKey}.locations`) as string[];
   const hasMachines = roles.includes("Maskinförare") || roles.includes("Maskinforare");
-  const machineExamples = t.raw("Form.machineOptions") as string[];
-  const certList = [
+
+  let projectMachines: string[] | undefined;
+  let projectRequirements: string[] | undefined;
+  
+  try {
+    projectMachines = t.raw(`Projects.items.${projectKey}.machines`) as string[];
+  } catch {}
+  
+  try {
+    projectRequirements = t.raw(`Projects.items.${projectKey}.requirements`) as string[];
+  } catch {}
+
+  const machineExamples = projectMachines || (t.raw("Form.machineOptions") as string[]);
+  const certList = projectRequirements || [
     t("Certs.items.id06"),
     t("Certs.items.safe"),
     t("Certs.items.apv1"),
@@ -104,7 +163,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               </span>
             </div>
             <h1 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-              {t(`Projects.items.${id}.title`)}
+              {t(`Projects.items.${projectKey}.title`)}
             </h1>
             <p className="mt-2 text-muted-foreground">
               {t("Projects.detailSubtitle")}
@@ -128,26 +187,26 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   {t("Projects.startDate")}
                 </p>
-                <p className="mt-0.5 text-sm font-medium">{t(`Projects.items.${id}.startDate`)}</p>
+                <p className="mt-0.5 text-sm font-medium">{t(`Projects.items.${projectKey}.startDate`)}</p>
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   {t("Projects.applyDeadline")}
                 </p>
-                <p className="mt-0.5 text-sm font-medium">{t(`Projects.items.${id}.applyDeadline`)}</p>
+                <p className="mt-0.5 text-sm font-medium">{t(`Projects.items.${projectKey}.applyDeadline`)}</p>
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   {t("Projects.individual")}
                 </p>
-                <p className="mt-0.5 text-sm font-medium text-green-600">{t(`Projects.items.${id}.individual`)}</p>
+                <p className="mt-0.5 text-sm font-medium text-green-600">{t(`Projects.items.${projectKey}.individual`)}</p>
               </div>
-              {t.raw(`Projects.items.${id}.accommodation`) && (
+              {t.raw(`Projects.items.${projectKey}.accommodation`) && (
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     {t("Projects.accommodation")}
                   </p>
-                  <p className="mt-0.5 text-sm font-medium text-emerald-600">{t(`Projects.items.${id}.accommodation`)}</p>
+                  <p className="mt-0.5 text-sm font-medium text-emerald-600">{t(`Projects.items.${projectKey}.accommodation`)}</p>
                 </div>
               )}
             </div>
@@ -159,7 +218,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               <span>{t("Projects.about")}</span>
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
-              {t(`Projects.items.${id}.description`)}
+              {t(`Projects.items.${projectKey}.description`)}
             </p>
           </div>
 
@@ -282,7 +341,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
               <li>{t("Projects.checklistFtax")}</li>
               <li>{t("Projects.checklistCerts")}</li>
               <li>{t("Projects.checklistReferences")}</li>
-              <li>{t("Projects.checklistDeadline", { deadline: t(`Projects.items.${id}.applyDeadline`) })}</li>
+              <li>{t("Projects.checklistDeadline", { deadline: t(`Projects.items.${projectKey}.applyDeadline`) })}</li>
             </ol>
           </div>
 

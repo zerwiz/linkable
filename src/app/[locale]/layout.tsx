@@ -57,6 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       languages: {
         en: `${baseUrl}/en`,
         sv: `${baseUrl}/sv`,
+        fi: `${baseUrl}/fi`,
       },
     },
     openGraph: {
@@ -65,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: `${baseUrl}/${locale}`,
       siteName: "LinkableWork",
       type: "website",
-      locale: locale === "sv" ? "sv_SE" : "en_SE",
+      locale: locale === "sv" ? "sv_SE" : locale === "fi" ? "fi_FI" : "en_SE",
       images: [
         {
           url: `${baseUrl}/og-image.png`,

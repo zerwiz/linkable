@@ -115,12 +115,7 @@ trap cleanup EXIT INT TERM
 
 cd "$PROJECT_DIR"
 
-if ! command -v bun >/dev/null 2>&1; then
-	echo "ERROR: bun is not installed or not in PATH"
-	exit 1
-fi
 
-log_step_start "bun install"
 echo "[BUN] Installing dependencies..."
 bun install
 log_step_end "bun install"

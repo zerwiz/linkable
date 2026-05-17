@@ -15,6 +15,7 @@ import { useState } from "react";
 import { Link } from "@/routing";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { projectNumberToKey } from "@/lib/projects";
 
 /* ------------------------------------------------------------------ */
 /*  Hero Section                                                       */
@@ -201,21 +202,18 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
   const t = useTranslations("Index");
 
   const roleProjects = [
-    { id: "groundworks", urgency: "high" },
-    { id: "infrastructure", urgency: "medium" },
-    { id: "specialized", urgency: "high" },
-    { id: "building", urgency: "low" },
+    { id: "2", urgency: "high" },
+    { id: "3", urgency: "medium" },
+    { id: "4", urgency: "high" },
+    { id: "5", urgency: "low" },
   ];
 
+  // Only skagersvagen (1) is active — others are being updated
   const worksiteProjects = [
-    { id: "skagersvagen", urgency: "high" },
-    { id: "umea-centrum", urgency: "high" },
-    { id: "lulea-hamn", urgency: "medium" },
-    { id: "skelleftea-campus", urgency: "high" },
-    { id: "pitea-industri", urgency: "low" },
+    { id: "1", urgency: "high" },
   ];
 
-  function renderProjectGrid(projects: typeof roleProjects, sectionKey: string) {
+  function renderProjectGrid(projects: { id: string; urgency: string }[], sectionKey: string) {
     return (
       <>
         <motion.h3
@@ -228,7 +226,9 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
           {t(`Projects.${sectionKey}`)}
         </motion.h3>
         <div className="mb-14 grid gap-6 sm:grid-cols-2">
-          {projects.map((project, i) => (
+          {projects.map((project, i) => {
+            const projectKey = projectNumberToKey(project.id) || project.id;
+            return (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 24 }}
@@ -240,7 +240,7 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between gap-4">
                     <h4 className="text-lg font-semibold text-foreground">
-                      {t(`Projects.items.${project.id}.title`)}
+                      {t(`Projects.items.${projectKey}.title`)}
                     </h4>
                     <Badge
                       className={`shrink-0 rounded-full text-[10px] font-bold ${
@@ -260,11 +260,11 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                   </div>
 
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {t(`Projects.items.${project.id}.description`)}
+                    {t(`Projects.items.${projectKey}.description`)}
                   </p>
 
                   <div className="mt-3 space-y-1">
-                    {(t.raw(`Projects.items.${project.id}.roles`) as string[])?.map((role) => (
+                    {(t.raw(`Projects.items.${projectKey}.roles`) as string[])?.map((role) => (
                       <button
                         key={role}
                         type="button"
@@ -282,26 +282,26 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
 
                   <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                     <MapPin className="h-3.5 w-3.5" />
-                    {(t.raw(`Projects.items.${project.id}.locations`) as string[])?.join("  /  ")}
+                    {(t.raw(`Projects.items.${projectKey}.locations`) as string[])?.join("  /  ")}
                   </div>
 
                   <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
                     <span>
-                      {t("Projects.startDate")}: {t(`Projects.items.${project.id}.startDate`)}
+                      {t("Projects.startDate")}: {t(`Projects.items.${projectKey}.startDate`)}
                     </span>
                     <span>
-                      {t("Projects.applyDeadline")}: {t(`Projects.items.${project.id}.applyDeadline`)}
+                      {t("Projects.applyDeadline")}: {t(`Projects.items.${projectKey}.applyDeadline`)}
                     </span>
                     <span className="text-green-600">
-                      {t("Projects.individual")}: {t(`Projects.items.${project.id}.individual`)}
+                      {t("Projects.individual")}: {t(`Projects.items.${projectKey}.individual`)}
                     </span>
-                    {t.raw(`Projects.items.${project.id}.accommodation`) && (
+                    {t.raw(`Projects.items.${projectKey}.accommodation`) && (
                       <span className="text-emerald-600">
-                        {t("Projects.accommodation")}: {t(`Projects.items.${project.id}.accommodation`)}
+                        {t("Projects.accommodation")}: {t(`Projects.items.${projectKey}.accommodation`)}
                       </span>
                     )}
                     {(() => {
-                      const certs = t.raw(`Projects.items.${project.id}.locationCerts`);
+                      const certs = t.raw(`Projects.items.${projectKey}.locationCerts`);
                       return Array.isArray(certs) && certs.length > 0 ? (
                         <span className="text-amber-600">
                           {t("Projects.locationCertsTitle")}: {certs.join(", ")}
@@ -336,7 +336,8 @@ export function ProjectsSection({ onSelectProject }: { onSelectProject?: (id: st
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
+          );
+          })}
         </div>
       </>
     );
@@ -1073,8 +1074,9 @@ export function ApplicationForm({
       "Extra certifieringar: " + (data.extraCertifications || "-"),
     ];
 
-    if (selectedProjectId) {
-      parts.push("Projekt: " + t(`Projects.items.${selectedProjectId}.title`));
+    const selectedProjectKey = selectedProjectId ? (projectNumberToKey(selectedProjectId) || selectedProjectId) : null;
+    if (selectedProjectKey) {
+      parts.push("Projekt: " + t(`Projects.items.${selectedProjectKey}.title`));
     }
 
     parts.push("");
@@ -1125,11 +1127,14 @@ export function ApplicationForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
 
-      {selectedProjectId && (
-        <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-          {t("Form.applyingFor")}: <strong>{t(`Projects.items.${selectedProjectId}.title`)}</strong>
-        </div>
-      )}
+      {(() => {
+        const selKey = selectedProjectId ? (projectNumberToKey(selectedProjectId) || selectedProjectId) : null;
+        return selKey ? (
+          <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+            {t("Form.applyingFor")}: <strong>{t(`Projects.items.${selKey}.title`)}</strong>
+          </div>
+        ) : null;
+      })()}
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div>

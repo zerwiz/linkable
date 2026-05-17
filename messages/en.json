@@ -136,7 +136,7 @@
           "groundworksLoc": "Lulea, Skelleftea, Umea",
           "infrastructure": "Infrastructure & Road Works",
           "infrastructureLoc": "Stockholm, Goteborg",
-          "machine": "Machine Operators (APV Licensed)",
+          "machine": "Machine Operators",
           "machineLoc": "Multiple Locations"
         }
       }
@@ -209,24 +209,39 @@
           "accommodation": "",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin (Excavator)",
+            "Hjullastare (Wheel loader)"
+          ],
+          "requirements": [
+            "ID06",
+            "Hot Works",
+            "Grävmaskin",
+            "Anläggningsförare",
+            "B (Car)",
+            "ADR-S 1.3",
+            "Stockholm City Course"
+          ],
           "description": "Stormwater and drainage work at Skagersvägen. The work includes manual excavation/suction truck, excavator + ground crew, backfilling, removal, pipe laying, restoration, stone pits, as well as drainage with drainage boards, geotextile, plugs, drain pipes, ground pipes, and all work related to installation. Also restoration with topsoil and grass seed, relocation of water service lines, planning, coordination, and site management. The work is estimated to take approx. 4 months from start to demobilization and restoration. We assume clean soil masses – sampling is included. Construction hut/staff facilities with shower/toilet are provided by the customer or charged separately."
         },
         "groundworks": {
-          "title": "Groundworks",
+          "title": "National",
           "roles": [
             "Anlaggare",
             "Maskinforare",
             "Arbetslag"
           ],
           "locations": [
-            "Multiple Locations"
+            "Lulea",
+            "Skelleftea",
+            "Umea"
           ],
           "startDate": "June 2026",
           "applyDeadline": "May 30, 2026",
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Foundation work, excavation, and site preparation for new residential and commercial developments across Norrbotten and Vasterbotten. Immediate starts available for crews with valid ID06 and APV certification."
+          "description": "Groundworks & Excavation. We are looking for experienced ground and construction workers for national assignments. Immediate start available for teams with valid ID06 and APV certification."
         },
         "infrastructure": {
           "title": "Infrastructure",
@@ -276,21 +291,15 @@
           "description": "General construction crews needed for residential building projects from foundation to finishing. F-tax status required for individual applicants. Teams of 3-8 preferred."
         },
         "umea-centrum": {
-          "title": "Umea City Centre Development",
-          "roles": [
-            "Anlaggare",
-            "Maskinforare",
-            "Arbetslag"
-          ],
-          "locations": [
-            "Umea"
-          ],
-          "startDate": "June 2026",
-          "applyDeadline": "May 20, 2026",
+          "title": "Umea — taking on assignments continuously",
+          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
+          "locations": ["Umea area"],
+          "startDate": "Ongoing",
+          "applyDeadline": "Ongoing",
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Mixed-use development in central Umea with commercial and residential units. Foundation work, concrete structures, and interior finishing phases. Experienced teams with ID06 and safe construction training preferred."
+          "description": "We take on assignments continuously and match jobs against people we have applicants for. Specific work sites are coming soon. Apply as the worker type you are and we will contact you when the right assignment comes up."
         },
         "lulea-hamn": {
           "title": "Lulea Harbour Expansion",
@@ -1170,9 +1179,9 @@
         "thomas": "Thomas",
         "thomasEmail": "lexcoab@gmail.com",
         "thomasPhone": "+46760952921",
-        "christer": "Christer",
-        "christerEmail": "lexcoab@gmail.com",
-        "christerPhone": "070-xxx xx xx"
+        "kim": "Kim Pynnönen",
+        "kimEmail": "lexcoab@gmail.com",
+        "kimPhone": "+46702583651"
       },
       "rights": "All rights reserved.",
       "privacy": "Privacy Policy",
