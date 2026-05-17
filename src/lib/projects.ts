@@ -18,8 +18,9 @@ export function projectKeyToNumber(key: string): string {
   return String(idx + 1);
 }
 
-export function projectNumberToKey(num: string): ProjectKey | null {
-  const idx = parseInt(num, 10) - 1;
+export function projectNumberToKey(id: string): ProjectKey | null {
+  if (PROJECT_IDS.includes(id as any)) return id as ProjectKey;
+  const idx = parseInt(id, 10) - 1;
   if (isNaN(idx) || idx < 0 || idx >= PROJECT_IDS.length) return null;
   return PROJECT_IDS[idx];
 }

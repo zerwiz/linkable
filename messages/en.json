@@ -241,6 +241,15 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Excavator",
+            "Wheel loader"
+          ],
+          "requirements": [
+            "ID06",
+            "Safe Construction",
+            "Construction driver"
+          ],
           "description": "Experienced construction workers needed for ground work, excavation and site preparation. Manual labor with hand tools. Valid ID06 required.\n\nList all certifications and training in your application."
         },
         "infrastructure": {
@@ -257,7 +266,22 @@
           "accommodation": "",
           "individual": "Individual",
           "locationCerts": [],
-          "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with machine operator certificates.\n\nRoles we're seeking:\n- Machine operators with certifications (Stockholm Stad, Heta arbeten, APV 1.1, 1.2, 1.3)\n- Work crews with at least one Swedish-speaking member\n- All above machine types for construction contracts\n\nList all certifications and training in your application."
+          "machines": [
+            "Excavator",
+            "Wheel Loader",
+            "Backhoe Loader",
+            "Bulldozer",
+            "Motor Grader",
+            "Dumper",
+            "Roller"
+          ],
+          "requirements": [
+            "ID06",
+            "Safe Construction Training",
+            "APV 1.1 (Work on Road)",
+            "Hot Works"
+          ],
+          "description": "Road construction, utilities installation, and civil infrastructure projects across Sweden. Looking for experienced teams with machine operator certificates.\n\nRoles we're seeking:\n- Machine operators with certifications (Stockholm Stad, Heta arbeten, APV 1.1)\n- Work crews with at least one Swedish-speaking member\n- All above machine types for construction contracts\n\nList all certifications and training in your application."
         },
         "specialized": {
           "title": "Machine Operator",
@@ -273,6 +297,19 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Excavator",
+            "Wheel loader",
+            "Dumper",
+            "Motor grader",
+            "Roller"
+          ],
+          "requirements": [
+            "ID06",
+            "Safe Construction",
+            "APV 1.1",
+            "Machine operator certificate"
+          ],
           "description": "Skilled machine operators sought for fine grading, asphalt paving, and heavy excavation. We need operators for tracked excavators, wheel loaders, dumpers, backhoe loaders, crawler dozers, motor graders, and rollers. Wheel excavator operators require a B driver's license. Valid machine operator certificate required. Competitive hourly wages.\n\nList all certifications and training in your application."
         },
         "building": {
@@ -296,17 +333,45 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Bulldozer",
+            "Excavator",
+            "Wheel loader",
+            "Motor grader",
+            "Roller",
+            "Dumper"
+          ],
+          "requirements": [
+            "ID06",
+            "GWO",
+            "Safe Construction",
+            "Hot Works"
+          ],
           "description": "Specialists needed for wind park construction — ground work, foundations and assembly. Seeking individuals with wind farm experience.\n\nList all certifications and training in your application."
         },
         "umea-centrum": {
           "title": "Umea — taking on assignments continuously",
-          "roles": ["Anlaggare", "Maskinforare", "Arbetslag"],
-          "locations": ["Umea area"],
+          "roles": [
+            "Anlaggare",
+            "Maskinforare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Umea area"
+          ],
           "startDate": "Ongoing",
           "applyDeadline": "Ongoing",
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Excavator",
+            "Wheel loader"
+          ],
+          "requirements": [
+            "ID06",
+            "Safe Construction"
+          ],
           "description": "We take on assignments continuously and match jobs against people we have applicants for. Specific work sites are coming soon. Apply as the worker type you are and we will contact you when the right assignment comes up."
         },
         "lulea-hamn": {
@@ -323,6 +388,18 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Excavator",
+            "Wheel loader",
+            "Pile driver",
+            "Sheet piling rig"
+          ],
+          "requirements": [
+            "ID06",
+            "APV 1.1",
+            "Safe Construction",
+            "Hot Works"
+          ],
           "description": "Expansion of Lulea harbour facilities including new quay, cargo handling areas, and rail connection. Heavy earthmoving, piling, and asphalt work. Machine operators with APV certification needed."
         },
         "skelleftea-campus": {
@@ -340,6 +417,15 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Excavator",
+            "Wheel loader"
+          ],
+          "requirements": [
+            "ID06",
+            "Safe Construction",
+            "Hot Works"
+          ],
           "description": "New educational buildings and surrounding infrastructure at Skelleftea campus. Groundworks, foundation laying, and site preparation for Phase 1 construction starting immediately."
         },
         "pitea-industri": {
@@ -356,6 +442,16 @@
           "accommodation": "Barracks / hotel included",
           "individual": "Individual",
           "locationCerts": [],
+          "machines": [
+            "Excavator",
+            "Wheel loader",
+            "Roller"
+          ],
+          "requirements": [
+            "ID06",
+            "Safe Construction",
+            "APV 1.1"
+          ],
           "description": "Industrial park development on the outskirts of Pitea. New road networks, utility installation, and commercial building foundations. Ideal for teams with experience in infrastructure and site development."
         }
       }
@@ -552,8 +648,8 @@
       "items": {
         "id06": "ID06",
         "safe": "Safe Construction Training",
-        "apv1": "APV 1.1, 1.2, 1.3 (Work on Road)",
-        "apv2": "APV 2.1, 2.2, 2.3 (Work on Road)",
+        "apv1": "APV 1.1 (Work on Road)",
+        "apv2": "APV 2.1 (Work on Road)",
         "apv3": "APV 3 (Work on Road)",
         "heta": "Hot Works",
         "basP": "BAS P (Planning)",
@@ -962,6 +1058,7 @@
       "badge": "Apply Now",
       "title": "Apply for projects or employment role",
       "description": "LinkableWork is looking for new employees, subcontractors, and individuals with F-tax for assignments in groundworks, construction, infrastructure, and contracting. Assignments run from May through October.",
+      "moreProjectsLink": "See all available projects — we have more fields than just civil engineering",
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
@@ -1048,11 +1145,8 @@
       "certOptionsOverall": [
         "ID06",
         "Safe Construction Training",
-        "APV 1.1, 1.2, 1.3 (Work on Road)",
-        "APV 2.1, 2.2, 2.3 (Work on Road)",
         "APV 3 (Work on Road)",
         "Hot Works",
-        "BAS P / BAS U",
         "CPR (HLR)",
         "Safe Lifting",
         "ADR-S 1.3",
@@ -1156,7 +1250,10 @@
       "references": {
         "title": "Important Websites & References",
         "items": [
-          ["BKK (Construction Contracts Committee)", "https://foreningenbkk.se/"]
+          [
+            "BKK (Construction Contracts Committee)",
+            "https://foreningenbkk.se/"
+          ]
         ]
       },
       "tips": {

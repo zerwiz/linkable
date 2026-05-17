@@ -116,6 +116,7 @@ trap cleanup EXIT INT TERM
 cd "$PROJECT_DIR"
 
 
+log_step_start "bun install"
 echo "[BUN] Installing dependencies..."
 bun install
 log_step_end "bun install"
@@ -133,7 +134,7 @@ log_step_end "bun run db:push"
 
 log_step_start "Starting Next.js dev server"
 echo "[BUN] Starting development server..."
-bun run dev &
+bun run dev > "$PROJECT_DIR/dev.log" 2>&1 &
 DEV_PID=$!
 log_step_end "Starting Next.js dev server"
 
