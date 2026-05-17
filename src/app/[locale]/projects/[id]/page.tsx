@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         locale: locale === "sv" ? "sv_SE" : locale === "fi" ? "fi_FI" : "en_SE",
         images: [
           {
-            url: `${baseUrl}/${locale}/projects/${id}/opengraph-image`,
+            url: `${baseUrl}/og-image.png`,
             width: 1200,
             height: 630,
             alt: title,
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         card: "summary_large_image",
         title: ogTitle,
         description: ogDescription,
-        images: [`${baseUrl}/${locale}/projects/${id}/opengraph-image`],
+        images: [`${baseUrl}/og-image.png`],
       },
     };
   } catch {

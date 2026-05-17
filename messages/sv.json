@@ -216,15 +216,15 @@
           "description": "Dagvatten- och dräneringsarbeten vid Skagersvägen. Arbetet omfattar handgrävning/sugbil, grävmaskin + markgubbe, återfyllning, bortforsling, läggning rör, återställning, stenkistor samt dränering med skivor pordrän, markduk, plugg, dränrör, markrör och allt arbete kopplat till montering och läggning. Även återställning med matjord och gräsfrö, omläggning av vattenservisledning, projektering, samordning och arbetsledning ingår. Arbetet bedöms ta ca 4 månader från igångsättning till avetablering och återställning. Vi förutsätter rena jordmassor – provtagning ingår. Byggbod/personalutrymme med dusch/toa tillhandahålls av kund eller debiteras."
         },
         "groundworks": {
-          "title": "Nationell",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "title": "Anläggare",
+          "roles": ["Anläggare", "Arbetslag"],
           "locations": ["Luleå", "Skellefteå", "Umeå"],
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Groundworks & Excavation. Vi söker erfarna mark- och anläggningsarbetare för nationella uppdrag. Omedelbar start tillgänglig för team med giltigt ID06 och APV-certifiering."
+          "description": "Vi söker erfarna anläggningsarbetare för markarbete, schaktning och platsförberedelse. Arbete för hand och med handhållna verktyg som spade, skottkärra, stamp och rivjärn. Anläggaren utför grundläggande markberedning, ledningsgrävning, dränering, betongarbete, asfaltering och återställning — allt från grovschakt till finsats. Vi värdesätter noggrannhet, fysik och yrkesstolthet."
         },
         "infrastructure": {
           "title": "Infrastruktur",
@@ -255,26 +255,26 @@
           "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis.\n\nRoller vi söker:\n- Maskinförare med certifieringar (ID06, säkerhet på bygget, APV 1.1, 1.2, 1.3)\n- Arbetslag med minst en person som kan kommunicera på svenska\n- Alla ovan nämnda maskintyper inom anläggningsentreprenad"
         },
         "specialized": {
-          "title": "Specialiserat maskinarbete",
-          "roles": ["Maskinförare"],
+          "title": "Maskinförare",
+          "roles": ["Maskinförare", "Lastbilförare"],
           "locations": ["Flera orter"],
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Giltigt maskinförarbevis och Arbete på väg (APV) krävs. Konkurrenskraftiga timlöner."
+          "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Vi söker förare till bandgrävare, hjullastare, dumper, grävlastare, bandschaktare, väghyvel och vält. För hjulgrävare krävs B-körkort. Giltigt maskinförarbevis krävs. Konkurrenskraftiga timlöner."
         },
         "building": {
-          "title": "Bygg & anläggning",
-          "roles": ["Anläggare", "Arbetslag"],
+          "title": "Vindpark",
+          "roles": ["Anläggare", "Maskinförare", "Dumper", "Lastbil", "Vält", "Grävmaskin", "Bandschaktare", "Lastbilförare", "Väghyvel"],
           "locations": ["Flera orter"],
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Allmänna bygglag sökes för bostadsprojekt från grund till färdigställande. F-skatt krävs för enskilda sökande. Team om 3-8 personer föredras."
+          "description": "Specialister sökes för vindparksbygge — markarbete, fundament och montering. Vi söker enskilda individer med erfarenhet av vindkraftsprojekt. F-skatt krävs."
         },
         "umea-centrum": {
           "title": "Umeå — vi tar in uppdrag löpande",
@@ -890,7 +890,8 @@
         "Arbetsledare",
         "Mättekniker",
         "KMA-samordnare",
-        "Projektledare / Kalkylator"
+        "Projektledare / Kalkylator",
+        "Lastbilförare"
       ],
       "roleOptionsOverall": [
         "Anläggningsförare",
@@ -905,7 +906,8 @@
         "Bergarbetare",
         "Beläggningsarbetare",
         "Håltagare",
-        "Stenmontör"
+        "Stenmontör",
+        "Lastbilförare"
       ],
       "locations": "Områden",
       "locationOptions": [
