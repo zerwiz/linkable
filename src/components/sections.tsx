@@ -1028,11 +1028,14 @@ export function ApplicationForm({
     expiryDates: "",
   });
 
-  const roleOptionsAnlaggning = t.raw("Form.roleOptions") as string[];
+  const roleOptionsAnlaggning = (t.raw("Form.roleOptions") as string[]) || [];
   const roleOptionsOverall = (t.raw("Form.roleOptionsOverall") as string[]) || [];
   const roleOptions = mode === "overall" 
-    ? Array.from(new Set([...roleOptionsAnlaggning, ...roleOptionsOverall])) 
-    : roleOptionsAnlaggning;
+    ? Array.from(new Set([
+        ...(Array.isArray(roleOptionsAnlaggning) ? roleOptionsAnlaggning : []),
+        ...(Array.isArray(roleOptionsOverall) ? roleOptionsOverall : [])
+      ])) 
+    : (Array.isArray(roleOptionsAnlaggning) ? roleOptionsAnlaggning : []);
 
   const [prevSelectedRole, setPrevSelectedRole] = useState(selectedRole);
   if (selectedRole !== prevSelectedRole) {
@@ -1106,23 +1109,29 @@ export function ApplicationForm({
     );
   }
 
-  const types = t.raw("Form.typeOptions") as string[];
-  const locationOptions = t.raw("Form.locationOptions") as string[];
+  const types = (t.raw("Form.typeOptions") as string[]) || [];
+  const locationOptions = (t.raw("Form.locationOptions") as string[]) || [];
   
-  const certOptionsAnlaggning = t.raw("Form.certOptions") as string[];
+  const certOptionsAnlaggning = (t.raw("Form.certOptions") as string[]) || [];
   const certOptionsOverall = (t.raw("Form.certOptionsOverall") as string[]) || [];
   const certOptions = mode === "overall" 
-    ? Array.from(new Set([...certOptionsAnlaggning, ...certOptionsOverall])) 
-    : certOptionsAnlaggning;
+    ? Array.from(new Set([
+        ...(Array.isArray(certOptionsAnlaggning) ? certOptionsAnlaggning : []),
+        ...(Array.isArray(certOptionsOverall) ? certOptionsOverall : [])
+      ])) 
+    : (Array.isArray(certOptionsAnlaggning) ? certOptionsAnlaggning : []);
 
-  const machineOptionsAnlaggning = t.raw("Form.machineOptions") as string[];
+  const machineOptionsAnlaggning = (t.raw("Form.machineOptions") as string[]) || [];
   const machineOptionsOverall = (t.raw("Form.machineOptionsOverall") as string[]) || [];
   const machineOptions = mode === "overall" 
-    ? Array.from(new Set([...machineOptionsAnlaggning, ...machineOptionsOverall])) 
-    : machineOptionsAnlaggning;
+    ? Array.from(new Set([
+        ...(Array.isArray(machineOptionsAnlaggning) ? machineOptionsAnlaggning : []),
+        ...(Array.isArray(machineOptionsOverall) ? machineOptionsOverall : [])
+      ])) 
+    : (Array.isArray(machineOptionsAnlaggning) ? machineOptionsAnlaggning : []);
 
-  const tradeOptions = t.raw("Form.tradeOptions") as string[];
-  const driverLicenseOptions = t.raw("Form.driverLicenseOptions") as string[];
+  const tradeOptions = (t.raw("Form.tradeOptions") as string[]) || [];
+  const driverLicenseOptions = (t.raw("Form.driverLicenseOptions") as string[]) || [];
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -1355,6 +1364,15 @@ export function ApplySection({
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
             {t("Form.description")}
           </p>
+          <div className="mt-4">
+            <Link
+              href="/projects"
+              className="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium transition-colors"
+            >
+              <span>{t("Form.moreProjectsLink")}</span>
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

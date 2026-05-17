@@ -197,14 +197,23 @@
       "items": {
         "skagersvagen": {
           "title": "Stockholm",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Stockholm"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Stockholm"
+          ],
           "startDate": "Juni 2026",
           "applyDeadline": "15 maj 2026",
           "accommodation": "",
           "individual": "Individuell",
           "locationCerts": [],
-          "machines": ["Grävmaskin", "Hjullastare"],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare"
+          ],
           "requirements": [
             "ID06",
             "Heta arbeten",
@@ -218,13 +227,29 @@
         },
         "groundworks": {
           "title": "Anläggare",
-          "roles": ["Anläggare", "Arbetslag"],
-          "locations": ["Luleå", "Skellefteå", "Umeå"],
+          "roles": [
+            "Anläggare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Luleå",
+            "Skellefteå",
+            "Umeå"
+          ],
           "startDate": "Juni 2026",
           "applyDeadline": "30 maj 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare"
+          ],
+          "requirements": [
+            "ID06",
+            "Säkerhet på bygget",
+            "Anläggningsförare"
+          ],
           "description": "Vi söker erfarna anläggningsarbetare för markarbete, schaktning och platsförberedelse. Arbete för hand och med handhållna verktyg som spade, skottkärra, stamp och rivjärn. Anläggaren utför grundläggande markberedning, ledningsgrävning, dränering, betongarbete, asfaltering och återställning — allt från grovschakt till finsats. Vi värdesätter noggrannhet, fysik och yrkesstolthet.\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "infrastructure": {
@@ -247,78 +272,200 @@
             "Pålmaskin",
             "Spontmaskin"
           ],
-          "locations": ["Hela Sverige"],
+          "locations": [
+            "Hela Sverige"
+          ],
           "startDate": "Aug 2026",
           "applyDeadline": "15 juni 2026",
           "accommodation": "",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med maskinförarbevis.\n\nRoller vi söker:\n- Maskinförare med certifieringar (Stockholm Stad, Heta arbeten, APV 1.1, 1.2, 1.3)\n- Arbetslag med minst en person som kan kommunicera på svenska\n- Alla ovan nämnda maskintyper inom anläggningsentreprenad\n\nLista alla certifieringar och utbildningar du har i ansökan."
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare",
+            "Grävlastare",
+            "Bandschaktare",
+            "Väghyvel",
+            "Dumper",
+            "Vält"
+          ],
+          "requirements": [
+            "ID06",
+            "Säkerhet på bygget",
+            "APV 1.1 (Arbete på väg)",
+            "Heta arbeten"
+          ],
+          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med maskinförarbevis.\n\nRoller vi söker:\n- Maskinförare med certifieringar (Stockholm Stad, Heta arbeten, APV 1.1)\n- Arbetslag med minst en person som kan kommunicera på svenska\n- Alla ovan nämnda maskintyper inom anläggningsentreprenad\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "specialized": {
           "title": "Maskinförare",
-          "roles": ["Maskinförare", "Lastbilförare"],
-          "locations": ["Flera orter"],
+          "roles": [
+            "Maskinförare",
+            "Lastbilförare"
+          ],
+          "locations": [
+            "Flera orter"
+          ],
           "startDate": "Juli 2026",
           "applyDeadline": "1 juni 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare",
+            "Dumper",
+            "Väghyvel",
+            "Vält"
+          ],
+          "requirements": [
+            "ID06",
+            "Säkerhet på bygget",
+            "APV 1.1",
+            "Maskinförarbevis"
+          ],
           "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Vi söker förare till bandgrävare, hjullastare, dumper, grävlastare, bandschaktare, väghyvel och vält. För hjulgrävare krävs B-körkort. Giltigt maskinförarbevis krävs. Konkurrenskraftiga timlöner.\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "building": {
           "title": "Vindpark",
-          "roles": ["Anläggare", "Maskinförare", "Dumper", "Lastbil", "Vält", "Grävmaskin", "Bandschaktare", "Lastbilförare", "Väghyvel"],
-          "locations": ["Flera orter"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Dumper",
+            "Lastbil",
+            "Vält",
+            "Grävmaskin",
+            "Bandschaktare",
+            "Lastbilförare",
+            "Väghyvel"
+          ],
+          "locations": [
+            "Flera orter"
+          ],
           "startDate": "Maj 2026",
           "applyDeadline": "30 april 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Bandschaktare",
+            "Grävmaskin",
+            "Hjullastare",
+            "Väghyvel",
+            "Vält",
+            "Dumper"
+          ],
+          "requirements": [
+            "ID06",
+            "GWO",
+            "Säkerhet på bygget",
+            "Heta arbeten"
+          ],
           "description": "Specialister sökes för vindparksbygge — markarbete, fundament och montering. Vi söker enskilda individer med erfarenhet av vindkraftsprojekt.\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "umea-centrum": {
           "title": "Umeå — vi tar in uppdrag löpande",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Umeå med omnejd"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Umeå med omnejd"
+          ],
           "startDate": "Löpande",
           "applyDeadline": "Löpande",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare"
+          ],
+          "requirements": [
+            "ID06",
+            "Säkerhet på bygget"
+          ],
           "description": "Vi tar in uppdrag löpande och matchar jobb mot personer vi har sökande till. Specifika arbetsplatser kommer inom kort. Sök som den yrkesroll du är så kontaktar vi dig när rätt uppdrag dyker upp."
         },
         "lulea-hamn": {
           "title": "Luleå hamnutbyggnad",
-          "roles": ["Maskinförare", "Arbetslag"],
-          "locations": ["Luleå"],
+          "roles": [
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Luleå"
+          ],
           "startDate": "Aug 2026",
           "applyDeadline": "1 juli 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare",
+            "Pålmaskin",
+            "Spontmaskin"
+          ],
+          "requirements": [
+            "ID06",
+            "APV 1.1",
+            "Säkerhet på bygget",
+            "Heta arbeten"
+          ],
           "description": "Utbyggnad av Luleå hamn med nya kajer, lastutrymmen och järnvägsanslutning. Tunga schaktarbeten, pålning och asfaltering. Maskinförare med APV-certifiering behövs."
         },
         "skelleftea-campus": {
           "title": "Skellefteå campusområde",
-          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
-          "locations": ["Skellefteå"],
+          "roles": [
+            "Anläggare",
+            "Maskinförare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Skellefteå"
+          ],
           "startDate": "Sep 2026",
           "applyDeadline": "10 aug 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare"
+          ],
+          "requirements": [
+            "ID06",
+            "Säkerhet på bygget",
+            "Heta arbeten"
+          ],
           "description": "Nya utbildningsbyggnader och omgivande infrastruktur vid Skellefteå campus. Markarbete, grundläggning och platsförberedelse för Fas 1 av byggnationen med omedelbar start."
         },
         "pitea-industri": {
           "title": "Piteå industriområde",
-          "roles": ["Anläggare", "Arbetslag"],
-          "locations": ["Piteå"],
+          "roles": [
+            "Anläggare",
+            "Arbetslag"
+          ],
+          "locations": [
+            "Piteå"
+          ],
           "startDate": "Okt 2026",
           "applyDeadline": "1 sep 2026",
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
+          "machines": [
+            "Grävmaskin",
+            "Hjullastare",
+            "Vält"
+          ],
+          "requirements": [
+            "ID06",
+            "Säkerhet på bygget",
+            "APV 1.1"
+          ],
           "description": "Industriområdesutveckling i utkanten av Piteå. Nya vägnät, ledningsdragning och grundläggning för kommersiella byggnader. Idealisk för team med erfarenhet av infrastruktur och markarbete."
         }
       }
@@ -515,8 +662,8 @@
       "items": {
         "id06": "ID06",
         "safe": "Säkerhet på bygget",
-        "apv1": "APV 1.1, 1.2, 1.3 (Arbete på väg)",
-        "apv2": "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "apv1": "APV 1.1 (Arbete på väg)",
+        "apv2": "APV 2.1 (Arbete på väg)",
         "apv3": "APV 3 (Arbete på väg)",
         "heta": "Heta arbeten",
         "basP": "BAS P (Planering)",
@@ -768,13 +915,22 @@
         "myndigheter": {
           "title": "Myndigheter",
           "links": [
-            ["Arbetsmiljöverket", "https://www.av.se"],
-            ["Elsäkerhetsverket", "https://www.elsakerhetsverket.se"],
+            [
+              "Arbetsmiljöverket",
+              "https://www.av.se"
+            ],
+            [
+              "Elsäkerhetsverket",
+              "https://www.elsakerhetsverket.se"
+            ],
             [
               "Transportstyrelsen (Körkort & YKB)",
               "https://www.transportstyrelsen.se"
             ],
-            ["Trafikverket", "https://www.trafikverket.se"]
+            [
+              "Trafikverket",
+              "https://www.trafikverket.se"
+            ]
           ]
         },
         "apv": {
@@ -806,41 +962,80 @@
         "yrkesnamnder": {
           "title": "Yrkesnämnder (Yrkesbevis)",
           "links": [
-            ["BYN (Byggnadsindustrins Yrkesnämnd)", "https://www.byn.se"],
-            ["TYA (Transportfackens Yrkesnämnd)", "https://www.tya.se"],
+            [
+              "BYN (Byggnadsindustrins Yrkesnämnd)",
+              "https://www.byn.se"
+            ],
+            [
+              "TYA (Transportfackens Yrkesnämnd)",
+              "https://www.tya.se"
+            ],
             [
               "MYN (Måleribranschens Yrkesnämnd)",
               "https://www.maleryrkesnamnd.se"
             ],
-            ["PVF (Plåt & Ventilation)", "https://www.pvf.se"],
-            ["TSY (Trädgårdsnäringens Yrkesnämnd)", "https://www.tsy.se"]
+            [
+              "PVF (Plåt & Ventilation)",
+              "https://www.pvf.se"
+            ],
+            [
+              "TSY (Trädgårdsnäringens Yrkesnämnd)",
+              "https://www.tsy.se"
+            ]
           ]
         },
         "sakerhet": {
           "title": "Säkerhet & Branschcertifikat",
           "links": [
-            ["ID06", "https://id06.se"],
-            ["SSG (Standard Solutions Group)", "https://www.ssg.se"],
+            [
+              "ID06",
+              "https://id06.se"
+            ],
+            [
+              "SSG (Standard Solutions Group)",
+              "https://www.ssg.se"
+            ],
             [
               "Brandskyddsföreningen (Heta Arbeten)",
               "https://www.brandskyddsforeningen.se"
             ],
-            ["Säker Vatten", "https://sakervatten.se"],
-            ["GVK (Säkra Våtrum)", "https://www.gvk.se"],
+            [
+              "Säker Vatten",
+              "https://sakervatten.se"
+            ],
+            [
+              "GVK (Säkra Våtrum)",
+              "https://www.gvk.se"
+            ],
             [
               "Byggföretagen (Safe Construction Training)",
               "https://www.byggforetagen.se"
             ],
-            ["Energiföretagen (ESA/EBR)", "https://www.energiforetagen.se"],
-            ["GWO (Global Wind Safety)", "https://www.globalwindsafety.org"],
-            ["Säkerhetsparken", "https://Byggsakerhetsparken.se"]
+            [
+              "Energiföretagen (ESA/EBR)",
+              "https://www.energiforetagen.se"
+            ],
+            [
+              "GWO (Global Wind Safety)",
+              "https://www.globalwindsafety.org"
+            ],
+            [
+              "Säkerhetsparken",
+              "https://Byggsakerhetsparken.se"
+            ]
           ]
         },
         "entreprenadjuridik": {
           "title": "Entreprenadjuridik & Standardavtal (AB 04 / ABT 06)",
           "links": [
-            ["ME (Maskinentreprenörerna)", "https://www.me.se"],
-            ["BKK (Byggandets Kontraktskommitté)", "https://foreningenbkk.se/"],
+            [
+              "ME (Maskinentreprenörerna)",
+              "https://www.me.se"
+            ],
+            [
+              "BKK (Byggandets Kontraktskommitté)",
+              "https://foreningenbkk.se/"
+            ],
             [
               "Byggföretagen - Entreprenadjuridik",
               "https://byggforetagen.se/radgivning/entreprenadjuridik/"
@@ -850,12 +1045,18 @@
         "ovrigt": {
           "title": "Övriga referenser",
           "links": [
-            ["Incert (Kylteknik/F-gas)", "https://www.incert.se"],
+            [
+              "Incert (Kylteknik/F-gas)",
+              "https://www.incert.se"
+            ],
             [
               "SSF (Stöldskyddsföreningen/Larm)",
               "https://www.stoldskyddsforeningen.se"
             ],
-            ["Säker Skog (Motorsåg/Röjsåg)", "https://sakerskog.se"]
+            [
+              "Säker Skog (Motorsåg/Röjsåg)",
+              "https://sakerskog.se"
+            ]
           ]
         }
       }
@@ -870,6 +1071,7 @@
       "badge": "Ansök nu",
       "title": "Ansök till projekt eller anställningsroll",
       "description": "LinkableWork söker nya anställda, underleverantörer och personer med F-skatt för uppdrag inom mark, anläggning, infrastruktur och entreprenad. Uppdrag löper från maj till oktober.",
+      "moreProjectsLink": "Se alla lediga projekt — vi har fler områden än bara anläggning",
       "name": "Namn",
       "email": "E-post",
       "phone": "Telefon",
@@ -956,11 +1158,8 @@
       "certOptionsOverall": [
         "ID06",
         "Säkerhet på bygget (Safe Construction Training)",
-        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
-        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
         "APV 3 (Arbete på väg)",
         "Heta arbeten",
-        "BAS P / BAS U",
         "HLR (Hjärt- och lungräddning)",
         "Säkra lyft",
         "ADR-S 1.3",
@@ -1063,7 +1262,10 @@
       "references": {
         "title": "Viktiga Webbplatser & Referenser",
         "items": [
-          ["BKK (Byggandets Kontraktskommitté)", "https://foreningenbkk.se/"]
+          [
+            "BKK (Byggandets Kontraktskommitté)",
+            "https://foreningenbkk.se/"
+          ]
         ]
       },
       "tips": {

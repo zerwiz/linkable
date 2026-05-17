@@ -23,7 +23,12 @@ const urgencyMap: Record<string, "high" | "medium" | "low"> = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string, id: string }> }): Promise<Metadata> {
   const { locale, id } = await params;
   const projectKey = projectNumberToKey(id);
-  if (!projectKey) notFound();
+  
+  if (!projectKey) {
+    return {
+      title: "Project Not Found | LinkableWork",
+    };
+  }
 
   const t = await getTranslations({ locale, namespace: "Index.Projects.items" });
   const tIndex = await getTranslations({ locale, namespace: "Index.Projects" });
@@ -96,22 +101,30 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
     urgency: urgencyMap[projectKey] || "low",
   };
 
-  const roles = t.raw(`Projects.items.${projectKey}.roles`) as string[];
-  const locations = t.raw(`Projects.items.${projectKey}.locations`) as string[];
+  const rolesRaw = t.raw(`Projects.items.${projectKey}.roles`);
+  const roles = Array.isArray(rolesRaw) ? rolesRaw : [];
+  
+  const locationsRaw = t.raw(`Projects.items.${projectKey}.locations`);
+  const locations = Array.isArray(locationsRaw) ? locationsRaw : [];
+  
   const hasMachines = roles.includes("Maskinförare") || roles.includes("Maskinforare");
 
   let projectMachines: string[] | undefined;
   let projectRequirements: string[] | undefined;
   
   try {
-    projectMachines = t.raw(`Projects.items.${projectKey}.machines`) as string[];
+    const m = t.raw(`Projects.items.${projectKey}.machines`);
+    if (Array.isArray(m)) projectMachines = m;
   } catch {}
   
   try {
-    projectRequirements = t.raw(`Projects.items.${projectKey}.requirements`) as string[];
+    const r = t.raw(`Projects.items.${projectKey}.requirements`);
+    if (Array.isArray(r)) projectRequirements = r;
   } catch {}
 
-  const machineExamples = projectMachines || (t.raw("Form.machineOptions") as string[]);
+  const machineOptionsRaw = t.raw("Form.machineOptions");
+  const machineExamples = projectMachines || (Array.isArray(machineOptionsRaw) ? machineOptionsRaw : []);
+  
   const certList = projectRequirements || [
     t("Certs.items.id06"),
     t("Certs.items.safe"),
