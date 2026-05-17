@@ -162,6 +162,7 @@
       "languageReq": "Språkkrav: Svenska eller god engelska i arbetslaget. Minst en person per lag måste kunna kommunicera obehindrat på svenska för säkerhetsgenomgångar.",
       "tools": "Verktyg: Underleverantörer förväntas hålla med egna handverktyg och personlig skyddsutrustning (PPE).",
       "insurance": "Försäkring: Giltig ansvarsförsäkring krävs för alla underleverantörer.",
+      "hiredBenefits": "Anställningsförmåner: Vid anställning står vi för trängselavgift och personlig utrustning.",
       "compensation": "Ersättning & Ekonomi",
       "paymentTerms": "Betalningsvillkor: 30 dagar efter godkänd faktura",
       "compensationType": "Ersättningsform: Timarvode enligt överenskommelse eller fastpris på delentreprenad",
@@ -224,7 +225,7 @@
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Vi söker erfarna anläggningsarbetare för markarbete, schaktning och platsförberedelse. Arbete för hand och med handhållna verktyg som spade, skottkärra, stamp och rivjärn. Anläggaren utför grundläggande markberedning, ledningsgrävning, dränering, betongarbete, asfaltering och återställning — allt från grovschakt till finsats. Vi värdesätter noggrannhet, fysik och yrkesstolthet."
+          "description": "Vi söker erfarna anläggningsarbetare för markarbete, schaktning och platsförberedelse. Arbete för hand och med handhållna verktyg som spade, skottkärra, stamp och rivjärn. Anläggaren utför grundläggande markberedning, ledningsgrävning, dränering, betongarbete, asfaltering och återställning — allt från grovschakt till finsats. Vi värdesätter noggrannhet, fysik och yrkesstolthet.\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "infrastructure": {
           "title": "Infrastruktur",
@@ -252,7 +253,7 @@
           "accommodation": "",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med säkerhetsutbildning och maskinförarbevis.\n\nRoller vi söker:\n- Maskinförare med certifieringar (ID06, säkerhet på bygget, APV 1.1, 1.2, 1.3)\n- Arbetslag med minst en person som kan kommunicera på svenska\n- Alla ovan nämnda maskintyper inom anläggningsentreprenad"
+          "description": "Vägbyggnad, ledningsdragning och civila infrastrukturprojekt i hela Sverige. Vi söker erfarna team med maskinförarbevis.\n\nRoller vi söker:\n- Maskinförare med certifieringar (Stockholm Stad, Heta arbeten, APV 1.1, 1.2, 1.3)\n- Arbetslag med minst en person som kan kommunicera på svenska\n- Alla ovan nämnda maskintyper inom anläggningsentreprenad\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "specialized": {
           "title": "Maskinförare",
@@ -263,7 +264,7 @@
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Vi söker förare till bandgrävare, hjullastare, dumper, grävlastare, bandschaktare, väghyvel och vält. För hjulgrävare krävs B-körkort. Giltigt maskinförarbevis krävs. Konkurrenskraftiga timlöner."
+          "description": "Skickliga maskinförare sökes för finplanering, asfaltering och tunga schaktarbeten. Vi söker förare till bandgrävare, hjullastare, dumper, grävlastare, bandschaktare, väghyvel och vält. För hjulgrävare krävs B-körkort. Giltigt maskinförarbevis krävs. Konkurrenskraftiga timlöner.\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "building": {
           "title": "Vindpark",
@@ -274,7 +275,7 @@
           "accommodation": "Baracker / hotell ingår",
           "individual": "Individuell",
           "locationCerts": [],
-          "description": "Specialister sökes för vindparksbygge — markarbete, fundament och montering. Vi söker enskilda individer med erfarenhet av vindkraftsprojekt. F-skatt krävs."
+          "description": "Specialister sökes för vindparksbygge — markarbete, fundament och montering. Vi söker enskilda individer med erfarenhet av vindkraftsprojekt.\n\nLista alla certifieringar och utbildningar du har i ansökan."
         },
         "umea-centrum": {
           "title": "Umeå — vi tar in uppdrag löpande",

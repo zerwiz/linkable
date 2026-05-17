@@ -292,6 +292,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ locale
                 <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-400" />
                 <span>{t("Projects.insurance")}</span>
               </li>
+              <li className="flex items-start gap-2">
+                <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-green-400" />
+                <span>{t("Projects.hiredBenefits")}</span>
+              </li>
             </ul>
           </div>
 

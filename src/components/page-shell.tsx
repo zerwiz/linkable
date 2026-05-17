@@ -291,16 +291,6 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground">{t("Footer.certs.title")}</h4>
-            <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li>{t("Certs.items.id06")}</li>
-              <li>{t("Certs.items.safe")}</li>
-              <li>{t("Certs.items.apv1")}</li>
-              <li>{t("Certs.items.machine")}</li>
-            </ul>
-          </div>
-
-          <div>
             <h4 className="text-sm font-semibold text-foreground">{t("Footer.contact.title")}</h4>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2 font-medium text-foreground">
