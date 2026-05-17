@@ -1,0 +1,1106 @@
+{
+  "Metadata": {
+    "title": "LinkableWork | Kumppaniportaali rakennusalan rekrytointiin",
+    "description": "Rekrytoimme sekä yrityksiä että yksityishenkilöitä rakennusprojekteihin koko Ruotsissa. Hae aliurakoitsijana, yrityksenä, työryhmänä tai yksityishenkilönä — yhdistämme sinut oikeaan projektiin tai työsuhteeseen.",
+    "ogTitle": "LinkableWork Kumppaniportaali",
+    "ogDescription": "Löydä rakennusprojekteja tai työpaikka koko Ruotsissa. Hae yrityksenä, aliurakoitsijana tai yksityishenkilönä.",
+    "twitterTitle": "LinkableWork Kumppaniportaali",
+    "twitterDescription": "Löydä rakennusprojekteja tai työpaikka koko Ruotsissa."
+  },
+  "Index": {
+    "RequestJob": {
+      "badge": "Yksityishenkilöille & Yrityksille",
+      "title": "Tarvitsetko työn tehtäväksi?",
+      "description": "Oletpa sitten yksityishenkilö, joka haluaa rakentaa terassin, kaivaa altaan tai remontoida kotia — tai yritys, jolla on suurempi urakkatarve. Kuvaile tarpeesi, niin palaamme tarjouksella.",
+      "benefits": {
+        "vetted": {
+          "title": "Varmennetut tekijät",
+          "description": "Kaikilla yhteistyökumppaneillamme on voimassa olevat sertifikaatit, ID06 ja vastuuvakuutus. Turvallisuutta alusta alkaen."
+        },
+        "offer": {
+          "title": "Tarjous ilman sitoumusta",
+          "description": "Kuvaile tarpeesi ja saat maksuttoman tarjouksen. Ei piilokuluja — vain selkeät hinnat."
+        },
+        "scope": {
+          "title": "Kaikki pienestä suureen",
+          "description": "Altaan kaivusta ja talon perustuksista suuriin infrastruktuuriprojekteihin. Löydämme oikean tekijän jokaiseen työhön."
+        }
+      },
+      "form": {
+        "title": "Kerro projektistasi",
+        "description": "Täytä lomake, niin otamme yhteyttä tarjouksella.",
+        "name": "Nimi",
+        "email": "Sähköposti",
+        "phone": "Puhelin",
+        "company": "Yritys (valinnainen)",
+        "jobType": "Työn tyyppi",
+        "jobTypeOptions": [
+          "Perustus & maanrakennus",
+          "Allas & puutarha",
+          "Remontti & muutostyö",
+          "Uudisrakennus",
+          "Infrastruktuuri & tie",
+          "Teollisuus & varasto",
+          "Katto & julkisivu",
+          "Sähkö & LVI",
+          "Muuraus & betonityö",
+          "Muu"
+        ],
+        "location": "Työpaikka",
+        "budget": "Arvioitu budjetti (valinnainen)",
+        "budgetOptions": [
+          "Alle 50 000 kr",
+          "50 000–200 000 kr",
+          "200 000–500 000 kr",
+          "500 000–1 000 000 kr",
+          "Yli 1 000 000 kr",
+          "En tiedä"
+        ],
+        "timeline": "Toivottu aikataulu",
+        "descriptionLabel": "Kuvaile mitä pitää tehdä",
+        "descriptionPlaceholder": "Kerro mahdollisimman tarkasti, mitä haluat teetettävän...",
+        "submit": "Pyydä tarjous",
+        "sending": "Lähetetään...",
+        "success": "Kiitos kyselystäsi!",
+        "successDescription": "Palaamme tarjouksella 24 tunnin kuluessa.",
+        "error": "Lähetys epäonnistui. Yritä uudelleen."
+      }
+    },
+    "RequestWorkers": {
+      "badge": "Yrityksille",
+      "title": "Tarvitsetko työntekijöitä?",
+      "description": "Onko sinulla projekti, joka kaipaa ammattitaitoisia käsiä? Toimitamme taitavia työntekijöitä ja työryhmiä työmaallesi. Voimme myös julkaista projektisi portaalissamme löytääksemme täydellisen matchin.",
+      "benefits": {
+        "supply": {
+          "title": "Toimitamme henkilöstöä",
+          "description": "Tarvitsetpa sitten yksittäisen koneenkuljettajan tai koko 20 hengen työryhmän, järjestämme sen nopeasti ja turvallisesti."
+        },
+        "portal": {
+          "title": "Julkaise portaalissa",
+          "description": "Tavoita tuhannet varmennetut aliurakoitsijat ja ammattityöntekijät lataamalla projektisi alustallemme."
+        },
+        "vetted": {
+          "title": "Varmennettu osaaminen",
+          "description": "Kaikilla työntekijöillämme on voimassa olevat sertifikaatit kuten ID06, Työturvallisuus rakennustyömaalla ja APV. Hoidamme kaikki tarkastukset."
+        }
+      },
+      "form": {
+        "title": "Lataa projektisi",
+        "description": "Kerro hieman tarpeestasi, niin otamme yhteyttä löytääksemme oikean ratkaisun.",
+        "companyName": "Yrityksen nimi",
+        "contactPerson": "Yhteyshenkilö",
+        "projectLocation": "Projektin sijainti",
+        "workType": "Työn tyyppi",
+        "workersNeeded": "Tarvittava henkilömäärä",
+        "startDate": "Toivottu aloituspäivä",
+        "descriptionLabel": "Tarpeen kuvaus",
+        "submit": "Lähetä kysely",
+        "success": "Kiitos kyselystäsi!",
+        "successDescription": "Tarkastelemme tarvettasi ja palaamme asiaan mahdollisimman pian."
+      }
+    },
+    "Navbar": {
+      "projects": "Projektit",
+      "requestWorkers": "Tarvitsetko työntekijöitä?",
+      "requestJob": "Tarvitsetko työn tehtäväksi?",
+      "howItWorks": "Näin se toimii",
+      "whyLinkable": "Miksi LinkableWork?",
+      "guide": "Ammattitodistukset & Sertifikaatit",
+      "extra": "Lisää",
+      "anlaggning": "Rakennusala",
+      "anlaggningProjects": "Rakennusprojektit",
+      "applyAnlaggning": "Hae rakennusalalle",
+      "contact": "Yhteystiedot",
+      "applyNow": "Hae nyt",
+      "toggleMenu": "Avaa valikko"
+    },
+    "Hero": {
+      "badge": "Rekrytoimme nyt kesäksi & syksyksi 2026",
+      "titlePart1": "Sinun osaamisesi.",
+      "titlePart2": "Meidän projektimme.",
+      "titlePart3": "Rakennettu yhdessä.",
+      "description": "LinkableWork yhdistää yksityishenkilöt, työntekijät, taitavat aliurakoitsijat, koneenkuljettajat ja työryhmät rakennusprojekteihin koko Ruotsissa. Rekisteröidy kerran, tule matchatuksi suoraan.",
+      "applyButton": "Hae kumppaniksi",
+      "viewProjects": "Näytä avoimet projektit",
+      "trust": {
+        "secure": "Turvallinen asiakirjojen lataus",
+        "response": "Vastaus 24 tunnin sisällä",
+        "projects": "Projekteja koko Ruotsissa"
+      },
+      "recruiting": {
+        "title": "Rekrytoimme juuri nyt",
+        "urgent": "KIIREELLINEN",
+        "scroll": "Vieritä alas nähdäksesi kaikki avoimet tehtävät",
+        "items": {
+          "groundworks": "Maanrakennus & kaivutyö",
+          "groundworksLoc": "Luleå, Skellefteå, Umeå",
+          "infrastructure": "Infrastruktuuri & tietöitä",
+          "infrastructureLoc": "Tukholma, Göteborg",
+          "machine": "Koneenkuljettajat",
+          "machineLoc": "Useita paikkakuntia"
+        }
+      }
+    },
+    "Projects": {
+      "badge": "Avoimet projektit",
+      "title": "Löydä oikea projekti osaamisellesi",
+      "description": "Rekrytoimme aktiivisesti koko Ruotsissa maanrakennukseen, infrastruktuuriin ja erikoistuneisiin rakennusrooleihin. Selaa ajankohtaisia avoimia paikkoja ja hae muutamassa minuutissa.",
+      "location": "Sijainti",
+      "responseTime": "Vastausaika",
+      "status": "Tila",
+      "activeRecruiting": "Aktiivinen rekrytointi",
+      "projectId": "Projekti-ID",
+      "quickFacts": "Pikatiedot",
+      "detailSubtitle": "Täältä löydät yksityiskohtaiset tiedot tulevasta projektista ja ohjeet hakemiselle.",
+      "rolesSubtitle": "Etsimme vahvistusta seuraaviin kategorioihin:",
+      "machineNote": "Tarkenna hakemuksessasi, mihin koneisiin sinulla on kokemusta ja mitkä ajokortit sinulla on.",
+      "about": "Projektista",
+      "rolesTitle": "Roolit, joita etsimme",
+      "machineList": "🚜 Konelista (esimerkkejä tarpeesta)",
+      "machineListDesc": "Koneenkuljettajilta haemme ensisijaisesti kokemusta seuraavista:",
+      "workingConditions": "Työehdot & Varusteet",
+      "languageReq": "Kielivaatimus: Ruotsi tai hyvä englanti työryhmässä. Vähintään yhden henkilön ryhmässä on kyettävä kommunikoimaan sujuvasti ruotsiksi turvallisuuskatsauksia varten.",
+      "tools": "Työvälineet: Aliurakoitsijoiden odotetaan tuovan omat käsityökalunsa ja henkilökohtaiset suojavarusteensa (PPE).",
+      "insurance": "Vakuutus: Voimassa oleva vastuuvakuus vaaditaan kaikilta aliurakoitsijoilta.",
+      "compensation": "Korvaus & Talous",
+      "paymentTerms": "Maksuehdot: 30 päivää hyväksytyn laskun jälkeen",
+      "compensationType": "Korvausmuoto: Tuntipalkka sopimuksen mukaan tai kiinteä hinta osaurakasta",
+      "ftaxReq": "F-skatt: Pakollinen kaikille hakeville yrityksille ja toiminimille.",
+      "contactPerson": "Yhteyshenkilö",
+      "contactRecruiter": "Vastaava rekrytoija:",
+      "application": "Hakemus",
+      "checklistHeader": "Tarkistuslista hakemusta varten:",
+      "checklistProjectId": "Ilmoita Projektin ID: {id}",
+      "checklistFtax": "Liitä kopio F-skatt-todistuksesta",
+      "checklistCerts": "Listaa asiaankuuluvat sertifikaatit (ID06-numero vaaditaan)",
+      "checklistReferences": "Lyhyt kuvaus aiemmista vastaavista projekteista (referenssit)",
+      "checklistDeadline": "Lähetä kiinnostuksenilmaisusi viimeistään {deadline}",
+      "requirements": "Sertifiointivaatimukset",
+      "applyNow": "Hae nyt",
+      "askQuestion": "Kysy meiltä",
+      "urgency": {
+        "urgent": "KIIREELLINEN",
+        "recruiting": "REKRYTOI",
+        "open": "AVOIN"
+      },
+      "roleSpecific": "Roolikohtaiset tehtävät",
+      "worksites": "Sijainnit / Työmaat",
+      "applyButton": "Hae tähän projektiin",
+      "moreInfo": "Lisätietoja",
+      "startDate": "Aloitus",
+      "applyDeadline": "Haku päättyy",
+      "accommodation": "Majoitus",
+      "id06Note": "ID06 voidaan järjestää LinkableWorkin kautta työsuhteen yhteydessä",
+      "locationCertsTitle": "Paikkakohtaiset sertifikaatit",
+      "individual": "Yksilöllinen",
+      "items": {
+        "skagersvagen": {
+          "title": "Tukholma",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Tukholma"],
+          "startDate": "Kesäkuu 2026",
+          "applyDeadline": "15. toukokuuta 2026",
+          "accommodation": "",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "machines": ["Grävmaskin", "Hjullastare"],
+          "requirements": [
+            "ID06",
+            "Heta arbeten",
+            "Grävmaskin",
+            "Anläggningsförare",
+            "B (Personbil)",
+            "ADR-S 1.3",
+            "Stockholm Stad kurs"
+          ],
+          "description": "Hulevesi- ja salaojitustyöt Skagersvägenillä. Työhön kuuluu käsinkaivu/imuauto, kaivinkone + maamies, täyttö, poiskuljetus, putkenasennus, ennallistus, kivikistat sekä salaojitus salaojalevyillä, suodatinkankaalla, tulpilla, salaojaputkilla, maaputkilla ja kaikki asennukseen ja asetteluun liittyvä työ. Myös ennallistus multamaalla ja nurmikon siemenellä, vesijohtolinjan siirto, suunnittelu, koordinointi ja työnjohto sisältyvät. Työn arvioidaan kestävän noin 4 kuukautta aloituksesta luovutukseen ja ennallistukseen. Oletamme puhtaita maamassoja – näytteenotto sisältyy. Työmaakoppi/henkilöstötilat suihkulla/wc:llä tarjoaa asiakas tai veloitetaan erikseen."
+        },
+        "groundworks": {
+          "title": "Maanrakennus",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Useita paikkakuntia"],
+          "startDate": "Kesäkuu 2026",
+          "applyDeadline": "30. toukokuuta 2026",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Perustustyöt, kaivutyö ja työmaan valmistelu uusia asuin- ja liikerakennusprojekteja varten Norrbottenissa ja Västerbottenissa. Välitön aloitus mahdollinen ryhmille, joilla on voimassa oleva ID06 ja APV-sertifiointi."
+        },
+        "infrastructure": {
+          "title": "Infrastruktuuri",
+          "roles": [
+            "Maskinförare",
+            "Arbetslag",
+            "Grävmaskin",
+            "Hjullastare",
+            "Grävlastare",
+            "Bandschaktare",
+            "Väghyvel",
+            "Dumper",
+            "Vält",
+            "Teleskoptruck",
+            "Mobilkran",
+            "Tornkran",
+            "Betongpump",
+            "Asfaltsläggare",
+            "Pålmaskin",
+            "Spontmaskin"
+          ],
+          "locations": ["Koko Ruotsi"],
+          "startDate": "Elokuu 2026",
+          "applyDeadline": "15. kesäkuuta 2026",
+          "accommodation": "",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Tienrakennus, johtojen vetäminen ja siviili-infrastruktuuriprojektit koko Ruotsissa. Etsimme kokeneita ryhmiä, joilla on turvallisuuskoulutus ja koneenkuljettajan todistukset.\n\nRoolit, joita etsimme:\n- Maskinförare sertifikaateilla (ID06, työturvallisuus rakennustyömaalla, APV 1.1, 1.2, 1.3)\n- Työryhmiä, joissa vähintään yksi henkilö osaa kommunikoida ruotsiksi\n- Kaikki edellä mainitut konetyypit rakennusurakoissa"
+        },
+        "specialized": {
+          "title": "Erikoistunut konetyö",
+          "roles": ["Maskinförare"],
+          "locations": ["Useita paikkakuntia"],
+          "startDate": "Heinäkuu 2026",
+          "applyDeadline": "1. kesäkuuta 2026",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Taitavia koneenkuljettajia etsitään viimeistelytöihin, asfaltointiin ja raskaisiin kaivutöihin. Voimassa oleva koneenkuljettajan todistus ja APV-sertifiointi vaaditaan. Kilpailukykyiset tuntipalkat."
+        },
+        "building": {
+          "title": "Rakennus & maanrakennus",
+          "roles": ["Anläggare", "Arbetslag"],
+          "locations": ["Useita paikkakuntia"],
+          "startDate": "Toukokuu 2026",
+          "applyDeadline": "30. huhtikuuta 2026",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Yleisiä rakennusryhmiä etsitään asuinrakennusprojekteihin perustuksista valmiiseen. F-skatt vaaditaan yksittäisiltä hakijoilta. 3-8 hengen ryhmät suositeltuja."
+        },
+        "umea-centrum": {
+          "title": "Uumaja — otamme toimeksiantoja jatkuvasti",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Uumaja seutuineen"],
+          "startDate": "Jatkuvasti",
+          "applyDeadline": "Jatkuvasti",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Otamme toimeksiantoja jatkuvasti ja matchaamme töitä henkilöille, joita meillä on hakijoina. Tarkemmat työmaat ilmoitetaan pian. Hae ammattiroolisi mukaan, niin otamme yhteyttä kun sopiva toimeksianto ilmaantuu."
+        },
+        "lulea-hamn": {
+          "title": "Luulajan sataman laajennus",
+          "roles": ["Maskinförare", "Arbetslag"],
+          "locations": ["Luulaja"],
+          "startDate": "Elokuu 2026",
+          "applyDeadline": "1. heinäkuuta 2026",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Luulajan sataman laajennus uusine laitureineen, lastausalueineen ja rautatieyhteyksineen. Raskaat kaivutyöt, paalutus ja asfaltointi. Koneenkuljettajia APV-sertifioinnilla tarvitaan."
+        },
+        "skelleftea-campus": {
+          "title": "Skellefteån kampus-alue",
+          "roles": ["Anläggare", "Maskinförare", "Arbetslag"],
+          "locations": ["Skellefteå"],
+          "startDate": "Syyskuu 2026",
+          "applyDeadline": "10. elokuuta 2026",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Uudet koulutusrakennukset ja ympäröivä infrastruktuuri Skellefteån kampuksella. Maanrakennus, perustustyöt ja työmaan valmistelu rakennuksen vaiheeseen 1, alkaen välittömästi."
+        },
+        "pitea-industri": {
+          "title": "Piteån teollisuusalue",
+          "roles": ["Anläggare", "Arbetslag"],
+          "locations": ["Piteå"],
+          "startDate": "Lokakuu 2026",
+          "applyDeadline": "1. syyskuuta 2026",
+          "accommodation": "Parakit / hotelli sisältyy",
+          "individual": "Yksilöllinen",
+          "locationCerts": [],
+          "description": "Teollisuusalueen kehittäminen Piteån laidalla. Uudet tieverkostot, johtojen vedot ja perustukset liikerakennuksille. Ihanteellinen ryhmille, joilla on kokemusta infrastruktuurista ja maanrakennuksesta."
+        }
+      }
+    },
+    "HowItWorks": {
+      "badge": "Näin se toimii",
+      "title": "Kolme tapaa käyttää LinkableWorkia",
+      "description": "Oletpa sitten etsimässä työtä, tarvitsemassa henkilöstöä tai haluamassa työn tehtäväksi — meillä on prosessi sinua varten.",
+      "step": "VAIHE",
+      "tabs": {
+        "worker": "Hae työtä",
+        "company": "Vuokraa henkilöstöä",
+        "client": "Tilaa työ"
+      },
+      "titles": {
+        "worker": "Neljä askelta seuraavaan projektiisi",
+        "company": "Neljä askelta oikeaan henkilöstöön",
+        "client": "Neljä askelta tehtyyn työhön"
+      },
+      "descriptions": {
+        "worker": "Virtaviivainen prosessimme on suunniteltu rakennusalan ammattilaisille. Hae puhelimestasi työtehtävien välillä, paperityötä ei tarvita.",
+        "company": "Löydä päteviä työntekijöitä ja työryhmiä projektiisi. Hoidamme koko prosessin julkaisusta käynnistykseen.",
+        "client": "Kuvaile mitä haluat tehtävän — altaasta ja terassista suurempiin rakennusprojekteihin — niin palaamme tarjouksella."
+      },
+      "flows": {
+        "worker": {
+          "steps": {
+            "apply": {
+              "title": "Hae projektiin",
+              "description": "Selaa avoimia tehtäviä ja hae suoraan projekteihin, jotka sopivat taitoisiisi ja mieltymyksiisi. Virtaviivainen lomakkeemme kerää kaiken tiedon, jota rekrytoijat tarvitsevat — roolit, sertifikaatit, kokemus — jotta voit hakea minuuteissa puhelimestasi."
+            },
+            "upload": {
+              "title": "Lataa sertifikaatit",
+              "description": "Lataa pakolliset sertifikaattisi turvallisesti — ID06, Työturvallisuus rakennustyömaalla, APV ja koneenkuljettajan todistukset. Eikö sinulla ole ID06:ta? Voimme järjestää sen työsuhteen yhteydessä."
+            },
+            "match": {
+              "title": "Tule matchatuksi",
+              "description": "Tiimimme tarkistaa hakemuksesi tai profiilisi ja matchaa sinut aktiivisiin projekteihin sijaintitoiveidesi, sertifikaattiesi ja käytettävyytesi perusteella. Hyvin matchaavat hakijat saavat välittömän ilmoituksen sähköpostitse."
+            },
+            "profile": {
+              "title": "Rekisteröi profiilisi (tulossa pian)",
+              "description": "Luo kumppanitilisi alle 5 minuutissa. Kerro yrityksestäsi tai toiminimestäsi, ensisijaisista rooleista, erikoistumisesta ja tiimin kapasiteetista. Lomake on suunniteltu nopeaan täyttöön myös mobiililla työmaalla."
+            }
+          }
+        },
+        "company": {
+          "steps": {
+            "post": {
+              "title": "Julkaise tarpeesi",
+              "description": "Lataa projektisi tai kuvaile mitä henkilöstöä tarvitset — määrä, roolit, sertifiointivaatimukset ja toivottu aloitusaika. Autamme muotoilemaan ilmoituksen parhaan matchin saavuttamiseksi."
+            },
+            "review": {
+              "title": "Arvioi hakijat",
+              "description": "Tiimimme seuloo ja matchaa päteviä hakijoita vaatimustesi mukaan. Saat kuratoidun listan varmennetuista työntekijöistä ja aliurakoitsijoista valmiina haastatteluun."
+            },
+            "hire": {
+              "title": "Valitse & palkkaa",
+              "description": "Valitse parhaiten sopivat hakijat. Hoidamme sopimukset, ID06-rekisteröinnin ja kaiken hallinnon, jotta pääset nopeasti alkuun."
+            },
+            "start": {
+              "title": "Aloita työ",
+              "description": "Henkilöstö on paikalla sovitun aikataulun mukaisesti. Seuraamme projektin kulkua varmistaaksemme, että kaikki sujuu."
+            }
+          }
+        },
+        "client": {
+          "steps": {
+            "describe": {
+              "title": "Kuvaile projektisi",
+              "description": "Kerro mitä haluat tehtävän — olipa kyseessä allas, terassi, talon perustus tai suurempi urakka. Ilmoita sijainti, budjetti ja toivottu aikataulu."
+            },
+            "quote": {
+              "title": "Saa tarjous",
+              "description": "Tarkistamme projektisi ja palaamme maksuttomalla tarjouksella 24 tunnin kuluessa. Selkeät hinnat ilman piilokuluja."
+            },
+            "approve": {
+              "title": "Hyväksy & varaa",
+              "description": "Sopiiko tarjous? Hyväksy, niin varaamme aloituspäivän ja koordinoimme kaikki tarvittavat resurssit, sertifikaatit ja varusteet."
+            },
+            "done": {
+              "title": "Työ tehdään",
+              "description": "Varmennetut tekijämme suorittavat työn sovitusti. Olemme tukenasi koko prosessin ajan."
+            }
+          }
+        }
+      }
+    },
+    "Why": {
+      "badge": "Miksi LinkableWork?",
+      "title": "Miksi yritykset, työntekijät ja tilaajat valitsevat meidät",
+      "description": "Oletpa kuka tahansa — teemme rakennusprosessista sujuvamman, nopeamman ja turvallisemman.",
+      "tabs": {
+        "worker": "Työnhakijoille",
+        "company": "Yrityksille",
+        "client": "Tilaajille"
+      },
+      "worker": {
+        "badge": "Jos etsit työtä",
+        "title": "Älykkäämpi tapa löytää rakennusurakoita",
+        "description": "Poistamme kitkan taitavien työntekijöiden ja niitä tarvitsevien projektien välillä. Tässä mikä erottaa meidät perinteisestä rekrytoinnista.",
+        "benefits": {
+          "matching": {
+            "title": "Nopea matchaus",
+            "description": "Rekrytoijamme tarkistavat hakemukset 24 tunnin sisällä. Hakijat, joilla on haluttuja sertifikaatteja kuten APV ja koneenkuljettajan todistukset, priorisoidaan ja heihin otetaan välittömästi yhteyttä."
+          },
+          "location": {
+            "title": "Projekteja koko Ruotsissa",
+            "description": "Luulajasta Göteborgiin teemme yhteistyötä suurten rakennusliikkeiden kanssa tarjotaksemme sinulle projekteja haluamallasi alueella. Ilmoita maantieteelliset toiveesi rekisteröitymisen yhteydessä."
+          },
+          "secure": {
+            "title": "Turvallista & säädöstenmukaista",
+            "description": "Kaikki ladatut asiakirjat salataan ja tallennetaan turvallisesti. Hoidamme F-skatt-verifioinnin, ID06-tarkistukset ja sertifikaattien validoinnin, jotta voit keskittyä työhön."
+          },
+          "teams": {
+            "title": "Suunniteltu ryhmille & yksilöille",
+            "description": "Oletpa sitten suuri aliurakoitsija, pieni yritys tai yksityishenkilö, portaali sopeutuu profiiliisi. Rekisteröidy 20 hengen ryhmänä tai yksin."
+          },
+          "transparent": {
+            "title": "Selkeät vaatimukset",
+            "description": "Jokainen projektimainos ilmoittaa selkeästi sertifiointivaatimukset, rooliodotukset ja keston. Ei yllätyksiä — tiedät tarkalleen mitä vaaditaan ennen hakemista."
+          },
+          "mobile": {
+            "title": "Suunniteltu rakennusalalle",
+            "description": "Portaalimme on rakennettu mobiili edellä, koska tiedämme että olet usein kentällä. Hakemuslomake toimii saumattomasti kaikilla älypuhelimilla, tableteilla ja tietokoneilla."
+          }
+        }
+      },
+      "company": {
+        "badge": "Yrityksille, jotka tarvitsevat henkilöstöä",
+        "title": "Vuokraa ammattitaitoisia rakennustyöntekijöitä — nopeasti ja joustavasti",
+        "description": "Teemme yrityksille helpoksi löytää varmennettuja työntekijöitä, tarvitsetpa sitten koneenkuljettajan tai kokonaisen työryhmän.",
+        "benefits": {
+          "speed": {
+            "title": "Henkilöstöä 48 tunnissa",
+            "description": "Tarvitsetko henkilöstöä nopeasti? Prosessimme julkaisusta matchaukseen kestää yleensä alle kaksi päivää. Seulomme kaikki hakijat etukäteen."
+          },
+          "vetted": {
+            "title": "Varmennetut työntekijät",
+            "description": "Kaikki hakijat on tarkistettu etukäteen voimassa olevilla ID06:lla, sertifikaateilla ja F-skattilla. Ei hallinnointia — vain valmiita aloittamaan."
+          },
+          "flexible": {
+            "title": "Joustava miehitys",
+            "description": "Vuokraa tunnin, projektin tai pitkäaikaisesti. Skaalaa ylös tai alas tarpeen mukaan. Ei pitkiä irtisanomisaikoja."
+          },
+          "support": {
+            "title": "Oma yhteyshenkilö",
+            "description": "Saat henkilökohtaisen rekrytointivastaavan, joka tuntee yrityksesi ja tarpeesi. Sama yhteyshenkilö joka kerta."
+          },
+          "quality": {
+            "title": "Laatuvarmistettu matchaus",
+            "description": "Emme matchaa pelkästään osaamisen perusteella — otamme huomioon kemian, työkulttuurin ja aiemmat kokemukset parhaan tuloksen saavuttamiseksi."
+          },
+          "network": {
+            "title": "Laaja verkosto",
+            "description": "Pääsy tuhansiin etukäteen tarkistettuihin työntekijöihin, koneenkuljettajiin ja aliurakoitsijoihin koko Ruotsissa."
+          }
+        }
+      },
+      "client": {
+        "badge": "Jos tarvitset työn tehtäväksi",
+        "title": "Saa tarjous rakennusprojektistasi — ilman sitoumusta",
+        "description": "Oletpa sitten yksityishenkilö tai yritys, autamme sinua löytämään oikean tekijän työhön.",
+        "benefits": {
+          "freeQuote": {
+            "title": "Tarjous ilman kustannuksia",
+            "description": "Kuvaile mitä tarvitset, niin saat maksuttoman tarjouksen 24 tunnin kuluessa. Ei piilokuluja — vain selkeät hinnat."
+          },
+          "vetted": {
+            "title": "Varmennetut tekijät",
+            "description": "Kaikilla tekijöillämme on voimassa olevat sertifikaatit, ID06 ja vastuuvakuutus. Voit tuntea olosi turvalliseksi alusta alkaen."
+          },
+          "allSizes": {
+            "title": "Kaikki pienestä suureen",
+            "description": "Allaskaivuista ja terassinrakennuksesta suuriin urakoihin ja infrastruktuuriprojekteihin. Mikään työ ei ole liian pieni tai liian suuri."
+          },
+          "support": {
+            "title": "Tukea koko prosessin ajan",
+            "description": "Olemme mukana tarjouksesta valmiiseen lopputulokseen. Onko kysymyksiä tai ongelmia? Ota yhteyttä, ratkaisemme ne."
+          },
+          "insurance": {
+            "title": "Vakuutettu turvallisuus",
+            "description": "Kaikilla tekijöillä on vastuuvakuutus ja varmistamme ID06:n ja sertifikaatit. Olet turvassa alusta loppuun."
+          },
+          "timely": {
+            "title": "Aikatakuu",
+            "description": "Palaamme tarjouksella 24 tunnin kuluessa ja työ aloitetaan sovitun aikataulun mukaisesti — täsmällisesti ja ammattimaisesti."
+          }
+        }
+      }
+    },
+    "Certs": {
+      "title": "Sertifikaatit, jotka varmennamme",
+      "description": "Lataa sertifikaattisi rekisteröitymisen yhteydessä — hoidamme validoinnin",
+      "items": {
+        "id06": "ID06",
+        "safe": "Työturvallisuus rakennustyömaalla",
+        "apv1": "APV 1.1, 1.2, 1.3 (Arbete på väg)",
+        "apv2": "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "apv3": "APV 3 (Arbete på väg)",
+        "heta": "Kuumat työt",
+        "basP": "BAS P (Suunnittelu)",
+        "basU": "BAS U (Toteutus)",
+        "hlr": "ELR (Elvytys)",
+        "sakralyft": "Turvalliset nostot",
+        "lastkoppling": "Kuormankytkentä",
+        "adr": "ADR-S 1.3",
+        "stockholm": "Tukholman kaupungin kurssi",
+        "ebr": "EBR (Sähköturvallisuus rakennus & purku)",
+        "ssgEntre": "SSG Entré",
+        "ssgSafety": "SSG Turvallisuus",
+        "ssgSbn": "SSG SBN",
+        "machine": "Koneenkuljettajan todistus",
+        "ftax": "F-skatt",
+        "esa": "ESA (Sähköturvallisuusohjeet)",
+        "kvartsdamm": "Kvartsipöly",
+        "gwo": "GWO (Global Wind Organisation)",
+        "hlrHjartstartare": "ELR defibrillaattorilla",
+        "hetaBrandvakt": "Kuumat työt / Palovartija",
+        "sakraLyftLastkoppling": "Turvalliset nostot / Kuormankytkentä",
+        "svetsLodning": "Hitsaussertifikaatti / Juotto",
+        "asbestPcb": "Asbesti / PCB",
+        "fallskyddRaddning": "Putouksenestö & Pelastus"
+      }
+    },
+    "Guide": {
+      "badge": "Opas",
+      "title": "Opas: Ruotsalaiset ammattitodistukset ja alan sertifikaatit",
+      "description": "Tässä on kattava yleiskatsaus yleisimmistä ammattitodistuksista ja sertifikaateista Ruotsin rakennus- ja maanrakennusalalla, luokiteltuna kategorian ja myöntäjän mukaan.",
+      "tipBadge": "Vinkkejä hakemukseen",
+      "tip": "ID06: Ilmoita aina korttisi numero. Dokumentaatio: Kuvaa ammattitodistuksesi ja sertifikaattisi (molemmat puolet) ja liitä hakemukseen. YKB/APV: Tarkista voimassaolopäivä – emme voi lähettää henkilöstöä vanhentuneilla sertifikaateilla.",
+      "showFullGuide": "Katso koko opas",
+      "sections": {
+        "roles": {
+          "title": "Keskeiset roolit & ammatit",
+          "subtitle": "Rekrytoimme henkilöstöä laajaan kirjoon rooleja projekteihimme.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Rakentaja / maa- ja rakennustyöntekijä",
+                "Koneenkuljettaja (kaivinkone, pyöräkuormaaja jne.)",
+                "Työryhmä (kokonaisia tiimejä urakkaan)",
+                "Rakennussukeltaja (erikoisroolit)",
+                "Puutarharakentaja & viimeistelijä",
+                "Työpäällikkö & työnjohtaja",
+                "Mittausteknikko (maastoonmerkintä & mittaus)",
+                "KMA-koordinaattori (laatu, ympäristö, työympäristö)",
+                "Projektipäällikkö / kustannuslaskija"
+              ]
+            }
+          }
+        },
+        "byn": {
+          "title": "1. Ammattityöntekijät (BYN & muut toimikunnat)",
+          "subtitle": "Näihin vaaditaan yleensä suoritettu oppiaika ja hyväksytty ammattiteoreettinen koe.",
+          "groups": {
+            "tra": {
+              "title": "Puu, Betoni, Muuri & Sisustus",
+              "items": [
+                "Puutyöntekijä (kirvesmies): Ammattitodistus talonrakennukseen ja puurakenteisiin.",
+                "Puutyöntekijä - Prefab: Valmiiden rakennusmoduulien asennus.",
+                "Betoniya: Valu, raudoitus ja betonihionta.",
+                "Betoni-pätevyys Luokka 1 & 2: Vaatimus vastuuhenkilölle kantavien rakenteiden valussa (myöntää mm. Betoniyhdistys).",
+                "Muurare & Laatoittaja: Muuraus ja kaakeli/klinkeröinti. Märkätilapätevyys GVK:n, BKR:n tai MVK:n kautta.",
+                "Lattianasentaja: Ammattitodistus mattoasennukseen, parkettiin ja hiontaan.",
+                "Kattoasentaja: Erikoistunut vesikatteisiin ja kattomateriaalien asennukseen."
+              ]
+            },
+            "mark": {
+              "title": "Maa & Rakennus",
+              "items": [
+                "Tie- ja rakennustyöntekijä: Perustukset ja maanvalmistelu.",
+                "Putkiasentaja (VA): Erikoistunut vesiin ja viemäreihin (vaatii usein VAV/STC-auktorisoinnin).",
+                "Rakennussukeltaja: Erikoisrooli (Luokka A tai B -sertifikaatti vaaditaan työsuojeluviranomaiselta).",
+                "Kiviasentaja: Erikoistunut reuna- ja katukiveykseen sekä laatoitukseen.",
+                "Päällystystyöntekijä / asfaltoija: Työ levittimellä, jyrällä ja säädöllä.",
+                "Kalliotyöntekijä / kallionräjäyttäjä: Vaatii räjäytyskortin luokka A tai B sekä usein tietoa kallion vahvistuksesta.",
+                "Karkea- & purkutyöntekijä: Karkea suunnittelu, raskas purku ja rakennussiivous.",
+                "Rei'ittäjä: Timanttiporaus ja betonisahaus raskaissa rakenteissa.",
+                "Telineiden rakentaja: Ammattitodistus rakennustelineiden asennukseen."
+              ]
+            }
+          }
+        },
+        "maskin": {
+          "title": "2. Koneet & Nosturit (BYN / TYA)",
+          "subtitle": "Koneenkuljettajilta (rakennuskoneenkuljettajat) vaaditaan erityiset ammattitodistukset jokaiselle konetyypille.",
+          "groups": {
+            "grav": {
+              "title": "Kaivu- & kaivinkoneet",
+              "items": [
+                "Kaivinkone: Tela- ja pyöräalustaiset koneet.",
+                "Kaivukuormaaja: Yhdistelmäkone kaivuun ja kuormaukseen.",
+                "Telakaivinkone: Raskaisiin kaivutöihin ja maaston tasaukseen.",
+                "Tiehöylä: Tarkkuustasaukseen tienrakennuksessa.",
+                "Dumpperi: Massojen kuljetus maastossa.",
+                "Jyrä: Maa-aineksen, soran tai asfaltin tiivistykseen.",
+                "Harjakone: Teiden hoitoon ja siivoukseen."
+              ]
+            },
+            "lyft": {
+              "title": "Nosto-, Trukki & Erikoiskoneet",
+              "items": [
+                "Pyöräkuormaaja: Jaettu rakennus (BYN) ja tavarankäsittely (TYA).",
+                "Teleskooppitrukki: Yleiskone korkeisiin nostoihin.",
+                "Mobiilinosturi / torninosturi: Vaatii laajan ammattitodistuksen nosturinkuljettajalle.",
+                "Nosturiauto: Koulutustodistus kuorma-autoon asennetulle nosturille (>18 tonnimetriä).",
+                "Siltanostin / Turvalliset nostot: Raskaisiin nostoihin teollisuudessa/prefabricoiduissa.",
+                "Paalutuskone / ponttauskone: Perustukset ja tukirakenteet.",
+                "Imuauto / huuhteluauto: Puhdistus ja korkeapainehuuhtelu.",
+                "Betoniuppi: Kone betonin levitykseen.",
+                "Asfaltinlevitin: Tiepäällysteen levitykseen.",
+                "Trukkikortti (A1-D2): Vastapainotrukkiin, työntömastotrukkiin jne."
+              ]
+            }
+          }
+        },
+        "management": {
+          "title": "3. Toimihenkilöt & Johto",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Työpäällikkö / työnjohtaja: Kokonaisvastuu tuotannosta ja turvallisuudesta.",
+                "Tarkastusvastaava (KA): Sertifioitu PBL:n mukaan.",
+                "Urakkainsinööri: Osto, kustannuslaskenta ja projektituki.",
+                "Mittausteknikko: Maastoonmerkintä ja määräsäätö.",
+                "KMA-koordinaattori: Vastuussa laadusta, ympäristöstä ja työympäristöstä.",
+                "Ilmastodeklaraatio-osaaminen: Tietämys Boverketin vaatimuksista rakennusten ilmastoselvitykselle."
+              ]
+            }
+          }
+        },
+        "installation": {
+          "title": "4. Asennus, Sähkö & LVI",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Sähköasentaja: Auktorisointi Elsäkerhetsverketiltä (AL, A tai B).",
+                "ESA (sähköturvallisuusohjeet): ESA Perus & Huolto (pakollinen työskenneltäessä lähellä sähköverkkoa).",
+                "EBR (sähköverkon alan ohjeet): Erityisesti sähköverkkoprojekteihin.",
+                "LVI-asentaja: Alan pätevyys ja \"Turvallinen vesi\".",
+                "Kylmäteknikko: Sertifioitu F-kaasuille (Incert).",
+                "Kuituasentaja (BCT): Alan sertifioitu asentaja vankalle kuidulle.",
+                "Hälytys & Turvallisuus: Sertifiointi hälytyksiin, CCTV:hen ja kulunvalvontaan (SSF)."
+              ]
+            }
+          }
+        },
+        "special": {
+          "title": "5. Erikoisosaaminen & Ympäristö",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Hitsaussertifikaatti (ISO 9606-1): Kantavalle teräkselle (EN 1090). Vaatii usein IWS/hitsauskoordinaattorin paikalla.",
+                "Asbestikartoitus / PCB-kartoitus: Erityinen koulutustodistus ja lupa AV:lta.",
+                "Kertamuovit: Lakisääteinen koulutus + lääketieteellinen valvonta (esim. epoksi).",
+                "Kvartsipöly: Koulutus riskistä työskenneltäessä betonin ja kiven kanssa.",
+                "GWO (Global Wind Organisation): Vaatimus työskentelyyn tuulivoiman parissa."
+              ]
+            }
+          }
+        },
+        "certs": {
+          "title": "6. Alan erityissertifikaatit & Kurssit",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "ID06: Pakollinen henkilökorttijärjestelmä.",
+                "Työturvallisuus rakennustyömaalla: (Safe Construction Training).",
+                "SSG Entré: Vaaditaan pääsyyn lähes kaikkeen raskaan teollisuuden piiriin Ruotsissa.",
+                "Bas P (suunnittelu) / Bas U (toteutus): Rakennustyöympäristön koordinaattori.",
+                "BAM (parempi työympäristö) / SAM: Peruskoulutus suojeluvaltuutetuille ja esimiehille.",
+                "Kuumatyöt / Palovartija: Sertifikaatti tulenarkoihin töihin.",
+                "Työskentely tiellä (APV): Taso 1.1, 1.2, 1.3, 2.1, 2.2, 2.3 ja 3.",
+                "TA-suunnittelu: Tietämys liikennejärjestelysuunnitelmista.",
+                "Putouksenestö & Pelastus: Työskentelyyn korkealla.",
+                "Liputtaja / lippuvahti: Pätevyys ohjata nosturin nostoja tai liikennettä manuaalisesti.",
+                "Turvalliset nostot: Kaikille, jotka kytkevät kuormia nosturiin tai nostolaitteeseen.",
+                "Tukholman kaupungin kurssi: Vaatimus työskentelyyn kaupungin maalla.",
+                "ELR (elvytys): Ensiaputaidot."
+              ]
+            }
+          }
+        },
+        "rail": {
+          "title": "7. Rautatie & Metsä",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "SoS-johtaja / TSM: Suojelu- ja turvallisuusjohtaja rautatiekiskoilla.",
+                "Moottorisahan ajokortti (taso A-D): Perustavasta edistyneeseen puunkaatoon.",
+                "Vesurikortti (RA, RB): Maanraivaus."
+              ]
+            }
+          }
+        },
+        "drivers": {
+          "title": "8. Ajokortit & Kuljetus",
+          "subtitle": "",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "B / BE: Henkilöauto ilman/kanssa raskas perävaunu.",
+                "C / CE: Raskas kuorma-auto ilman/kanssa perävaunu.",
+                "YKB (ammattipätevyystodistus): Lakivaatimus ammattimaiseen tavaraliikenteeseen.",
+                "ADR-S 1.3: Vaarallisten aineiden kuljetus (esim. polttoaine säiliöissä).",
+                "Digitaalinen ajopiirturikortti: Raskaiden ajoneuvojen kuljettajille."
+              ]
+            }
+          }
+        },
+        "locations": {
+          "title": "Alueet & Paikkakunnat",
+          "subtitle": "Meillä on projekteja ja henkilöstötarpeita seuraavissa lääneissä.",
+          "groups": {
+            "items": {
+              "title": "",
+              "items": [
+                "Tukholma, Uppsala, Södermanland",
+                "Länsi-Götanmaa, Halland, Skåne",
+                "Norrbotten, Västerbotten, Västernorrland",
+                "Itä-Götanmaa, Jönköping, Kronoberg, Kalmar",
+                "Blekinge, Gotlanti, Örebro, Västmanland",
+                "Taalainmaa, Gävleborg, Värmland, Jämtland"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LinkCollection": {
+      "badge": "Linkit",
+      "title": "Linkkikokoelma: Viranomaiset & Sertifiointi",
+      "description": "Tässä on kattava lista verkkososoitteista pätevyyksien varmistamista, koulutusten varaamista ja alan sääntöjen tarkistamista varten.",
+      "groups": {
+        "myndigheter": {
+          "title": "Viranomaiset",
+          "links": [
+            ["Arbetsmiljöverket (työsuojeluviranomainen)", "https://www.av.se"],
+            ["Elsäkerhetsverket (sähköturvallisuusviranomainen)", "https://www.elsakerhetsverket.se"],
+            [
+              "Transportstyrelsen (ajokortit & YKB)",
+              "https://www.transportstyrelsen.se"
+            ],
+            ["Trafikverket (liikennevirasto)", "https://www.trafikverket.se"]
+          ]
+        },
+        "apv": {
+          "title": "Työskentely tiellä (APV) 1, 2 & 3",
+          "links": [
+            [
+              "Trafikverket - APV-vaatimukset",
+              "https://bransch.trafikverket.se/apv"
+            ],
+            [
+              "Varmenna APV-pätevyys",
+              "https://www.trafikverket.se/tjanster/kompetensportalen/"
+            ]
+          ]
+        },
+        "stockholm": {
+          "title": "Tukholman kaupunki (kaivu & APV)",
+          "links": [
+            [
+              "Kaiva Tukholman kaupungin alueella",
+              "https://foretagsservice.stockholm/tillstand-regler-och-tillsyn/markupplatelse/grava-i-gatumark/"
+            ],
+            [
+              "APV-kurssi Tukholman kaupunki",
+              "https://foretagsservice.stockholm/evenemang-utbildningar/utbildningar/arbete-pa-vag/"
+            ]
+          ]
+        },
+        "yrkesnamnder": {
+          "title": "Ammattitoimikunnat (ammattitodistukset)",
+          "links": [
+            ["BYN (rakennusalan ammattitoimikunta)", "https://www.byn.se"],
+            ["TYA (kuljetusalan ammattitoimikunta)", "https://www.tya.se"],
+            [
+              "MYN (maalarialan ammattitoimikunta)",
+              "https://www.maleryrkesnamnd.se"
+            ],
+            ["PVF (pelti & ilmanvaihto)", "https://www.pvf.se"],
+            ["TSY (puutarha-alan ammattitoimikunta)", "https://www.tsy.se"]
+          ]
+        },
+        "sakerhet": {
+          "title": "Turvallisuus & alan sertifikaatit",
+          "links": [
+            ["ID06", "https://id06.se"],
+            ["SSG (Standard Solutions Group)", "https://www.ssg.se"],
+            [
+              "Brandskyddsföreningen (kuumat työt)",
+              "https://www.brandskyddsforeningen.se"
+            ],
+            ["Säker Vatten (turvallinen vesi)", "https://sakervatten.se"],
+            ["GVK (turvalliset märkätilat)", "https://www.gvk.se"],
+            [
+              "Byggföretagen (Safe Construction Training)",
+              "https://www.byggforetagen.se"
+            ],
+            ["Energiföretagen (ESA/EBR)", "https://www.energiforetagen.se"],
+            ["GWO (Global Wind Safety)", "https://www.globalwindsafety.org"],
+            ["Säkerhetsparken", "https://Byggsakerhetsparken.se"]
+          ]
+        },
+        "entreprenadjuridik": {
+          "title": "Urakkajuridiikka & Vakiosopimukset (AB 04 / ABT 06)",
+          "links": [
+            ["ME (koneurakoitsijat)", "https://www.me.se"],
+            ["BKK (rakennusalan sopimuskomitea)", "https://foreningenbkk.se/"],
+            [
+              "Byggföretagen - urakkajuridiikka",
+              "https://byggforetagen.se/radgivning/entreprenadjuridik/"
+            ]
+          ]
+        },
+        "ovrigt": {
+          "title": "Muut viitteet",
+          "links": [
+            ["Incert (kylmätekniikka/F-kaasu)", "https://www.incert.se"],
+            [
+              "SSF (varkaudenestoyhdistys/hälytykset)",
+              "https://www.stoldskyddsforeningen.se"
+            ],
+            ["Säker Skog (moottorisaha/vesuri)", "https://sakerskog.se"]
+          ]
+        }
+      }
+    },
+    "CTA": {
+      "title": "Valmis aloittamaan?",
+      "description": "Oletpa sitten yksityishenkilö, työntekijä, koneenkuljettaja, aliurakoitsija tai työryhmä etsimässä seuraavaa projektia — rekisteröidy tänään, niin yhdistämme sinut mahdollisuuksiin koko Ruotsissa.",
+      "applyButton": "Hae kumppaniksi",
+      "talkToTeam": "Puhu tiimimme kanssa"
+    },
+    "Form": {
+      "badge": "Hae nyt",
+      "title": "Hae projektiin tai työsuhteeseen",
+      "description": "LinkableWork etsii uusia työntekijöitä, aliurakoitsijoita ja F-skatt-henkilöitä tehtäviin maanrakennukseen, rakentamiseen, infrastruktuuriin ja urakointiin. Tehtävät kestävät toukokuusta lokakuuhun.",
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "company": "Yritys (valinnainen)",
+      "type": "Haen",
+      "typeOptions": [
+        "Aliurakoitsija",
+        "Yksityishenkilö F-skattilla",
+        "Yksityishenkilö ilman F-skattia"
+      ],
+      "roles": "Roolit, joista olen kiinnostunut",
+      "roleOptions": [
+        "Rakentaja",
+        "Koneenkuljettaja",
+        "Työryhmä",
+        "Rakennussukeltaja",
+        "Puutarharakentaja",
+        "Työpäällikkö",
+        "Työnjohtaja",
+        "Mittausteknikko",
+        "KMA-koordinaattori",
+        "Projektipäällikkö / Kustannuslaskija"
+      ],
+      "roleOptionsOverall": [
+        "Rakennuskoneenkuljettaja",
+        "Tie- ja rakennustyöntekijä",
+        "Betoniya",
+        "Puutyöntekijä",
+        "Muurare",
+        "Laatoittaja",
+        "Lattianasentaja",
+        "Telineiden rakentaja",
+        "Kattoasentaja",
+        "Kalliotyöntekijä",
+        "Päällystystyöntekijä",
+        "Rei'ittäjä",
+        "Kiviasentaja"
+      ],
+      "locations": "Alueet",
+      "locationOptions": [
+        "Blekingen lääni",
+        "Taalainmaan lääni",
+        "Gotlannin lääni",
+        "Gävleborgin lääni",
+        "Hallandin lääni",
+        "Jämtlandin lääni",
+        "Jönköpingin lääni",
+        "Kalmarin lääni",
+        "Kronobergin lääni",
+        "Norrbottenin lääni",
+        "Skånen lääni",
+        "Tukholman lääni",
+        "Södermanlandin lääni",
+        "Uppsalan lääni",
+        "Värmlandin lääni",
+        "Västerbottenin lääni",
+        "Västernorrlandin lääni",
+        "Västmanlandin lääni",
+        "Länsi-Götanmaan lääni",
+        "Örebron lääni",
+        "Itä-Götanmaan lääni"
+      ],
+      "certifications": "Sertifikaatit, jotka minulla on",
+      "certOptions": [
+        "ID06",
+        "Safe Construction Training (Työturvallisuus rakennustyömaalla)",
+        "APV 1.1 (Arbete på väg)",
+        "APV 1.2 (Arbete på väg)",
+        "APV 1.3 (Arbete på väg)",
+        "APV 2.1 (Arbete på väg)",
+        "APV 2.2 (Arbete på väg)",
+        "APV 2.3 (Arbete på väg)",
+        "APV 3 (Arbete på väg)",
+        "Kuumat työt",
+        "BAS P (Suunnittelu)",
+        "BAS U (Toteutus)",
+        "ELR (Elvytys)",
+        "Turvalliset nostot",
+        "ADR-S 1.3",
+        "Tukholman kaupungin kurssi"
+      ],
+      "certOptionsOverall": [
+        "ID06",
+        "Safe Construction Training (Työturvallisuus rakennustyömaalla)",
+        "APV 1.1, 1.2, 1.3 (Arbete på väg)",
+        "APV 2.1, 2.2, 2.3 (Arbete på väg)",
+        "APV 3 (Arbete på väg)",
+        "Kuumat työt",
+        "BAS P / BAS U",
+        "ELR (Elvytys)",
+        "Turvalliset nostot",
+        "ADR-S 1.3",
+        "Tukholman kaupungin kurssi"
+      ],
+      "machineLicenses": "Koneenkuljettajan todistukset",
+      "machineOptions": [
+        "Grävmaskin (Kaivinkone)",
+        "Hjullastare (Pyöräkuormaaja)",
+        "Grävlastare (Kaivukuormaaja)",
+        "Bandschaktare (Telakaivinkone)",
+        "Väghyvel (Tiehöylä)",
+        "Dumpperi",
+        "Vält (Jyrä)",
+        "Teleskoptruck (Teleskooppitrukki)",
+        "Mobilkran (Mobiilinosturi)",
+        "Tornkran (Torninosturi)",
+        "Betongpump (Betoniuppi)",
+        "Asfaltsläggare (Asfaltinlevitin)",
+        "Pålmaskin (Paalutuskone)",
+        "Spontmaskin (Ponttauskone)"
+      ],
+      "machineOptionsOverall": [
+        "Kaivinkone (Grävmaskin)",
+        "Pyöräkuormaaja (Hjullastare)",
+        "Kaivukuormaaja (Grävlastare)",
+        "Telakaivinkone (Bandschaktare)",
+        "Tiehöylä (Väghyvel)",
+        "Dumpperi",
+        "Jyrä (Vält)",
+        "Teleskooppitrukki (Teleskoptruck)",
+        "Mobiilinosturi (Mobilkran)",
+        "Torninosturi (Tornkran)",
+        "Betoniuppi (Betongpump)",
+        "Asfaltinlevitin (Asfaltsläggare)",
+        "Paalutuskone / Ponttauskone (Pålmaskin / Spontmaskin)"
+      ],
+      "tradeCertificates": "Ammattitodistukset",
+      "driverLicenses": "Ajokortit",
+      "driverLicenseOptions": [
+        "B (Henkilöauto)",
+        "BE (Henkilöauto raskaalla perävaunulla)",
+        "C (Raskas kuorma-auto)",
+        "CE (Raskas kuorma-auto perävaunulla)",
+        "YKB (ammattipätevyystodistus)",
+        "Digitaalinen ajopiirturikortti",
+        "ADR-S 1.3",
+        "Körkort B (Ajokortti B)",
+        "Körkort BE (Ajokortti BE)",
+        "Körkort C / CE (Ajokortti C / CE)"
+      ],
+      "certNumber": "Ammattitodistusnumero (BYN/TYA)",
+      "expiryDates": "Voimassaoloajat (esim. YKB, APV, kuumat työt)",
+      "tradeOptions": [
+        "Rakennuskoneenkuljettaja",
+        "Tie- ja rakennustyöntekijä",
+        "Betoniya",
+        "Puutyöntekijä (kirvesmies)",
+        "Telineiden rakentaja",
+        "Päällystystyöntekijä",
+        "Rei'ittäjä",
+        "Kiviasentaja",
+        "Kalliotyöntekijä",
+        "Rakennussukeltaja",
+        "Puutarharakentaja",
+        "LVI-asentaja",
+        "Sähköasentaja (auktorisoitu sähköasentaja)",
+        "Putkiasentaja (VA)",
+        "Karkea- & purkutyöntekijä"
+      ],
+      "applyingFor": "Haen kohteeseen",
+      "cv": "CV / Kokemus",
+      "cvHint": "Liitä CV:si, kuvaile kokemustasi tai linkitä LinkedIn-profiilisi",
+      "cvPlaceholder": "Esimerkiksi: yli 10 vuoden kokemus kaivinkoneenkuljettajana...",
+      "references": "Referenssit",
+      "referencesHint": "Aiemmat työnantajat, projektit tai tilaajat, joihin voimme ottaa yhteyttä",
+      "referencesPlaceholder": "Yritys, yhteyshenkilö, puhelin...",
+      "extraCertifications": "Lisäsertifikaatit (valinnainen)",
+      "extraCertificationsHint": "Listaa sertifikaatit tai ammattitodistukset, joita ei ole yllä olevassa listassa",
+      "uploadHint": "Vinkki: Kuvaa sertifikaattisi näkyvällä voimassaolopäivällä ja liitä sähköpostiin. Se nopeuttaa varmennusta.",
+      "extraCertificationsPlaceholder": "Esimerkiksi: Maalari (MYN), LVI-asentaja, hitsaussertifikaatti ISO 9606-1...",
+      "message": "Viesti (valinnainen)",
+      "messagePlaceholder": "Kerro kokemuksestasi, tiimikoosta, käytettävyydestä...",
+      "submit": "Lähetä hakemus",
+      "sending": "Lähetetään...",
+      "success": "Kiitos hakemuksestasi!",
+      "successDescription": "Palaamme asiaan 24 tunnin kuluessa.",
+      "error": "Hakemuksen lähetys epäonnistui. Yritä uudelleen."
+    },
+    "ApplyInfo": {
+      "entreprenadformer": {
+        "title": "Urakkamuodot & Juridiikka",
+        "description": "Varmistaaksemme selkeät vastuurajat projekteissamme noudatamme alan vakiintuneita sopimusmalleja.",
+        "items": [
+          "AB 04: Yleiset määräykset toteutusurakoille (joissa tilaaja vastaa suunnittelusta).",
+          "ABT 06: Yleiset määräykset kokonaisurakoille (joissa urakoitsija vastaa sekä suunnittelusta että toteutuksesta).",
+          "AB-U 07 / ABT-U 07: Vakiosopimukset erityisesti aliurakoitsijoille, jotka liittyvät pääsopimuksiin AB 04 tai ABT 06."
+        ]
+      },
+      "references": {
+        "title": "Tärkeät verkkosivustot & Viitteet",
+        "items": [
+          ["BKK (rakennusalan sopimuskomitea)", "https://foreningenbkk.se/"]
+        ]
+      },
+      "tips": {
+        "title": "Vinkkejä hakemukseen",
+        "items": [
+          "Ilmoita ammattitodistusnumerosi BYN:stä tai TYA:sta hakemuksessa nopeampaa varmennusta varten.",
+          "Liitä kopiot sertifikaateistasi näkyvällä voimassaolopäivällä.",
+          "Onko sinulla osaamista kaivos- tai tuulivoimateollisuudesta? Mainitse se — suuri kysyntä Pohjois-Ruotsissa.",
+          "Ilmoita ID06-numerosi, jos sinulla on olemassa oleva kortti."
+        ]
+      }
+    },
+    "Footer": {
+      "description": "Yhdistää ammattitaitoiset rakennusalan ammattilaiset projekteihin koko Ruotsissa. Nopeasti, turvallisesti ja alalle rakennettu.",
+      "portal": {
+        "title": "Portaali",
+        "projects": "Avoimet projektit",
+        "howItWorks": "Näin se toimii",
+        "applyNow": "Hae nyt",
+        "contact": "Yhteystiedot",
+        "guide": "Ammattitodistukset & sertifikaatit",
+        "login": "Kumppanin kirjautuminen"
+      },
+      "certs": {
+        "title": "Sertifikaatit"
+      },
+      "contact": {
+        "title": "Yhteystiedot",
+        "subtitle": "Onko kysyttävää rekrytoinnista, projekteista tai haluatko pyytää tarjouksen? Ota yhteyttä, autamme mielellämme.",
+        "thomas": "Thomas",
+        "thomasEmail": "lexcoab@gmail.com",
+        "thomasPhone": "+46760952921",
+        "kim": "Kim Pynnönen",
+        "kimEmail": "lexcoab@gmail.com",
+        "kimPhone": "+46702583651"
+      },
+      "rights": "Kaikki oikeudet pidätetään.",
+      "privacy": "Tietosuojakäytäntö",
+      "terms": "Käyttöehdot",
+      "cookie": "Evästekäytäntö"
+    }
+  }
+}
